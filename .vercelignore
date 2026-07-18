@@ -1,0 +1,9 @@
+# Keep the Vercel upload lean — none of these are needed to build or run the app.
+archive/
+docs/
+tests/
+scripts/
+.playwright-mcp/
+
+# data/ is intentionally NOT ignored — the API routes read it at runtime
+# (bundled into the functions via next.config outputFileTracingIncludes).
