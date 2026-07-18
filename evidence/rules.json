@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "scope": "Relapsed/refractory aggressive B-cell lymphoma, 2nd line",
+  "rules": [
+    {
+      "rule_id": "R01",
+      "condition": "refractoriness.primary_refractory == true",
+      "action": "exclude",
+      "therapy": "tafasitamab-lenalidomide",
+      "rationale": "L-MIND excluded primary-refractory disease, so there is no efficacy evidence for tafasitamab-lenalidomide in this setting; the exclusion is by disease biology, not age or transplant-ineligibility.",
+      "citation_ids": [
+        "L-MIND"
+      ],
+      "severity": "hard"
+    },
+    {
+      "rule_id": "R02",
+      "condition": "disease.chemosensitive == false",
+      "action": "exclude",
+      "therapy": "autologous-stem-cell-transplant",
+      "rationale": "Autologous transplant benefits only chemotherapy-sensitive relapse (PARMA); chemorefractory disease removes ASCT from the differential.",
+      "citation_ids": [
+        "PARMA"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R03",
+      "condition": "fitness.cell_therapy_fit == true && (refractoriness.primary_refractory == true || disease.relapse_timing == 'early')",
+      "action": "prefer",
+      "therapy": "CD19-CAR-T (axi-cel or liso-cel)",
+      "rationale": "For fit patients with primary-refractory or early-relapse (<=12 mo) LBCL, 2L CD19 CAR-T is superior to salvage chemo plus ASCT (ZUMA-7, TRANSFORM).",
+      "citation_ids": [
+        "ZUMA-7",
+        "TRANSFORM"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R04",
+      "condition": "transplant_intent == 'ineligible'",
+      "action": "prefer",
+      "therapy": "lisocabtagene-maraleucel (liso-cel)",
+      "rationale": "Liso-cel is a 2L option for transplant-ineligible patients regardless of relapse timing (PILOT), with lower CRS/ICANS than axi-cel.",
+      "citation_ids": [
+        "PILOT"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R05",
+      "condition": "line == 2",
+      "action": "exclude",
+      "therapy": "tisagenlecleucel",
+      "rationale": "Tisagenlecleucel failed its second-line trial (BELINDA, no EFS benefit); it is not a second-line option, unlike axi-cel and liso-cel.",
+      "citation_ids": [
+        "BELINDA"
+      ],
+      "severity": "hard"
+    },
+    {
+      "rule_id": "R06",
+      "condition": "line == 2 && therapy == 'epcoritamab+GemOx'",
+      "action": "flag",
+      "therapy": "epcoritamab-GemOx",
+      "rationale": "Only epcoritamab monotherapy is approved (3L+); the GemOx combination and 2L use are off-label but prospectively supported (EPCORE NHL-2). Name the boundary, cite the basis and its limits, and let the physician proceed.",
+      "citation_ids": [
+        "EPCORE-NHL-2",
+        "EPCORE-NHL-1"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R07",
+      "condition": "therapy == 'glofitamab+GemOx' && region == 'US'",
+      "action": "flag",
+      "therapy": "glofitamab-GemOx",
+      "rationale": "Glofitamab+GemOx received a US Complete Response Letter (STARGLO) and is not FDA-approved; glofitamab is US-approved only as monotherapy at 3L+. Flag as off-label/unavailable, do not present as approved standard.",
+      "citation_ids": [
+        "STARGLO",
+        "GLOFIT-MONO"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R08",
+      "condition": "plan.intends_cellular_therapy == true && regimen.contains_bendamustine == true",
+      "action": "flag",
+      "therapy": "bendamustine-containing regimen (e.g., pola-BR)",
+      "rationale": "Bendamustine before apheresis impairs T-cell fitness and cellular-therapy outcomes; do not give a bendamustine-containing regimen when CAR-T or a T-cell engager is still intended.",
+      "citation_ids": [
+        "BENDA-PREAPHERESIS",
+        "POLA-BR"
+      ],
+      "severity": "hard"
+    },
+    {
+      "rule_id": "R09",
+      "condition": "(prior.cd19_directed == true || plan.cd19_car_t == true)",
+      "action": "flag",
+      "therapy": "CD19-directed therapy (tafasitamab, loncastuximab) before CD19 CAR-T",
+      "rationale": "Sequencing a CD19-directed agent before a planned CD19 CAR-T raises antigen-loss/escape concern; flag the sequencing and confirm target-antigen strategy.",
+      "citation_ids": [
+        "L-MIND",
+        "LOTIS-2"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R10",
+      "condition": "regimen.contains_polatuzumab == true && visit.neuropathy_severity_reported >= 'grade2'",
+      "action": "flag",
+      "therapy": "polatuzumab-containing regimen",
+      "rationale": "Polatuzumab's MMAE payload compounds pre-existing (vincristine-related) peripheral neuropathy; flag when grade >=2 neuropathy is reported.",
+      "citation_ids": [
+        "POLA-BR"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R11",
+      "condition": "therapy in ['CD19-CAR-T'] ",
+      "action": "require_workup",
+      "therapy": "CD19-CAR-T",
+      "rationale": "There is no numeric age cutoff for CAR-T; eligibility is a composite of physiologic fitness, organ function, comorbidity, caregiver reliability, and logistics. Represent 'too old for CAR-T' only as a failing composite, never as an age rule.",
+      "citation_ids": [
+        "CART-OLDER",
+        "PILOT"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R12",
+      "condition": "fitness.age >= 70 && geriatric_assessment.completed == false",
+      "action": "require_workup",
+      "therapy": "any systemic therapy",
+      "rationale": "For patients aged >=70, ECOG alone under-detects vulnerability; require geriatric-assessment domains (ADL/IADL, falls, cognition, polypharmacy, comorbidity index) before calling a patient fit.",
+      "citation_ids": [
+        "FIL-sGA",
+        "ASCO-GA-2018",
+        "ASCO-GA-2023",
+        "ECOG-FRAILTY"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R13",
+      "condition": "disease.molecular.myc_positive == true && disease.molecular.myc_method == 'unknown'",
+      "action": "require_workup",
+      "therapy": "n/a (diagnostic)",
+      "rationale": "Before labeling a case double-hit, require the MYC FISH method: true double-hit needs a MYC translocation (rearrangement), not amplification/copy-number gain. Block auto-upgrade of 'double-hit-like' to true double-hit.",
+      "citation_ids": [
+        "WHO-HAEM5",
+        "ICC"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R14",
+      "condition": "disease.cns_involvement == true && disease.cns_compartment contains 'parenchymal'",
+      "action": "require_workup",
+      "therapy": "CNS-penetrant systemic backbone (HD-MTX / high-dose cytarabine / thiotepa)",
+      "rationale": "Parenchymal secondary CNS disease requires CNS-penetrant systemic therapy; intrathecal-only or R-ICE-type regimens are insufficient because they do not reach parenchymal disease. R-DHAP (cytarabine) is more CNS-active than R-ICE.",
+      "citation_ids": [
+        "MARIETTA",
+        "MATRix",
+        "CNS-PHARM"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R15",
+      "condition": "disease.cns_involvement == true && therapy == 'CD19-CAR-T'",
+      "action": "prefer",
+      "therapy": "lisocabtagene-maraleucel or tisagenlecleucel (lower ICANS)",
+      "rationale": "When CAR-T is chosen with baseline CNS disease, prefer lower-ICANS products (liso-cel/tisa-cel); the basis is TRANSCEND and registry data, not a routine on-label CNS indication.",
+      "citation_ids": [
+        "TRANSCEND",
+        "CART-CNS"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R16",
+      "condition": "plan.bridging_agent == 'copanlisib'",
+      "action": "exclude",
+      "therapy": "copanlisib",
+      "rationale": "Copanlisib was withdrawn from the US market (2023) and has weak/uncertain CNS penetration; it is not a valid current bridging option.",
+      "citation_ids": [
+        "COPANLISIB-WITHDRAWAL"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R17",
+      "condition": "plan.hd_mtx == true",
+      "action": "require_workup",
+      "therapy": "high-dose methotrexate",
+      "rationale": "High-dose methotrexate requires adequate renal function, absence of third-spacing (ascites/effusions), reconciliation of clearance-delaying drugs (NSAIDs, PPIs, penicillins), and a leucovorin-rescue/hydration/alkalinization plan.",
+      "citation_ids": [
+        "CNS-PHARM"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R18",
+      "condition": "therapy.is_bispecific == true && visit.distance_to_center_minutes >= 60",
+      "action": "require_workup",
+      "therapy": "bispecific antibody (epcoritamab / glofitamab)",
+      "rationale": "Bispecific CRS/ICANS risk is front-loaded to cycle-1 step-up; require ramp-up at the certified center for distant patients and hand-back to the local oncologist only after the ramp-up window. Flag any plan that assigns the highest-risk doses to the community.",
+      "citation_ids": [
+        "EPCORE-NHL-1",
+        "GLOFIT-MONO"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R19",
+      "condition": "therapy in ['CD19-CAR-T','bispecific'] && visit.caregiver_reliability != 'robust'",
+      "action": "flag",
+      "therapy": "CD19-CAR-T or bispecific ramp-up",
+      "rationale": "CAR-T and bispecific ramp-up require a reliable caregiver who can recognize and report CRS/ICANS and return promptly; flag when caregiver support is absent or unreliable.",
+      "citation_ids": [
+        "CART-OLDER",
+        "PILOT"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R20",
+      "condition": "refractoriness.primary_refractory == true && disease.cell_of_origin == 'GCB' && fitness.cell_therapy_fit == true",
+      "action": "flag",
+      "therapy": "under-treatment / overly-gentle regimen",
+      "rationale": "Do not down-rank an active regimen solely because the disease is GCB or not double-hit when it is primary-refractory; primary-refractoriness is the dominant adverse driver, and under-treating a fit patient risks a foreseeable poor outcome.",
+      "citation_ids": [
+        "SCHOLAR-1",
+        "FIL-sGA"
+      ],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R21",
+      "condition": "visit.clinician_relapse_confidence == 'imaging_clinical_gestalt'",
+      "action": "flag",
+      "therapy": "diagnostic-certainty requirement",
+      "rationale": "Preserve real-world diagnostic uncertainty: when serial imaging and clinical picture are convincing, an equivocal or necrotic re-biopsy does not veto treatment; do not require histologic confirmation to proceed. (Clinical-practice standard.)",
+      "citation_ids": [],
+      "severity": "soft"
+    },
+    {
+      "rule_id": "R22",
+      "condition": "prior.first_line == 'R-miniCHOP' && fitness.age >= 80",
+      "action": "flag",
+      "therapy": "interpretation of early progression after 1L",
+      "rationale": "R-miniCHOP is a validated age-attenuated first-line regimen for patients >=80; early progression after it reflects refractory biology, not inadequate dosing, and should not down-triage subsequent intent.",
+      "citation_ids": [
+        "R-miniCHOP"
+      ],
+      "severity": "soft"
+    }
+  ]
+}

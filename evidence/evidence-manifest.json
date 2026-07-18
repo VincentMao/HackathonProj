@@ -622,20 +622,6 @@
     "10.31547/bct-2023-032",
     "10.1200/JCO.23.01097"
   ],
-  "nccn_sections_to_extract": [
-    "NCCN B-Cell Lymphomas \u2014 DLBCL: Second-Line Therapy (candidates for transplant / intention to proceed to HDT+ASCT)",
-    "NCCN B-Cell Lymphomas \u2014 DLBCL: Second-Line and Subsequent Therapy (non-candidates for transplant / transplant-ineligible)",
-    "NCCN B-Cell Lymphomas \u2014 DLBCL: Third-Line and Subsequent Therapy (R/R, includes bispecifics, ADCs, tafasitamab-lenalidomide, loncastuximab)",
-    "NCCN B-Cell Lymphomas \u2014 Suggested Treatment Regimens for DLBCL (regimen tables: R-ICE, R-DHAP/DHAX, R-GDP, R-GemOx, pola-BR, tafa-len, glofitamab, epcoritamab, mosunetuzumab, loncastuximab)",
-    "NCCN B-Cell Lymphomas \u2014 Principles of CAR T-Cell Therapy (product selection, eligibility, bridging, contraindications)",
-    "NCCN B-Cell Lymphomas \u2014 CAR T-cell therapy eligibility / referral criteria within DLBCL 2L and 3L pathways",
-    "NCCN B-Cell Lymphomas \u2014 DLBCL in older/frail adults (R-miniCHOP, dose-attenuation, geriatric assessment)",
-    "NCCN B-Cell Lymphomas \u2014 High-Grade B-Cell Lymphoma with MYC and BCL2 rearrangements (double-hit) and double-expressor: workup and R/R management",
-    "NCCN B-Cell Lymphomas \u2014 Secondary CNS Lymphoma: CNS prophylaxis, evaluation, and treatment of CNS involvement (HD-MTX-based, MATRix/MARIETTA-type regimens)",
-    "NCCN B-Cell Lymphomas \u2014 Diagnosis / Workup / Immunophenotyping and molecular subtyping (cell-of-origin, FISH for MYC/BCL2/BCL6)",
-    "NCCN B-Cell Lymphomas \u2014 Allogeneic HCT positioning after CAR-T failure / for R/R disease",
-    "NCCN B-Cell Lymphomas \u2014 Principles of Radiation Therapy and Response Assessment (Lugano criteria) as applied to R/R DLBCL"
-  ],
   "gaps": [
     "Epcoritamab monotherapy phase 3 EPCORE DLBCL-1 (confirmatory trial): topline press-release only as of Jul 2026 \u2014 no peer-reviewed publication, no PMID/DOI. OS not yet reported. Update when a full paper/meeting presentation appears.",
     "Copanlisib withdrawal: regulatory/press-release only \u2014 no PMID/DOI. Best citable source is the Bayer press release; also note the rubric correction (failed trial = CHRONOS-4, not CHRONOS-3).",
