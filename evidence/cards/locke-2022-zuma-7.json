@@ -1,0 +1,44 @@
+{
+  "key": "Locke-2022-ZUMA-7",
+  "title": "Axicabtagene Ciloleucel as Second-Line Therapy for Large B-Cell Lymphoma (ZUMA-7)",
+  "authors_year": "Locke FL, Miklos DB, Jacobson CA, et al. 2022",
+  "journal": "N Engl J Med 2022;386:640-654 (NCT03391466)",
+  "design": "Phase 3, randomized (1:1), open-label, international superiority trial. Axi-cel (autologous anti-CD19 CAR-T) vs standard of care (platinum-based salvage chemoimmunotherapy followed by high-dose therapy + ASCT in responders). Randomization stratified by response to first-line therapy (primary refractory vs relapse \u22646 mo vs relapse >6-\u226412 mo) and second-line age-adjusted IPI. Primary endpoint: event-free survival by blinded central review. Note: the local full-text file is the trial protocol + statistical analysis plan supplement, which grounds design and eligibility verbatim; headline efficacy numbers below are the published ZUMA-7 primary results.",
+  "population": "Adults with R/R DLBCL after first-line rituximab + anthracycline-based chemoimmunotherapy; disease either primary-refractory or relapsed within 12 months of initiating first-line therapy. Transplant-intended population (intent to proceed to HDT/ASCT if second-line response). N=359 randomized (axi-cel 180 vs SOC 179).",
+  "line": "Second line (2L) R/R LBCL",
+  "key_eligibility": [
+    "INCLUDES the highest-risk 2L population: primary-refractory disease AND early relapse (\u226412 months) \u2014 the opposite of L-MIND, which excludes primary-refractory. This is the population where 2L CAR-T is indicated.",
+    "Refractory defined as no complete remission to first-line therapy (PD as best response, or SD after \u22654 cycles); patients merely intolerant to first-line therapy were excluded.",
+    "Relapsed disease defined as CR to first-line followed by biopsy-proven relapse \u226412 months of initiating first-line therapy.",
+    "Required adequate first-line therapy: anti-CD20 monoclonal antibody (unless CD20-negative) AND an anthracycline-containing regimen.",
+    "Intent to proceed to HDT and ASCT if response to second-line therapy (i.e., otherwise transplant-eligible/intended patients).",
+    "Exclusion: history of autologous or allogeneic stem cell transplant."
+  ],
+  "outcomes": "Published ZUMA-7 primary results: median EFS 8.3 vs 2.0 months, HR 0.40 (95% CI 0.31-0.51), P<0.001; 24-month EFS 41% vs 16%. ORR 83% vs 50%; CR 65% vs 32%. Only ~35% of SOC arm proceeded to ASCT. Axi-cel grade \u22653 CRS 6%, grade \u22653 neurologic events 21%. Establishes 2L axi-cel superior to salvage chemo/ASCT for primary-refractory/early-relapse LBCL.",
+  "grounds_rubric_claims": [
+    "2L CAR-T (axi-cel) is superior to salvage chemotherapy + ASCT for primary-refractory or early-relapse (<12 mo) LBCL on EFS",
+    "Primary-refractory / early-relapse (<12 mo) LBCL is an indication for 2L CAR-T rather than salvage/ASCT",
+    "2L axi-cel eligibility requires prior anti-CD20 + anthracycline first-line therapy and transplant intent"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "A Phase 3, Randomized, Open-Label Study Evaluating the Efficacy of Axicabtagene Ciloleucel versus Standard of Care Therapy in Subjects with Relapsed/Refractory Diffuse Large B Cell Lymphoma (ZUMA-7)",
+      "supports": "Design: head-to-head randomized comparison of 2L axi-cel vs standard salvage-of-care in R/R DLBCL"
+    },
+    {
+      "quote": "Randomization will be stratified by response to first-line therapy (primary refractory, vs relapse \u2264 6 months of initiating first-line therapy vs relapse > 6 and \u2264 12 months of initiating first-line therapy)",
+      "supports": "Population = primary-refractory or relapse within 12 months (the early-relapse/refractory group where 2L CAR-T applies)"
+    },
+    {
+      "quote": "Refractory disease defined as no complete remission to first-line therapy; subjects who are intolerant to first-line therapy are excluded",
+      "supports": "Key eligibility definition of primary-refractory disease grounding 2L CAR-T indication"
+    },
+    {
+      "quote": "Intent to proceed to HDT and ASCT if response to second-line therapy",
+      "supports": "Transplant-intended population \u2014 axi-cel compared directly against the salvage-chemo-then-ASCT pathway"
+    }
+  ],
+  "caveats": "Local file is the ZUMA-7 protocol + SAP supplement (not the results paper); it grounds design, stratification, and eligibility verbatim. The efficacy numbers (EFS HR 0.40, median 8.3 vs 2.0 mo, ORR 83%/CR 65%) are the published primary results and should be cited to the NEJM article body, not to the protocol text.",
+  "full_text_available": true,
+  "line_field_note": "2L"
+}

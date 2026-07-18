@@ -1,0 +1,37 @@
+{
+  "key": "Shawabkeh-2026-CART-CNS-metaanalysis",
+  "title": "Safety and efficacy of CAR T-cell therapy in central nervous system lymphoma: a systematic review and meta-analysis",
+  "authors_year": "Shawabkeh AE, et al., 2026",
+  "journal": "Frontiers in Oncology 2026;16:1790444",
+  "design": "Systematic review and meta-analysis (PRISMA 2020; PROSPERO CRD420251070033) of 39 studies (38 in quantitative analysis; up to 1,190 patients). Predominantly retrospective single-arm cohorts (n=28) plus 11 single-arm interventional/phase 1-2 studies; NO randomized comparisons. Freeman-Tukey double-arcsine pooling, random-effects (DerSimonian-Laird).",
+  "population": "Adults (>=18) with PCNSL or SCNSL treated with CD19-based CAR T-cell therapy (axi-cel, tisa-cel, liso-cel, brexu-cel, and dual/triple-targeted constructs). 20 studies SCNSL, 5 PCNSL, 13 both. Predominant histology DLBCL; includes double-/triple-hit subsets in several cohorts. No restriction on prior lines or bridging.",
+  "key_eligibility": [
+    "Included adults with PCNSL or SCNSL (systemic NHL with CNS involvement) receiving CD19-based CAR-T; single- and dual/triple-targeted constructs allowed",
+    "Case reports with <3 patients, reviews, editorials, and preclinical studies EXCLUDED; required separately reported CNS-lymphoma outcomes",
+    "Both prospective and retrospective designs, including case series with >=3 patients; no restriction on prior therapy lines, bridging, or geography",
+    "Rationale: pivotal CAR-T trials systematically excluded active CNS involvement due to neurotoxicity concerns"
+  ],
+  "outcomes": "Pooled ORR 0.75 (95% CI 0.70-0.79; I2=53.3%); CR 0.52 (0.46-0.58); PR 0.18 (0.14-0.22). No significant difference in ORR between PCNSL and SCNSL (p=0.063). PFS pooled HR PCNSL vs SCNSL 0.89 (95% CI 0.16-4.91, NS). OS rate 0.71 at 6 mo to 0.48 at 24 mo; PFS 0.41 at 6 mo to 0.28 at 24 mo. Pooled median-of-medians OS 8.6 mo, PFS 3.6 mo. CRS 83.5% (grade>=3 5.77%); ICANS 44.9% (grade>=3 17.4%).",
+  "grounds_rubric_claims": [
+    "Meta-analytic (non-randomized) evidence supports CAR T-cell therapy achieving robust responses in CNS lymphoma (ORR ~75%, CR ~52%)",
+    "Efficacy of CAR-T is comparable between primary and secondary CNS lymphoma",
+    "Severe CRS is infrequent (grade>=3 ~6%) and severe ICANS is manageable (~17%) in CNS-lymphoma CAR-T",
+    "Evidence base for CAR-T in CNS lymphoma is non-randomized (retrospective cohorts + single-arm trials), as CNS involvement was excluded from pivotal trials"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "The pooled overall response rate (ORR) was 0.75 [95% CI: 0.70-0.79]... Complete response (CR) rate was 0.52 [0.46-0.58]",
+      "supports": "Pooled CAR-T efficacy in CNS lymphoma: ORR 75%, CR 52%"
+    },
+    {
+      "quote": "CART therapy achieves robust response rates in CNS lymphoma, with efficacy comparable between PCNSL and SCNSL. Neurotoxicity remains frequent but manageable, and severe CRS events are infrequent.",
+      "supports": "Overall conclusion: comparable PCNSL/SCNSL efficacy; manageable neurotoxicity; infrequent severe CRS"
+    },
+    {
+      "quote": "Cytokine Release Syndrome (CRS) occurred in 83.5% [79.0-88.0], with grade>=3 CRS in 5.77% [3.0-9.0]. Immune Effector Cell-Associated Neurotoxicity Syndrome (ICANS) was reported in 44.9% [36.0-54.0], with severe (grade >=3) events in 17.4% [12.0-23.0].",
+      "supports": "Safety profile: CRS 83.5% (severe 5.8%), ICANS 44.9% (severe 17.4%)"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Non-randomized evidence: 28/39 studies retrospective single-arm; substantial heterogeneity (ICANS I2=84%). PFS HR comparison PCNSL vs SCNSL very wide (0.16-4.91). Pooled proportions across heterogeneous products, prior-line burden, and bridging. Registry/abstract data included."
+}

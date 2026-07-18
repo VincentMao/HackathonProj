@@ -1,0 +1,40 @@
+{
+  "key": "mosun-pola-p1b2",
+  "title": "Mosunetuzumab With Polatuzumab Vedotin in Relapsed or Refractory Aggressive Large B-Cell Lymphoma: A Phase 1b/2 Trial",
+  "authors_year": "Budde et al., 2024",
+  "journal": "Nature Medicine (2024;30(1):229-239)",
+  "design": "Ongoing phase 1b/2 multi-arm trial (NCT03671018); phase 1b dose escalation (n=22) + single-arm phase 2 dose expansion (n=98). Outpatient, fixed-duration mosunetuzumab (step-up dosing, 8-17 cycles) + polatuzumab vedotin 1.8 mg/kg C1-C6. RP2D mosunetuzumab 1/2/60/30 mg.",
+  "population": "120 enrolled overall (117 efficacy-evaluable LBCL); dose-expansion 98 R/R LBCL. Median age 68 (range 20-88); median 2 prior lines (range 1-10); 35% prior CAR-T; 12.5% prior ASCT; 57.5% primary refractory; 20.2% double/triple-hit.",
+  "line": "2L+ (positioned as second-line, transplant-ineligible; 1-10 prior lines, median 2)",
+  "key_eligibility": [
+    "R/R aggressive LBCL: DLBCL, HGBCL, transformed FL, grade 3b FL (grade 1-3a FL excluded from efficacy)",
+    "Transplant-ineligible second-line and later R/R LBCL",
+    "Prior CAR-T permitted and included (35%); primary-refractory patients included (57.5%)",
+    "Positioned explicitly as a fixed-duration outpatient regimen"
+  ],
+  "outcomes": "Dose-expansion (n=98, RP2D): IRC best ORR 59.2% (95% CI 48.8-69.0); best CR 45.9% (95% CI 35.8-56.3) vs 42% historical control (P=0.0003). Median DoR 20.8 mo; median DoCR not reached (95% CI 20.5-NE); 24-mo CR event-free rate 60.8%. Median PFS 11.4 mo (95% CI 6.2-18.7). Median OS 23.3 mo (95% CI 14.8-NE). Prior-CAR-T subgroup (n=35): ORR 57%, median PFS 9.6 mo. Primary-refractory: median PFS 8.5 mo. Any-grade CRS 16.7% (grade 3 2.5%, no grade 4); ICANS-consistent 5%; grade >=3 neutropenia 25%; no febrile neutropenia; treatment-related discontinuation 10%.",
+  "outcomes_field_note": "",
+  "grounds_rubric_claims": [
+    "Mosun-pola is a fixed-duration, outpatient chemo-free bispecific + ADC regimen suitable for second-line transplant-ineligible R/R LBCL",
+    "Active after prior CAR-T (ORR 57% in prior-CAR-T subgroup) and in primary-refractory disease (included; 57.5% of cohort)",
+    "Low CRS (16.7%, grade 3 only 2.5%) supports outpatient administration",
+    "CR rate (45.9%) exceeds single-agent mosunetuzumab (24%) and single-agent polatuzumab (13%), suggesting combination synergy",
+    "Enrolled a higher proportion of primary-refractory (57.5% vs 19%) and post-CAR-T (35% vs 0%) patients than L-MIND tafa-len population"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "These data demonstrate that mosunetuzumab plus polatuzumab vedotin has a favorable safety profile with highly durable responses suitable as second-line therapy in transplant-ineligible relapsed/refractory LBCL.",
+      "supports": "Second-line transplant-ineligible positioning / fixed-duration outpatient regimen"
+    },
+    {
+      "quote": "Best complete response was 45.9% (95% CI: 35.8-56.3)... Median IRC-assessed PFS was 11.4 months (95% CI: 6.2-18.7). Median overall survival was 23.3 months (95% CI: 14.8-NE).",
+      "supports": "Headline efficacy outcomes (CR, PFS, OS)"
+    },
+    {
+      "quote": "Notably, the current study enrolled a higher proportion of primary refractory patients (57.5% versus 19.0%) and post-CAR-T cell therapy patients (35% versus 0%) compared to the tafa-len population in the L-MIND study.",
+      "supports": "Contrast with L-MIND eligibility (primary-refractory and post-CAR-T inclusion)"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Single-arm phase 2 (n=98), no randomized comparator; historical control 42%. Small high-risk subgroups. Grade 1-3a FL excluded from efficacy. Peripheral neuropathy 30.8% (polatuzumab-driven). Applicability limited in patients refractory to prior polatuzumab vedotin."
+}

@@ -1,0 +1,37 @@
+{
+  "key": "Korfel-2015-PCNSL-pharmacotherapy",
+  "title": "A focus on pharmacotherapy for primary central nervous system lymphoma",
+  "authors_year": "Korfel A, 2015",
+  "journal": "Expert Review of Hematology 2015;8(5):559-562",
+  "design": "Editorial/narrative review of PCNSL pharmacotherapy, summarizing the (limited) randomized and non-comparative evidence.",
+  "population": "Primary CNS lymphoma (PCNSL), the vast majority of which are DLBCL. Discusses CNS penetration of chemotherapeutic agents and HD-MTX-based regimens.",
+  "key_eligibility": [
+    "Not a trial; reviews which drugs cross the intact blood-brain/blood-CSF barrier - a defining constraint for CNS-directed therapy",
+    "CNS penetration (CSF concentration as surrogate): high-dose cytarabine, temozolomide, and thiotepa reach >100% of plasma; ifosfamide ~30%; high-dose methotrexate <5% but still cytotoxic",
+    "Standard aggressive-lymphoma CHOP-type regimens are inadequate for CNS disease because of poor CNS penetration"
+  ],
+  "outcomes": "No new data (review). Key grounding facts: HD-MTX is the single most important drug in PCNSL (optimally >3 g/m2 at <=2-week intervals, 3-4 h infusion). HD-MTX monotherapy less effective than HD-MTX-based polychemotherapy. Randomized phase 2 (Ferreri 2009): HD-MTX + high-dose cytarabine vs HD-MTX alone gave CR 46% vs 18% (p=0.006) and 3-year PFS 38% vs 21% (p=0.01). Rituximab penetrates CNS poorly (<1% of systemic concentration in leptomeningeal compartment). Thiotepa-based high-dose chemotherapy + ASCT consolidation feasible in younger patients (3-yr PFS ~63-79%). G-PCNSL-SG1: consolidating WBRT gave no survival advantage and increased neurotoxicity.",
+  "grounds_rubric_claims": [
+    "CNS-penetrant drugs are required for CNS lymphoma: high-dose methotrexate, high-dose cytarabine, and thiotepa are the CNS-penetrant backbone (thiotepa and high-dose cytarabine reach >100% of plasma CSF levels; HD-MTX <5% but cytotoxic)",
+    "Standard CHOP-type regimens are inadequate for CNS lymphoma due to poor blood-brain-barrier penetration",
+    "HD-MTX is the most important drug in PCNSL; combining HD-MTX with high-dose cytarabine improves CR and PFS (randomized phase 2)",
+    "Rituximab penetrates the CNS poorly (<1% of systemic concentration reaches the leptomeninges)",
+    "Thiotepa-based conditioning + ASCT is a valid consolidation - supporting the CNS-penetrant drug choices in MARIETTA-type regimens"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "The CSF concentrations (regarded a surrogate marker for CNS penetration) are >100% of the corresponding plasma concentrations for high-dose cytarabine (HDAraC), temozolomide and thiotepa, approximately 30% for ifosfamide and <5%, but still cytotoxic, for high-dose methotrexate (HDMTX).",
+      "supports": "CNS-penetrant drug ranking: high-dose cytarabine, temozolomide, thiotepa >100% plasma; HD-MTX <5% but cytotoxic"
+    },
+    {
+      "quote": "the cyclophosphamide, vincristine, doxorubicine, prednisolone regimen, the current standard chemotherapy for aggressive lymphomas, is not an adequate treatment of PCNSL",
+      "supports": "CHOP-type standard lymphoma chemotherapy is inadequate for CNS lymphoma (poor CNS penetration)"
+    },
+    {
+      "quote": "as a large protein, rituximab poorly penetrates the CNS, with less than 1% of systemic concentration reaching the leptomeningeal compartment",
+      "supports": "Rituximab has poor CNS penetration (<1% of systemic concentration in the leptomeninges)"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "2015 editorial - predates CAR-T era and current regimens; reflects PCNSL (not secondary CNS) but the CNS-penetration pharmacology (HD-MTX/ara-C/thiotepa) generalizes. Opinion piece; author flags the Ferreri 2009 randomized phase 2 monotherapy arm may have used a suboptimal HD-MTX schedule."
+}

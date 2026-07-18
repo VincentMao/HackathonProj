@@ -1,0 +1,40 @@
+{
+  "key": "glofitamab-3L",
+  "title": "Glofitamab for Relapsed or Refractory Diffuse Large B-Cell Lymphoma",
+  "authors_year": "Dickinson et al., 2022",
+  "journal": "New England Journal of Medicine (2022;387:2220-31)",
+  "design": "Phase 2 part of an open-label phase 1-2 trial (NCT03075696); single-arm, fixed-duration glofitamab monotherapy (12 cycles) with obinutuzumab pretreatment. Sponsor F. Hoffmann-La Roche.",
+  "population": "155 patients with R/R DLBCL (NOS), transformed FL, high-grade B-cell lymphoma, or PMBCL who had received >=2 prior lines. Median age 66 (range 21-90); median 3 prior lines (range 2-7); 33% prior CAR-T; 58% primary refractory; 86% refractory to last therapy.",
+  "line": "3L+ (third line and beyond; >=2 prior lines including anti-CD20 and anthracycline)",
+  "key_eligibility": [
+    "Histologically confirmed DLBCL NOS, transformed FL, HGBCL, or PMBCL",
+    "Relapsed after or refractory to >=2 prior lines including >=1 anti-CD20 antibody-containing regimen and >=1 anthracycline-containing regimen",
+    "ECOG 0-1",
+    "Prior CAR-T permitted and included (33% of cohort); primary-refractory NOT excluded (58% primary refractory)"
+  ],
+  "outcomes": "Primary endpoint CR by IRC = 39% (95% CI 32-48). ORR 52% (95% CI 43-60). CR among prior-CAR-T patients 35%. Median time to CR 42 days. CR ongoing at 12 mo in 78%. Median DoCR not reached (95% CI 16.8-NR). Median PFS 4.9 mo; 12-mo PFS 37%. 12-mo OS 50%. Median OS 11.5 mo (investigator). CRS in 63% (grade >=3 in 4%); ICANS-consistent neuro events 8% (grade >=3 in 3%). Grade >=3 AEs 62%; discontinuation for AE 9%.",
+  "outcomes_field_note": "",
+  "grounds_rubric_claims": [
+    "Glofitamab is an approved fixed-duration (12-cycle) monotherapy option for R/R DLBCL at 3L+ (>=2 prior lines)",
+    "Glofitamab retains activity after prior CAR-T (CR 35% in prior-CAR-T subgroup)",
+    "Fixed-duration bispecific: treatment stops at 12 cycles rather than treat-to-progression, unlike epcoritamab/odronextamab",
+    "Requires obinutuzumab pretreatment + step-up dosing for CRS mitigation; CRS mostly low-grade and confined to cycle 1",
+    "Eligibility requires prior anti-CD20 and anthracycline exposure"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "In the phase 2 part of a phase 1-2 study, we enrolled patients with relapsed or refractory DLBCL who had received at least two lines of therapy previously.",
+      "supports": "3L+ line-of-therapy positioning (>=2 prior lines)"
+    },
+    {
+      "quote": "Patients received pretreatment with obinutuzumab to mitigate cytokine release syndrome, followed by fixed-duration glofitamab monotherapy (12 cycles total).",
+      "supports": "Fixed-duration monotherapy design with obinutuzumab pretreatment"
+    },
+    {
+      "quote": "39% (95% confidence interval [CI], 32 to 48) of the patients had a complete response according to independent review. Results were consistent among the 52 patients who had previously received chimeric antigen receptor T-cell therapy (35% of whom had a complete response).",
+      "supports": "Headline CR rate and retained efficacy after prior CAR-T"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Single-arm, no comparator; historical control benchmark of 20% CR. Conducted primarily in Europe/Australia with limited racial diversity. Five fatal AEs were Covid-19-related. Cross-trial comparisons cautioned by authors."
+}

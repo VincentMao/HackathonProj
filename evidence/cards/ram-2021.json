@@ -1,0 +1,39 @@
+{
+  "key": "Ram-2021",
+  "title": "Toxicity and efficacy of CAR T-cell therapy in patients with DLBCL above the age of 70 years compared to younger patients - a matched control multicenter cohort study",
+  "authors_year": "Ram, Grisariu, Shargian-Alon, ... Avivi (2021)",
+  "journal": "Haematologica 2022;107(5):1111-1118",
+  "design": "Retrospective matched-control multicenter cohort (3 Israeli centers); elderly (>=70) vs younger (<70) matched on ECOG PS (0-1 vs 2-3) and LDH (high vs normal)",
+  "population": "R/R DLBCL. 47 patients >=70 underwent apheresis; 41 infused (mean age 76.2) = study cohort, matched to 41 younger (mean 55.4). Commercial tisa-cel (~80%) or axi-cel (~20%). Non-selective real-world referral: 66% poor PS (ECOG 2-3), ~40% high LDH, ~48% progressive disease pre-infusion, ~47% >=3 prior lines.",
+  "key_eligibility": [
+    "Consecutive R/R DLBCL patients >=70 years referred for CD19 CAR-T (study cohort), matched to <70 controls",
+    "No centralized eligibility committee; national infrastructure did not mandate strict PS/organ cutoffs \u2014 enabling a non-selective elderly population",
+    "Only exclusions at screening: ECOG 4 (n=1) and active hepatitis B (n=1); 96% of referred elderly were eligible and apheresed",
+    "Explicitly NO numeric age cap \u2014 age itself not an exclusion"
+  ],
+  "outcomes": "41/47 (87%) infused; 96% of referred elderly eligible for apheresis. Response similar: CR 46% + PR 17% (ORR 63%) elderly vs 78% younger (P=0.337). Toxicity comparable: grade >=3 CRS 9.8% vs 7.3% (P=0.29); grade 3-4 ICANS 2.5% vs 4.9% (P=0.54); overall ICANS 27.5% vs 17.1% (P=0.48); hospital stay 23.4 vs 24.6 days (P=0.55). Non-relapse mortality 0 at 1 and 3 months both groups. Elderly 6-/12-mo PFS 39%/32%; OS 74%/69%. Age and ECOG PS had NO impact on CR, PFS, or OS in multivariate models; only high LDH, non-GCB, bridging, and post-CAR CR state mattered.",
+  "grounds_rubric_claims": [
+    "CAR-T is feasible and effective in selected older adults (>=70); age per se should not preclude CAR-T",
+    "No numeric age cutoff is justified \u2014 outcomes matched younger patients when controlled for PS and LDH",
+    "Logistics/fitness composite (rapid referral-to-infusion, lymphocyte fitness, LDH, PS) drives outcome more than chronological age",
+    "ICANS severity was low here (tisa-cel-predominant); toxicity not increased by age in this cohort, but authors note axi-cel series report higher ICANS in older patients",
+    "Prior vascular disease and dementia did NOT predict ICANS in this cohort"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "outcomes of CAR-T cell therapy are comparable between elderly, geriatric and younger patients, indicating that age as per se should not preclude CAR-T cell administration.",
+      "supports": "No numeric age cutoff; age alone should not exclude CAR-T"
+    },
+    {
+      "quote": "There was no difference between the elderly and the control group in overall ICANS (27.5% vs. 17.1%. respectively, P=0.48) and grade 3-4 ICANS (2.5% vs. 4.9%, respectively, P=0.54).",
+      "supports": "Toxicity (incl. neurotoxicity) not increased by age in this tisa-cel-predominant cohort"
+    },
+    {
+      "quote": "Ideally, a geriatric scoring assessment should be employed and help to establish eligibility criteria for CAR-T cell therapy in this aged group pf patients.",
+      "supports": "Fitness/geriatric assessment (not age) should govern selection"
+    }
+  ],
+  "caveats": "Small (n=41 per arm), retrospective, single-country. Predominantly tisagenlecleucel, which the authors note carries lower ICANS than axi-cel \u2014 so the flat ICANS-by-age finding may not generalize to axi-cel. Possible residual selection: presumably ineligible patients may never have been referred. Matched on ECOG/LDH only; imbalance in ECOG 3 (12% elderly vs 39% younger) and prior autoHCT.",
+  "full_text_available": true,
+  "line": "Haematologica 2022;107(5):1111-1118"
+}

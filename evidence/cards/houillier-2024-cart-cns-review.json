@@ -1,0 +1,36 @@
+{
+  "key": "Houillier-2024-CART-CNS-review",
+  "title": "CAR T-cell Therapy for Central Nervous System Lymphoma",
+  "authors_year": "Houillier C, Choquet S, 2024",
+  "journal": "Current Oncology Reports 2024;26:1521-1529",
+  "design": "Narrative review of published CAR T-cell studies in primary and secondary CNS lymphoma (compiles ~13 primary studies + meta-analyses; predominantly retrospective, non-randomized).",
+  "population": "Highly pretreated primary (PCNSL) and secondary (SCNSL) CNS lymphoma, mostly DLBCL; younger than typical CNSL median age, median 3+ prior lines, variable prior ASCT. Products: axi-cel, tisa-cel, liso-cel, relma-cel, brexu-cel. Pivotal CAR-T DLBCL trials had EXCLUDED CNS involvement due to neurotoxicity fears.",
+  "key_eligibility": [
+    "CNS lymphoma patients were historically EXCLUDED from pivotal CAR-T trials (ZUMA, TRANSFORM, etc.) because of fear of neurotoxicity - this review addresses that evidence gap with off-trial/retrospective data",
+    "Includes both PCNSL and SCNSL; largest series focus on SCNSL because CAR-T is already licensed in SCNSL in routine practice in many countries",
+    "Some studies included patients with prior CNS involvement but no active CNS disease at infusion"
+  ],
+  "outcomes": "Across studies ORR 64-95%, CR 32-67%. 1-year PFS ranged 15-25% (some studies) to >40% (others); e.g. Choquet PCNSL 12-month PFS 43%, Nayak axi-cel median PFS 14.3 mo / OS 26.4 mo. ICANS in 36-68% (grade 3-4 in 4.5-29%); CRS in 58-89% (grade 3-4 in 0-21%) - comparable to systemic DLBCL. Disease control before infusion (CR/PR vs SD/PD) strongly predicted outcome (e.g. Choquet 1-yr relapse-free 79% if CR/PR vs 24% if SD/PD, p=0.02).",
+  "grounds_rubric_claims": [
+    "CAR T-cell therapy is active in secondary CNS DLBCL with response rates approaching systemic DLBCL, supported by non-randomized/retrospective evidence",
+    "Neurotoxicity (ICANS) with CAR-T in CNS lymphoma is not higher than in systemic DLBCL and should not preclude use",
+    "CNS involvement was excluded from pivotal CAR-T trials, so CNS CAR-T evidence is non-randomized (proof-of-concept series, cohorts, meta-analyses)",
+    "Disease control/bridging to achieve response before CAR-T infusion improves outcomes in CNS lymphoma"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "All studies reported high response rates, with overall response rates ranging from 64 to 95% and CR rates ranging from 32 to 67%.",
+      "supports": "CAR-T efficacy in CNS lymphoma: ORR 64-95%, CR 32-67%"
+    },
+    {
+      "quote": "CNS lymphomas have been excluded from such trials partly because of their poor prognosis, but mostly because of the fear of neurotoxicity.",
+      "supports": "Pivotal CAR-T trials excluded CNS lymphoma; evidence base is non-randomized"
+    },
+    {
+      "quote": "the results appeared reassuring in all the studies, with 36 to 68% of ICANS and 4.5 to 29% of grade 3-4 ICANS, which is also close to what is reported in systemic DLBCL",
+      "supports": "Neurotoxicity rates in CNS-lymphoma CAR-T are comparable to systemic DLBCL"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Narrative review; underlying studies mostly retrospective, heterogeneous in populations/products/prior therapy, with limited follow-up. No randomized data for CAR-T in CNS lymphoma. Prognosis after post-CAR-T relapse is poor (median OS ~4.6 mo). Position of CAR-T in the treatment sequence remains undefined."
+}

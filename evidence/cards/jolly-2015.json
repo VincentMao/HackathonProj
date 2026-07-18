@@ -1,0 +1,37 @@
+{
+  "key": "Jolly-2015",
+  "title": "Geriatric Assessment-Identified Deficits in Older Cancer Patients With Normal Performance Status",
+  "authors_year": "Jolly, Deal, Nyrop, Williams, ... Muss (2015)",
+  "journal": "The Oncologist 2015;20:379-385",
+  "design": "Cross-sectional analysis of a prospective registry (Carolina Senior, NCT01137825); brief geriatric assessment vs. Karnofsky performance status",
+  "population": "984 cancer patients aged >=65 (mean 73, range 65-99); analysis subsample of 796 (81%) rated functionally normal (KPS >=80) by BOTH professional and self-report. 74% female, 89% white; 6% lymphoma, 5% leukemia (mostly breast, 54%). Not R/R DLBCL-specific, but the frailty-vs-PS principle is directly transferable.",
+  "key_eligibility": [
+    "English-speaking cancer patients aged >=65 enrolled in Carolina Senior registry",
+    "Completed brief geriatric assessment (KPS + Patient-KPS + multi-domain measures)",
+    "Focus subsample required agreement between professional and patient KPS >=80 (excludes disagreement to isolate GA signal beyond PS)"
+  ],
+  "outcomes": "Among KPS >=80 (functionally normal) patients: 69% had >=1 GA-identified deficit; only ~1/3 had none. 24% had >=3 deficits. Specific deficits: 43% took >=9 medications daily; 25% had >=4 comorbidities; 23% >=1 IADL impairment; 18% Timed Up-and-Go >=14 s (fall/early-death predictor) or unable; 18% >=5% unintentional weight loss; 12% MHI-5 <=76 (poor mental health). Multivariable: each 5-yr age increase OR 1.2 (95% CI 1.06-1.38) for having a deficit; active treatment OR 1.7 (1.13-2.64).",
+  "grounds_rubric_claims": [
+    "ECOG/KPS performance status systematically under-captures frailty; a functionally normal PS score does not exclude clinically meaningful deficits",
+    "Multi-domain geriatric assessment surfaces modifiable/prognostic impairments (polypharmacy, comorbidity, IADL, gait/TUG, weight loss, cognition, mood) that PS misses",
+    "TUG >=14 s and >=5% unintentional weight loss are single deficits with independent prognostic weight even in a PS-normal older patient",
+    "Older age independently raises the odds of hidden deficits, supporting GA over chronological age or PS alone for treatment decisions"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Within this sample of older cancer patients who were rated as functionally normal by KPS, GA identified important deficits that could affect treatment tolerance and outcomes.",
+      "supports": "PS-normal does not equal deficit-free; GA adds information beyond performance status"
+    },
+    {
+      "quote": "Only a third of our functionally normal sample had no GA-identified deficits.",
+      "supports": "Magnitude of PS under-capture: 69% of KPS >=80 patients had at least one deficit"
+    },
+    {
+      "quote": "The odds ratio for each 5-year increase in age was 1.2 (95% CI: 1.06-1.38), suggesting that as age increases, so do the odds of having at least 1 deficit.",
+      "supports": "Age independently predicts hidden frailty deficits beyond performance status"
+    }
+  ],
+  "caveats": "Predominantly breast cancer (54%) and female (74%); only 6% lymphoma. Not treatment-outcome data and not R/R DLBCL or CAR-T specific; grounds the PS-vs-frailty principle, not any lymphoma-specific numeric threshold. Uses KPS (not ECOG) as the PS instrument.",
+  "full_text_available": true,
+  "line": "The Oncologist 2015;20:379-385"
+}

@@ -1,0 +1,42 @@
+{
+  "key": "tafa-len-L-MIND",
+  "title": "Tafasitamab for Patients With Relapsed or Refractory DLBCL: Final 5-Year Efficacy and Safety (L-MIND)",
+  "authors_year": "Duell et al., 2023",
+  "journal": "Haematologica (2024;109(2):553-566)",
+  "design": "Open-label, single-arm, global multicenter phase 2 study (NCT02399085). Final 5-year analysis. Tafasitamab + lenalidomide for up to 12 cycles, then tafasitamab monotherapy until progression. Sponsor MorphoSys AG.",
+  "population": "80 patients (full analysis set) with ASCT-ineligible R/R DLBCL, 1-3 prior systemic therapies. Median age 72 (range 41-86); 50% had 1 prior line, 50% had >=2; 50% IPI 3-5; 18.8% primary refractory (by amended definition); 11.3% prior ASCT.",
+  "line": "2L+ (ASCT-ineligible; 1-3 prior lines; label positions as second-line for transplant-ineligible)",
+  "key_eligibility": [
+    "ASCT-ineligible R/R DLBCL, aged >=18",
+    "1 to 3 prior systemic therapies including >=1 CD20-targeting agent",
+    "ECOG 0-2",
+    "Primary-refractory disease was EXCLUDED per protocol; definition changed during trial (initially no response/progression within 3 mo, amended June 2016 to within 6 mo of prior anti-CD20 regimen), so some early-relapsing patients (3-6 mo) were enrolled -- 18.8% ultimately had primary-refractory disease by the updated definition",
+    "US label: DLBCL NOS including DLBCL arising from low-grade lymphoma, ineligible for ASCT"
+  ],
+  "outcomes": "Best ORR 57.5% (46/80; 95% CI 45.9-68.5); CR rate 41.3% (n=33); PR 16.3%. Median DoR not reached (median follow-up 44.0 mo); plateau after ~12 mo. Median PFS 11.6 mo (95% CI 5.7-45.7). Median OS 33.5 mo (95% CI 18.3-NR). By prior lines: 1 prior line ORR 67.5% (CR 52.5%), median PFS 23.5 mo; >=2 prior lines ORR 47.5% (CR 30.0%), median PFS 7.6 mo. 5-yr OS 72.7% for best-response CR vs 18.3% for PR. Grade >=3 TEAE 64.2%; neutropenia grade >=3 48.1%. AE frequency decreased on tafasitamab monotherapy.",
+  "outcomes_field_note": "",
+  "grounds_rubric_claims": [
+    "Tafa-len (L-MIND) is a standard second-line option specifically for ASCT-INELIGIBLE R/R DLBCL",
+    "Primary-refractory disease was an EXCLUSION criterion in L-MIND (key rubric gate: tafa-len not validated for primary-refractory patients)",
+    "Efficacy is markedly higher at 2L (1 prior line: ORR 67.5%, CR 52.5%) than at 3L+ (>=2 prior lines: ORR 47.5%, CR 30%) -- favors earlier use",
+    "Restricted to 1-3 prior lines; not studied beyond 3 prior lines",
+    "Depth of response (CR) drives long-term survival",
+    "Real-world data show 91% of typical R/R LBCL patients would not have met L-MIND eligibility"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Patients with primary refractory disease were excluded, but because the definition changed while the study was active, some were eligible and included.",
+      "supports": "Primary-refractory exclusion criterion (core rubric gate) and the definitional nuance"
+    },
+    {
+      "quote": "tafasitamab, an anti-CD19 immunotherapy, is used with lenalidomide for patients with autologous stem cell transplant-ineligible relapsed/refractory diffuse large B-cell lymphoma",
+      "supports": "ASCT-ineligible positioning / indication"
+    },
+    {
+      "quote": "Patients who had received only one prior line of therapy had a higher ORR (67.5%, with 52.5% CR and 15.0% PR) compared to patients who had received two or more prior lines of therapy (47.5%, with 30.0% CR and 17.5% PR).",
+      "supports": "Line-of-therapy dependence favoring earlier (2L) use"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Single-arm, small (n=80), no comparator. Primary-refractory definition changed mid-trial, so a minority of primary-refractory (3-6 mo relapse) patients were included. No/minimal prior CAR-T or prior anti-CD19 exposure in cohort; poorly generalizable to post-CAR-T setting (real-world: 91% ineligible for L-MIND)."
+}

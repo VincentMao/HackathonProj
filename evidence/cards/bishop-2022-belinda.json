@@ -1,0 +1,38 @@
+{
+  "key": "Bishop-2022-BELINDA",
+  "title": "Second-Line Tisagenlecleucel or Standard Care in Aggressive B-Cell Lymphoma (BELINDA)",
+  "authors_year": "Bishop MR, Dickinson M, Purtill D, et al. 2022",
+  "journal": "N Engl J Med 2022;386:629-639 (NCT03570892)",
+  "design": "International phase 3, randomized (1:1) trial. Tisagenlecleucel (tisa-cel) with optional platinum-based bridging chemotherapy vs standard care (platinum salvage chemoimmunotherapy + high-dose therapy/autologous HSCT in responders). Crossover to tisa-cel permitted after confirmed SD/PD at/after week 12. Primary endpoint: event-free survival (time from randomization to SD or PD at/after week 12 assessment, or death). NEGATIVE trial.",
+  "population": "Adults with aggressive B-cell lymphoma refractory to (no CR) or relapsing within 12 months after first-line anti-CD20 + anthracycline therapy; ASCT-eligible, ECOG 0-1. N=322 (tisa-cel 162 vs standard care 160). 66% refractory to first-line, 19.3% relapse <6 mo.",
+  "line": "Second line (2L) R/R aggressive B-cell lymphoma",
+  "key_eligibility": [
+    "Same high-risk 2L population as ZUMA-7 (refractory or relapse \u226412 mo, transplant-eligible) \u2014 yet the result was OPPOSITE (negative), so BELINDA does NOT support tisa-cel in 2L.",
+    "Optional bridging chemotherapy allowed and heavily used; median time from leukapheresis to tisa-cel infusion was 52 days (long manufacturing/logistics interval).",
+    "EFS endpoint clock started at week 12 and progressive disease before then did not count as an event, differing from ZUMA-7's definition \u2014 a design factor implicated in the null result.",
+    "Only 32.5% of standard-care patients received ASCT."
+  ],
+  "outcomes": "Median EFS 3.0 months in BOTH groups; HR for event or death 1.07 (95% CI 0.82-1.40), P=0.61 \u2014 no benefit. Response at/after week 12: 46.3% (tisa-cel) vs 42.5% (standard care); CR 28.4% vs 27.5%. More PD at week 6 (preinfusion) in tisa-cel arm (25.9% vs 13.8%). CRS in 61.3% of infused patients (grade \u22653 in 5.2%); grade \u22653 neurologic events 1.9%. Conclusion: tisa-cel NOT superior to standard salvage therapy in 2L.",
+  "grounds_rubric_claims": [
+    "Tisagenlecleucel (tisa-cel) is NOT indicated in the second line \u2014 BELINDA was negative (EFS HR 1.07, P=0.61)",
+    "2L CAR-T benefit is product/design-specific: unlike axi-cel (ZUMA-7) and liso-cel (TRANSFORM), tisa-cel did not beat salvage/ASCT",
+    "In an eligible 2L R/R LBCL patient, tisa-cel should not substitute for axi-cel/liso-cel or for the salvage-ASCT pathway"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Tisagenlecleucel was not superior to standard salvage therapy in this trial.",
+      "supports": "Core negative conclusion: tisa-cel does not beat standard care in 2L"
+    },
+    {
+      "quote": "The median event-free survival in both groups was 3.0 months (hazard ratio for event or death in the tisagenlecleucel group, 1.07; 95% confidence interval, 0.82 to 1.40; P = 0.61).",
+      "supports": "Primary endpoint numeric result showing no EFS benefit for tisa-cel in 2L"
+    },
+    {
+      "quote": "A total of 25.9% of the patients in the tisagenlecleucel group had lymphoma progression at week 6, as compared with 13.8% of those in the standard-care group.",
+      "supports": "Longer manufacturing/time-to-infusion and preinfusion progression contributed to the null result \u2014 mechanistic contrast with axi-cel"
+    }
+  ],
+  "caveats": "Negative trial; do not misread as evidence FOR 2L tisa-cel. The null result is attributed partly to trial design (week-12 EFS clock, long 52-day median time-to-infusion, optional bridging masking benefit) rather than proving CAR-T is ineffective in 2L \u2014 axi-cel (ZUMA-7) and liso-cel (TRANSFORM) were positive in the same setting. Tisa-cel retains approval only for 3L+ DLBCL.",
+  "full_text_available": true,
+  "line_field_note": "2L"
+}

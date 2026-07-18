@@ -1,0 +1,40 @@
+{
+  "key": "El-2024-post-CAR-T-review",
+  "title": "Therapeutic Options for Large B-Cell Lymphoma Relapsing After CD19-Directed CAR T-Cell Therapy",
+  "authors_year": "El Warrak S, Kharfan-Dabaja MA, Iqbal M, Hamadani M, Chavez J, Mohty R. 2024",
+  "journal": "Bone Marrow Transplantation 2024;59:162-170",
+  "design": "Narrative review synthesizing observational/retrospective studies and early-phase trials of salvage options after CD19 CAR-T failure in LBCL: CD19-directed agents (tafasitamab-lenalidomide, loncastuximab), polatuzumab, CD20xCD3 bispecific antibodies (epcoritamab, glofitamab, mosunetuzumab, others), allogeneic HCT, and re-treatment/next-generation CAR-T. Includes a proposed post-CAR-T treatment algorithm.",
+  "population": "Adults with R/R LBCL who relapse or progress after CD19-directed CAR-T (axi-cel, tisa-cel, liso-cel). Post-CAR-T failure carries a poor prognosis (median OS ~6 months).",
+  "line": "Post-CAR-T relapse (3L+ / after cellular therapy)",
+  "key_eligibility": [
+    "Frames the population downstream of failed CAR-T \u2014 a distinct decision node where allo-HCT and bispecifics enter.",
+    "Allo-HCT is RESERVED for patients who relapse after CAR-T, are otherwise transplant-eligible, and achieve an objective response (CR or at least PR) to subsequent therapy.",
+    "Attainment of CR (or at least PR) prior to allografting is an explicit prerequisite for durable remission \u2014 mirrors PARMA-era chemosensitivity principle.",
+    "CD19-directed agents (tafa-len, loncastuximab) show markedly reduced efficacy after CD19 CAR-T failure (ORR ~17-34%, often CD19 antigen loss).",
+    "CD20xCD3 bispecifics (epcoritamab, glofitamab) retain meaningful activity post-CAR-T and can serve as a bridge to allo-HCT."
+  ],
+  "outcomes": "Post-CAR-T failure median OS ~6 months. CD19 agents post-CAR-T: tafa-len/loncaT ORR ~17-34%, CR ~5-17%, short PFS. Bispecifics post-CAR-T: epcoritamab ORR 54.1%/CR 34.4% in prior-CAR-T subgroup; glofitamab CR 35% in prior-CAR-T. Allo-HCT after CAR-T failure (Zurko et al, N=88): 1-year OS 59%, PFS 45%, NRM 22%; disease status CR in 51% at transplant. Fried et al (N=39): 2-year OS 45%, PFS 31%, NRM 43%. Durable remission achievable only in selected, chemo/immuno-responsive, fit (median age <65) patients.",
+  "grounds_rubric_claims": [
+    "Allogeneic HCT is reserved for LBCL patients who relapse after CAR-T (not used before/instead of CAR-T)",
+    "Allo-HCT after CAR-T requires achieving a CR (or at least PR) to subsequent therapy as a prerequisite for durable benefit",
+    "CD19-directed agents lose efficacy after CD19 CAR-T failure (antigen loss/downregulation); non-CD19 bispecifics are preferred and can bridge to allo-HCT",
+    "Post-CAR-T relapse is a poor-prognosis state (median OS ~6 months) warranting clinical-trial enrollment when available"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Prior to the approval and widespread use of CAR T in R/R LBCL, allo-HCT was generally reserved for patients who relapsed after an auto-HCT and/or had failed multiple prior lines of therapy.",
+      "supports": "Allo-HCT is positioned as a later-line, post-cellular-therapy option \u2014 reserved, not front-loaded"
+    },
+    {
+      "quote": "One of the main limitations for allo-HCT is the prerequisite of achieving disease control in the form of CR or at least PR.",
+      "supports": "Chemosensitivity/response prerequisite for allo-HCT after CAR-T failure"
+    },
+    {
+      "quote": "relapsing after CAR Ts or failure to respond is generally associated with a poor prognosis with an anticipated median overall survival (OS) of approximately 6 months, at best",
+      "supports": "Post-CAR-T failure is a poor-prognosis decision node (median OS ~6 months)"
+    }
+  ],
+  "caveats": "Review-level (not a controlled trial); allo-HCT and bispecific data are largely retrospective/single-arm with selection bias toward younger, fitter, response-achieving patients (median age <65). No head-to-head data define optimal sequencing; authors recommend clinical-trial enrollment first, then bispecific/ADC/mAb (ideally targeting a non-CD19 antigen) with allo-HCT consolidation in eligible responders.",
+  "full_text_available": true,
+  "line_field_note": "post-CAR-T"
+}

@@ -1,0 +1,37 @@
+{
+  "key": "Alaggio-2022-WHO-HAEM5",
+  "title": "The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Lymphoid Neoplasms (WHO-HAEM5)",
+  "authors_year": "Alaggio R, et al., 2022",
+  "journal": "Leukemia 2022;36:1720-1748",
+  "design": "Consensus classification / expert review article (WHO Blue Book 5th edition overview). Not a clinical trial; defines diagnostic entities and criteria.",
+  "population": "Not applicable (classification of lymphoid neoplasm entities). Relevant entity: aggressive large B-cell lymphomas, specifically DLBCL/high-grade B-cell lymphoma with MYC and BCL2 rearrangements (\"double-hit\").",
+  "key_eligibility": [
+    "Defines DLBCL/HGBL-MYC/BCL2 by the presence of DUAL rearrangements of MYC AND BCL2 (detected as gene rearrangements, e.g. by FISH break-apart), not amplification or copy-number gain",
+    "MYC/BCL6 dual-rearranged cases are explicitly EXCLUDED from the DLBCL/HGBL-MYC/BCL2 entity and reclassified as DLBCL,NOS or HGBL,NOS by morphology",
+    "Morphology may be large, intermediate, or blastoid cells; entity is defined genetically, not morphologically",
+    "HGBL-11q (formerly Burkitt-like with 11q aberration) is MYC-rearrangement-NEGATIVE and defined by the 11q gain/loss pattern; distinct from double-hit"
+  ],
+  "outcomes": "No efficacy outcomes (classification document). Key definitional point: the WHO-HAEM4R entity 'HGBL with dual rearrangements of MYC and BCL2 and/or BCL6' was reframed in WHO-HAEM5 to 'DLBCL/HGBL with MYC and BCL2 rearrangements,' narrowing double-hit to MYC+BCL2 rearranged only (BCL6 dual-hit removed). Notably 54% of HGBL,NOS carry a double-hit gene-expression signature (DHITsig) despite LACKING the rearrangements, underscoring that the entity requires demonstrated rearrangement.",
+  "grounds_rubric_claims": [
+    "WHO-HAEM5 double-hit lymphoma = MYC + BCL2 rearrangement demonstrated by FISH (gene rearrangement), NOT MYC amplification or copy-number gain",
+    "MYC/BCL6 double-rearranged cases are no longer classified as double-hit under WHO-HAEM5",
+    "Double-hit status is defined genetically and is morphology-independent (large, intermediate, or blastoid all qualify if MYC+BCL2 rearranged)",
+    "A double-hit gene-expression signature can exist without rearrangement (HGBL,NOS) and does NOT meet the diagnostic entity definition"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "the WHO-HAEM5 renames the entity diffuse large B-cell lymphoma/high-grade B-cell lymphoma with MYC and BCL2 rearrangements (DLBCL/HGBL-MYC/BCL2) to encompass tumours defined by the presence of dual MYC and BCL2 rearrangements that may be composed of large or intermediate or blastoid cells",
+      "supports": "Double-hit entity is defined by dual MYC AND BCL2 rearrangements (not amplification), independent of morphology"
+    },
+    {
+      "quote": "lymphoid neoplasms with dual MYC and BCL6 rearrangements represent a more diverse spectrum... these cases have been excluded from the DLBCL/HGBL-MYC/BCL2 entity and are now classified either as a subtype of DLBCL, NOS or HGBL, NOS",
+      "supports": "MYC/BCL6 dual-rearranged lymphomas are excluded from the double-hit entity in WHO-HAEM5"
+    },
+    {
+      "quote": "gene expression profiling showed that 54% of HGBL, NOS harbour the \"double hit\" signature (DHITsig) characteristic of LBCL/HGBL with MYC/BCL2 despite lacking rearrangements of these genes",
+      "supports": "The double-hit gene-expression signature is distinct from the rearrangement-defined entity; diagnosis requires demonstrated MYC+BCL2 rearrangement"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Classification/consensus document, not comparative evidence. Does not state a specific FISH probe protocol; the point is that the entity is defined by rearrangement of MYC and BCL2, which in practice is assessed by break-apart FISH. Text does not explicitly use the word 'amplification' to contrast; the grounding is that 'rearrangement' (not gain/amplification) defines the entity."
+}

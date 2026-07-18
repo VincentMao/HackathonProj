@@ -1,0 +1,43 @@
+{
+  "key": "Ferreri-2021-MARIETTA",
+  "title": "MATRix-RICE therapy and autologous haematopoietic stem-cell transplantation in diffuse large B-cell lymphoma with secondary CNS involvement (MARIETTA)",
+  "authors_year": "Ferreri AJM, et al., 2021",
+  "journal": "Lancet Haematology 2021;8:e110-21",
+  "design": "International, single-arm, phase 2 trial; 24 hospitals in Italy, UK, Netherlands, Switzerland (IELSG). Modified intention-to-treat analysis. NCT02329080.",
+  "population": "Adults 18-70 years with histologically proven DLBCL and secondary CNS involvement (brain, meninges, cranial nerves, eyes, spinal cord) either at initial diagnosis (concomitant with systemic disease) or at relapse; ECOG PS <=3. 79 enrolled, 75 assessable; median age 58. 32 (43%) CNS at presentation, 43 registered at relapse; 20/43 (47%) systemic disease refractory to prior line. Regimen: 3x MATRix (rituximab, high-dose methotrexate 3.5 g/m2, cytarabine, thiotepa) then 3x RICE, then carmustine-thiotepa conditioned autologous HSCT; intrathecal chemo in all.",
+  "key_eligibility": [
+    "Double-hit and triple-hit lymphoma patients were ELIGIBLE (explicitly included), as were high-grade transformations from indolent lymphoma",
+    "No previous treatment with high-dose methotrexate allowed (HD-MTX-naive required)",
+    "Primary CNS lymphoma EXCLUDED (this is a secondary-CNS trial); also excluded prior organ transplant/immunosuppression, HIV",
+    "Any prior systemic-lymphoma therapy allowed except HD-MTX or prior autologous/allogeneic HSCT",
+    "Both untreated (CNS at diagnosis) and relapsed patients included"
+  ],
+  "outcomes": "Primary endpoint MET: 1-year PFS 58% (95% CI 55-61) for whole assessable population (42/75 progression-free at 1 yr). ORR after MATRix-RICE 65% (95% CI 54-76), CR 39%. End-of-programme ORR 61% (CR 55%), median DOR 26 months. 37 patients received autologous HSCT. 2-year OS 46% (95% CI 39-53) overall, 83% for transplanted. Subgroup: 2-year PFS 71% for CNS-at-initial-diagnosis vs 28% for CNS-at-relapse (p=0.0031). Grade 3-4 toxicity mainly haematologic (neutropenia 61%, thrombocytopenia 60%, anaemia 35%); treatment-related mortality 5% (4 Gram-negative sepsis deaths).",
+  "grounds_rubric_claims": [
+    "MARIETTA (MATRix-RICE + autologous HSCT) is the largest prospective trial and reference regimen for secondary CNS lymphoma in DLBCL",
+    "Secondary CNS lymphoma treatment uses CNS-penetrant drugs: high-dose methotrexate, high-dose cytarabine, and thiotepa (MATRix), plus thiotepa-based conditioning",
+    "Double-hit/triple-hit DLBCL patients are eligible for MARIETTA-type intensive CNS-directed therapy",
+    "Outcomes differ by timing: CNS involvement at initial diagnosis has substantially better PFS than CNS relapse",
+    "Intrathecal chemotherapy is a standard component and was associated with improved PFS"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Patients with high-grade transformation from indolent lymphoma and patients with double-hit or triple-hit lymphoma were eligible.",
+      "supports": "Double-hit/triple-hit DLBCL with secondary CNS involvement were explicitly eligible for MATRix-RICE + autologous HSCT"
+    },
+    {
+      "quote": "At 1 year from enrolment the primary endpoint was met, 42 patients were progression free (progression-free survival 58%; 95% CI 55-61).",
+      "supports": "Headline efficacy: 1-year PFS 58% in secondary CNS DLBCL"
+    },
+    {
+      "quote": "the main inclusion criteria were: histologically proven diagnosis of diffuse large B-cell lymphoma; CNS involvement... at presentation... or at relapse... and no previous treatment with high-dose methotrexate",
+      "supports": "Key eligibility: DLBCL with secondary CNS involvement, HD-MTX-naive; PCNSL excluded"
+    },
+    {
+      "quote": "patients with CNS localisation at initial diagnosis had a significantly improved progression-free survival compared with patients with CNS involvement at relapse, with a 2-year progression free survival of 71%... and 28%... (p=0.0031)",
+      "supports": "Timing of CNS involvement (diagnosis vs relapse) is prognostic for MARIETTA outcomes"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Single-arm phase 2 (no randomized comparator). Very poor-prognosis population; salvage after MARIETTA failure was futile (median survival ~1 month post-progression). Excludes PCNSL and HIV/immunosuppressed. Only 37/75 reached transplant, so intent-to-treat outcomes are lower than transplanted-subgroup figures."
+}

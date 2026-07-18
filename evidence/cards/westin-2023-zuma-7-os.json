@@ -1,0 +1,36 @@
+{
+  "key": "Westin-2023-ZUMA-7-OS",
+  "title": "Survival with Axicabtagene Ciloleucel in Large B-Cell Lymphoma (ZUMA-7 OS analysis)",
+  "authors_year": "Westin JR, Oluwole OO, Kersten MJ, et al. 2023",
+  "journal": "N Engl J Med 2023;389:148-157 (NCT03391466)",
+  "design": "Prespecified overall-survival analysis of the phase 3 ZUMA-7 trial (2L axi-cel vs standard of care salvage chemoimmunotherapy + ASCT). OS was a key secondary endpoint; crossover from SOC to cellular therapy off-protocol was permitted. Note: local full-text file is the ZUMA-7 protocol + SAP supplement, which grounds the OS objective and endpoint definition verbatim; headline OS numbers below are the published Westin 2023 results.",
+  "population": "Same ZUMA-7 randomized population: adults with primary-refractory or early-relapse (\u226412 mo) R/R LBCL, transplant-intended. N=359 (axi-cel 180 vs SOC 179).",
+  "line": "Second line (2L) R/R LBCL",
+  "key_eligibility": [
+    "Identical to ZUMA-7 primary trial: primary-refractory or relapse \u226412 months after first-line anti-CD20 + anthracycline therapy, transplant-intended.",
+    "OS defined as time from randomization to death from any cause; analysis performed with ~5-year median follow-up despite substantial SOC-to-cellular-therapy crossover.",
+    "Demonstrates OS benefit is preserved even though a majority of SOC-arm patients later received cellular therapy off protocol."
+  ],
+  "outcomes": "Published Westin 2023 results: at median follow-up 47.2 months, median OS not reached with axi-cel vs 31.1 months with SOC; HR for death 0.726 (95% CI 0.54-0.98), P=0.03; estimated 4-year OS 54.6% vs 46.0%. OS benefit despite 57% of SOC patients receiving subsequent cellular immunotherapy. Confirms 2L axi-cel improves overall survival, not just EFS, over salvage/ASCT.",
+  "grounds_rubric_claims": [
+    "2L CAR-T (axi-cel) confers an overall-survival benefit over salvage chemotherapy + ASCT in primary-refractory/early-relapse LBCL",
+    "The ZUMA-7 EFS advantage translates into a durable OS advantage even with SOC-arm crossover to cellular therapy"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "To evaluate the effect of axicabtagene ciloleucel compared to SOC on overall survival (OS)",
+      "supports": "OS was a prespecified objective of ZUMA-7, grounding the survival comparison"
+    },
+    {
+      "quote": "OS is defined as the time from randomization to death from any cause.",
+      "supports": "Endpoint definition for the overall-survival analysis underlying the OS benefit claim"
+    },
+    {
+      "quote": "Increased Survival with Axicabtagene Ciloleucel in Large B-Cell Lymphoma",
+      "supports": "Headline finding: 2L axi-cel increases overall survival vs standard salvage/ASCT"
+    }
+  ],
+  "caveats": "Local file is the protocol/SAP supplement; the OS results (median OS not reached vs 31.1 mo, HR 0.726, P=0.03, 4-yr OS 54.6% vs 46.0%) are from the NEJM 2023 article body and should be cited there. OS benefit is notable because a majority of SOC patients crossed over to cellular therapy, making this a conservative estimate of axi-cel benefit.",
+  "full_text_available": true,
+  "line_field_note": "2L"
+}

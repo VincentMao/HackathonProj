@@ -1,0 +1,37 @@
+{
+  "key": "Takigawa-2024-CART-isolated-SCNS-case",
+  "title": "A case of successful CAR-T cell therapy for early isolated CNS recurrence of DLBCL with persistent CAR-T cells",
+  "authors_year": "Takigawa K, et al., 2024",
+  "journal": "Blood Cell Therapy (APBMT) 2024",
+  "design": "Single case report (n=1), non-randomized.",
+  "population": "66-year-old man with non-GCB DLBCL (Ann Arbor stage IV; IPI 2; CNS-IPI intermediate). Tumor immunophenotype CD10-, non-GCB (CD10-/BCL6-/MUM1+); positive for BCL2 and MYC by IHC. Achieved CR after 6x R-CHOP, then isolated CNS relapse (leptomeningeal, CSF B-cells 51/uL) 3 months later. Received 7 courses high-dose methotrexate + intrathecal MTX (partial response), then liso-cel CAR-T as second-line.",
+  "key_eligibility": [
+    "Isolated secondary CNS relapse of DLBCL (leptomeningeal/CSF disease; no systemic or radiographic parenchymal disease)",
+    "Early relapse (<1 year) after R-CHOP - rationale that ASCT would give only temporary benefit, favoring CAR-T",
+    "Liso-cel used as approved second-line therapy for early relapsed/refractory large B-cell lymphoma; tumor MYC+/BCL2+ by IHC (not stated as FISH-confirmed double-hit)"
+  ],
+  "outcomes": "Second CR achieved after liso-cel; CSF CR by day 18 with resolution of CNS symptoms, ongoing CR to day 120. CRS grade 2 (treated with tocilizumab); NO ICANS. Prolonged pancytopenia (bone marrow failure) recovered with G-CSF + eltrombopag. CAR-T dynamics: peripheral blood CAR-T 25% (d11), 8% (d18), 0.3% (d90); 46.3% CAR-T detected in CSF on day 18 - demonstrating CAR-T trafficking to meningeal disease. Cites Cook meta-analysis (128 pts; ORR 64% overall, 57% SCNSL; ICANS 48%, grade 3-4 26%).",
+  "grounds_rubric_claims": [
+    "CAR T-cell therapy (liso-cel) can be effective and tolerable in isolated secondary CNS DLBCL relapse (single-case, non-randomized evidence)",
+    "Secondary CNS lymphoma requires CNS-penetrant drugs; HD-MTX (with intrathecal MTX) is used before/around CAR-T",
+    "CAR-T cells traffic across the blood-brain barrier into CSF/meningeal disease (46.3% CAR-T in CSF at day 18)",
+    "In early (<1 yr) post-R-CHOP CNS relapse, CAR-T may be preferable to ASCT (which offers only temporary benefit)",
+    "CRS can be manageable (grade 2, tocilizumab) with absent ICANS even in CNS disease"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "This case is the first to validate the efficacy and safety of CAR-T cell therapy for isolated secondary CNS lymphoma in clinical practice.",
+      "supports": "Single-case evidence for CAR-T efficacy/safety in isolated secondary CNS DLBCL"
+    },
+    {
+      "quote": "we detected 46.3% of CAR-T cells in the CSF (2/uL) on day 18, suggesting that these CAR-T cells can migrate directly to meningeal lesions of DLBCL",
+      "supports": "CAR-T cells traffic into CSF/meningeal CNS disease"
+    },
+    {
+      "quote": "Secondary central nervous system (CNS) lymphomas typically require CNS-penetrating drugs; however, the available agents are limited with temporary effects and poor outcomes.",
+      "supports": "Rationale for CNS-penetrant drugs in secondary CNS lymphoma and unmet need motivating CAR-T"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "n=1 case report - lowest level of evidence, non-randomized, no comparator, short follow-up (CR to ~day 120). MYC/BCL2 were positive by immunohistochemistry only (double-expressor); FISH double-hit status not reported. OCR-garbled source text but clinical facts are legible."
+}

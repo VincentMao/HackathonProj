@@ -1,0 +1,42 @@
+{
+  "key": "epcoritamab-EPCORE-NHL1",
+  "title": "Epcoritamab, a Novel Subcutaneous CD3xCD20 Bispecific T-Cell-Engaging Antibody, in Relapsed or Refractory Large B-Cell Lymphoma: Dose Expansion (EPCORE NHL-1)",
+  "authors_year": "Thieblemont et al., 2023",
+  "journal": "Journal of Clinical Oncology (2023;41(12):2238-2247)",
+  "design": "Phase 1/2, single-arm, multicenter, open-label dose-expansion cohort (EPCORE NHL-1; NCT03625037). Subcutaneous epcoritamab treat-to-progression with step-up dosing; 48 mg full dose. No B-cell-depleting pretreatment; corticosteroid CRS prophylaxis. Sponsors Genmab/AbbVie. Basis for 3L+ accelerated approval.",
+  "population": "157 patients with R/R CD20+ LBCL and >=2 prior lines. Median age 64 (range 20-83); median 3 prior lines (range 2-11); 61.1% primary refractory; 38.9% prior CAR-T (75.4% of those refractory to CAR-T); 19.7% prior ASCT; 88.5% DLBCL.",
+  "line": "3L+ (>=2 prior lines including anti-CD20; prior ASCT failure or ineligibility required)",
+  "key_eligibility": [
+    "Age >=18, CD20+ DLBCL or other aggressive NHL (PMBCL, HGBCL, FL grade 3B)",
+    ">=2 prior lines of systemic therapy including >=1 anti-CD20-containing regimen",
+    "Prior failure of OR ineligibility for autologous stem-cell transplantation",
+    "Prior CAR-T permitted and included (38.9%); primary-refractory NOT excluded (61.1% of cohort)",
+    "ECOG 0-2; no minimum life expectancy or leukocyte count required"
+  ],
+  "outcomes": "Primary endpoint ORR by IRC = 63.1% (95% CI 55.0-70.6); CR rate 38.9% (95% CI 31.2-46.9). Median DoR 12.0 mo (among complete responders: not reached; 88.7% of CRs in response at 6 and 9 mo). Median time to response 1.4 mo; time to CR 2.7 mo. Median PFS 4.4 mo (95% CI 3.0-7.9); PFS not reached in complete responders. Median OS not reached. MRD-negative 45.8%. Prior-CAR-T subgroup (n=61): ORR 54.1%, CR 34.4%. Primary-refractory (n=96): ORR 55.2%, CR 30.2%. CRS 49.7% (grade 1-2 47.1%, grade 3 2.5%, no grade 4/5); ICANS 6.4% with one fatal event; grade >=3 AEs 61.1%; discontinuation for AE 7.6%.",
+  "outcomes_field_note": "",
+  "grounds_rubric_claims": [
+    "Epcoritamab monotherapy is an approved 3L+ option for R/R LBCL (>=2 prior lines) -- EPCORE NHL-1 is the approval basis",
+    "Subcutaneous, treat-to-progression bispecific (contrast with fixed-duration glofitamab)",
+    "Requires prior ASCT failure or ineligibility and prior anti-CD20 exposure",
+    "Retains activity after prior CAR-T (ORR 54%, CR 34%) and in primary-refractory disease (ORR 55%, CR 30%; both included, not excluded)",
+    "CRS is mostly low grade (grade 3 2.5%) with corticosteroid prophylaxis and 24-h monitoring at first full dose; one fatal ICANS event",
+    "Depth of response matters: CR-vs-nonresponder PFS HR 0.11"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "adults with relapsed or refractory CD20+ large B-cell lymphoma and at least two prior therapy lines (including anti-CD20 therapies) received subcutaneous epcoritamab in 28-day cycles... until disease progression or unacceptable toxicity.",
+      "supports": "3L+ line positioning and treat-to-progression (non-fixed-duration) design"
+    },
+    {
+      "quote": "the overall response rate was 63.1% (95% CI, 55.0 to 70.6) and the complete response rate was 38.9% (95% CI, 31.2 to 46.9).",
+      "supports": "Headline ORR and CR (approval-basis efficacy)"
+    },
+    {
+      "quote": "In patients with primary refractory disease (n = 96), the ORR was 55.2% and the CR rate was 30.2%. In patients who received prior CAR T-cell therapy (n = 61), the ORR was 54.1% and the CR rate was 34.4%.",
+      "supports": "Activity in primary-refractory and post-CAR-T subgroups (both included, unlike L-MIND)"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Single-arm, no control group; median follow-up only 10.7 mo. One fatal ICANS event (with confounders). First full dose requires 24-h inpatient monitoring. Regional ORR differences driven by CAR-T-exposure proportions."
+}

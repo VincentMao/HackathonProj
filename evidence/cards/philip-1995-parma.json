@@ -1,0 +1,39 @@
+{
+  "key": "Philip-1995-PARMA",
+  "title": "Autologous Bone Marrow Transplantation as Compared with Salvage Chemotherapy in Relapses of Chemotherapy-Sensitive Non-Hodgkin's Lymphoma (PARMA)",
+  "authors_year": "Philip T, Guglielmi C, Hagenbeek A, et al. 1995",
+  "journal": "N Engl J Med 1995;333:1540-1545",
+  "design": "Prospective, multicenter, randomized trial. All 215 relapsed patients received 2 courses of DHAP salvage chemotherapy; the 109 chemosensitivity-confirmed responders were randomized to high-dose chemotherapy (BEAC) + autologous bone marrow transplantation (\u00b1 involved-field RT) vs 4 further courses of DHAP (conventional treatment). Primary comparison: event-free and overall survival. The foundational trial establishing ASCT for chemosensitive relapsed aggressive NHL.",
+  "population": "Adults 18-60 years with intermediate- or high-grade NHL in first (n=188) or second (n=27) relapse, all with prior CR to a doxorubicin-containing first-line regimen. Only chemosensitive relapses (CR/PR to 2 courses of DHAP) were randomized (N=109; transplant 55 vs conventional 54).",
+  "line": "Relapsed aggressive NHL (historical 2L salvage/ASCT paradigm)",
+  "key_eligibility": [
+    "CHEMOSENSITIVITY IS A PREREQUISITE: only patients responding (CR/PR) to 2 courses of DHAP salvage were randomized. 90 non-responders were excluded before randomization and had markedly worse survival (11% at 5 years).",
+    "Required prior doxorubicin (anthracycline)-containing regimen with a documented complete response to first-line therapy.",
+    "EXCLUDED patients with CNS or bone marrow involvement at relapse.",
+    "Age ceiling ~60 years (ASCT restricted to younger/fit patients).",
+    "Establishes that ASCT benefit is confined to chemosensitive disease \u2014 chemorefractory relapse does not benefit and needs an alternative (now CAR-T)."
+  ],
+  "outcomes": "At median 63-month follow-up: 5-year event-free survival 46% (transplant) vs 12% (conventional), P=0.001; 5-year overall survival 53% vs 32%, P=0.038. Response rate 84% (ASCT) vs 44% (chemo). Chemorefractory (DHAP-nonresponder) patients had only 11% 5-year survival (P<0.001 vs randomized). Toxic-death rate 6% in transplant arm. Establishes salvage-chemo-then-ASCT as standard for chemosensitive relapsed aggressive NHL.",
+  "grounds_rubric_claims": [
+    "ASCT for relapsed aggressive B-cell lymphoma requires demonstrated chemosensitivity (response to salvage chemotherapy) as a prerequisite",
+    "Chemorefractory relapse does NOT benefit from ASCT and needs an alternative modality (the gap CAR-T fills)",
+    "Historical standard of care for chemosensitive relapse = salvage chemoimmunotherapy followed by high-dose therapy + autologous transplant (the SOC comparator arm in ZUMA-7/BELINDA/TRANSFORM)"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Patients with complete or partial responses were considered to have relapses of chemotherapy-sensitive lymphoma and were eligible for random assignment to one of the treatment groups.",
+      "supports": "Chemosensitivity (response to salvage DHAP) is the gating eligibility criterion for ASCT randomization"
+    },
+    {
+      "quote": "At five years, the rate of event-free survival was 46 percent in the transplantation group and 12 percent in the group receiving chemotherapy without transplantation (P = 0.001), and the rate of overall survival was 53 and 32 percent, respectively (P = 0.038).",
+      "supports": "ASCT improves EFS and OS over salvage chemotherapy in chemosensitive relapsed aggressive NHL"
+    },
+    {
+      "quote": "the overall survival at five years in the group of 109 randomized patients was 42 percent... and 11 percent in the group of 90 patients without initial responses to chemotherapy (P < 0.001).",
+      "supports": "Chemorefractory (salvage-nonresponsive) patients derive minimal benefit \u2014 ASCT is not appropriate without chemosensitivity"
+    }
+  ],
+  "caveats": "1995 trial predating rituximab, PET staging, and CAR-T; conducted with autologous bone marrow (not peripheral blood stem cells) and included some indolent histologies later reclassified. Its enduring rubric relevance is the principle that ASCT requires chemosensitivity \u2014 CORAL and later data show <12-month/refractory relapse responds poorly to salvage, which is precisely the population now directed to 2L CAR-T per ZUMA-7.",
+  "full_text_available": true,
+  "line_field_note": "2L-historical"
+}
