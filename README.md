@@ -10,17 +10,16 @@ _TODO: A short paragraph on the problem this project solves and the approach._
 
 ## Data
 
-The `data/` directory contains a synthetic (non-PHI) dataset:
+The `data/synthetic-ambient-fhir-25/` directory contains a synthetic (non-PHI) dataset — safe to commit, no real patient data:
 
 | File | Description |
 |------|-------------|
-| `data/synthetic-ambient-fhir-25.zip` | Synthetic ambient FHIR records (~1 MB, 25 samples). Safe to commit — no real patient data. |
-
-Unzip it locally before use:
-
-```bash
-unzip data/synthetic-ambient-fhir-25.zip -d data/synthetic-ambient-fhir-25
-```
+| `synthetic-ambient-fhir-25.json` | Full FHIR bundle (JSON). |
+| `synthetic-ambient-fhir-25.jsonl` | Same records, one JSON object per line (JSONL). |
+| `schema.json` | Schema describing the record structure. |
+| `summary.json` | Summary/stats for the dataset. |
+| `index.html` | Standalone HTML viewer for browsing the records. |
+| `README.md` | Notes about how the dataset was generated. |
 
 ## Getting started
 
