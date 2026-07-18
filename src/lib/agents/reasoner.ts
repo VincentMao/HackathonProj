@@ -65,9 +65,11 @@ function system(rules: RuleTable): string {
     "unless a rule is a hard exclusion. Every rationale.ref and every depends_on entry MUST be 'chart.<field>' " +
     "or 'visit.<signalKey>'. Do not put age in depends_on when fitness/logistics are the real drivers. " +
     "Weigh the whole chart — organ function (e.g. cardiac LVEF vs anthracycline exposure), peripheral neuropathy " +
-    "(vincristine/polatuzumab), relapse timing and chemosensitivity — against the rules. Include only the most " +
-    "relevant options (typically 4-6): the preferred and serious candidates plus any noteworthy exclusion; you need " +
-    "not enumerate every regimen in the set.\n\n" +
+    "(vincristine/polatuzumab), relapse timing and chemosensitivity — against the rules. Rank the relevant options " +
+    "(typically 4-7): the preferred and serious candidates plus any noteworthy exclusion. Include best-supportive-care " +
+    "/ goals-of-care (BSC_GOC) as an option when it is clinically appropriate — e.g. when the room surfaces frailty, " +
+    "cognitive impairment or consent concerns, poor performance status, or goals favoring comfort. You need not " +
+    "enumerate every active regimen.\n\n" +
     "RULE TABLE:\n" +
     ruleLines
   );
@@ -112,5 +114,7 @@ export async function reason(
     `CHART:\n${chartText}\n\nROOM (conversation signals):\n${roomText || "(none)"}`,
     signal,
   );
+  // The reasoner includes goals-of-care when clinically appropriate (see system prompt);
+  // we don't force it into every case.
   return RecommendationSet.parse({ case_id: caseId, options: dedupeByRegimen(out.options) });
 }
