@@ -1,0 +1,648 @@
+{
+  "count": 40,
+  "papers": [
+    {
+      "key": "zuma7-primary",
+      "title": "Axicabtagene Ciloleucel as Second-Line Therapy for Large B-Cell Lymphoma (ZUMA-7)",
+      "authors_year": "Locke FL et al., 2022",
+      "journal": "N Engl J Med",
+      "best_identifier": "10.1056/NEJMoa2116133",
+      "doi": "10.1056/NEJMoa2116133",
+      "pmid": "34891224",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "2L CAR-T beats salvage-chemo/ASCT in primary-refractory/early-relapse LBCL: axi-cel ZUMA-7 primary EFS"
+      ]
+    },
+    {
+      "key": "zuma7-os-update",
+      "title": "Survival with Axicabtagene Ciloleucel in Large B-Cell Lymphoma (ZUMA-7 OS update)",
+      "authors_year": "Westin JR et al., 2023",
+      "journal": "N Engl J Med",
+      "best_identifier": "10.1056/NEJMoa2301665",
+      "doi": "10.1056/NEJMoa2301665",
+      "pmid": "37272527",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "2L CAR-T beats salvage-chemo/ASCT: axi-cel ZUMA-7 overall survival update (positive OS)"
+      ]
+    },
+    {
+      "key": "transform-lancet",
+      "title": "Lisocabtagene maraleucel versus standard of care with salvage chemotherapy followed by ASCT as second-line treatment in relapsed/refractory large B-cell lymphoma (TRANSFORM): interim analysis, phase 3",
+      "authors_year": "Kamdar M et al., 2022",
+      "journal": "Lancet",
+      "best_identifier": "10.1016/S0140-6736(22)00662-6",
+      "doi": "10.1016/S0140-6736(22)00662-6",
+      "pmid": "35717989",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "2L CAR-T beats salvage-chemo/ASCT: liso-cel TRANSFORM"
+      ]
+    },
+    {
+      "key": "pilot",
+      "title": "Lisocabtagene maraleucel as second-line therapy in adults with relapsed or refractory large B-cell lymphoma not intended for HSCT (PILOT): open-label phase 2",
+      "authors_year": "Sehgal A et al., 2022",
+      "journal": "Lancet Oncol",
+      "best_identifier": "10.1016/S1470-2045(22)00339-4",
+      "doi": "10.1016/S1470-2045(22)00339-4",
+      "pmid": "35839786",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "liso-cel PILOT: 2L, transplant-ineligible, single-arm"
+      ]
+    },
+    {
+      "key": "belinda",
+      "title": "Second-Line Tisagenlecleucel or Standard Care in Aggressive B-Cell Lymphoma (BELINDA)",
+      "authors_year": "Bishop MR et al., 2022",
+      "journal": "N Engl J Med",
+      "best_identifier": "10.1056/NEJMoa2116596",
+      "doi": "10.1056/NEJMoa2116596",
+      "pmid": "34904798",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "tisa-cel BELINDA: 2L NEGATIVE EFS, encodes 'not 2L' for tisa-cel"
+      ]
+    },
+    {
+      "key": "transcend-nhl-001",
+      "title": "Lisocabtagene maraleucel for patients with relapsed or refractory large B-cell lymphomas (TRANSCEND NHL 001): a multicentre seamless design study",
+      "authors_year": "Abramson JS et al., 2020",
+      "journal": "Lancet",
+      "best_identifier": "10.1016/S0140-6736(20)31366-0",
+      "doi": "10.1016/S0140-6736(20)31366-0",
+      "pmid": "32888407",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "TRANSCEND NHL 001: liso-cel pivotal 3L+; permitted secondary CNS lymphoma"
+      ]
+    },
+    {
+      "key": "scholar-1",
+      "title": "Outcomes in refractory diffuse large B-cell lymphoma: results from the international SCHOLAR-1 study",
+      "authors_year": "Crump M et al., 2017",
+      "journal": "Blood",
+      "best_identifier": "10.1182/blood-2017-03-769620",
+      "doi": "10.1182/blood-2017-03-769620",
+      "pmid": "28774879",
+      "pmcid": "PMC5649550",
+      "open_access": true,
+      "priority": "supporting",
+      "grounds": [
+        "SCHOLAR-1: refractory DLBCL, median OS ~6 mo; pre-CAR-T baseline prognosis"
+      ]
+    },
+    {
+      "key": "parma-asct-chemosensitivity",
+      "title": "Autologous bone marrow transplantation as compared with salvage chemotherapy in relapses of chemotherapy-sensitive non-Hodgkin's lymphoma (PARMA)",
+      "authors_year": "Philip T et al., 1995",
+      "journal": "N Engl J Med",
+      "best_identifier": "10.1056/NEJM199512073332305",
+      "doi": "10.1056/NEJM199512073332305",
+      "pmid": "7477169",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "ASCT requires chemosensitivity (canonical randomized evidence: benefit only in chemotherapy-sensitive relapse)"
+      ]
+    },
+    {
+      "key": "allo-post-cart-review",
+      "title": "Therapeutic options for large B-cell lymphoma relapsing after CD19-directed CAR T-cell therapy",
+      "authors_year": "El Warrak S, Kharfan-Dabaja MA, Mohty R, et al., 2023",
+      "journal": "Bone Marrow Transplant",
+      "best_identifier": "10.1038/s41409-023-02176-0",
+      "doi": "10.1038/s41409-023-02176-0",
+      "pmid": "38102213",
+      "open_access": false,
+      "priority": "supporting",
+      "grounds": [
+        "allo-HCT reserved post-CAR-T (review anchor); attainment of CR prior to allografting is prerequisite for durable remission"
+      ]
+    },
+    {
+      "key": "lmind-5yr-final",
+      "title": "Tafasitamab for patients with relapsed or refractory diffuse large B-cell lymphoma: final 5-year efficacy and safety findings in the phase II L-MIND study",
+      "authors_year": "Duell J et al., 2024",
+      "journal": "Haematologica",
+      "best_identifier": "10.3324/haematol.2023.283480",
+      "doi": "10.3324/haematol.2023.283480",
+      "pmid": "37646664",
+      "pmcid": "PMC10828760",
+      "open_access": true,
+      "priority": "core",
+      "grounds": [
+        "Tafasitamab-lenalidomide L-MIND 5-year final analysis (grounding for the ASCT-ineligible R/R DLBCL claim; note L-MIND excluded primary-refractory disease)"
+      ]
+    },
+    {
+      "key": "lmind-original-salles-2020",
+      "title": "Tafasitamab plus lenalidomide in relapsed or refractory diffuse large B-cell lymphoma (L-MIND): a multicentre, prospective, single-arm, phase 2 study",
+      "authors_year": "Salles G et al., 2020",
+      "journal": "Lancet Oncol",
+      "best_identifier": "10.1016/S1470-2045(20)30225-4",
+      "doi": "10.1016/S1470-2045(20)30225-4",
+      "pmid": "32511983",
+      "open_access": false,
+      "priority": "supporting",
+      "grounds": [
+        "Original L-MIND primary publication behind the tafasitamab-lenalidomide approval"
+      ]
+    },
+    {
+      "key": "sunmo-phase3-jco-2025",
+      "title": "Mosunetuzumab Plus Polatuzumab Vedotin in Transplant-Ineligible Refractory/Relapsed Large B-Cell Lymphoma: Primary Results of the Phase III SUNMO Trial",
+      "authors_year": "Budde LE et al., 2025",
+      "journal": "J Clin Oncol",
+      "best_identifier": "10.1200/JCO-25-01957",
+      "doi": "10.1200/JCO-25-01957",
+      "pmid": "41037766",
+      "pmcid": "PMC12711268",
+      "open_access": true,
+      "priority": "core",
+      "grounds": [
+        "Phase 3 SUNMO of mosunetuzumab + polatuzumab vedotin vs R-GemOx in ASCT-ineligible R/R LBCL (mPFS 11.5 vs 3.8 mo, HR 0.41)"
+      ]
+    },
+    {
+      "key": "mosun-pola-phase1b2-natmed-2023",
+      "title": "Mosunetuzumab with polatuzumab vedotin in relapsed or refractory aggressive large B cell lymphoma: a phase 1b/2 trial",
+      "authors_year": "Budde LE et al., 2023",
+      "journal": "Nat Med",
+      "best_identifier": "10.1038/s41591-023-02726-5",
+      "doi": "10.1038/s41591-023-02726-5",
+      "pmid": "38072960",
+      "pmcid": "PMC10803244",
+      "open_access": true,
+      "priority": "supporting",
+      "grounds": [
+        "Earlier phase 1b/2 of mosunetuzumab + polatuzumab vedotin in R/R aggressive LBCL (superseded as evidence by phase 3 SUNMO)"
+      ]
+    },
+    {
+      "key": "epcore-nhl2-gemox-blood-2025",
+      "title": "Epcoritamab plus GemOx in transplant-ineligible relapsed/refractory DLBCL: results from the EPCORE NHL-2 trial",
+      "authors_year": "Brody J et al., 2025",
+      "journal": "Blood",
+      "best_identifier": "10.1182/blood.2024026830",
+      "doi": "10.1182/blood.2024026830",
+      "pmid": "39792928",
+      "pmcid": "PMC12000653",
+      "open_access": true,
+      "priority": "supporting",
+      "grounds": [
+        "Epcoritamab + GemOx EPCORE NHL-2, off-label 2L combo (ORR 85%, CR 61%)"
+      ]
+    },
+    {
+      "key": "epcore-dlbcl1-phase3-topline-2026",
+      "title": "AbbVie/Genmab Announce Topline Results for Epcoritamab from Phase 3 EPCORE DLBCL-1 Trial in Relapsed/Refractory DLBCL",
+      "authors_year": "AbbVie/Genmab press release, Jan 16 2026",
+      "journal": "Company press release (AbbVie / Genmab / GlobeNewswire)",
+      "best_identifier": "https://news.abbvie.com/2026-01-16-AbbVie-Announces-Topline-Results-for-Epcoritamab-DuoBody-R-CD3xCD20-from-Phase-3-EPCORE-R-DLBCL-1-Trial-in-Patients-with-Relapsed-Refractory-Diffuse-Large-B-cell-Lymphoma-DLBCL",
+      "url": "https://news.abbvie.com/2026-01-16-AbbVie-Announces-Topline-Results-for-Epcoritamab-DuoBody-R-CD3xCD20-from-Phase-3-EPCORE-R-DLBCL-1-Trial-in-Patients-with-Relapsed-Refractory-Diffuse-Large-B-cell-Lymphoma-DLBCL",
+      "open_access": true,
+      "priority": "supporting",
+      "grounds": [
+        "Epcoritamab monotherapy phase 3 EPCORE DLBCL-1 topline confirmatory trial (PFS HR 0.74, 95% CI 0.60-0.92); press-release only, no peer-reviewed publication as of Jul 2026"
+      ]
+    },
+    {
+      "key": "epcore-nhl1-pivotal-thieblemont-jco-2023",
+      "title": "Epcoritamab, a Novel, Subcutaneous CD3xCD20 Bispecific T-Cell-Engaging Antibody, in Relapsed or Refractory Large B-Cell Lymphoma: Dose Expansion in a Phase I/II Trial",
+      "authors_year": "Thieblemont C et al., 2023",
+      "journal": "J Clin Oncol",
+      "best_identifier": "10.1200/JCO.22.01725",
+      "doi": "10.1200/JCO.22.01725",
+      "pmid": "36548927",
+      "pmcid": "PMC10115554",
+      "open_access": true,
+      "priority": "core",
+      "grounds": [
+        "Pivotal EPCORE NHL-1 dose-expansion behind epcoritamab monotherapy 3L+ approval (ORR 63.1%, CR 38.9%)"
+      ]
+    },
+    {
+      "key": "starglo-phase3-abramson-lancet-2024",
+      "title": "Glofitamab plus gemcitabine and oxaliplatin (GemOx) versus rituximab-GemOx for relapsed or refractory diffuse large B-cell lymphoma (STARGLO): a global phase 3, randomised, open-label trial",
+      "authors_year": "Abramson JS et al., 2024",
+      "journal": "Lancet",
+      "best_identifier": "10.1016/S0140-6736(24)01774-4",
+      "doi": "10.1016/S0140-6736(24)01774-4",
+      "pmid": "39550172",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "Phase 3 STARGLO of glofitamab + GemOx vs R-GemOx (OS HR 0.59; the trial that received the FDA CRL 2025-07-18)"
+      ]
+    },
+    {
+      "key": "glofit-mono-pivotal-dickinson-nejm-2022",
+      "title": "Glofitamab for Relapsed or Refractory Diffuse Large B-Cell Lymphoma",
+      "authors_year": "Dickinson MJ et al., 2022",
+      "journal": "N Engl J Med",
+      "best_identifier": "10.1056/NEJMoa2206913",
+      "doi": "10.1056/NEJMoa2206913",
+      "pmid": "36507690",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "Glofitamab monotherapy pivotal trial behind the 3L+ approval (fixed-duration; CR 39%)"
+      ]
+    },
+    {
+      "key": "pola-br-go29365-sehn-jco-2020",
+      "title": "Polatuzumab Vedotin in Relapsed or Refractory Diffuse Large B-Cell Lymphoma (GO29365)",
+      "authors_year": "Sehn LH et al., 2020",
+      "journal": "J Clin Oncol",
+      "best_identifier": "10.1200/JCO.19.00172",
+      "doi": "10.1200/JCO.19.00172",
+      "pmid": "31693429",
+      "pmcid": "PMC7032881",
+      "open_access": true,
+      "priority": "core",
+      "grounds": [
+        "Pola-BR GO29365 randomized phase 2 (pola-BR vs BR)",
+        "Polatuzumab vedotin (MMAE, anti-microtubule) causes cumulative peripheral neuropathy (PN 43.6% grade 1-2, cumulative onset) that can stack with/exacerbate prior vincristine neurotoxicity",
+        "FDA POLIVY Prescribing Information (regulatory label, no PMID): PN is a cumulative effect and POLIVY may exacerbate pre-existing peripheral neuropathy \u2014 supports label/safety framing (accessdata.fda.gov/drugsatfda_docs/label/2019/761121s000lbl.pdf)"
+      ]
+    },
+    {
+      "key": "lonca-lotis2-caimi-lancetoncol-2021",
+      "title": "Loncastuximab tesirine in relapsed or refractory diffuse large B-cell lymphoma (LOTIS-2): a multicentre, open-label, single-arm, phase 2 trial",
+      "authors_year": "Caimi PF et al., 2021",
+      "journal": "Lancet Oncol",
+      "best_identifier": "10.1016/S1470-2045(21)00139-X",
+      "doi": "10.1016/S1470-2045(21)00139-X",
+      "pmid": "33989558",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "Loncastuximab tesirine LOTIS-2 pivotal phase 2 behind the 3L+ approval (ORR 48.3%, CR 24.1%)"
+      ]
+    },
+    {
+      "key": "fil-sga-merli-spina-elderly-project-2021",
+      "title": "Simplified Geriatric Assessment in Older Patients With Diffuse Large B-Cell Lymphoma: The Prospective Elderly Project of the Fondazione Italiana Linfomi",
+      "authors_year": "Merli F, Luminari S, Tucci A, Spina M, et al., 2021",
+      "journal": "J Clin Oncol",
+      "best_identifier": "10.1200/JCO.20.02465",
+      "doi": "10.1200/JCO.20.02465",
+      "pmid": "33577377",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "FIL simplified Geriatric Assessment (sGA) classifying fit/unfit/frail in elderly DLBCL",
+        "Prospective elderly-DLBCL sGA validation (Merli/Spina); feeds the Elderly Prognostic Index (EPI)"
+      ]
+    },
+    {
+      "key": "asco-geriatric-oncology-guideline-2018-mohile-full",
+      "title": "Practical Assessment and Management of Vulnerabilities in Older Patients Receiving Chemotherapy: ASCO Guideline for Geriatric Oncology",
+      "authors_year": "Mohile SG, Dale W, Somerfield MR, Hurria A, et al., 2018",
+      "journal": "J Clin Oncol",
+      "best_identifier": "10.1200/JCO.2018.78.8687",
+      "doi": "10.1200/JCO.2018.78.8687",
+      "pmid": "29782209",
+      "pmcid": "PMC6063790",
+      "open_access": true,
+      "priority": "core",
+      "grounds": [
+        "ASCO Geriatric Oncology guideline (2018 Mohile) \u2014 primary full guideline grounding GA-guided management of older cancer patients"
+      ]
+    },
+    {
+      "key": "asco-geriatric-oncology-guideline-2023-update-dale-mohile",
+      "title": "Practical Assessment and Management of Vulnerabilities in Older Patients Receiving Systemic Cancer Therapy: ASCO Guideline Update",
+      "authors_year": "Dale W, Klepin HD, Williams GR, Mohile SG, et al., 2023",
+      "journal": "J Clin Oncol",
+      "best_identifier": "10.1200/JCO.23.00933",
+      "doi": "10.1200/JCO.23.00933",
+      "pmid": "37459573",
+      "pmcid": "PMC12803700",
+      "open_access": true,
+      "priority": "core",
+      "grounds": [
+        "ASCO Geriatric Oncology guideline 2023 update",
+        "Recommends GA-guided management (GAM) for all 65+ receiving systemic therapy; endorses the Practical Geriatric Assessment"
+      ]
+    },
+    {
+      "key": "siog-cga-recommendations-extermann-2005",
+      "title": "Use of comprehensive geriatric assessment in older cancer patients: recommendations from the task force on CGA of the International Society of Geriatric Oncology (SIOG)",
+      "authors_year": "Extermann M, Aapro M, Bernabei R, Topinkova E, et al., 2005",
+      "journal": "Crit Rev Oncol Hematol",
+      "best_identifier": "10.1016/j.critrevonc.2005.06.003",
+      "doi": "10.1016/j.critrevonc.2005.06.003",
+      "pmid": "16084735",
+      "open_access": false,
+      "priority": "supporting",
+      "grounds": [
+        "SIOG recommendations on (comprehensive) geriatric assessment in older cancer patients \u2014 canonical SIOG task-force document"
+      ]
+    },
+    {
+      "key": "r-minichop-peyrade-lysa-2011",
+      "title": "Attenuated immunochemotherapy regimen (R-miniCHOP) in elderly patients older than 80 years with diffuse large B-cell lymphoma: a multicentre, single-arm, phase 2 trial",
+      "authors_year": "Peyrade F, Jardin F, Thieblemont C, Tilly H, et al., 2011",
+      "journal": "Lancet Oncol",
+      "best_identifier": "10.1016/S1470-2045(11)70069-9",
+      "doi": "10.1016/S1470-2045(11)70069-9",
+      "pmid": "21482186",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "R-miniCHOP for DLBCL >=80 (Peyrade, LYSA/GELA) \u2014 grounds 'age-attenuated 1L is valid, not under-dosing'",
+        "Concludes R-miniCHOP should be the standard treatment for DLBCL patients >80y"
+      ]
+    },
+    {
+      "key": "cirs-g-miller-1992",
+      "title": "Rating chronic medical illness burden in geropsychiatric practice and research: application of the Cumulative Illness Rating Scale",
+      "authors_year": "Miller MD, Paradis CF, Houck PR, Reynolds CF, et al., 1992",
+      "journal": "Psychiatry Res",
+      "best_identifier": "10.1016/0165-1781(92)90005-n",
+      "doi": "10.1016/0165-1781(92)90005-n",
+      "pmid": "1594710",
+      "open_access": false,
+      "priority": "supporting",
+      "grounds": [
+        "CIRS-G (Cumulative Illness Rating Scale for Geriatrics) \u2014 canonical methods/manual reference for the comorbidity index embedded in FIL GA"
+      ]
+    },
+    {
+      "key": "charlson-comorbidity-index-1987",
+      "title": "A new method of classifying prognostic comorbidity in longitudinal studies: development and validation",
+      "authors_year": "Charlson ME, Pompei P, Ales KL, MacKenzie CR, 1987",
+      "journal": "J Chronic Dis",
+      "best_identifier": "10.1016/0021-9681(87)90171-8",
+      "doi": "10.1016/0021-9681(87)90171-8",
+      "pmid": "3558716",
+      "open_access": false,
+      "priority": "supporting",
+      "grounds": [
+        "Charlson Comorbidity Index \u2014 canonical original development/validation reference for the comorbidity index used in these decisions"
+      ]
+    },
+    {
+      "key": "cart-older-adults-ram-2022",
+      "title": "Toxicity and efficacy of chimeric antigen receptor T-cell therapy in patients with diffuse large B-cell lymphoma above the age of 70 years compared to younger patients \u2014 a matched control multicenter cohort study",
+      "authors_year": "Ram R, Grisariu S, Shargian-Alon L, Avivi I, et al., 2022",
+      "journal": "Haematologica",
+      "best_identifier": "10.3324/haematol.2021.278288",
+      "doi": "10.3324/haematol.2021.278288",
+      "pmid": "34233446",
+      "pmcid": "PMC9052918",
+      "open_access": true,
+      "priority": "supporting",
+      "grounds": [
+        "CAR-T in older adults >=70: matched feasibility/efficacy series grounding 'no numeric age cutoff; fitness+logistics composite'",
+        "Comparable CRS/ICANS, response, and survival vs younger; age per se should not preclude CAR-T"
+      ]
+    },
+    {
+      "key": "cart-older-adults-bailen-geth-tc-geltamo-2024",
+      "title": "Anti-CD19 CAR-T Cell Therapy in Elderly Patients: Multicentric Real-World Experience from GETH-TC/GELTAMO",
+      "authors_year": "Bail\u00e9n R, Iacoboni G, Delgado J, Kwon M, et al., 2024",
+      "journal": "Transplant Cell Ther",
+      "best_identifier": "10.1016/j.jtct.2024.06.022",
+      "doi": "10.1016/j.jtct.2024.06.022",
+      "pmid": "39069076",
+      "open_access": false,
+      "priority": "supporting",
+      "grounds": [
+        "CAR-T in older adults >=70: larger real-world series (n=412 infused; 71 >=70) showing comparable efficacy to younger, no numeric age cutoff",
+        "Age >=70 independent risk factor for grade >=3 CRS but not for PFS/OS \u2014 supports fitness+logistics composite over age threshold"
+      ]
+    },
+    {
+      "key": "ecog-undercaptures-frailty-jolly-2015",
+      "title": "Geriatric assessment-identified deficits in older cancer patients with normal performance status",
+      "authors_year": "Jolly TA, Deal AM, Nyrop KA, Muss HB, et al., 2015",
+      "journal": "The Oncologist",
+      "best_identifier": "10.1634/theoncologist.2014-0247",
+      "doi": "10.1634/theoncologist.2014-0247",
+      "pmid": "25765876",
+      "pmcid": "PMC4391761",
+      "open_access": true,
+      "priority": "supporting",
+      "grounds": [
+        "Evidence that performance status (ECOG/KPS) under-captures frailty vs multi-domain geriatric assessment",
+        "Among 796 functionally normal patients (KPS >=80), 69% had >=1 GA-identified deficit and 24% had >=3"
+      ]
+    },
+    {
+      "key": "marietta-ferreri-2021",
+      "title": "MATRix-RICE therapy and autologous haematopoietic stem-cell transplantation in diffuse large B-cell lymphoma with secondary CNS involvement (MARIETTA): an international, single-arm, phase 2 trial",
+      "authors_year": "Ferreri AJM et al., 2021",
+      "journal": "Lancet Haematol",
+      "best_identifier": "10.1016/S2352-3026(20)30366-5",
+      "doi": "10.1016/S2352-3026(20)30366-5",
+      "pmid": "33513372",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "Secondary CNS lymphoma treatment: MARIETTA regimen (MATRix induction -> R-ICE/RICE -> carmustine-thiotepa + autologous HSCT) in DLBCL with concurrent or relapsed CNS involvement"
+      ]
+    },
+    {
+      "key": "matrix-ferreri-2016",
+      "title": "Chemoimmunotherapy with methotrexate, cytarabine, thiotepa, and rituximab (MATRix regimen) in patients with primary CNS lymphoma: results of the first randomisation of the IELSG32 phase 2 trial",
+      "authors_year": "Ferreri AJM et al., 2016",
+      "journal": "Lancet Haematol",
+      "best_identifier": "10.1016/S2352-3026(16)00036-3",
+      "doi": "10.1016/S2352-3026(16)00036-3",
+      "pmid": "27132696",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "MATRix regimen (HD-MTX + cytarabine + thiotepa + rituximab) as the CNS-active chemoimmunotherapy backbone; IELSG32 first randomisation establishing MATRix as standard induction"
+      ]
+    },
+    {
+      "key": "cns-pharmacology-korfel-2015",
+      "title": "A focus on pharmacotherapy for primary central nervous system lymphoma",
+      "authors_year": "Korfel A, 2015",
+      "journal": "Expert Rev Hematol",
+      "best_identifier": "10.1586/17474086.2015.1066672",
+      "doi": "10.1586/17474086.2015.1066672",
+      "open_access": false,
+      "priority": "supporting",
+      "grounds": [
+        "CNS pharmacology: HD-MTX (>=3 g/m2), high-dose cytarabine, thiotepa achieve cytotoxic CSF/parenchymal levels; supports why ara-C-containing salvage (R-DHAP) is more CNS-active than R-ICE. NOTE: PCNSL-framed; does not itself headline 'R-CHOP components/cisplatin fail to reach cytotoxic CNS levels'"
+      ]
+    },
+    {
+      "key": "who-haem5-alaggio-2022",
+      "title": "The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Lymphoid Neoplasms",
+      "authors_year": "Alaggio R et al., 2022",
+      "journal": "Leukemia",
+      "best_identifier": "10.1038/s41375-022-01620-2",
+      "doi": "10.1038/s41375-022-01620-2",
+      "pmid": "35732829",
+      "pmcid": "PMC9214472",
+      "open_access": true,
+      "priority": "core",
+      "grounds": [
+        "WHO-HAEM5 lymphoid classification framework; entity definitions used to distinguish double-hit high-grade B-cell lymphoma (MYC AND BCL2 rearrangements) from MYC amplification and double-expressor phenotype"
+      ]
+    },
+    {
+      "key": "icc-campo-2022",
+      "title": "The International Consensus Classification of Mature Lymphoid Neoplasms: a report from the Clinical Advisory Committee",
+      "authors_year": "Campo E et al., 2022",
+      "journal": "Blood",
+      "best_identifier": "10.1182/blood.2022015851",
+      "doi": "10.1182/blood.2022015851",
+      "pmid": "35653592",
+      "pmcid": "PMC9479027",
+      "open_access": true,
+      "priority": "core",
+      "grounds": [
+        "ICC definition of high-grade B-cell lymphoma with MYC and BCL2 rearrangements (double-hit by FISH); companion/alternative framework to WHO-HAEM5 for the double-hit vs MYC-amplification vs double-expressor distinction"
+      ]
+    },
+    {
+      "key": "carT-cns-meta-shawabkeh-2026",
+      "title": "Safety and efficacy of CAR T-cell therapy in central nervous system lymphoma: a systematic review and meta-analysis",
+      "authors_year": "Shawabkeh AE et al., 2026",
+      "journal": "Front Oncol",
+      "best_identifier": "10.3389/fonc.2026.1790444",
+      "doi": "10.3389/fonc.2026.1790444",
+      "pmid": "41948499",
+      "pmcid": "PMC13050687",
+      "open_access": true,
+      "priority": "core",
+      "grounds": [
+        "CD19 CAR-T in CNS lymphoma (primary and secondary): pooled ORR 0.75, CR 0.52, CRS 83.5% (gr>=3 5.8%), ICANS 44.9% (gr>=3 17.4%), efficacy comparable PCNSL vs SCNSL. Strongest quantitative pooled anchor (38-study meta-analysis) for CAR-T in secondary CNS lymphoma"
+      ]
+    },
+    {
+      "key": "carT-cns-review-houillier-2024",
+      "title": "CAR T-cell Therapy for Central Nervous System Lymphoma",
+      "authors_year": "Houillier C, Choquet S, 2024",
+      "journal": "Curr Oncol Rep",
+      "best_identifier": "10.1007/s11912-024-01609-3",
+      "doi": "10.1007/s11912-024-01609-3",
+      "pmid": "39466477",
+      "open_access": false,
+      "priority": "supporting",
+      "grounds": [
+        "CD19 CAR-T in primary and secondary CNS lymphoma (narrative review): CR 32-67%, 1-yr PFS 40-60%, neurotoxicity 36-68%; efficacy close to systemic DLBCL, tolerable neurotoxicity"
+      ]
+    },
+    {
+      "key": "carT-cns-case-takigawa-2024",
+      "title": "A case of successful CAR-T cell therapy for early isolated CNS recurrence of DLBCL with persistent CAR-T cells",
+      "authors_year": "Takigawa K et al., 2024",
+      "journal": "Blood Cell Ther",
+      "best_identifier": "10.31547/bct-2023-032",
+      "doi": "10.31547/bct-2023-032",
+      "pmid": "38854403",
+      "pmcid": "PMC11153208",
+      "open_access": true,
+      "priority": "supporting",
+      "grounds": [
+        "Illustrative CD19 CAR-T (liso-cel) for isolated secondary CNS relapse of DLBCL; documents CAR-T expansion/persistence and second CR (single case report \u2014 anecdotal support only)"
+      ]
+    },
+    {
+      "key": "benda-preapheresis-iacoboni-2024",
+      "title": "Recent Bendamustine Treatment Before Apheresis Has a Negative Impact on Outcomes in Patients With Large B-Cell Lymphoma Receiving Chimeric Antigen Receptor T-Cell Therapy",
+      "authors_year": "Iacoboni G et al., 2024",
+      "journal": "J Clin Oncol",
+      "best_identifier": "10.1200/JCO.23.01097",
+      "doi": "10.1200/JCO.23.01097",
+      "pmid": "37874957",
+      "open_access": false,
+      "priority": "core",
+      "grounds": [
+        "Bendamustine before apheresis/CAR-T compromises T-cell fitness and outcomes: 439-patient European multicenter series; recent (<9 mo) exposure -> lower ORR (40% vs 72%), shorter PFS (1.3 vs 6.2 mo) and OS (4.6 vs 23.5 mo); grounds the sequencing hazard of bendamustine bridging before T-cell collection (tied to washout timing, not cumulative dose)"
+      ]
+    },
+    {
+      "key": "copanlisib-withdrawal-2023",
+      "title": "Bayer provides update on Aliqopa (copanlisib): voluntary withdrawal of US NDA for relapsed follicular lymphoma after confirmatory trial (CHRONOS-4) failed to meet PFS endpoint",
+      "authors_year": "Bayer / FDA regulatory action, Nov 2023",
+      "journal": "Bayer press release (Nov 13, 2023)",
+      "best_identifier": "https://www.bayer.com/en/us/news-stories/update-on-aliqopar",
+      "url": "https://www.bayer.com/en/us/news-stories/update-on-aliqopar",
+      "open_access": true,
+      "priority": "supporting",
+      "grounds": [
+        "Copanlisib (Aliqopa) US market withdrawal, Nov 2023, following confirmatory-trial PFS failure \u2014 removes copanlisib as a viable option in the R/R lymphoma decision tree. CORRECTION: failed confirmatory trial was CHRONOS-4, not CHRONOS-3 (which was positive). No PMID/DOI \u2014 press-release/regulatory source only"
+      ]
+    }
+  ],
+  "fetch_identifiers": [
+    "10.1056/NEJMoa2116133",
+    "10.1056/NEJMoa2301665",
+    "10.1016/S0140-6736(22)00662-6",
+    "10.1016/S1470-2045(22)00339-4",
+    "10.1056/NEJMoa2116596",
+    "10.1016/S0140-6736(20)31366-0",
+    "10.1182/blood-2017-03-769620",
+    "10.1056/NEJM199512073332305",
+    "10.1038/s41409-023-02176-0",
+    "10.3324/haematol.2023.283480",
+    "10.1016/S1470-2045(20)30225-4",
+    "10.1200/JCO-25-01957",
+    "10.1038/s41591-023-02726-5",
+    "10.1182/blood.2024026830",
+    "10.1200/JCO.22.01725",
+    "10.1016/S0140-6736(24)01774-4",
+    "10.1056/NEJMoa2206913",
+    "10.1200/JCO.19.00172",
+    "10.1016/S1470-2045(21)00139-X",
+    "10.1200/JCO.20.02465",
+    "10.1200/JCO.2018.78.8687",
+    "10.1200/JCO.23.00933",
+    "10.1016/j.critrevonc.2005.06.003",
+    "10.1016/S1470-2045(11)70069-9",
+    "10.1016/0165-1781(92)90005-n",
+    "10.1016/0021-9681(87)90171-8",
+    "10.3324/haematol.2021.278288",
+    "10.1016/j.jtct.2024.06.022",
+    "10.1634/theoncologist.2014-0247",
+    "10.1016/S2352-3026(20)30366-5",
+    "10.1016/S2352-3026(16)00036-3",
+    "10.1586/17474086.2015.1066672",
+    "10.1038/s41375-022-01620-2",
+    "10.1182/blood.2022015851",
+    "10.3389/fonc.2026.1790444",
+    "10.1007/s11912-024-01609-3",
+    "10.31547/bct-2023-032",
+    "10.1200/JCO.23.01097"
+  ],
+  "nccn_sections_to_extract": [
+    "NCCN B-Cell Lymphomas \u2014 DLBCL: Second-Line Therapy (candidates for transplant / intention to proceed to HDT+ASCT)",
+    "NCCN B-Cell Lymphomas \u2014 DLBCL: Second-Line and Subsequent Therapy (non-candidates for transplant / transplant-ineligible)",
+    "NCCN B-Cell Lymphomas \u2014 DLBCL: Third-Line and Subsequent Therapy (R/R, includes bispecifics, ADCs, tafasitamab-lenalidomide, loncastuximab)",
+    "NCCN B-Cell Lymphomas \u2014 Suggested Treatment Regimens for DLBCL (regimen tables: R-ICE, R-DHAP/DHAX, R-GDP, R-GemOx, pola-BR, tafa-len, glofitamab, epcoritamab, mosunetuzumab, loncastuximab)",
+    "NCCN B-Cell Lymphomas \u2014 Principles of CAR T-Cell Therapy (product selection, eligibility, bridging, contraindications)",
+    "NCCN B-Cell Lymphomas \u2014 CAR T-cell therapy eligibility / referral criteria within DLBCL 2L and 3L pathways",
+    "NCCN B-Cell Lymphomas \u2014 DLBCL in older/frail adults (R-miniCHOP, dose-attenuation, geriatric assessment)",
+    "NCCN B-Cell Lymphomas \u2014 High-Grade B-Cell Lymphoma with MYC and BCL2 rearrangements (double-hit) and double-expressor: workup and R/R management",
+    "NCCN B-Cell Lymphomas \u2014 Secondary CNS Lymphoma: CNS prophylaxis, evaluation, and treatment of CNS involvement (HD-MTX-based, MATRix/MARIETTA-type regimens)",
+    "NCCN B-Cell Lymphomas \u2014 Diagnosis / Workup / Immunophenotyping and molecular subtyping (cell-of-origin, FISH for MYC/BCL2/BCL6)",
+    "NCCN B-Cell Lymphomas \u2014 Allogeneic HCT positioning after CAR-T failure / for R/R disease",
+    "NCCN B-Cell Lymphomas \u2014 Principles of Radiation Therapy and Response Assessment (Lugano criteria) as applied to R/R DLBCL"
+  ],
+  "gaps": [
+    "Epcoritamab monotherapy phase 3 EPCORE DLBCL-1 (confirmatory trial): topline press-release only as of Jul 2026 \u2014 no peer-reviewed publication, no PMID/DOI. OS not yet reported. Update when a full paper/meeting presentation appears.",
+    "Copanlisib withdrawal: regulatory/press-release only \u2014 no PMID/DOI. Best citable source is the Bayer press release; also note the rubric correction (failed trial = CHRONOS-4, not CHRONOS-3).",
+    "No dedicated citation for the explicit claim that R-CHOP-backbone components and cisplatin do not reach cytotoxic CNS levels \u2014 Korfel 2015 is PCNSL-framed and does not headline this contrast. Needs a dedicated secondary-CNS-prophylaxis/pharmacology reference to ground the R-ICE-vs-R-DHAP CNS-penetration argument.",
+    "No study directly quantifies the incremental/cumulative peripheral neuropathy from prior vincristine (CHOP/R-CHOP) followed by polatuzumab vedotin (MMAE) \u2014 the vincristine->pola stacking concern is mechanistic (shared microtubule-inhibitor MoA) plus the FDA POLIVY label, not a head-to-head study.",
+    "FDA POLIVY Prescribing Information and the STARGLO FDA CRL (2025-07-18) are regulatory documents without PMIDs/DOIs; they support label/regulatory framing but are not fetchable as papers.",
+    "cns-pharmacology-korfel-2015 has a DOI but no cleanly linked PMID/PMCID (Expert Rev Hematol indexing gap) \u2014 fetchable by DOI only; verify retrieval.",
+    "CAR-T in secondary CNS lymphoma is grounded primarily by a meta-analysis (Shawabkeh 2026), a narrative review (Houillier 2024), and a single case report (Takigawa 2024) \u2014 no dedicated prospective/registry trial of CAR-T specifically in secondary CNS DLBCL; evidence base is inherently non-randomized."
+  ]
+}

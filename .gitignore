@@ -1,42 +1,13 @@
-# --- OS / editor cruft ---
-.DS_Store
-Thumbs.db
-*.swp
-.idea/
-.vscode/
-*~
-
-# --- Secrets / environment ---
+# Never commit copyrighted full text or secrets to this public repo
 .env
 .env.*
-!.env.example
-*.key
-*.pem
-secrets.*
-
-# --- Python ---
+*.pdf
+papers/
+chunks/
+nccn/
 __pycache__/
-*.py[cod]
+*.pyc
 .venv/
 venv/
-env/
-.ipynb_checkpoints/
-*.egg-info/
-.pytest_cache/
-
-# --- Node / JS ---
 node_modules/
-dist/
-build/
-npm-debug.log*
-yarn-error.log
-.next/
-
-# --- Logs & temp ---
-*.log
-tmp/
-.cache/
-
-# --- Data ---
-# Committing both the source zip and its extracted contents.
-# (.DS_Store and other OS cruft are ignored via the section above.)
+.DS_Store
