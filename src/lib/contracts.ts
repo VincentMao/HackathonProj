@@ -126,51 +126,39 @@ export const Recommendation = z.object({
 });
 export type Recommendation = z.infer<typeof Recommendation>;
 
-export const RecommendationDelta = z.object({
-  regimen: RegimenId,
-  change: z.enum(["rose", "fell", "entered", "excluded", "flagged"]),
-  from_rank: z.number().int().nullable(),
-  to_rank: z.number().int().nullable(),
-  driver_refs: z.array(Ref),
-});
-export type RecommendationDelta = z.infer<typeof RecommendationDelta>;
-
+/** One combined ranking that considers chart + room together (no separate pre/post). */
 export const RecommendationSet = z.object({
   case_id: z.string(),
-  pre: z.object({ options: z.array(Recommendation) }), // chart-only pass
-  post: z.object({ options: z.array(Recommendation) }), // chart + room pass
-  delta: z.array(RecommendationDelta),
+  options: z.array(Recommendation),
 });
 export type RecommendationSet = z.infer<typeof RecommendationSet>;
 
 /* ------------------------------------------------------------------ *
- * 3. VerifierReport — output of the verifier
+ * 3. VerifierReport — per-plan verification
+ *    The verifier checks each INCLUDED plan against the rules + evidence and surfaces
+ *    the things a doctor should attend to (off-label boundaries, safety cautions,
+ *    sequencing hazards), plus the citations that support the plan.
  * ------------------------------------------------------------------ */
 
-export const RuleCheck = z.object({
-  rule_id: z.string(), // e.g. "R01"
-  passed: z.boolean(),
-  verdict: Verdict,
-  message: z.string(),
+export const PlanFlag = z.object({
+  severity: z.enum(["hard", "attention", "info"]), // hard = safety/efficacy stop; attention = review; info = note
+  text: z.string(),
   citation_id: CitationId.nullable(),
 });
-export type RuleCheck = z.infer<typeof RuleCheck>;
+export type PlanFlag = z.infer<typeof PlanFlag>;
 
-export const Grounding = z.object({
-  claim_id: z.string(),
-  claim_text: z.string(),
-  verdict: Verdict,
-  citation_id: CitationId.nullable(),
-  quote: z.string().nullable(), // anchor span; null while a pack entry has no anchor_quote
+export const PlanVerification = z.object({
+  regimen: RegimenId,
+  verdict: Verdict, // verified | off_guideline_explained | flagged
+  citations: z.array(CitationId), // evidence supporting this plan
+  flags: z.array(PlanFlag), // things needing the doctor's attention
 });
-export type Grounding = z.infer<typeof Grounding>;
+export type PlanVerification = z.infer<typeof PlanVerification>;
 
 export const VerifierReport = z.object({
   case_id: z.string(),
-  rule_checks: z.array(RuleCheck),
-  groundings: z.array(Grounding),
-  overall: Verdict,
-  degraded: z.boolean(), // true if grounding timed out -> claims render "unverified"
+  plans: z.array(PlanVerification),
+  degraded: z.boolean(), // true if the evidence step timed out
 });
 export type VerifierReport = z.infer<typeof VerifierReport>;
 

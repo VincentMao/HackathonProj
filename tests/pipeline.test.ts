@@ -19,17 +19,24 @@ describe("contracts / fixtures", () => {
 
   it("Case B fixture: EPCOR_GEMOX is rank-1 and off_guideline with a citation", () => {
     const fx = loadFixture(CASE_B)!;
-    const top = fx.recommendations.post.options.find((o) => o.rank === 1);
+    const top = fx.recommendations.options.find((o) => o.rank === 1);
     expect(top?.regimen).toBe("EPCOR_GEMOX");
     expect(top?.status).toBe("off_guideline");
     expect(top?.off_guideline?.citation_id).toBe("EPCORE-NHL-2");
+    // Verifier flags the off-label boundary on that plan.
+    const v = fx.verifier.plans.find((p) => p.regimen === "EPCOR_GEMOX");
+    expect(v?.verdict).toBe("off_guideline_explained");
+    expect(v?.flags.length).toBeGreaterThan(0);
   });
 
-  it("Case A fixture: CNS-directed salvage enters the plan from the room", () => {
+  it("Case A fixture: CNS-directed salvage is the top plan, driven by the room", () => {
     const fx = loadFixture(CASE_A)!;
-    const entered = fx.recommendations.delta.find((d) => d.regimen === "CNS_SALVAGE_MATRIX");
-    expect(entered?.change).toBe("entered");
-    expect(entered?.driver_refs).toContain("visit.new_neuro_symptoms");
+    const top = fx.recommendations.options.find((o) => o.rank === 1);
+    expect(top?.regimen).toBe("CNS_SALVAGE_MATRIX");
+    expect(top?.rationale.some((r) => r.ref === "visit.new_neuro_symptoms")).toBe(true);
+    // Every included plan has a verification entry.
+    const included = fx.recommendations.options.filter((o) => o.status !== "excluded");
+    expect(fx.verifier.plans.length).toBe(included.length);
   });
 });
 

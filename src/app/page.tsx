@@ -1,41 +1,31 @@
 "use client";
 
 /**
- * Consilium — single interactive page. Load a starting case (A/B), edit the chart facts
- * and/or the transcript, and Run the real pipeline live to get new recommendations.
+ * Consilium — single interactive page. Load a starting case (or from scratch), edit the chart
+ * facts and/or the transcript, and Run the real pipeline live. One combined ranking (chart +
+ * room together); each plan carries its verifier attention flags; the doctor selects a plan
+ * and Accepts or Overrides it.
  *
- *   Load case  -> instant cached result
- *   Edit + Run -> live pipeline (signals -> reasoner x2 -> verifier), identical code path
- *
- * Before/after: chart-only (pre) vs after-the-room (post), with the verifier and decision.
+ *   Load case  -> instant cached result (A/B) or live (T1/T2)
+ *   Edit + Run -> live pipeline (signals -> reasoner -> verifier), identical code path
  */
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { PipelineResult, Recommendation } from "@/lib/contracts";
+import { useCallback, useEffect, useRef, useState } from "react";
+import type { PipelineResult, Recommendation, RegimenId } from "@/lib/contracts";
 import type { ChartExtract } from "@/lib/rules";
 import { BLANK_CHART } from "@/lib/rules";
 import { CASES, PRESET_KEYS, type PresetKey } from "@/components/labels";
 import ChartForm from "@/components/ChartForm";
 import RankedList from "@/components/RankedList";
 import SignalChip from "@/components/SignalChip";
-import VerdictBadge from "@/components/VerdictBadge";
-import VerifierPanel from "@/components/VerifierPanel";
 import DecisionBar, { type DecisionState } from "@/components/DecisionBar";
 
 type CaseKey = PresetKey | "scratch";
 const SCRATCH_ID = "SCRATCH::ENC-0001";
 
-function topPostOption(result: PipelineResult): Recommendation | undefined {
-  return result.recommendations.post.options
+function topOption(result: PipelineResult): Recommendation | undefined {
+  return result.recommendations.options
     .filter((o) => o.status !== "excluded" && o.rank > 0)
     .sort((a, b) => a.rank - b.rank)[0];
-}
-
-/** "Age is not the decision": age drove a pre option but not the top post option. */
-function ageIsNotTheDecision(result: PipelineResult): boolean {
-  const hasAge = (refs: string[]) => refs.some((r) => r.includes("age"));
-  const preAge = result.recommendations.pre.options.some((o) => hasAge(o.depends_on));
-  const top = topPostOption(result);
-  return preAge && !!top && !hasAge(top.depends_on);
 }
 
 export default function Home() {
@@ -47,6 +37,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [dirty, setDirty] = useState(false);
   const [decision, setDecision] = useState<DecisionState>({ action: null, reason: "" });
+  const [selectedRegimen, setSelectedRegimen] = useState<RegimenId | null>(null);
   const runToken = useRef(0);
 
   const caseId = caseKey === "scratch" ? SCRATCH_ID : CASES[caseKey].caseId;
@@ -133,6 +124,16 @@ export default function Home() {
     void loadCase("A");
   }, [loadCase]);
 
+  // When a new result arrives, default-select the top plan and reset the decision.
+  useEffect(() => {
+    if (!result) {
+      setSelectedRegimen(null);
+      return;
+    }
+    setSelectedRegimen(topOption(result)?.regimen ?? null);
+    setDecision({ action: null, reason: "" });
+  }, [result]);
+
   // Cmd/Ctrl+Enter runs live from anywhere (incl. the transcript textarea).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -154,8 +155,10 @@ export default function Home() {
     setDirty(true);
   };
 
-  const showAgeCallout = useMemo(() => (result ? ageIsNotTheDecision(result) : false), [result]);
-  const top = result ? topPostOption(result) : undefined;
+  const top = result ? topOption(result) : undefined;
+  // "Age is not the decision": an older patient whose top plan hinges on function/logistics, not age.
+  const showAgeCallout =
+    !!result && !!chart && chart.fitness.age >= 75 && !!top && !top.depends_on.some((r) => r.includes("age"));
   const scenario =
     caseKey === "scratch"
       ? "Build a case from scratch — set the chart facts and type the room, then run live."
@@ -179,7 +182,11 @@ export default function Home() {
             >
               {result.mode}
             </span>
-            <VerdictBadge verdict={result.verifier.overall} />
+            {result.verifier.degraded && (
+              <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-500">
+                evidence check degraded
+              </span>
+            )}
           </div>
         )}
       </header>
@@ -288,37 +295,28 @@ export default function Home() {
                 )}
               </div>
 
-              {/* Before / after */}
-              <div className="grid gap-6 xl:grid-cols-2">
-                <div>
-                  <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-500">
-                    Chart only
-                  </h2>
-                  <RankedList options={result.recommendations.pre.options} />
-                </div>
-                <div>
-                  <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-500">
-                    After the room
-                  </h2>
-                  {showAgeCallout && (
-                    <div className="mb-3 rounded-xl border border-teal-300 bg-teal-50 p-3">
-                      <p className="text-sm font-semibold text-teal-900">Age is not the decision</p>
-                      <p className="text-xs text-teal-800">
-                        The chart-only pass leaned on age; after the room the top option depends on function, goals and
-                        logistics — not the number on the chart.
-                      </p>
-                    </div>
-                  )}
-                  <RankedList
-                    options={result.recommendations.post.options}
-                    deltas={result.recommendations.delta}
-                    emphasizeDependsOn
-                  />
-                </div>
+              {/* One combined ranking (chart + room), each plan verified */}
+              <div>
+                <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-500">
+                  Recommended plans
+                </h2>
+                {showAgeCallout && (
+                  <div className="mb-3 rounded-xl border border-teal-300 bg-teal-50 p-3">
+                    <p className="text-sm font-semibold text-teal-900">Age is not the decision</p>
+                    <p className="text-xs text-teal-800">
+                      The top plan hinges on function, goals and logistics — not the number on the chart.
+                    </p>
+                  </div>
+                )}
+                <RankedList
+                  options={result.recommendations.options}
+                  verifications={result.verifier.plans}
+                  selectedRegimen={selectedRegimen}
+                  onSelect={(r) => setSelectedRegimen(r as RegimenId)}
+                />
               </div>
 
-              <VerifierPanel report={result.verifier} />
-              {top && <DecisionBar top={top} decision={decision} onChange={setDecision} />}
+              <DecisionBar regimen={selectedRegimen} decision={decision} onChange={setDecision} />
             </>
           )}
         </section>

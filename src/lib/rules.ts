@@ -13,7 +13,7 @@
  * for the case-by-case rule/citation coverage map.
  */
 import { z } from "zod";
-import type { RegimenId, VisitSignals, RuleCheck, Verdict } from "./contracts";
+import type { RegimenId, VisitSignals, Verdict } from "./contracts";
 import { evaluateCondition, type Ctx } from "./condition";
 
 /* ------------------------------------------------------------------ *
@@ -264,10 +264,19 @@ const ACTION_VERDICT: Record<Rule["action"], Verdict> = {
   require_workup: "verified",
 };
 
+/** A fired rule (used by validation/tests; the live verifier is per-plan in agents/verifier). */
+export interface RuleCheckResult {
+  rule_id: string;
+  passed: boolean;
+  verdict: Verdict;
+  message: string;
+  citation_id: string | null;
+}
+
 /**
  * Evaluate every rule against the merged context. Rules whose condition references a
  * candidate field (therapy / regimen / plan) are evaluated per-candidate; others once.
- * Returns the RuleChecks that fired.
+ * Returns the rules that fired.
  */
 export function runRuleChecks(
   table: RuleTable,
@@ -275,9 +284,9 @@ export function runRuleChecks(
   signals: VisitSignals | null,
   candidates: RegimenId[],
   plan: PlanFlags = {},
-): RuleCheck[] {
+): RuleCheckResult[] {
   const base = baseContext(chart, signals);
-  const out: RuleCheck[] = [];
+  const out: RuleCheckResult[] = [];
   const seen = new Set<string>();
 
   for (const rule of table.rules) {

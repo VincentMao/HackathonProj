@@ -1,12 +1,10 @@
 /**
- * Reasoner (LLM), runs twice:
- *   pass 1 (pre)  = chart only
- *   pass 2 (post) = chart + VisitSignals
+ * Reasoner (LLM). One combined pass over chart + room signals -> a single ranked list.
  * Reads the rule table; ranks over the committed RegimenId set; emits off_guideline as a
- * first-class field. The delta (pre -> post) is computed deterministically in code.
+ * first-class field. Weighs the whole chart (organ function, neuropathy, relapse timing).
  */
 import { RegimenId, Recommendation, RecommendationSet } from "../contracts";
-import type { VisitSignals, RecommendationDelta } from "../contracts";
+import type { VisitSignals } from "../contracts";
 import type { ChartExtract } from "../rules";
 import type { RuleTable } from "../rules";
 import { chartSummary } from "../chart";
@@ -92,34 +90,7 @@ async function rankPass(
   });
 }
 
-function computeDelta(
-  pre: z.infer<typeof Recommendation>[],
-  post: z.infer<typeof Recommendation>[],
-): RecommendationDelta[] {
-  const preByReg = new Map(pre.map((o) => [o.regimen, o]));
-  const deltas: RecommendationDelta[] = [];
-  for (const p of post) {
-    const before = preByReg.get(p.regimen);
-    const from = before && before.status !== "excluded" ? before.rank : null;
-    const to = p.status === "excluded" ? null : p.rank;
-    let change: RecommendationDelta["change"];
-    if (p.status === "excluded") change = "excluded";
-    else if (from == null) change = "entered";
-    else if (to != null && to < from) change = "rose";
-    else if (to != null && to > from) change = "fell";
-    else continue; // unchanged
-    deltas.push({
-      regimen: p.regimen,
-      change,
-      from_rank: from,
-      to_rank: to,
-      driver_refs: p.rationale.filter((r) => r.ref.startsWith("visit.")).map((r) => r.ref),
-    });
-  }
-  return deltas;
-}
-
-/** A regimen must appear at most once per ranked list; keep the first occurrence. */
+/** A regimen must appear at most once in the ranked list; keep the first occurrence. */
 function dedupeByRegimen(options: z.infer<typeof Recommendation>[]): z.infer<typeof Recommendation>[] {
   const seen = new Set<string>();
   return options.filter((o) => (seen.has(o.regimen) ? false : (seen.add(o.regimen), true)));
@@ -136,17 +107,10 @@ export async function reason(
   const roomText = (signals?.signals ?? [])
     .map((s) => `- ${s.label}: ${String(s.value)} ("${s.evidence_span}")`)
     .join("\n");
-  // The two passes are independent given the signals — run them concurrently to halve latency.
-  const [pre, post] = await Promise.all([
-    rankPass(rules, `CHART ONLY:\n${chartText}`, signal),
-    rankPass(rules, `CHART:\n${chartText}\n\nROOM (conversation signals):\n${roomText || "(none)"}`, signal),
-  ]);
-  const preOpts = dedupeByRegimen(pre.options);
-  const postOpts = dedupeByRegimen(post.options);
-  return RecommendationSet.parse({
-    case_id: caseId,
-    pre: { options: preOpts },
-    post: { options: postOpts },
-    delta: computeDelta(preOpts, postOpts),
-  });
+  const out = await rankPass(
+    rules,
+    `CHART:\n${chartText}\n\nROOM (conversation signals):\n${roomText || "(none)"}`,
+    signal,
+  );
+  return RecommendationSet.parse({ case_id: caseId, options: dedupeByRegimen(out.options) });
 }

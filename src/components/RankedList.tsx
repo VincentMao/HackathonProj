@@ -1,9 +1,8 @@
 /**
- * An ordered list of recommendations (pre or post pass). Sorts ranked options
- * ascending and drops rank-0 / excluded options to the bottom. When a delta map
- * is supplied (post pass), each card shows its change badge.
+ * The one combined ranking. Sorts by rank (excluded plans drop to the bottom) and renders a
+ * selectable card per plan, each with its verifier attention flags + evidence.
  */
-import type { Recommendation, RecommendationDelta } from "@/lib/contracts";
+import type { Recommendation, PlanVerification } from "@/lib/contracts";
 import RecCard from "./RecCard";
 
 function order(a: Recommendation, b: Recommendation): number {
@@ -14,29 +13,27 @@ function order(a: Recommendation, b: Recommendation): number {
 
 export default function RankedList({
   options,
-  deltas,
-  emphasizeDependsOn = false,
+  verifications,
+  selectedRegimen,
+  onSelect,
 }: {
   options: Recommendation[];
-  deltas?: RecommendationDelta[];
-  emphasizeDependsOn?: boolean;
+  verifications: PlanVerification[];
+  selectedRegimen: string | null;
+  onSelect: (regimen: string) => void;
 }) {
   const sorted = [...options].sort(order);
-  const deltaByRegimen = new Map<string, RecommendationDelta>();
-  deltas?.forEach((d) => deltaByRegimen.set(d.regimen, d));
+  const vByReg = new Map(verifications.map((v) => [v.regimen, v]));
 
   return (
     <div className="space-y-3">
       {sorted.map((rec, i) => (
-        <div
-          key={`${rec.regimen}-${i}`}
-          className="stagger-in"
-          style={{ animationDelay: `${i * 90}ms` }}
-        >
+        <div key={`${rec.regimen}-${i}`} className="stagger-in" style={{ animationDelay: `${i * 70}ms` }}>
           <RecCard
             rec={rec}
-            delta={deltaByRegimen.get(rec.regimen)}
-            emphasizeDependsOn={emphasizeDependsOn}
+            verification={vByReg.get(rec.regimen)}
+            selected={selectedRegimen === rec.regimen}
+            onSelect={rec.status === "excluded" ? undefined : () => onSelect(rec.regimen)}
           />
         </div>
       ))}

@@ -41,180 +41,85 @@
   },
   "recommendations": {
     "case_id": "SYN-A-0001::SYN-A-ENC-0001",
-    "pre": {
-      "options": [
-        {
-          "regimen": "R_DHAP",
-          "rank": 1,
-          "intent": "curative",
-          "status": "preferred",
-          "rationale": [
-            { "text": "Fit, primary-refractory aggressive B-cell lymphoma: platinum-based salvage to establish disease control before cellular therapy.", "ref": "chart.refractoriness.primary_refractory" }
-          ],
-          "depends_on": ["chart.refractoriness.primary_refractory", "chart.fitness.cell_therapy_fit"],
-          "off_guideline": null
-        },
-        {
-          "regimen": "CAR_T_LISOCEL",
-          "rank": 2,
-          "intent": "curative",
-          "status": "candidate",
-          "rationale": [
-            { "text": "Primary-refractory, cell-therapy-fit: 2L CD19 CAR-T is the destination therapy (ZUMA-7/TRANSFORM).", "ref": "chart.refractoriness.primary_refractory" }
-          ],
-          "depends_on": ["chart.fitness.cell_therapy_fit"],
-          "off_guideline": null
-        },
-        {
-          "regimen": "R_ICE",
-          "rank": 3,
-          "intent": "curative",
-          "status": "candidate",
-          "rationale": [
-            { "text": "Alternative platinum salvage backbone.", "ref": "chart.refractoriness.primary_refractory" }
-          ],
-          "depends_on": ["chart.refractoriness.primary_refractory"],
-          "off_guideline": null
-        }
-      ]
-    },
-    "post": {
-      "options": [
-        {
-          "regimen": "CNS_SALVAGE_MATRIX",
-          "rank": 1,
-          "intent": "curative",
-          "status": "preferred",
-          "rationale": [
-            { "text": "New back pain, leg weakness and urinary hesitancy surfaced in the room point to secondary CNS involvement, which reroutes therapy to a CNS-penetrant systemic backbone plus intrathecal therapy.", "ref": "visit.new_neuro_symptoms" },
-            { "text": "Parenchymal/leptomeningeal disease requires CNS-active systemic drugs (HD-MTX / high-dose cytarabine / thiotepa); intrathecal therapy alone cannot reach parenchymal disease.", "ref": "chart.disease.cns_compartment" }
-          ],
-          "depends_on": ["visit.new_neuro_symptoms", "chart.disease.cns_involvement"],
-          "off_guideline": null
-        },
-        {
-          "regimen": "CAR_T_LISOCEL",
-          "rank": 2,
-          "intent": "curative",
-          "status": "preferred",
-          "rationale": [
-            { "text": "Intent to proceed to CD19 CAR-T after CNS-directed control; liso-cel preferred over axi-cel for lower ICANS given baseline CNS disease (TRANSCEND).", "ref": "chart.disease.cns_involvement" },
-            { "text": "Aggressive curative path is supported by fitness, goals and a reliable caregiver — not blocked by anything.", "ref": "visit.caregiver_reliability" }
-          ],
-          "depends_on": ["chart.fitness.cell_therapy_fit", "visit.caregiver_reliability", "visit.treatment_intent"],
-          "off_guideline": null
-        },
-        {
-          "regimen": "R_DHAP",
-          "rank": 3,
-          "intent": "curative",
-          "status": "candidate",
-          "rationale": [
-            { "text": "Cytarabine-containing salvage is CNS-active and a defensible (not canonical) route with intrathecal therapy.", "ref": "chart.disease.cns_compartment" }
-          ],
-          "depends_on": ["chart.disease.cns_involvement"],
-          "off_guideline": null
-        },
-        {
-          "regimen": "R_ICE",
-          "rank": 4,
-          "intent": "curative",
-          "status": "excluded",
-          "rationale": [
-            { "text": "Poor CNS penetration; insufficient for parenchymal secondary CNS disease.", "ref": "chart.disease.cns_compartment" }
-          ],
-          "depends_on": ["chart.disease.cns_involvement"],
-          "off_guideline": null
-        }
-      ]
-    },
-    "delta": [
+    "options": [
       {
         "regimen": "CNS_SALVAGE_MATRIX",
-        "change": "entered",
-        "from_rank": null,
-        "to_rank": 1,
-        "driver_refs": ["visit.new_neuro_symptoms"]
+        "rank": 1,
+        "intent": "curative",
+        "status": "preferred",
+        "rationale": [
+          { "text": "New back pain, leg weakness and urinary hesitancy surfaced in the room point to secondary CNS involvement, which reroutes therapy to a CNS-penetrant systemic backbone plus intrathecal therapy.", "ref": "visit.new_neuro_symptoms" },
+          { "text": "Parenchymal/leptomeningeal disease requires CNS-active systemic drugs (HD-MTX / high-dose cytarabine / thiotepa); intrathecal therapy alone cannot reach parenchymal disease.", "ref": "chart.disease.cns_compartment" }
+        ],
+        "depends_on": ["visit.new_neuro_symptoms", "chart.disease.cns_involvement"],
+        "off_guideline": null
+      },
+      {
+        "regimen": "CAR_T_LISOCEL",
+        "rank": 2,
+        "intent": "curative",
+        "status": "preferred",
+        "rationale": [
+          { "text": "Intent to proceed to CD19 CAR-T after CNS-directed control; liso-cel preferred over axi-cel for lower ICANS given baseline CNS disease.", "ref": "chart.disease.cns_involvement" },
+          { "text": "Aggressive curative path is supported by fitness, goals and a reliable caregiver.", "ref": "visit.caregiver_reliability" }
+        ],
+        "depends_on": ["chart.fitness.cell_therapy_fit", "visit.caregiver_reliability", "visit.treatment_intent"],
+        "off_guideline": null
       },
       {
         "regimen": "R_DHAP",
-        "change": "fell",
-        "from_rank": 1,
-        "to_rank": 3,
-        "driver_refs": ["visit.new_neuro_symptoms"]
+        "rank": 3,
+        "intent": "curative",
+        "status": "candidate",
+        "rationale": [
+          { "text": "Cytarabine-containing salvage is CNS-active and a defensible (not canonical) route with intrathecal therapy.", "ref": "chart.disease.cns_compartment" }
+        ],
+        "depends_on": ["chart.disease.cns_involvement"],
+        "off_guideline": null
       },
       {
         "regimen": "R_ICE",
-        "change": "excluded",
-        "from_rank": 3,
-        "to_rank": null,
-        "driver_refs": ["chart.disease.cns_compartment"]
+        "rank": 0,
+        "intent": "curative",
+        "status": "excluded",
+        "rationale": [
+          { "text": "Poor CNS penetration; insufficient for parenchymal secondary CNS disease.", "ref": "chart.disease.cns_compartment" }
+        ],
+        "depends_on": ["chart.disease.cns_involvement"],
+        "off_guideline": null
       }
     ]
   },
   "verifier": {
     "case_id": "SYN-A-0001::SYN-A-ENC-0001",
-    "rule_checks": [
+    "plans": [
       {
-        "rule_id": "R14",
-        "passed": true,
+        "regimen": "CNS_SALVAGE_MATRIX",
         "verdict": "verified",
-        "message": "Parenchymal secondary CNS disease requires a CNS-penetrant systemic backbone (HD-MTX / high-dose cytarabine / thiotepa). CNS-directed salvage satisfies this.",
-        "citation_id": "MARIETTA"
+        "citations": ["MARIETTA", "MATRix", "CNS-PHARM"],
+        "flags": [
+          { "severity": "attention", "text": "Requires HD-MTX workup: adequate renal function, no third-spacing, reconcile clearance-delaying drugs, and a leucovorin-rescue/hydration plan.", "citation_id": "CNS-PHARM" },
+          { "severity": "info", "text": "Intrathecal therapy is an adjunct for leptomeningeal disease; it cannot treat parenchymal disease on its own.", "citation_id": "MARIETTA" }
+        ]
       },
       {
-        "rule_id": "R15",
-        "passed": true,
+        "regimen": "CAR_T_LISOCEL",
         "verdict": "verified",
-        "message": "With baseline CNS disease and CAR-T chosen, liso-cel is preferred (lower ICANS); basis is TRANSCEND / registry data.",
-        "citation_id": "TRANSCEND"
+        "citations": ["ZUMA-7", "TRANSCEND"],
+        "flags": [
+          { "severity": "attention", "text": "CAR-T eligibility is a fitness + caregiver + logistics composite, never an age cutoff; confirm a reliable caregiver for the CRS/ICANS window.", "citation_id": "CART-OLDER" },
+          { "severity": "info", "text": "Prefer liso-cel over axi-cel for lower ICANS with baseline CNS disease (basis: TRANSCEND/registry, not a routine on-label CNS indication).", "citation_id": "TRANSCEND" }
+        ]
       },
       {
-        "rule_id": "R03",
-        "passed": true,
+        "regimen": "R_DHAP",
         "verdict": "verified",
-        "message": "Fit primary-refractory patient: 2L CD19 CAR-T is the preferred destination therapy.",
-        "citation_id": "ZUMA-7"
-      },
-      {
-        "rule_id": "R02",
-        "passed": true,
-        "verdict": "excluded",
-        "message": "ASCT removed from the differential: chemorefractory disease is not a transplant setting.",
-        "citation_id": "PARMA"
+        "citations": ["CNS-PHARM", "MARIETTA"],
+        "flags": [
+          { "severity": "attention", "text": "Cytarabine-based salvage is CNS-active but non-canonical for parenchymal disease versus a MATRix/MARIETTA HD-MTX/thiotepa backbone.", "citation_id": "MARIETTA" }
+        ]
       }
     ],
-    "groundings": [
-      {
-        "claim_id": "A-g1",
-        "claim_text": "CNS-penetrant systemic backbone (HD-MTX/cytarabine/thiotepa) for secondary CNS disease.",
-        "verdict": "verified",
-        "citation_id": "MARIETTA",
-        "quote": ""
-      },
-      {
-        "claim_id": "A-g2",
-        "claim_text": "Liso-cel preferred over axi-cel for lower ICANS with baseline CNS disease.",
-        "verdict": "verified",
-        "citation_id": "TRANSCEND",
-        "quote": ""
-      },
-      {
-        "claim_id": "A-g3",
-        "claim_text": "2L CD19 CAR-T beats salvage/ASCT in primary-refractory/early-relapse LBCL.",
-        "verdict": "verified",
-        "citation_id": "ZUMA-7",
-        "quote": "event-free survival 8.3 vs 2.0 months (HR 0.40)"
-      },
-      {
-        "claim_id": "A-g4",
-        "claim_text": "R-ICE has poor CNS penetration; cytarabine-containing salvage is more CNS-active.",
-        "verdict": "verified",
-        "citation_id": "CNS-PHARM",
-        "quote": ""
-      }
-    ],
-    "overall": "verified",
     "degraded": false
   }
 }

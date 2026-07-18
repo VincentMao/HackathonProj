@@ -54,10 +54,8 @@ for (const caseId of ["SYN-A-0001::SYN-A-ENC-0001", "SYN-B-0001::SYN-B-ENC-0001"
   const fx = loadFixture(caseId);
   if (!fx) continue;
   const cites = [
-    ...fx.verifier.rule_checks.map((c) => c.citation_id),
-    ...fx.verifier.groundings.map((g) => g.citation_id),
-    ...fx.recommendations.pre.options.flatMap((o) => (o.off_guideline ? [o.off_guideline.citation_id] : [])),
-    ...fx.recommendations.post.options.flatMap((o) => (o.off_guideline ? [o.off_guideline.citation_id] : [])),
+    ...fx.verifier.plans.flatMap((p) => [...p.citations, ...p.flags.map((f) => f.citation_id)]),
+    ...fx.recommendations.options.flatMap((o) => (o.off_guideline ? [o.off_guideline.citation_id] : [])),
   ].filter((c): c is string => !!c);
   for (const c of cites) if (!ids.has(c)) problems.push(`fixture ${caseId}: unknown citation_id ${c}`);
 }
