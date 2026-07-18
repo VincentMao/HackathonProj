@@ -44,8 +44,25 @@ export async function getResult(
     const fixture = loadFixture(caseId);
     if (fixture) return fixture;
   }
-  const raw = loadCase(caseId);
-  const chart = chartOverride ?? extractChart(raw);
-  const effective = transcript.trim() === "" ? raw.transcript : transcript;
+  // Only touch the case file when we still need a chart or a transcript. A "from scratch"
+  // case has no file: the client always supplies a chart override (and usually a transcript).
+  let chart = chartOverride ?? null;
+  let effective = transcript;
+  if (chart === null || effective.trim() === "") {
+    const raw = tryLoadCase(caseId);
+    if (raw) {
+      chart = chart ?? extractChart(raw);
+      if (effective.trim() === "") effective = raw.transcript;
+    }
+  }
+  if (!chart) throw new Error(`getResult: no chart available for '${caseId}' (supply a chart override)`);
   return runPipeline(caseId, chart, effective, "live");
+}
+
+function tryLoadCase(caseId: string) {
+  try {
+    return loadCase(caseId);
+  } catch {
+    return null;
+  }
 }

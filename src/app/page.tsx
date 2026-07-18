@@ -12,6 +12,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { PipelineResult, Recommendation } from "@/lib/contracts";
 import type { ChartExtract } from "@/lib/rules";
+import { BLANK_CHART } from "@/lib/rules";
 import { CASES } from "@/components/labels";
 import ChartForm from "@/components/ChartForm";
 import RankedList from "@/components/RankedList";
@@ -20,7 +21,8 @@ import VerdictBadge from "@/components/VerdictBadge";
 import VerifierPanel from "@/components/VerifierPanel";
 import DecisionBar, { type DecisionState } from "@/components/DecisionBar";
 
-type CaseKey = "A" | "B";
+type CaseKey = "A" | "B" | "scratch";
+const SCRATCH_ID = "SCRATCH::ENC-0001";
 
 function topPostOption(result: PipelineResult): Recommendation | undefined {
   return result.recommendations.post.options
@@ -47,10 +49,10 @@ export default function Home() {
   const [decision, setDecision] = useState<DecisionState>({ action: null, reason: "" });
   const runToken = useRef(0);
 
-  const caseId = CASES[caseKey].caseId;
+  const caseId = caseKey === "scratch" ? SCRATCH_ID : CASES[caseKey].caseId;
 
   // Load a starting case: populate editable inputs, then show the instant cached result.
-  const loadCase = useCallback(async (key: CaseKey) => {
+  const loadCase = useCallback(async (key: "A" | "B") => {
     const token = ++runToken.current;
     setCaseKey(key);
     setLoading(true);
@@ -114,6 +116,19 @@ export default function Home() {
     }
   }, [caseId, chart, transcript]);
 
+  // Start from scratch: neutral chart + empty transcript, nothing cached — build it live.
+  const startBlank = useCallback(() => {
+    ++runToken.current;
+    setCaseKey("scratch");
+    setChart(BLANK_CHART);
+    setTranscript("");
+    setResult(null);
+    setError(null);
+    setLoading(false);
+    setDirty(true);
+    setDecision({ action: null, reason: "" });
+  }, []);
+
   useEffect(() => {
     void loadCase("A");
   }, [loadCase]);
@@ -141,7 +156,10 @@ export default function Home() {
 
   const showAgeCallout = useMemo(() => (result ? ageIsNotTheDecision(result) : false), [result]);
   const top = result ? topPostOption(result) : undefined;
-  const meta = CASES[caseKey];
+  const scenario =
+    caseKey === "scratch"
+      ? "Build a case from scratch — set the chart facts and type the room, then run live."
+      : CASES[caseKey].scenario;
 
   return (
     <main className="mx-auto max-w-7xl px-6 py-6">
@@ -172,7 +190,7 @@ export default function Home() {
           <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Starting point</p>
             <div className="mt-2 flex gap-2">
-              {(["A", "B"] as CaseKey[]).map((k) => (
+              {(["A", "B"] as const).map((k) => (
                 <button
                   key={k}
                   type="button"
@@ -188,9 +206,23 @@ export default function Home() {
                 </button>
               ))}
             </div>
+            <button
+              type="button"
+              onClick={startBlank}
+              className={`mt-2 w-full rounded-xl px-3 py-2 text-left text-sm transition-colors ${
+                caseKey === "scratch"
+                  ? "bg-slate-900 text-white"
+                  : "border border-dashed border-slate-300 text-slate-600 hover:bg-slate-100"
+              }`}
+            >
+              <span className="block font-semibold">+ From scratch</span>
+              <span className={`block text-xs ${caseKey === "scratch" ? "text-slate-300" : "text-slate-400"}`}>
+                Blank chart — build the case live
+              </span>
+            </button>
 
             <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-400">Chart</p>
-            <p className="mb-1 text-xs text-slate-400">{meta.scenario}</p>
+            <p className="mb-1 text-xs text-slate-400">{scenario}</p>
             {chart && <ChartForm chart={chart} onChange={editChart} disabled={loading} />}
 
             <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-400">Transcript (the room)</p>
@@ -223,7 +255,11 @@ export default function Home() {
         <section className={`space-y-6 transition-opacity ${dirty ? "opacity-60" : "opacity-100"}`}>
           {!result && (
             <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-400">
-              {loading ? "Running the pipeline…" : "Load a case to begin."}
+              {loading
+                ? "Running the pipeline…"
+                : chart
+                  ? "Edit the chart and transcript, then Run live to generate a plan."
+                  : "Load a case to begin."}
             </div>
           )}
 

@@ -56,6 +56,25 @@ export const ChartExtract = z.object({
 });
 export type ChartExtract = z.infer<typeof ChartExtract>;
 
+/** Neutral defaults for a "from scratch" case the user builds live. */
+export const BLANK_CHART: ChartExtract = {
+  line: 2,
+  region: "US",
+  transplant_intent: "undetermined",
+  refractoriness: { primary_refractory: false },
+  disease: {
+    chemosensitive: true,
+    relapse_timing: "na",
+    cell_of_origin: "unknown",
+    cns_involvement: false,
+    cns_compartment: [],
+    molecular: { myc_positive: false, myc_method: "not_tested" },
+  },
+  fitness: { age: 65, cell_therapy_fit: true },
+  prior: { first_line: "unknown", cd19_directed: false },
+  geriatric_assessment: { completed: false },
+};
+
 /* ------------------------------------------------------------------ *
  * Context 3 — CandidateEval (per-recommendation; synthesized, not patient data)
  * ------------------------------------------------------------------ */
