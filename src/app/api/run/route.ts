@@ -1,15 +1,16 @@
 /**
- * Live pipeline endpoint. POST { caseId, transcript } -> PipelineResult.
- * Case C (and any transcript override) runs through the identical getResult()/runPipeline
- * path; Cases A/B return cached fixtures. Missing API key -> 501 so the client degrades.
+ * Live pipeline endpoint. POST { caseId, transcript?, chart? } -> PipelineResult.
+ * No overrides -> cached fixture for a preloaded case. An edited transcript and/or chart
+ * runs live through the identical getResult()/runPipeline path. 501 when no API key.
  */
 import { NextResponse } from "next/server";
 import { getResult } from "@/lib/pipeline";
+import { ChartExtract } from "@/lib/rules";
 
 export const runtime = "nodejs";
 
 export async function POST(req: Request) {
-  let body: { caseId?: string; transcript?: string };
+  let body: { caseId?: string; transcript?: string; chart?: unknown };
   try {
     body = await req.json();
   } catch {
@@ -18,8 +19,17 @@ export async function POST(req: Request) {
   const { caseId, transcript } = body;
   if (!caseId) return NextResponse.json({ error: "caseId is required" }, { status: 400 });
 
+  let chartOverride: ReturnType<typeof ChartExtract.parse> | undefined;
+  if (body.chart !== undefined && body.chart !== null) {
+    const parsed = ChartExtract.safeParse(body.chart);
+    if (!parsed.success) {
+      return NextResponse.json({ error: "invalid chart override" }, { status: 400 });
+    }
+    chartOverride = parsed.data;
+  }
+
   try {
-    const result = await getResult(caseId, transcript ?? "");
+    const result = await getResult(caseId, transcript ?? "", chartOverride);
     return NextResponse.json(result);
   } catch (err) {
     const message = err instanceof Error ? err.message : "pipeline error";

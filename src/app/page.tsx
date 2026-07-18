@@ -1,36 +1,31 @@
 "use client";
 
 /**
- * Consilium — single-page, keyboard-driven temporal narrative.
+ * Consilium — single interactive page. Load a starting case (A/B), edit the chart facts
+ * and/or the transcript, and Run the real pipeline live to get new recommendations.
  *
- *   Space / →  advance stage      ← / ⌫  previous stage
- *   r          reset to stage 1   1 / 2 / 3  jump to Case A / B / C
+ *   Load case  -> instant cached result
+ *   Edit + Run -> live pipeline (signals -> reasoner x2 -> verifier), identical code path
  *
- * Data comes only from POST /api/run { caseId, transcript } -> PipelineResult.
- * A/B return cached fixtures (empty transcript); C runs live. Fixtures are never
- * read directly in the client.
+ * Before/after: chart-only (pre) vs after-the-room (post), with the verifier and decision.
  */
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { PipelineResult, Recommendation } from "@/lib/contracts";
-import Stage, { StageRail, STAGES } from "@/components/Stage";
-import ChartHeader from "@/components/ChartHeader";
+import type { ChartExtract } from "@/lib/rules";
+import { CASES } from "@/components/labels";
+import ChartForm from "@/components/ChartForm";
 import RankedList from "@/components/RankedList";
 import SignalChip from "@/components/SignalChip";
 import VerdictBadge from "@/components/VerdictBadge";
-import CitationPill from "@/components/CitationPill";
+import VerifierPanel from "@/components/VerifierPanel";
 import DecisionBar, { type DecisionState } from "@/components/DecisionBar";
-import LiveInput from "@/components/LiveInput";
-import KeyboardLegend from "@/components/KeyboardLegend";
-import { CASES } from "@/components/labels";
 
-type CaseKey = "A" | "B" | "C";
-const CASE_BY_DIGIT: Record<string, CaseKey> = { "1": "A", "2": "B", "3": "C" };
+type CaseKey = "A" | "B";
 
 function topPostOption(result: PipelineResult): Recommendation | undefined {
-  const ranked = result.recommendations.post.options
+  return result.recommendations.post.options
     .filter((o) => o.status !== "excluded" && o.rank > 0)
-    .sort((a, b) => a.rank - b.rank);
-  return ranked[0];
+    .sort((a, b) => a.rank - b.rank)[0];
 }
 
 /** "Age is not the decision": age drove a pre option but not the top post option. */
@@ -43,328 +38,248 @@ function ageIsNotTheDecision(result: PipelineResult): boolean {
 
 export default function Home() {
   const [caseKey, setCaseKey] = useState<CaseKey>("A");
-  const [stage, setStage] = useState(0);
+  const [chart, setChart] = useState<ChartExtract | null>(null);
+  const [transcript, setTranscript] = useState("");
   const [result, setResult] = useState<PipelineResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [dirty, setDirty] = useState(false);
   const [decision, setDecision] = useState<DecisionState>({ action: null, reason: "" });
-  const [cTranscript, setCTranscript] = useState(CASES.C.transcript);
+  const runToken = useRef(0);
 
-  const meta = CASES[caseKey];
+  const caseId = CASES[caseKey].caseId;
 
-  const runCase = useCallback(async (key: CaseKey, transcript: string) => {
+  // Load a starting case: populate editable inputs, then show the instant cached result.
+  const loadCase = useCallback(async (key: CaseKey) => {
+    const token = ++runToken.current;
+    setCaseKey(key);
     setLoading(true);
     setError(null);
-    setResult(null);
-    setStage(0);
+    setDirty(false);
     setDecision({ action: null, reason: "" });
+    const id = CASES[key].caseId;
+    try {
+      const caseRes = await fetch(`/api/case?caseId=${encodeURIComponent(id)}`);
+      const caseData = await caseRes.json();
+      if (token !== runToken.current) return;
+      setChart(caseData.chart as ChartExtract);
+      setTranscript(caseData.transcript as string);
+
+      const runRes = await fetch("/api/run", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ caseId: id }),
+      });
+      if (token !== runToken.current) return;
+      if (runRes.ok) setResult((await runRes.json()) as PipelineResult);
+      else setResult(null);
+    } catch {
+      if (token === runToken.current) setError("Could not load case. Is the dev server running?");
+    } finally {
+      if (token === runToken.current) setLoading(false);
+    }
+  }, []);
+
+  // Run the pipeline live on the current (possibly edited) chart + transcript.
+  const runLive = useCallback(async () => {
+    if (!chart) return;
+    const token = ++runToken.current;
+    setLoading(true);
+    setError(null);
     try {
       const res = await fetch("/api/run", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ caseId: CASES[key].caseId, transcript }),
+        body: JSON.stringify({ caseId, transcript, chart }),
       });
+      if (token !== runToken.current) return;
       if (!res.ok) {
         const detail = await res.json().catch(() => null);
-        if (res.status === 501) {
-          setError(
-            "Live pipeline unavailable (no API key configured). Cases A and B still run from cache.",
-          );
-        } else {
-          setError(detail?.error ? String(detail.error) : `Request failed (${res.status}).`);
-        }
+        setError(
+          res.status === 501
+            ? "Live pipeline unavailable — set ANTHROPIC_API_KEY in .env.local and restart."
+            : detail?.error
+              ? String(detail.error)
+              : `Run failed (${res.status}).`,
+        );
         return;
       }
-      const data = (await res.json()) as PipelineResult;
-      setResult(data);
-    } catch {
-      setError("Could not reach /api/run. Is the dev server running?");
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  // Selecting a case: A/B auto-load from cache; C waits for an explicit Run.
-  const selectCase = useCallback(
-    (key: CaseKey) => {
-      setCaseKey(key);
-      setStage(0);
+      setResult((await res.json()) as PipelineResult);
+      setDirty(false);
       setDecision({ action: null, reason: "" });
-      if (key === "C") {
-        setResult(null);
-        setError(null);
-      } else {
-        void runCase(key, "");
-      }
-    },
-    [runCase],
-  );
+    } catch {
+      if (token === runToken.current) setError("Could not reach /api/run.");
+    } finally {
+      if (token === runToken.current) setLoading(false);
+    }
+  }, [caseId, chart, transcript]);
 
-  // Initial load: Case A from cache.
   useEffect(() => {
-    void runCase("A", "");
-  }, [runCase]);
+    void loadCase("A");
+  }, [loadCase]);
 
-  const maxStage = STAGES.length - 1;
-  const canAdvance = result !== null;
-
-  // Keyboard controls drive everything.
+  // Cmd/Ctrl+Enter runs live from anywhere (incl. the transcript textarea).
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      const target = e.target as HTMLElement | null;
-      if (target && (target.tagName === "TEXTAREA" || target.tagName === "INPUT")) return;
-
-      if (e.key === " " || e.key === "ArrowRight") {
+      if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
         e.preventDefault();
-        if (canAdvance) setStage((s) => Math.min(maxStage, s + 1));
-      } else if (e.key === "ArrowLeft" || e.key === "Backspace") {
-        e.preventDefault();
-        setStage((s) => Math.max(0, s - 1));
-      } else if (e.key === "r" || e.key === "R") {
-        setStage(0);
-        setDecision({ action: null, reason: "" });
-      } else if (CASE_BY_DIGIT[e.key]) {
-        selectCase(CASE_BY_DIGIT[e.key]);
+        void runLive();
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [canAdvance, maxStage, selectCase]);
+  }, [runLive]);
 
-  const showAgeCallout = useMemo(
-    () => (result ? ageIsNotTheDecision(result) : false),
-    [result],
-  );
+  const editChart = (next: ChartExtract) => {
+    setChart(next);
+    setDirty(true);
+  };
+  const editTranscript = (v: string) => {
+    setTranscript(v);
+    setDirty(true);
+  };
+
+  const showAgeCallout = useMemo(() => (result ? ageIsNotTheDecision(result) : false), [result]);
   const top = result ? topPostOption(result) : undefined;
+  const meta = CASES[caseKey];
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-5xl flex-col gap-6 px-6 py-6">
-      {/* Header */}
-      <header className="flex flex-wrap items-center justify-between gap-4">
+    <main className="mx-auto max-w-7xl px-6 py-6">
+      <header className="flex flex-wrap items-end justify-between gap-4 border-b border-slate-200 pb-4">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">
-            Consilium
-          </h1>
+          <h1 className="text-2xl font-bold tracking-tight text-slate-900">Consilium</h1>
           <p className="text-sm text-slate-500">The chart proposes, the room disposes.</p>
         </div>
-        <div className="flex items-center gap-3">
-          {result && (
+        {result && (
+          <div className="flex items-center gap-3">
             <span
               className={`rounded-full px-3 py-1 text-xs font-semibold ${
                 result.mode === "live"
-                  ? "border border-teal-200 bg-teal-50 text-teal-700"
+                  ? "border border-teal-300 bg-teal-50 text-teal-700"
                   : "border border-slate-200 bg-slate-50 text-slate-500"
               }`}
             >
-              {result.mode === "live" ? "live" : "cached"}
+              {result.mode}
             </span>
-          )}
-          <nav className="flex gap-1 rounded-full border border-slate-200 bg-white p-1 shadow-sm">
-            {(["A", "B", "C"] as CaseKey[]).map((k) => (
-              <button
-                key={k}
-                type="button"
-                onClick={() => selectCase(k)}
-                className={`rounded-full px-4 py-1.5 text-sm font-semibold transition-colors ${
-                  caseKey === k
-                    ? "bg-slate-900 text-white"
-                    : "text-slate-500 hover:bg-slate-100"
-                }`}
-              >
-                Case {k}
-              </button>
-            ))}
-          </nav>
-        </div>
+            <VerdictBadge verdict={result.verifier.overall} />
+          </div>
+        )}
       </header>
 
-      {/* Case title + progress rail */}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-base font-medium text-slate-600">
-          <span className="font-bold text-slate-900">{meta.title}</span> — {meta.scenario}
-        </p>
-        <StageRail active={stage} />
-      </div>
+      <div className="mt-6 grid gap-6 lg:grid-cols-[380px_1fr]">
+        {/* ---------- Input panel ---------- */}
+        <aside className="lg:sticky lg:top-6 lg:self-start">
+          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Starting point</p>
+            <div className="mt-2 flex gap-2">
+              {(["A", "B"] as CaseKey[]).map((k) => (
+                <button
+                  key={k}
+                  type="button"
+                  onClick={() => void loadCase(k)}
+                  className={`flex-1 rounded-xl px-3 py-2 text-left text-sm transition-colors ${
+                    caseKey === k ? "bg-slate-900 text-white" : "border border-slate-200 text-slate-600 hover:bg-slate-100"
+                  }`}
+                >
+                  <span className="block font-semibold">{CASES[k].title}</span>
+                  <span className={`block text-xs ${caseKey === k ? "text-slate-300" : "text-slate-400"}`}>
+                    {CASES[k].chart.age}{CASES[k].chart.sex} · {CASES[k].chart.diagnosis.split(",")[0]}
+                  </span>
+                </button>
+              ))}
+            </div>
 
-      {/* Stage content */}
-      <div className="flex-1">
-        <Stage index={stage}>
-          {/* ---- Stage 1: Chart ---- */}
-          {stage === 0 && (
-            <div className="space-y-5">
-              <ChartHeader chart={meta.chart} />
-              {caseKey === "C" && (
-                <LiveInput
-                  transcript={cTranscript}
-                  onChange={setCTranscript}
-                  onRun={() => void runCase("C", cTranscript)}
-                  loading={loading}
-                />
-              )}
-              {error && (
-                <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm font-medium text-amber-800">
-                  {error}
-                </div>
-              )}
-              {loading && <SkeletonList />}
-              {result && !loading && (
-                <div>
-                  <SectionTitle>Chart-only recommendation</SectionTitle>
-                  <RankedList options={result.recommendations.pre.options} />
-                </div>
-              )}
-              {!result && !loading && !error && caseKey === "C" && (
-                <EmptyHint text="Run the live pipeline to populate the narrative." />
-              )}
+            <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-400">Chart</p>
+            <p className="mb-1 text-xs text-slate-400">{meta.scenario}</p>
+            {chart && <ChartForm chart={chart} onChange={editChart} disabled={loading} />}
+
+            <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-400">Transcript (the room)</p>
+            <textarea
+              value={transcript}
+              onChange={(e) => editTranscript(e.target.value)}
+              rows={10}
+              spellCheck={false}
+              className="mt-1 w-full rounded-xl border border-slate-300 p-3 font-mono text-xs leading-relaxed text-slate-800 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+              placeholder="Edit the conversation to surface new symptoms…"
+            />
+
+            <button
+              type="button"
+              onClick={() => void runLive()}
+              disabled={loading || !chart}
+              className="mt-3 w-full rounded-xl bg-teal-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-teal-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {loading ? "Running pipeline…" : "Run live"}
+              <span className="ml-2 font-normal text-teal-200">⌘⏎</span>
+            </button>
+            {dirty && !loading && (
+              <p className="mt-2 text-center text-xs text-amber-600">Inputs changed — run live to update the plan.</p>
+            )}
+            {error && <p className="mt-2 rounded-lg bg-red-50 px-3 py-2 text-xs text-red-600">{error}</p>}
+          </div>
+        </aside>
+
+        {/* ---------- Outputs ---------- */}
+        <section className={`space-y-6 transition-opacity ${dirty ? "opacity-60" : "opacity-100"}`}>
+          {!result && (
+            <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-400">
+              {loading ? "Running the pipeline…" : "Load a case to begin."}
             </div>
           )}
 
-          {/* ---- Stage 2: The room ---- */}
-          {stage === 1 &&
-            (result ? (
+          {result && (
+            <>
+              {/* The room */}
               <div>
-                <SectionTitle>Signals from the conversation</SectionTitle>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {result.signals.signals.map((sig, i) => (
-                    <SignalChip key={sig.key} signal={sig} index={i} />
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <EmptyHint text="No signals yet — run a case first." />
-            ))}
-
-          {/* ---- Stage 3: Re-rank ---- */}
-          {stage === 2 &&
-            (result ? (
-              <div className="space-y-4">
-                {showAgeCallout && (
-                  <div className="rounded-2xl border border-teal-300 bg-teal-50 p-5">
-                    <div className="text-sm font-bold uppercase tracking-wide text-teal-800">
-                      Age is not the decision
-                    </div>
-                    <p className="mt-1 text-sm text-teal-900">
-                      The chart-only pass leaned on age. After the room, the top option depends on
-                      function, goals and logistics — not the number on the chart.
-                    </p>
+                <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider text-slate-500">
+                  The room surfaced
+                </h2>
+                {result.signals.signals.length ? (
+                  <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+                    {result.signals.signals.map((s, i) => (
+                      <SignalChip key={s.key + i} signal={s} index={0} />
+                    ))}
                   </div>
+                ) : (
+                  <p className="text-sm text-slate-400">No conversation signals extracted.</p>
                 )}
-                <SectionTitle>Recommendation after the room</SectionTitle>
-                <RankedList
-                  options={result.recommendations.post.options}
-                  deltas={result.recommendations.delta}
-                  emphasizeDependsOn
-                />
               </div>
-            ) : (
-              <EmptyHint text="Nothing to re-rank yet." />
-            ))}
 
-          {/* ---- Stage 4: Verify ---- */}
-          {stage === 3 &&
-            (result ? (
-              <div className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <span className="text-sm font-semibold text-slate-500">Overall</span>
-                  <VerdictBadge verdict={result.verifier.overall} />
-                  {result.verifier.degraded && (
-                    <span className="rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-xs font-semibold text-amber-700">
-                      degraded — grounding timed out
-                    </span>
+              {/* Before / after */}
+              <div className="grid gap-6 xl:grid-cols-2">
+                <div>
+                  <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-500">
+                    Chart only
+                  </h2>
+                  <RankedList options={result.recommendations.pre.options} />
+                </div>
+                <div>
+                  <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-500">
+                    After the room
+                  </h2>
+                  {showAgeCallout && (
+                    <div className="mb-3 rounded-xl border border-teal-300 bg-teal-50 p-3">
+                      <p className="text-sm font-semibold text-teal-900">Age is not the decision</p>
+                      <p className="text-xs text-teal-800">
+                        The chart-only pass leaned on age; after the room the top option depends on function, goals and
+                        logistics — not the number on the chart.
+                      </p>
+                    </div>
                   )}
-                </div>
-
-                <div>
-                  <SectionTitle>Rule checks</SectionTitle>
-                  <div className="space-y-2">
-                    {result.verifier.rule_checks.map((rc) => (
-                      <div
-                        key={rc.rule_id}
-                        className="flex flex-col gap-2 rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:flex-row sm:items-start sm:justify-between"
-                      >
-                        <div className="min-w-0">
-                          <div className="flex items-center gap-2">
-                            <span className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-xs font-semibold text-slate-500">
-                              {rc.rule_id}
-                            </span>
-                            <span className="text-sm font-medium text-slate-800">{rc.message}</span>
-                          </div>
-                        </div>
-                        <div className="flex shrink-0 items-center gap-2">
-                          {rc.citation_id && <CitationPill id={rc.citation_id} />}
-                          <VerdictBadge verdict={rc.verdict} />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <SectionTitle>Groundings</SectionTitle>
-                  <div className="space-y-2">
-                    {result.verifier.groundings.map((g) => (
-                      <div
-                        key={g.claim_id}
-                        className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"
-                      >
-                        <div className="flex flex-wrap items-center justify-between gap-2">
-                          <span className="text-sm font-medium text-slate-800">{g.claim_text}</span>
-                          <div className="flex items-center gap-2">
-                            {g.citation_id && <CitationPill id={g.citation_id} />}
-                            <VerdictBadge verdict={g.verdict} />
-                          </div>
-                        </div>
-                        {g.quote && g.quote.trim().length > 0 && (
-                          <blockquote className="mt-2 border-l-2 border-indigo-300 pl-3 text-sm italic text-slate-600">
-                            &ldquo;{g.quote}&rdquo;
-                          </blockquote>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+                  <RankedList
+                    options={result.recommendations.post.options}
+                    deltas={result.recommendations.delta}
+                    emphasizeDependsOn
+                  />
                 </div>
               </div>
-            ) : (
-              <EmptyHint text="Nothing to verify yet." />
-            ))}
 
-          {/* ---- Stage 5: Decision ---- */}
-          {stage === 4 &&
-            (result && top ? (
-              <DecisionBar top={top} decision={decision} onChange={setDecision} />
-            ) : (
-              <EmptyHint text="No decision available — run a case first." />
-            ))}
-        </Stage>
+              <VerifierPanel report={result.verifier} />
+              {top && <DecisionBar top={top} decision={decision} onChange={setDecision} />}
+            </>
+          )}
+        </section>
       </div>
-
-      <KeyboardLegend />
     </main>
-  );
-}
-
-function SectionTitle({ children }: { children: React.ReactNode }) {
-  return (
-    <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-400">
-      {children}
-    </h3>
-  );
-}
-
-function EmptyHint({ text }: { text: string }) {
-  return (
-    <div className="rounded-xl border border-dashed border-slate-300 bg-white p-8 text-center text-sm text-slate-400">
-      {text}
-    </div>
-  );
-}
-
-function SkeletonList() {
-  return (
-    <div className="space-y-3">
-      {[0, 1, 2].map((i) => (
-        <div key={i} className="h-24 animate-pulse rounded-2xl border border-slate-200 bg-white" />
-      ))}
-    </div>
   );
 }

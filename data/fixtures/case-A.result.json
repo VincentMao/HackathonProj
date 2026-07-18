@@ -137,13 +137,6 @@
         "driver_refs": ["visit.new_neuro_symptoms"]
       },
       {
-        "regimen": "CAR_T_LISOCEL",
-        "change": "rose",
-        "from_rank": 2,
-        "to_rank": 2,
-        "driver_refs": ["chart.disease.cns_involvement", "visit.caregiver_reliability"]
-      },
-      {
         "regimen": "R_DHAP",
         "change": "fell",
         "from_rank": 1,

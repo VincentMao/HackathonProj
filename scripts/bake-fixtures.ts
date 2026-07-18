@@ -9,6 +9,7 @@
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { loadCase } from "../src/lib/data";
+import { extractChart } from "../src/lib/chart";
 import { runPipeline } from "../src/lib/pipeline";
 
 const TARGETS: Array<[string, string]> = [
@@ -19,7 +20,7 @@ const TARGETS: Array<[string, string]> = [
 async function main() {
   for (const [caseId, file] of TARGETS) {
     const raw = loadCase(caseId);
-    const result = await runPipeline(caseId, raw, raw.transcript, "cached");
+    const result = await runPipeline(caseId, extractChart(raw), raw.transcript, "cached");
     const path = join(process.cwd(), "data", "fixtures", file);
     writeFileSync(path, JSON.stringify(result, null, 2) + "\n");
     console.log(`✓ baked ${file}`);

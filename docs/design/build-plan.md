@@ -366,3 +366,15 @@ Case-data fixes (case JSONs, unchanged by the new commits — verified live):
 - **`longitudinal_summary.resource_counts`** don't match `related_resources` counts (e.g. Case B Condition 6 vs 4). Plausibly by-design (longitudinal totals vs encounter subset); confirm which layer the reasoner reads. Not a bug if the label is honored.
 
 Findings already resolved by the new commits (were flagged against the stale `rules.md`/manifest): citation machine-linkage (now `citation_id` enum), LOTIS-2/SCHOLAR-1 orphans (now used by R09/R20), `population`+`anchor_quote` fields (now present), manifest template literal, EPCORE-DLBCL-1 OS wording (pack now says "did not reach significance").
+
+---
+
+## Update (2026-07-18): single-page interactive model
+
+The 3-case staged UI (2 cached tabs + 1 live) was replaced by **one interactive page**:
+- Load a starting case (A or B) → instant cached result.
+- The **chart facts** (age, primary-refractory, CNS involvement, cell-of-origin, transplant intent) and the **transcript** are **editable**.
+- **Run live** (⌘⏎) runs the identical pipeline on the edited inputs → new recommendations.
+- Layout is a single **before/after** screen: "Chart only" vs "After the room" ranked lists, with the room's signals, the verifier panel, and the decision bar.
+
+New endpoint `GET /api/case?caseId=` returns the deterministic `ChartExtract` + transcript to populate the editable inputs. `POST /api/run` now accepts an optional validated `chart` override; `getResult(caseId, transcript, chartOverride?)` returns the cached fixture only when there are no edits, else runs live. Stage/keyboard-narrative components were removed.
