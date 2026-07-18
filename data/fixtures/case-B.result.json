@@ -1,0 +1,254 @@
+{
+  "case_id": "SYN-B-0001::SYN-B-ENC-0001",
+  "mode": "cached",
+  "signals": {
+    "case_id": "SYN-B-0001::SYN-B-ENC-0001",
+    "mode": "cached",
+    "signals": [
+      {
+        "key": "functional_narrative",
+        "label": "Functional status (real-world)",
+        "value": "gardens daily, independent, drives",
+        "evidence_span": "I still do my garden every morning, the tomatoes are coming in. I cook for myself, I drive to church and the store.",
+        "ref": "visit.functional_narrative",
+        "salience": "high"
+      },
+      {
+        "key": "treatment_intent",
+        "label": "Treatment intent",
+        "value": "curative",
+        "evidence_span": "I want the one that gives me the best shot. I didn't drive all this way to go easy.",
+        "ref": "visit.treatment_intent",
+        "salience": "high"
+      },
+      {
+        "key": "distance_to_center_minutes",
+        "label": "Distance to cellular-therapy center",
+        "value": 90,
+        "evidence_span": "About an hour and a half, but my daughter drove, so it wasn't bad.",
+        "ref": "visit.distance_to_center_minutes",
+        "salience": "high"
+      },
+      {
+        "key": "caregiver_reliability",
+        "label": "Caregiver reliability",
+        "value": "limited",
+        "evidence_span": "I'm Carla, her daughter. I come to the important ones.",
+        "ref": "visit.caregiver_reliability",
+        "salience": "med"
+      },
+      {
+        "key": "gentler_vs_active_preference",
+        "label": "Gentler vs active preference",
+        "value": "prefers_active",
+        "evidence_span": "Then let's do it. The strong one.",
+        "ref": "visit.gentler_vs_active_preference",
+        "salience": "med"
+      }
+    ]
+  },
+  "recommendations": {
+    "case_id": "SYN-B-0001::SYN-B-ENC-0001",
+    "pre": {
+      "options": [
+        {
+          "regimen": "POLA_MOSUN",
+          "rank": 1,
+          "intent": "disease_control",
+          "status": "preferred",
+          "rationale": [
+            { "text": "Age 86, transplant-ineligible, prior R-CHOP now refractory: a chart-only read down-triages toward a gentler, chemo-light, largely outpatient regimen (SUNMO).", "ref": "chart.fitness.age" }
+          ],
+          "depends_on": ["chart.fitness.age", "chart.transplant_intent"],
+          "off_guideline": null
+        },
+        {
+          "regimen": "EPCOR_GEMOX",
+          "rank": 2,
+          "intent": "curative",
+          "status": "off_guideline",
+          "rationale": [
+            { "text": "Highly active bispecific + chemotherapy combination for transplant-ineligible R/R DLBCL (EPCORE NHL-2).", "ref": "chart.refractoriness.primary_refractory" }
+          ],
+          "depends_on": ["chart.refractoriness.primary_refractory"],
+          "off_guideline": {
+            "boundary": "Only epcoritamab monotherapy is approved, and only at 3L+. The GemOx combination and 2L use are off-label.",
+            "citation_id": "EPCORE-NHL-2",
+            "tradeoff": "Trades on-label status for a prospectively-supported, deeper response in a fit, transplant-ineligible patient not pursuing CAR-T."
+          }
+        },
+        {
+          "regimen": "TAFA_LEN",
+          "rank": 0,
+          "intent": "disease_control",
+          "status": "excluded",
+          "rationale": [
+            { "text": "Excluded: L-MIND excluded primary-refractory disease, so there is no efficacy evidence here. The exclusion is by disease biology — not age, not transplant-ineligibility.", "ref": "chart.refractoriness.primary_refractory" }
+          ],
+          "depends_on": ["chart.refractoriness.primary_refractory"],
+          "off_guideline": null
+        },
+        {
+          "regimen": "CAR_T_LISOCEL",
+          "rank": 0,
+          "intent": "curative",
+          "status": "excluded",
+          "rationale": [
+            { "text": "Deprioritized on a composite of comorbidity + distance + caregiver, pending the room. Not an age rule.", "ref": "chart.fitness.age" }
+          ],
+          "depends_on": ["chart.fitness.cell_therapy_fit"],
+          "off_guideline": null
+        }
+      ]
+    },
+    "post": {
+      "options": [
+        {
+          "regimen": "EPCOR_GEMOX",
+          "rank": 1,
+          "intent": "curative",
+          "status": "off_guideline",
+          "rationale": [
+            { "text": "Robust performance status (gardens daily, independent) and explicit active goals argue against under-treating a phenotypically fit patient — age is not the decision.", "ref": "visit.functional_narrative" },
+            { "text": "Patient wants the most active option and is not pursuing CAR-T; a highly active bispecific + chemo combination fits.", "ref": "visit.treatment_intent" },
+            { "text": "Bispecific ramp-up (cycle 1) delivered at the center, then handed back to the local oncologist — makes a distant patient treatable.", "ref": "visit.distance_to_center_minutes" }
+          ],
+          "depends_on": ["chart.refractoriness.primary_refractory", "visit.functional_narrative", "visit.treatment_intent"],
+          "off_guideline": {
+            "boundary": "Only epcoritamab monotherapy is approved, and only at 3L+. The GemOx combination and 2L use are off-label.",
+            "citation_id": "EPCORE-NHL-2",
+            "tradeoff": "Off strict guideline for this line, chosen deliberately for a robust, fit, transplant-ineligible patient to avoid under-treatment; grounded in EPCORE NHL-2 (ORR 85%, CR 61%)."
+          }
+        },
+        {
+          "regimen": "POLA_MOSUN",
+          "rank": 2,
+          "intent": "disease_control",
+          "status": "candidate",
+          "rationale": [
+            { "text": "A legitimate gentler option, but it can under-treat a phenotypically fit patient with primary-refractory disease.", "ref": "visit.functional_narrative" }
+          ],
+          "depends_on": ["chart.transplant_intent"],
+          "off_guideline": null
+        },
+        {
+          "regimen": "TAFA_LEN",
+          "rank": 0,
+          "intent": "disease_control",
+          "status": "excluded",
+          "rationale": [
+            { "text": "Excluded: primary-refractory disease was an explicit L-MIND exclusion, so there is no efficacy evidence. Not because of age, and not because she is transplant-ineligible.", "ref": "chart.refractoriness.primary_refractory" }
+          ],
+          "depends_on": ["chart.refractoriness.primary_refractory"],
+          "off_guideline": null
+        },
+        {
+          "regimen": "CAR_T_LISOCEL",
+          "rank": 0,
+          "intent": "curative",
+          "status": "excluded",
+          "rationale": [
+            { "text": "Excluded on a composite: 90-minute distance from the certified center plus limited caregiver availability make the sustained CRS/ICANS monitoring window unworkable. This is the failing composite — never a numeric age cutoff.", "ref": "visit.distance_to_center_minutes" }
+          ],
+          "depends_on": ["visit.distance_to_center_minutes", "visit.caregiver_reliability"],
+          "off_guideline": null
+        }
+      ]
+    },
+    "delta": [
+      {
+        "regimen": "EPCOR_GEMOX",
+        "change": "rose",
+        "from_rank": 2,
+        "to_rank": 1,
+        "driver_refs": ["visit.functional_narrative", "visit.treatment_intent"]
+      },
+      {
+        "regimen": "POLA_MOSUN",
+        "change": "fell",
+        "from_rank": 1,
+        "to_rank": 2,
+        "driver_refs": ["visit.functional_narrative"]
+      },
+      {
+        "regimen": "CAR_T_LISOCEL",
+        "change": "excluded",
+        "from_rank": 0,
+        "to_rank": null,
+        "driver_refs": ["visit.distance_to_center_minutes", "visit.caregiver_reliability"]
+      }
+    ]
+  },
+  "verifier": {
+    "case_id": "SYN-B-0001::SYN-B-ENC-0001",
+    "rule_checks": [
+      {
+        "rule_id": "R01",
+        "passed": true,
+        "verdict": "excluded",
+        "message": "Tafasitamab-lenalidomide excluded in primary-refractory disease (L-MIND excluded primary-refractory). Exclusion is by biology, not age or transplant-ineligibility.",
+        "citation_id": "L-MIND"
+      },
+      {
+        "rule_id": "R06",
+        "passed": true,
+        "verdict": "off_guideline_explained",
+        "message": "Epcoritamab + GemOx is off-label in 2L (only epcoritamab monotherapy is approved, 3L+). Boundary named, grounded in EPCORE NHL-2; clinician may proceed.",
+        "citation_id": "EPCORE-NHL-2"
+      },
+      {
+        "rule_id": "R20",
+        "passed": true,
+        "verdict": "verified",
+        "message": "Do not down-rank an active regimen solely on age/biology when disease is primary-refractory; under-treating a phenotypically fit patient is the greater risk.",
+        "citation_id": "SCHOLAR-1"
+      },
+      {
+        "rule_id": "R18",
+        "passed": true,
+        "verdict": "verified",
+        "message": "Bispecific for a distant patient: cycle-1 ramp-up assigned to the center, hand-back after the ramp-up window. Highest-risk doses stay at the center.",
+        "citation_id": "EPCORE-NHL-1"
+      },
+      {
+        "rule_id": "R11",
+        "passed": true,
+        "verdict": "verified",
+        "message": "CAR-T ineligibility represented as a failing fitness+logistics+caregiver composite, never a numeric age cutoff.",
+        "citation_id": "CART-OLDER"
+      }
+    ],
+    "groundings": [
+      {
+        "claim_id": "B-g1",
+        "claim_text": "L-MIND excluded primary-refractory disease; no efficacy evidence for tafa-len there.",
+        "verdict": "excluded",
+        "citation_id": "L-MIND",
+        "quote": "primary-refractory disease was excluded"
+      },
+      {
+        "claim_id": "B-g2",
+        "claim_text": "Epcoritamab + GemOx (EPCORE NHL-2) is an off-label 2L combination with high CMR in transplant-ineligible R/R DLBCL.",
+        "verdict": "off_guideline_explained",
+        "citation_id": "EPCORE-NHL-2",
+        "quote": "ORR 85%, CR 61% (transplant-ineligible)"
+      },
+      {
+        "claim_id": "B-g3",
+        "claim_text": "Refractory DLBCL has poor prognosis; under-treating a fit patient risks a foreseeable poor outcome.",
+        "verdict": "verified",
+        "citation_id": "SCHOLAR-1",
+        "quote": "median overall survival ~6 months"
+      },
+      {
+        "claim_id": "B-g4",
+        "claim_text": "No numeric age cutoff for CAR-T; eligibility is a fitness+logistics composite.",
+        "verdict": "verified",
+        "citation_id": "CART-OLDER",
+        "quote": "no label-based upper age limit for CAR-T"
+      }
+    ],
+    "overall": "off_guideline_explained",
+    "degraded": false
+  }
+}

@@ -110,7 +110,7 @@ export type VisitSignals = z.infer<typeof VisitSignals>;
 
 export const Recommendation = z.object({
   regimen: RegimenId,
-  rank: z.number().int().positive(),
+  rank: z.number().int().nonnegative(), // 1 = top; 0 = excluded sentinel (sorted to bottom)
   intent: z.enum(["curative", "disease_control", "palliative"]),
   status: z.enum(["preferred", "candidate", "excluded", "off_guideline"]),
   rationale: z.array(z.object({ text: z.string(), ref: Ref })),

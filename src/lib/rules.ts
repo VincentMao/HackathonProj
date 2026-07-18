@@ -13,7 +13,8 @@
  * for the case-by-case rule/citation coverage map.
  */
 import { z } from "zod";
-import type { RegimenId } from "./contracts";
+import type { RegimenId, VisitSignals, RuleCheck, Verdict } from "./contracts";
+import { evaluateCondition, type Ctx } from "./condition";
 
 /* ------------------------------------------------------------------ *
  * Context 1 — ChartExtract (deterministic from the case JSON; chart.* provenance)
@@ -120,6 +121,104 @@ export const RuleTable = z.object({
 });
 export type RuleTable = z.infer<typeof RuleTable>;
 
-// TODO(pipeline): loadRuleTable() reads data/knowledge/rules.json + validates every
-// citation_id against the evidence pack (fail loud). evaluateRule(rule, ctx) parses the
-// condition against the merged context. See docs/design/build-plan.md.
+/* ------------------------------------------------------------------ *
+ * Context building + rule evaluation
+ * ------------------------------------------------------------------ */
+
+/** Plan-intent flags (Context 3, plan.*) — provisional pipeline intent, not patient data. */
+export interface PlanFlags {
+  intends_cellular_therapy?: boolean;
+  cd19_car_t?: boolean;
+  hd_mtx?: boolean;
+  bridging_agent?: string | null;
+}
+
+/** Flatten ChartExtract + VisitSignals into a flat, dotted-key context. */
+export function baseContext(chart: ChartExtract, signals: VisitSignals | null): Ctx {
+  const ctx: Ctx = {
+    line: chart.line,
+    region: chart.region,
+    transplant_intent: chart.transplant_intent,
+    "refractoriness.primary_refractory": chart.refractoriness.primary_refractory,
+    "disease.chemosensitive": chart.disease.chemosensitive,
+    "disease.relapse_timing": chart.disease.relapse_timing,
+    "disease.cell_of_origin": chart.disease.cell_of_origin,
+    "disease.cns_involvement": chart.disease.cns_involvement,
+    "disease.cns_compartment": chart.disease.cns_compartment,
+    "disease.molecular.myc_positive": chart.disease.molecular.myc_positive,
+    "disease.molecular.myc_method": chart.disease.molecular.myc_method,
+    "fitness.age": chart.fitness.age,
+    "fitness.cell_therapy_fit": chart.fitness.cell_therapy_fit,
+    "prior.first_line": chart.prior.first_line,
+    "prior.cd19_directed": chart.prior.cd19_directed,
+    "geriatric_assessment.completed": chart.geriatric_assessment.completed,
+  };
+  for (const s of signals?.signals ?? []) ctx[`visit.${s.key}`] = s.value;
+  return ctx;
+}
+
+/** Add Context 3 (candidate) fields for a specific regimen + plan intent. */
+export function withCandidate(base: Ctx, regimen: RegimenId, plan: PlanFlags = {}): Ctx {
+  const a = REGIMEN_ATTRS[regimen];
+  return {
+    ...base,
+    therapy: a.therapy,
+    "therapy.class": a.class,
+    "therapy.is_bispecific": a.is_bispecific,
+    "regimen.contains_bendamustine": a.contains_bendamustine,
+    "regimen.contains_polatuzumab": a.contains_polatuzumab,
+    "prior.cd19_directed": base["prior.cd19_directed"] ?? false,
+    "plan.intends_cellular_therapy": plan.intends_cellular_therapy ?? false,
+    "plan.cd19_car_t": plan.cd19_car_t ?? false,
+    "plan.hd_mtx": plan.hd_mtx ?? false,
+    "plan.bridging_agent": plan.bridging_agent ?? null,
+  };
+}
+
+const ACTION_VERDICT: Record<Rule["action"], Verdict> = {
+  exclude: "excluded",
+  flag: "off_guideline_explained",
+  prefer: "verified",
+  deprioritize: "off_guideline_explained",
+  require_workup: "verified",
+};
+
+/**
+ * Evaluate every rule against the merged context. Rules whose condition references a
+ * candidate field (therapy / regimen / plan) are evaluated per-candidate; others once.
+ * Returns the RuleChecks that fired.
+ */
+export function runRuleChecks(
+  table: RuleTable,
+  chart: ChartExtract,
+  signals: VisitSignals | null,
+  candidates: RegimenId[],
+  plan: PlanFlags = {},
+): RuleCheck[] {
+  const base = baseContext(chart, signals);
+  const out: RuleCheck[] = [];
+  const seen = new Set<string>();
+
+  for (const rule of table.rules) {
+    const candidateScoped = /\b(therapy|regimen|plan)\b/.test(rule.condition);
+    const ctxs = candidateScoped ? candidates.map((c) => withCandidate(base, c, plan)) : [base];
+    for (const ctx of ctxs) {
+      let fired = false;
+      try {
+        fired = evaluateCondition(rule.condition, ctx);
+      } catch {
+        fired = false; // a malformed/unsupported condition never crashes the demo
+      }
+      if (!fired || seen.has(rule.rule_id)) continue;
+      seen.add(rule.rule_id);
+      out.push({
+        rule_id: rule.rule_id,
+        passed: true,
+        verdict: rule.severity === "hard" && rule.action === "exclude" ? "flagged" : ACTION_VERDICT[rule.action],
+        message: rule.rationale,
+        citation_id: rule.citation_ids[0] ?? null,
+      });
+    }
+  }
+  return out;
+}
