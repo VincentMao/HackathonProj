@@ -1,0 +1,35 @@
+{
+  "key": "ICC",
+  "title": "The International Consensus Classification of Mature Lymphoid Neoplasms: a report from the Clinical Advisory Committee",
+  "authors_year": "Campo, Jaffe, Cook, ... Zelenetz, 2022",
+  "journal": "Blood 140(11):1229-1253",
+  "design": "Consensus classification / diagnostic-criteria report from an international Clinical Advisory Committee (14 working groups), updating lymphoid neoplasm classification with genomic data.",
+  "population": "N/A (diagnostic classification of mature lymphoid, histiocytic, and dendritic cell neoplasms).",
+  "line": "N/A (pathology/diagnostic-criteria document).",
+  "key_eligibility": [
+    "Defines diagnostic entities and required ancillary studies (e.g., FISH) for classification",
+    "High-grade B-cell lymphoma with MYC and BCL2 rearrangements category redefined to EXCLUDE cases with only MYC and BCL6 rearrangements (those become a separate provisional entity)"
+  ],
+  "outcomes": "Establishes 'High-grade B-cell lymphoma with MYC and BCL2 rearrangements' (HGBCL-DH-BCL2, 'double-hit') as a defined entity of GCB origin, diagnosed by demonstrating both MYC and BCL2 rearrangements (translocations detected by FISH). Critically, copy-number increase or amplification of MYC/BCL2 is explicitly NOT sufficient to substitute for a true rearrangement. Double-hit categories continue to exclude follicular lymphoma; the MYC partner gene (IG vs non-IG) does not affect classification. HGBCL-DH-BCL6 (MYC+BCL6) is a separate provisional entity.",
+  "grounds_rubric_claims": [
+    "Double-hit lymphoma = concurrent MYC AND BCL2 rearrangements (translocations), demonstrated by FISH",
+    "Copy-number gain or amplification of MYC/BCL2 does NOT qualify as a rearrangement and cannot substitute for it in the double-hit definition",
+    "MYC+BCL6 (without BCL2) is a separate provisional entity, not the classic MYC/BCL2 double-hit"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "HGBCL-DH now comprises 2 groups: HGBCL with MYC and BCL2 rearrangements (with or without BCL6 rearrangement) (HGBCL-DH-BCL2) and a new provisional entity, HBGBL with MYC and BCL6 rearrangements (HGBCL-DH-BCL6).",
+      "supports": "Double-hit defined by MYC and BCL2 rearrangement (distinct from MYC/BCL6)"
+    },
+    {
+      "quote": "Neither copy number increase nor amplification of these genes is sufficient to substitute for rearrangement in these categories.",
+      "supports": "Amplification/copy-number gain does NOT count as double-hit; only true rearrangement qualifies"
+    },
+    {
+      "quote": "The category is redefined to exclude patients with only MYC and BCL6 rearrangements.",
+      "supports": "MYC/BCL6-only cases are excluded from the classic MYC+BCL2 double-hit category"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "ICC classification runs parallel to (and diverges in places from) the concurrent WHO-HAEM5; terminology and provisional-entity status (e.g., HGBCL-DH-BCL6) may differ between systems. Requires FISH; MYC partner-gene significance remains controversial."
+}

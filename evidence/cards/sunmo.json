@@ -1,0 +1,37 @@
+{
+  "key": "SUNMO",
+  "title": "Mosunetuzumab Plus Polatuzumab Vedotin in Transplant-Ineligible Refractory/Relapsed Large B-Cell Lymphoma: Primary Results of the Phase III SUNMO Trial",
+  "authors_year": "Budde et al., 2025",
+  "journal": "J Clin Oncol 2025; 43: 3799-3811",
+  "design": "Global, randomised, phase 3 trial; 50 sites in 13 countries; NCT05171647. Randomised 2:1 to Mosun-Pola (n=138) vs R-GemOx (n=70). Dual primary endpoints: centrally assessed ORR and PFS; OS key secondary. Median follow-up 23.2 months.",
+  "population": "Adults with R/R LBCL (DLBCL NOS, HGBCL including double/triple-hit, FL grade 3b, transformed FL) refractory/relapsed after >=1 prior therapy, deemed ASCT-INELIGIBLE by treating physician. Median age 62; 41% >=65; median 2 prior lines (44% had only 1); 74% primary refractory or relapse within 12 months of first-line. Prior polatuzumab permitted if no PD within 12 months of last dose.",
+  "line": "Second-line or later in transplant-ineligible patients (>=1 prior therapy).",
+  "key_eligibility": [
+    "ASCT-ineligible per treating physician",
+    "Previous polatuzumab vedotin permitted only if no disease progression within 12 months of last dose",
+    "HGBCL including double-/triple-hit and transformed FL included (broader histology than STARGLO)",
+    "Fully outpatient, chemotherapy-free bispecific + ADC regimen; no hospitalization required for mosunetuzumab"
+  ],
+  "outcomes": "Median PFS 11.5 months (Mosun-Pola) vs 3.8 months (R-GemOx); HR 0.41 (95% CI 0.3-0.6); P<0.0001. ORR 70% vs 40% (P<0.0001); CR 51% vs 24%. Interim OS 18.7 vs 13.6 months (HR 0.80; P=0.28, not yet significant). CRS in 26% of Mosun-Pola patients; grade >=2 CRS and tocilizumab use each <5%; only one grade 3 CRS, no grade 4/5, no ICANS. Lowest reported CRS among T-cell engagers. Improved patient-reported outcomes and fewer cytopenias/neuropathy vs R-GemOx.",
+  "grounds_rubric_claims": [
+    "Mosun-Pola is a gentler, outpatient, chemo-free option for transplant-ineligible R/R LBCL, superior PFS/ORR vs R-GemOx",
+    "Lowest CRS of T-cell engagers (grade >=2 <5%, no ICANS) - preferred where CRS/neurotoxicity risk or CAR-T ineligibility is a concern",
+    "Prior polatuzumab within 12 months with PD is an exclusion/sequencing consideration (pola re-exposure limited)",
+    "Appropriate for CAR-T-ineligible R/R DLBCL and proposed to replace GemOx as control arm"
+  ],
+  "full_text_available": true,
+  "verbatim_quotes": [
+    {
+      "quote": "the median PFS was significantly longer with Mosun-Pola than with R-GemOx (11.5 months [95% CI, 5.6 to 18] v 3.8 months [95% CI, 2.9 to 4.1]; hazard ratio for progression or death, 0.41 [95% CI, 0.3 to 0.6]; P < .0001).",
+      "supports": "Primary PFS benefit of Mosun-Pola over R-GemOx in transplant-ineligible R/R LBCL"
+    },
+    {
+      "quote": "the rate of grade >=2 cytokine release syndrome (CRS) and usage of tocilizumab occurred in <5% of patients",
+      "supports": "Very low CRS - grounds gentler-option rubric claim for transplant-ineligible patients"
+    },
+    {
+      "quote": "Previous treatment with polatuzumab vedotin was permitted if no disease progression (PD) occurred within 12 months of the last dose.",
+      "supports": "Sequencing constraint on prior polatuzumab exposure (eligibility rule)"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "key": "L-MIND-original",
+  "title": "Tafasitamab plus lenalidomide in relapsed or refractory diffuse large B-cell lymphoma (L-MIND): a multicentre, prospective, single-arm, phase 2 study",
+  "authors_year": "Salles et al., 2020",
+  "journal": "Lancet Oncol 2020; 21: 978-88",
+  "design": "Multicentre, open-label, single-arm phase 2 study; 35 sites in 10 countries; NCT02399085. Tafasitamab (anti-CD19 mAb) 12 mg/kg IV + lenalidomide 25 mg/day for up to 12 cycles, then tafasitamab monotherapy until progression. Safety n=81; primary activity analysis n=80. Primary endpoint: centrally assessed ORR (2007 IWG criteria).",
+  "population": "Adults with R/R DLBCL after 1-3 prior systemic regimens (>=1 anti-CD20), ASCT-INELIGIBLE. Median age 72; 50% had only 1 prior line; all had prior anti-CD20 and anthracycline. Median 2 prior lines.",
+  "line": "ASCT-ineligible R/R DLBCL, 2L-4L (1-3 prior regimens).",
+  "key_eligibility": [
+    "PRIMARY-REFRACTORY DLBCL EXCLUDED (defined as no response to, or progression during/within 6 months of, frontline therapy) - the key exclusion grounding a rubric rule that L-MIND evidence does NOT apply to primary-refractory patients",
+    "Double-hit/triple-hit DLBCL excluded (if known)",
+    "Only 1-3 prior lines allowed; must be ASCT-ineligible; prior anti-CD19 or immunomodulatory drugs (thalidomide/lenalidomide) excluded",
+    "CNS lymphoma involvement excluded",
+    "Pre-amendment: only relapse within 3 months of prior anti-CD20 counted as primary refractory; post-amendment aligned to 6-month NCCN definition"
+  ],
+  "outcomes": "ORR 60% (95% CI 48-71); CR 43% (32-54); PR 18%. Median DoR 21.7 months (not reached for CR; 93% of CR patients had response lasting 18 months). Median PFS 12.1 months; 12-month PFS 50%; median OS not reached (12-month OS 74%). Grade >=3 TEAEs: neutropenia 48%, thrombocytopenia 17%, febrile neutropenia 12%. Toxicity decreased after lenalidomide discontinuation (tafasitamab monotherapy phase).",
+  "grounds_rubric_claims": [
+    "Tafasitamab-lenalidomide (L-MIND) is an option for ASCT-ineligible R/R DLBCL, ORR 60%/CR 43%, durable responses",
+    "L-MIND EXCLUDED primary-refractory DLBCL - so its efficacy evidence does NOT support use in primary-refractory patients (key rubric guardrail)",
+    "L-MIND excluded double/triple-hit and limited to 1-3 prior lines - eligibility caveats on generalizability",
+    "Anti-CD19 mAb - relevant to CD19-directed sequencing considerations"
+  ],
+  "caveats": "Single-arm; enriched for less-refractory patients (primary-refractory excluded), which inflates apparent benefit relative to real-world 3L+ populations. Small n=80.",
+  "full_text_available": true,
+  "verbatim_quotes": [
+    {
+      "quote": "Exclusion criteria included ... primary refractory diffuse large B-cell lymphoma, defined as no response to, or progression during or within 6 months of frontline therapy",
+      "supports": "L-MIND explicitly EXCLUDED primary-refractory DLBCL - the load-bearing exclusion for a rubric rule limiting tafasitamab-lenalidomide applicability"
+    },
+    {
+      "quote": "48 (60%; 95% CI 48-71) of 80 patients who received tafasitamab plus lenalidomide had an objective response: 34 (43%; 32-54) had a complete response and 14 (18%; 10-28) had a partial response.",
+      "supports": "Headline efficacy of tafasitamab-lenalidomide in ASCT-ineligible R/R DLBCL"
+    },
+    {
+      "quote": "were not candidates for high-dose chemotherapy and subsequent autologous stem-cell transplantation",
+      "supports": "Population is ASCT-ineligible R/R DLBCL"
+    }
+  ]
+}

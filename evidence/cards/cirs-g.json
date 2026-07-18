@@ -1,0 +1,31 @@
+{
+  "key": "CIRS-G",
+  "title": "Rating chronic medical illness burden in geropsychiatric practice and research: application of the Cumulative Illness Rating Scale (CIRS-G)",
+  "authors_year": "Miller, Paradis, Houck, Mazumdar, Stack, Rifai, Mulsant, Reynolds, 1992",
+  "journal": "Psychiatry Research 41:237-248",
+  "design": "Methods/instrument feasibility and reliability study. A geriatric-adapted modification of the Cumulative Illness Rating Scale (CIRS; Linn 1968) operationalized with a manual, tested in elderly subjects.",
+  "population": "141 elderly outpatients across five groups: two geriatric medical-clinic groups (n=20 each), 45 recurrent-depressed, 21 spousally bereaved, 35 healthy controls; plus 10 inpatients for reliability testing.",
+  "line": "N/A (comorbidity/illness-burden rating instrument).",
+  "key_eligibility": [
+    "Elderly outpatient and inpatient geriatric/geropsychiatric subjects",
+    "Raters included nurse practitioners, physician's assistants, and geriatric psychiatrists reviewing charts/exams"
+  ],
+  "outcomes": "CIRS-G rates 13-14 organ-system categories each 0 (no problem) to 4 (extremely severe/urgent), yielding five summary numbers (categories endorsed, total score, severity index, and counts of level-3 and level-4 categories). Good interrater reliability: intraclass correlation 0.78 (outpatients) and 0.88 (inpatients) for total score. CIRS-G total discriminated groups (10.6 in older medical-clinic group vs 4.5 in healthy controls, p<0.0001) and correlated with ADL capability and physicians' global burden estimates. Weighted toward chronic problems, so scores are cumulative and expected to rise over time.",
+  "grounds_rubric_claims": [
+    "CIRS-G is a validated organ-system-based comorbidity/illness-burden rating instrument with good interrater reliability",
+    "Each organ system is rated 0-4 by severity; the total and severity indices quantify cumulative burden",
+    "CIRS-G is one of the tools recommended for comorbidity assessment in geriatric oncology"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "a rating of 0 indicates no problem in a given category; a rating of 1 indicates a mild problem; a rating of 2 indicates a problem of moderate severity requiring active therapy; a rating of 3 indicates severe or constant disability; and 4, an extremely severe or urgent clinical problem.",
+      "supports": "The 0-4 per-organ-system severity scoring that grounds the rubric"
+    },
+    {
+      "quote": "Good interrater reliability (i.e., intraclass correlations of 0.78 and 0.88 in a subsample of 10 outpatients and a separate group of 10 inpatients, respectively) was achieved for CIRS(G) total scores.",
+      "supports": "Reliability of the instrument"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Developed and validated in geriatric/geropsychiatric populations, not cancer patients. Small samples. A single very severe condition may be underrepresented in the total score (ceiling of one organ category)."
+}

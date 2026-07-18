@@ -1,0 +1,36 @@
+{
+  "key": "TRANSFORM",
+  "title": "Lisocabtagene maraleucel versus standard of care with salvage chemotherapy followed by autologous stem cell transplantation as second-line treatment in patients with relapsed or refractory large B-cell lymphoma (TRANSFORM)",
+  "authors_year": "Kamdar et al., 2022",
+  "journal": "Lancet 2022; 399: 2294-308",
+  "design": "Global, open-label, randomised phase 3 trial; 47 sites (USA, Europe, Japan); NCT03575351. Patients randomised 1:1 (n=92 liso-cel vs n=92 standard of care [salvage immunochemotherapy + high-dose chemo + ASCT]). Prespecified interim analysis at 82% of EFS information fraction; primary endpoint event-free survival.",
+  "population": "Adults 18-75 years with LBCL primary refractory to or relapsed within 12 months of first-line anthracycline + anti-CD20 therapy; ECOG 0-1; candidates for autologous HSCT. 73% refractory to first-line; median age 60; DLBCL NOS, transformed indolent, HGBCL double/triple-hit, PMBCL, THRBCL, FL3B.",
+  "line": "Second-line (2L), specifically primary-refractory or early-relapse (<=12 months) LBCL.",
+  "key_eligibility": [
+    "Population is DEFINED BY primary-refractory or early (<=12 month) relapse after first-line therapy - the exact high-risk group excluded from L-MIND",
+    "Must be considered candidates for autologous HSCT (transplant-eligible)",
+    "Secondary CNS lymphoma allowed",
+    "No minimum absolute lymphocyte count required for enrolment"
+  ],
+  "outcomes": "Median EFS significantly improved with liso-cel: 10.1 months (95% CI 6.1-NR) vs 2.3 months (2.2-4.3) for SOC; stratified HR 0.35 (95% CI 0.23-0.53); p<0.0001. CR rate 66% vs 39% (p<0.0001). Median PFS 14.8 vs 5.7 months (HR 0.41). ORR 86% vs 48%. Grade 3 CRS 1% and grade 3 neurological events 4% in liso-cel group (no grade 4/5). No treatment-related deaths with liso-cel.",
+  "grounds_rubric_claims": [
+    "liso-cel is a preferred 2L option for primary-refractory/early-relapse (<=12 mo) LBCL, superior to salvage chemo + ASCT",
+    "CAR T-cell therapy displaces salvage/ASCT as standard 2L care for the primary-refractory / early-relapse high-risk group",
+    "Strong EFS benefit (HR 0.35) grounds a rule that transplant-intended primary-refractory patients should be routed to CAR T rather than salvage chemo"
+  ],
+  "full_text_available": true,
+  "verbatim_quotes": [
+    {
+      "quote": "Median event-free survival was significantly improved in the liso-cel group (10.1 months [95% CI 6.1-not reached]) compared with the standard-of-care group (2.3 months [2.2-4.3]; stratified hazard ratio 0.35; 95% CI 0.23-0.53; ... one-sided p<0.0001).",
+      "supports": "Primary EFS benefit of liso-cel over salvage/ASCT in 2L primary-refractory/early-relapse LBCL (HR 0.35)"
+    },
+    {
+      "quote": "a prespecified interim analysis of liso-cel versus standard of care as second-line treatment for primary refractory or early relapsed (within 12 months after response to initial therapy) LBCL.",
+      "supports": "Defines the 2L primary-refractory/early-relapse population - the group L-MIND excludes"
+    },
+    {
+      "quote": "These results support liso-cel as a new second-line treatment recommendation in patients with early relapsed or refractory LBCL.",
+      "supports": "Grounds rubric claim that liso-cel is recommended 2L therapy for this high-risk group"
+    }
+  ]
+}

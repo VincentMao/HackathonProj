@@ -1,0 +1,36 @@
+{
+  "key": "MATRix",
+  "title": "Chemoimmunotherapy with methotrexate, cytarabine, thiotepa, and rituximab (MATRix regimen) in patients with primary CNS lymphoma: first randomisation of the IELSG32 phase 2 trial",
+  "authors_year": "Ferreri, Cwynarski, Pulczynski, ... Illerhaus (IELSG), 2016",
+  "journal": "Lancet Haematology 3(5):e217-e227",
+  "design": "International, multicentre, open-label, randomised phase 2 trial (53 centres, five European countries); first randomisation (1:1:1) of induction: group A methotrexate-cytarabine; group B +rituximab; group C +rituximab+thiotepa (MATRix). Primary endpoint centrally assessed complete remission rate, modified intention-to-treat.",
+  "population": "227 enrolled / 219 assessable HIV-negative patients aged 18-70 (median ~57) with newly diagnosed primary CNS lymphoma (all DLBCL histology), disease confined to CNS/cranial nerves/eyes.",
+  "line": "First line (induction) for newly diagnosed primary CNS lymphoma.",
+  "key_eligibility": [
+    "Age 18-70, histologically proven B-cell non-Hodgkin lymphoma confined to CNS/cranial nerves/eyes, no prior treatment, measurable disease",
+    "ECOG performance status <=3 (or <=2 for ages 66-70)",
+    "Excluded: prior organ transplant/immunosuppression, HBV/HCV/HIV infection, other malignancies"
+  ],
+  "outcomes": "Complete remission rate 49% (group C, MATRix) vs 30% (group B) vs 23% (group A); MATRix vs methotrexate-cytarabine HR 0.46 (95% CI 0.28-0.74). Overall response 87% vs 74% vs 53%. 2-year progression-free survival 61% (C) vs 46% (B) vs 36% (A); 2-year overall survival 69% (C) vs 56% (B) vs 42% (A). Grade 4 haematological toxicity more frequent with thiotepa but infective complications similar; 13 (6%) died of toxicity during induction. Thiotepa crosses the blood-brain barrier (plasma-to-CSF ratio 100%).",
+  "grounds_rubric_claims": [
+    "MATRix (high-dose methotrexate + cytarabine + thiotepa + rituximab) is the CNS-penetrant standard induction backbone for primary CNS lymphoma in patients up to 70",
+    "CNS-directed regimens must use drugs with CNS bioavailability/blood-brain-barrier penetration (methotrexate, cytarabine, thiotepa)",
+    "Adding thiotepa and rituximab to methotrexate-cytarabine significantly improves complete remission, PFS, and OS"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "the IELSG32 trial provides a high level of evidence supporting the use of MATRix combination as the new standard chemoimmunotherapy for patients aged up to 70 years with newly diagnosed primary CNS lymphoma.",
+      "supports": "MATRix as standard CNS-penetrant induction backbone for PCNSL"
+    },
+    {
+      "quote": "patients treated with rituximab and thiotepa had a complete remission rate of 49% (95% CI 38-60), compared with 23% (14-31) of those treated with methotrexate-cytarabine alone (hazard ratio 0.46, 95% CI 0.28-0.74).",
+      "supports": "Headline efficacy of MATRix vs methotrexate-cytarabine"
+    },
+    {
+      "quote": "Thiotepa is an alkylating agent that is active against aggressive lymphomas, and can cross the blood-brain barrier with a plasma-to-cerebrospinal fluid (CSF) ratio of 100%.",
+      "supports": "CNS penetration rationale for the regimen components"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Randomised phase 2 (calibration design, no formal pre-planned between-group comparison originally); open-label. Upper age limit 70 and ECOG PS <=3 (<=2 if 66-70), so not directly applicable to older/frailer PCNSL patients. 6% induction toxic-death rate. Consolidation (second randomisation, WBRT vs ASCT) reported separately."
+}

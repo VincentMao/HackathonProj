@@ -1,0 +1,36 @@
+{
+  "key": "CHARLSON",
+  "title": "A new method of classifying prognostic comorbidity in longitudinal studies: development and validation",
+  "authors_year": "Charlson, Pompei, Ales, MacKenzie, 1987",
+  "journal": "Journal of Chronic Diseases (J Chron Dis) 40(5):373-383",
+  "design": "Methods/instrument development and validation study. Weighted comorbidity index developed empirically from 1-yr mortality in an inception cohort of 559 medical inpatients (New York Hospital, 1984) and validated against 10-yr mortality in 685 breast cancer patients (Yale New Haven Hospital, 1962-1969).",
+  "population": "Derivation: 559 general medical inpatients. Validation: 685 women with histologically proven primary breast carcinoma.",
+  "line": "N/A (comorbidity measurement instrument, not a treatment).",
+  "key_eligibility": [
+    "Derivation cohort = consecutive medical-service admissions over 1 month (99.3% of eligible)",
+    "Conditions completely resolved or history of operation for inactive conditions were NOT counted as comorbidity",
+    "Validation cohort = histologically proven primary breast cancer with first treatment at Yale New Haven Hospital"
+  ],
+  "outcomes": "Assigns weights (1, 2, 3, or 6) to 19 comorbid conditions summed to a total score. 1-yr mortality rose stepwise with score: '0'=12%, '1-2'=26%, '3-4'=52%, '>=5'=85%. Lymphoma and leukemia each carry a weight of 2; metastatic solid tumor and AIDS carry weight 6. Each increasing level of the index conferred a relative risk of death from comorbid disease of 2.3 (95% CI 1.9-2.8); each decade of age RR 2.4. An optional combined age-comorbidity score adds 1 point per decade over 40.",
+  "grounds_rubric_claims": [
+    "Charlson Comorbidity Index is a validated instrument to quantify comorbidity burden for prognosis/eligibility decisions",
+    "A weighted comorbidity index (not a simple count of conditions) is the validated approach; conditions carry disease-specific weights",
+    "Lymphoma and leukemia are assigned a comorbidity weight of 2 in the index"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "A weighted index that takes into account the number and the seriousness of comorbid disease was developed in a cohort of 559 medical patients.",
+      "supports": "CCI is a weighted (not simple-count) comorbidity instrument"
+    },
+    {
+      "quote": "To simplify the system, conditions with a relative risk >=1.2 <1.5 were assigned a weight of 1; conditions with a risk >1.5 <2.5 a weight of 2; conditions with a weight of >=2.5 <3.5 a weight of 3; and those two conditions with weights of 6 or more were assigned a weight of 6.",
+      "supports": "The weighting scheme (1/2/3/6) that grounds the scoring rubric"
+    },
+    {
+      "quote": "The relative risk for each increasing level of the comorbidity index was 2.3 (95% confidence limits: 1.9-2.8) and for each decade of age was 2.4.",
+      "supports": "Validation of the index as a graded predictor of comorbid death"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Derived from 1-yr mortality and tested for 10-yr prediction; authors call it 'preliminary' given small numbers per condition. Age-comorbidity composite was not separately validated. Developed in general medical and breast cancer patients, not lymphoma-specific."
+}

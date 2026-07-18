@@ -1,0 +1,35 @@
+{
+  "key": "SIOG",
+  "title": "Use of comprehensive geriatric assessment in older cancer patients: recommendations from the SIOG task force on CGA",
+  "authors_year": "Extermann, Aapro, Bernabei, Cohen, Droz, Lichtman, Mor, Monfardini, Repetto, Sorbye, Topinkova, 2005",
+  "journal": "Critical Reviews in Oncology/Hematology 55:241-252",
+  "design": "Systematic evidence review and consensus recommendations (adapted Oxford levels of evidence) from an eight-member SIOG task force addressing four key questions about CGA in older cancer patients.",
+  "population": "Older cancer patients (soft age limit ~70); evidence base drawn largely from community-dwelling elderly and geriatric RCTs, with limited cancer-specific data.",
+  "line": "N/A (assessment/care-process recommendation).",
+  "key_eligibility": [
+    "Recommends screening for geriatric problems in cancer patients beyond age 70 (a 'soft limit')",
+    "Systematic review of Medline literature through February 2003 rated by adapted Oxford criteria"
+  ],
+  "outcomes": "Concludes there is strong evidence that CGA detects problems missed by routine assessment and that CGA improves function and reduces hospitalization in the elderly; heterogeneous evidence for survival and cost-effectiveness; corroborative but limited cancer-specific evidence. Recommends that functional assessment be more extensive than ECOG performance status (adding ADL/IADL and a performance test such as timed get-up-and-go), plus screening for depression and cognition, and that CGA include follow-up. Cannot recommend any single tool above others.",
+  "grounds_rubric_claims": [
+    "Comprehensive geriatric assessment should be used in older cancer patients to detect problems missed by standard oncologic assessment",
+    "Functional assessment should go beyond ECOG performance status (ADL/IADL, performance measures)",
+    "Geriatric screening is recommended beyond age ~70 as a soft limit"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "A CGA, with or without screening, and with follow-up, should be used in older cancer patients, in order to detect unaddressed problems, improve their functional status, and possibly their survival.",
+      "supports": "Core SIOG recommendation to use CGA in older cancer patients"
+    },
+    {
+      "quote": "functional status assessment should be more extensive than the ECOG performance status evaluation and may include ADL/IADL, and/or a performance test such as the timed get up and go.",
+      "supports": "CGA/GA should extend beyond ECOG performance status"
+    },
+    {
+      "quote": "Based on retrospective evidence that the incidence of geriatric problems increases sharply after 70 in cancer patients, we recommend screening for them beyond that age. This should be considered a soft limit.",
+      "supports": "Age ~70 soft threshold for geriatric screening"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Explicitly labeled 'recommendations' not guidelines; evidence for specific CGA components is weak and largely extrapolated from non-cancer geriatric trials. No single tool endorsed. Publications only through early 2003."
+}

@@ -1,0 +1,36 @@
+{
+  "key": "POLA-BR",
+  "title": "Polatuzumab Vedotin in Relapsed or Refractory Diffuse Large B-Cell Lymphoma",
+  "authors_year": "Sehn et al., 2019",
+  "journal": "J Clin Oncol 2020; 38: 155-165",
+  "design": "International, multicenter, open-label phase Ib/II trial (GO29365; NCT02257567). Randomised cohort (n=80; 40 per arm) comparing polatuzumab vedotin + bendamustine + rituximab (pola-BR) vs BR alone; plus single-arm pola-BG cohort (n=27). Primary endpoint: IRC-assessed CR rate at end of treatment. Up to six 21-day cycles.",
+  "population": "Adults with transplant-ineligible R/R DLBCL (excluding transformed lymphoma) after >=1 prior line; ECOG 0-2; grade <=1 peripheral neuropathy. Median 2 prior lines; most refractory to last therapy (75% pola-BR, 85% BR); median age 67-71. Double/triple-hit not excluded.",
+  "line": "Approved third-line or later (3L+); trial enrolled >=1 prior line (transplant-ineligible).",
+  "key_eligibility": [
+    "Transplant-ineligible R/R DLBCL, or prior ASCT failure",
+    "Transformed lymphoma EXCLUDED; peripheral neuropathy must be grade <=1 at entry",
+    "Contains bendamustine - relevant to sequencing hazard before cellular therapy (see BENDA-PREAPHERESIS)"
+  ],
+  "outcomes": "Randomised cohort: IRC CR rate 40.0% (pola-BR) vs 17.5% (BR); P=0.026. Median IRC PFS 9.5 vs 3.7 months (HR 0.36; 95% CI 0.21-0.63; P<0.001). Median OS 12.4 vs 4.7 months (HR 0.42; 95% CI 0.24-0.75; P=0.002) - 58% reduction in risk of death. Higher grade 3-4 neutropenia (46.2% vs 33.3%), anaemia, and thrombocytopenia with pola-BR; grade 1-2 polatuzumab-associated peripheral neuropathy in 43.6%, mostly resolving.",
+  "grounds_rubric_claims": [
+    "Pola-BR is an approved 3L+ regimen for transplant-ineligible R/R DLBCL with OS benefit over BR (HR 0.42)",
+    "Regimen contains bendamustine - flags a sequencing hazard when cellular (CAR T) therapy may follow, since recent bendamustine before apheresis worsens CAR T outcomes",
+    "Pola-BR excludes transformed lymphoma in its pivotal evidence (eligibility caveat)"
+  ],
+  "caveats": "Small randomised cohort (40/arm), phase Ib/II. Bendamustine backbone raises concern if CAR T is a subsequent planned therapy.",
+  "full_text_available": true,
+  "verbatim_quotes": [
+    {
+      "quote": "pola-BR patients had a significantly higher IRC-assessed CR rate (40.0% v 17.5%; P = .026) and longer IRC-assessed PFS (median, 9.5 v 3.7 months; ... P < .001) and OS (median, 12.4 v 4.7 months; HR, 0.42; 95% CI, 0.24 to 0.75; P = .002...).",
+      "supports": "Efficacy of pola-BR over BR: higher CR, longer PFS and OS in transplant-ineligible R/R DLBCL"
+    },
+    {
+      "quote": "Polatuzumab vedotin combined with BR resulted in a significantly higher CR rate and reduced the risk of death by 58% compared with BR in patients with transplantation-ineligible R/R DLBCL.",
+      "supports": "Headline conclusion; grounds approved-3L+ role and 58% OS risk reduction"
+    },
+    {
+      "quote": "All patients received bendamustine 90 mg/m2 intravenously",
+      "supports": "Regimen contains bendamustine - grounds the sequencing-hazard link to impaired CAR T apheresis/outcomes"
+    }
+  ]
+}

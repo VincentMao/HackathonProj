@@ -1,0 +1,37 @@
+{
+  "key": "STARGLO",
+  "title": "Glofitamab plus gemcitabine and oxaliplatin (GemOx) versus rituximab-GemOx for relapsed or refractory diffuse large B-cell lymphoma (STARGLO): a global phase 3, randomised, open-label trial",
+  "authors_year": "Abramson et al., 2024",
+  "journal": "Lancet 2024; 404: 1940-54",
+  "design": "Global phase 3, randomised, open-label trial; 62 centres in 13 countries; NCT04408638. Randomised 2:1 to Glofit-GemOx (n=183) vs R-GemOx (n=91). Primary endpoint overall survival. Primary analysis cutoff Mar 2023; updated analysis Feb 2024.",
+  "population": "Transplant-INELIGIBLE adults with histologically confirmed R/R DLBCL NOS after >=1 prior therapy. Median age 68; median 1 prior line (37% had >=2). Patients with 1 prior line had to be ASCT-ineligible (age >=70, end-organ dysfunction, ECOG >=2, refusal, comorbidity). NOTE: transformed, double/triple-hit, and HGBCL NOS were EXCLUDED.",
+  "line": "Second-line or later in transplant-ineligible patients (>=1 prior therapy).",
+  "key_eligibility": [
+    "Transplant-ineligible only; if only one prior line, must be ASCT-ineligible by defined criteria (age >=70, end-organ dysfunction, ECOG >=2, refusal, comorbidity)",
+    "EXCLUDED: DLBCL transformed from indolent lymphoma, double/triple-hit (HGBCL with MYC + BCL2/BCL6), and HGBCL NOS - restricts to DLBCL NOS",
+    "Prior CAR T-cell therapy allowed (8% had prior CAR T)"
+  ],
+  "outcomes": "Updated analysis (median f/u 20.7 mo): median OS 25.5 months (Glofit-GemOx) vs 12.9 months (R-GemOx); HR 0.62 (95% CI 0.43-0.88). Primary analysis OS HR 0.59 (0.40-0.89; p=0.011). IRC PFS 13.8 vs 3.6 months (HR 0.40). IRC CR rate 58.5% vs 25.3%; ORR 68.3% vs 40.7%. CRS in 44% of glofitamab-exposed (predominantly low grade; grade >=3 ~2%). REGULATORY NOTE: received US Complete Response Letter / not FDA-approved (per project framing).",
+  "grounds_rubric_claims": [
+    "Glofit-GemOx improves OS over R-GemOx in transplant-ineligible R/R DLBCL (2L+), HR ~0.62",
+    "Off-the-shelf CD20xCD3 bispecific + chemo is an option for transplant-ineligible patients without CAR T access",
+    "Glofit-GemOx not FDA-approved (US CRL) - availability caveat for US practice despite positive phase 3",
+    "Excludes transformed / double-hit / HGBCL, so evidence applies to DLBCL NOS transplant-ineligible only"
+  ],
+  "caveats": "US regulatory status: received a Complete Response Letter; not FDA-approved (per task framing). Subgroup OS inconsistencies by region/race noted; NALT censoring imbalance prompted post-hoc EFS analysis.",
+  "full_text_available": true,
+  "verbatim_quotes": [
+    {
+      "quote": "At the updated analysis after a median follow-up of 20.7 months (19.9-23.3), a consistent improvement in overall survival was observed with Glofit-GemOx versus R-GemOx (median 25.5 months [18.3-NE] vs 12.9 months [7.9-18.5]; HR 0.62 [0.43-0.88]).",
+      "supports": "Headline OS benefit of Glofit-GemOx over R-GemOx in transplant-ineligible R/R DLBCL"
+    },
+    {
+      "quote": "We recruited transplant-ineligible patients (aged >=18 years) with histologically confirmed relapsed or refractory diffuse large B-cell lymphoma after one or more previous therapies.",
+      "supports": "Population is transplant-ineligible R/R DLBCL, 2L+"
+    },
+    {
+      "quote": "Patients with diffuse large B-cell lymphoma transformed from indolent lymphoma, double or triple hit lymphomas ... or high-grade B-cell lymphoma, not otherwise specified, were not eligible.",
+      "supports": "Key exclusions restricting evidence to DLBCL NOS (grounds a sequencing/eligibility rubric caveat)"
+    }
+  ]
+}

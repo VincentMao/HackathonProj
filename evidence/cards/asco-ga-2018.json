@@ -1,0 +1,36 @@
+{
+  "key": "ASCO-GA-2018",
+  "title": "Practical Assessment and Management of Vulnerabilities in Older Patients Receiving Chemotherapy: ASCO Guideline for Geriatric Oncology",
+  "authors_year": "Mohile, Dale, Somerfield, ... Hurria, 2018",
+  "journal": "Journal of Clinical Oncology 36(22):2326-2347",
+  "design": "ASCO clinical practice guideline based on a systematic review (68 studies: 30 prospective cohorts, 17 GEM RCTs, 2 GA-allocation RCTs, life-expectancy studies, and systematic reviews).",
+  "population": "Patients aged 65 and older with cancer receiving chemotherapy.",
+  "line": "N/A (assessment guideline; applies across treatment lines).",
+  "key_eligibility": [
+    "Age >=65 receiving chemotherapy is the population for which GA is recommended (age 65 chosen because robust GA outcome data exist above that cutoff)",
+    "Candidate cohort studies required chemotherapy, >=100 patients, and outpatient GA focus"
+  ],
+  "outcomes": "Strong recommendation (high-quality evidence) that geriatric assessment be used in patients >=65 to identify vulnerabilities not captured by routine oncology assessment, because KPS/ECOG performance status do NOT accurately predict which older adults are at highest risk of chemotherapy adverse outcomes. Minimum domains: function, comorbidity, falls, depression, cognition, nutrition. Recommends IADLs (function), thorough history or validated tool such as CIRS-G or Charlson (comorbidity), single question (falls), GDS (depression), Mini-Cog or BOMC (cognition), weight loss/BMI (nutrition); CARG or CRASH for chemotherapy-toxicity risk; G8 or VES-13 for mortality; ePrognosis for life expectancy.",
+  "grounds_rubric_claims": [
+    "Geriatric assessment should be used instead of or in addition to ECOG/KPS for patients >=65 on chemotherapy",
+    "ECOG/KPS performance status alone does not accurately identify older adults at highest risk of chemo toxicity",
+    "Comorbidity should be assessed with a validated tool such as CIRS-G or Charlson",
+    "Recommended minimum GA domains: function, comorbidity, falls, depression, cognition, nutrition"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "In patients age 65 and older receiving chemotherapy, geriatric assessment (GA)... should be used to identify vulnerabilities or geriatric impairments that are not routinely captured in oncology assessments (Type: Evidence-based... Evidence quality: high; Strength of recommendation: strong).",
+      "supports": "Strong recommendation for GA in patients >=65"
+    },
+    {
+      "quote": "Studies have shown that traditional oncology performance measures, such as the Karnofsky performance status (KPS) or Eastern Cooperative Oncology Group (ECOG) performance status (PS) scores, do not accurately predict which older adults are at highest risk of adverse outcomes from chemotherapy.",
+      "supports": "GA over ECOG/KPS alone"
+    },
+    {
+      "quote": "Consider validated tools such as CIRS-G or Charlson. History, CIRS-G, and OARS comorbidity recommended by experts.",
+      "supports": "CIRS-G/Charlson as recommended comorbidity tools within GA"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "2018 version predates the GAP70+/GAIN GA-management RCTs; recommendation for GA-guided management was informal-consensus at this point (strengthened in the 2023 update). Focused on chemotherapy, not other systemic therapies."
+}

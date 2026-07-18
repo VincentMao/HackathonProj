@@ -1,0 +1,36 @@
+{
+  "key": "R-miniCHOP",
+  "title": "Attenuated immunochemotherapy regimen (R-miniCHOP) in elderly patients older than 80 years with diffuse large B-cell lymphoma: a multicentre, single-arm, phase 2 trial",
+  "authors_year": "Peyrade, Jardin, Thieblemont, ... Tilly (GELA), 2011",
+  "journal": "Lancet Oncology 12(5):460-468",
+  "design": "Prospective, multicentre, single-arm, phase 2 trial (38 centres, France and Belgium); 6 cycles of R-miniCHOP every 3 weeks; primary endpoint overall survival, intention-to-treat.",
+  "population": "149 patients (of 150 enrolled) aged over 80 years (median 83, range 80-95) with untreated CD20+ DLBCL; 75% Ann Arbor stage III/IV; ECOG PS <=2.",
+  "line": "First line (untreated DLBCL) in patients >=80 years.",
+  "key_eligibility": [
+    "Age over 80 with untreated histologically proven CD20+ DLBCL (WHO classification)",
+    "Ann Arbor stage I bulky to IV; age-adjusted IPI 1-3; ECOG PS <=2; life expectancy >=3 months",
+    "Excluded: CNS or meningeal involvement, other lymphoma subtypes, history of indolent lymphoma, poor renal (creatinine >150 umol/L) or hepatic function, poor marrow reserve, prior cancer within 5 years, patients under guardianship"
+  ],
+  "outcomes": "Median overall survival 29 months; 2-year OS 59% (95% CI 49-67). Median PFS 21 months; 2-year PFS 47% (38-56). Overall response rate 73%; complete/unconfirmed-complete response rate 62%. On multivariate analysis only serum albumin <=35 g/L predicted worse OS (HR 3.2, 95% CI 1.4-7.1, p=0.0053). 58 deaths (33 from lymphoma progression, 12 attributed to treatment toxicity). Grade >=3 neutropenia in 59 patients; febrile neutropenia in 11. Doses: rituximab 375 mg/m2, cyclophosphamide 400 mg/m2, doxorubicin 25 mg/m2, vincristine 1 mg (all day 1), prednisone 40 mg/m2 days 1-5.",
+  "grounds_rubric_claims": [
+    "R-miniCHOP is a validated, prospectively studied first-line regimen for DLBCL in patients >=80 with good performance status; attenuated dosing is intentional and evidence-based, not inappropriate under-dosing",
+    "Curative-intent immunochemotherapy is achievable in the very elderly (2-year OS 59%, CR/CRu 62%)",
+    "Serum albumin <=35 g/L (a nutrition/frailty marker) is the dominant adverse prognostic factor in this population"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "R-miniCHOP offers a good compromise between efficacy and safety in patients aged over 80 years old. R-miniCHOP should be considered as the new standard treatment in this subgroup of patients.",
+      "supports": "R-miniCHOP is the standard first-line regimen for DLBCL patients >80, validating attenuated dosing"
+    },
+    {
+      "quote": "the median overall survival was 29 months (95% CI 21 to upper limit not reached); 2-year overall survival was 59% (49-67%).",
+      "supports": "Headline efficacy outcomes"
+    },
+    {
+      "quote": "In multivariate analyses, overall survival was only affected by a serum albumin concentration of 35 g/L or less (hazard ratio 3.2, 95% CI 1.4-7.1; p=0.0053).",
+      "supports": "Low serum albumin as the key adverse prognostic factor"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Single-arm, no control group; selected patients (ECOG PS <=2, adequate organ/marrow function) so not generalizable to frail/unfit >=80. 12 toxic deaths (>20% of deaths); most grade 3-4 hematologic toxicity and treatment-related deaths clustered in cycle 1. No formal comprehensive geriatric assessment performed (only IADL)."
+}

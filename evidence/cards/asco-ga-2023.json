@@ -1,0 +1,36 @@
+{
+  "key": "ASCO-GA-2023",
+  "title": "Practical Assessment and Management of Vulnerabilities in Older Patients Receiving Systemic Cancer Therapy: ASCO Guideline Update",
+  "authors_year": "Dale, Klepin, Williams, ... Mohile, 2023",
+  "journal": "Journal of Clinical Oncology 41(26):4293-4312",
+  "design": "ASCO guideline update; systematic review (Jan 2016-Dec 2022) identifying nine GA-guided-management (GAM) RCTs (including GAP70+ and GAIN), plus secondary analyses and systematic reviews.",
+  "population": "Older adults (65+) with cancer receiving systemic therapy (chemotherapy, targeted therapy, or immunotherapy).",
+  "line": "N/A (assessment/management guideline across lines and modalities).",
+  "key_eligibility": [
+    "Population: older adults with cancer (65+) considering systemic (non-surgical/non-radiation) therapy",
+    "RCTs required >=100 total patients; small/pilot RCTs excluded",
+    "GAP70+ enrolled patients >=70 with incurable solid tumor or lymphoma and >=1 GA vulnerability; GAIN enrolled patients >=65 with solid tumor"
+  ],
+  "outcomes": "Strong recommendation (high-quality evidence): all patients 65+ with GA-identified impairments should receive GA-guided management (GAM). Driven by GAP70+ (grade 3-5 toxicity 51% intervention vs 71% usual care; RR 0.74, 95% CI 0.64-0.86, P=.0001; fewer falls) and GAIN (grade >=3 toxicity 50.5% vs 60.6%, a 10.1% reduction, P=.02). GA should include physical and cognitive function, emotional health, comorbid conditions, polypharmacy, nutrition, and social support; the Practical Geriatric Assessment (PGA) is offered as one option. Reiterates the 2018 recommendation that GA identifies vulnerabilities not captured by oncology assessment.",
+  "grounds_rubric_claims": [
+    "All patients 65+ with GA-identified deficits should receive GA-guided management (strong, high-quality evidence)",
+    "GA-guided management reduces serious (grade 3-5) chemotherapy toxicity (GAP70+, GAIN RCTs)",
+    "GA should span function, cognition, emotional health, comorbidity, polypharmacy, nutrition, and social support; extends to targeted therapy and immunotherapy"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "All patients with cancer aged 65 and over with geriatric assessment (GA)-identified impairments should have GA-guided management (GAM) included in their care plan... (Type: Evidence based... Evidence quality: High; Strength of recommendation: Strong)",
+      "supports": "Strong recommendation for GA-guided management in 65+"
+    },
+    {
+      "quote": "a lower proportion of patients (51%) in the intervention group experienced grade 3-5 toxic effects than patients in the usual care group (71%; relative risk [RR] 0.74 (95% CI, 0.64 to 0.86; P = .0001).",
+      "supports": "GAP70+ RCT evidence that GAM reduces chemo toxicity"
+    },
+    {
+      "quote": "A GA should include high priority aging-related domains known to be associated with outcomes in older patients with cancer to include assessment of physical and cognitive function, emotional health, comorbid conditions, polypharmacy, nutrition, and social support.",
+      "supports": "Required GA domains"
+    }
+  ],
+  "full_text_available": true,
+  "caveats": "Evidence strongest for chemotherapy; extension to targeted/immunotherapy rests on early/indirect data. PGA is offered by informal consensus (weak recommendation) and is not yet psychometrically validated as a composite. Some GAM RCTs (e.g., 5C, EGeSOR, Orum) were negative for QOL/completion/survival endpoints."
+}

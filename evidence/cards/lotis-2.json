@@ -1,0 +1,37 @@
+{
+  "key": "LOTIS-2",
+  "title": "Loncastuximab tesirine in relapsed or refractory diffuse large B-cell lymphoma (LOTIS-2): a multicentre, open-label, single-arm, phase 2 trial",
+  "authors_year": "Caimi et al., 2021",
+  "journal": "Lancet Oncol 2021; 22: 790-800",
+  "design": "Multicentre (28 sites, USA/UK/Italy/Switzerland), open-label, single-arm phase 2 trial; NCT03589469. Loncastuximab tesirine (CD19-directed antibody-drug conjugate, PBD payload) 150 ug/kg x2 cycles then 75 ug/kg, up to 1 year. As-treated population n=145. Primary endpoint: centrally assessed ORR.",
+  "population": "Adults with R/R DLBCL after >=2 prior multiagent systemic therapies; ECOG 0-2; measurable disease. Included high-risk groups: double/triple-hit, transformed, and primary-refractory DLBCL. Median 3 prior lines; 9% prior CAR T; median age 66.",
+  "line": "Third-line or later (3L+); >=2 prior systemic therapies.",
+  "key_eligibility": [
+    "Broad high-risk eligibility: double-hit/triple-hit, transformed, and primary-refractory DLBCL all included (unlike L-MIND/pola-BR)",
+    "Biopsy-proven CD19 expression required for patients with previous CD19-directed therapy - relevant to antigen-loss sequencing",
+    "Active CNS lymphoma excluded; bulky disease (>=10 cm) excluded after protocol amendment 2",
+    "Previous CAR T-cell therapy allowed (9% had prior CAR T)"
+  ],
+  "outcomes": "As-treated (n=145): ORR 48.3% (95% CI 39.9-56.7); CR 24.1%; PR 24%. Median DoR 10.3 months (13.4 mo for CR, 5.7 mo for PR); median PFS 4.9 months; median OS 9.9 months. Grade >=3 TEAEs: neutropenia 26%, thrombocytopenia 18%, increased GGT 17%. PBD-related toxicities: edema/effusion, liver enzyme elevation, skin/nail changes. In 13 patients with prior CD19 CAR T, ORR was similar to overall - and CD19 expression generally maintained after loncastuximab (antigen loss not common).",
+  "grounds_rubric_claims": [
+    "Loncastuximab tesirine is an approved 3L+ CD19 ADC option for R/R DLBCL, ORR ~48%, CR ~24%",
+    "Active on high-risk subgroups (double/triple-hit, transformed, primary-refractory) that other regimens exclude",
+    "CD19-directed ADC raises antigen-loss sequencing considerations with CD19 CAR T; biopsy CD19 required after prior CD19 therapy; CD19 expression usually retained, so it does not preclude subsequent CD19 CAR T",
+    "Can be used before or after CD19 CAR T (bidirectional sequencing)"
+  ],
+  "full_text_available": true,
+  "verbatim_quotes": [
+    {
+      "quote": "70 of 145 patients had complete or partial response (overall response rate 48.3% [95% CI 39.9-56.7]); 35 had complete response and 35 had partial response",
+      "supports": "Headline efficacy of single-agent loncastuximab tesirine 3L+"
+    },
+    {
+      "quote": "a small study of patients who had CD19-directed CAR T-cell therapy after loncastuximab tesirine therapy found CD19 expression after loncastuximab tesirine treatment in all patients with biopsies (ten of 14 patients), suggesting CD19 antigen loss after loncastuximab tesirine is not common.",
+      "supports": "Antigen-loss sequencing note: loncastuximab (CD19 ADC) generally does not cause CD19 loss precluding subsequent CD19 CAR T"
+    },
+    {
+      "quote": "Biopsy-proven CD19 expression was required for patients with previous CD19-directed therapy.",
+      "supports": "Eligibility rule tied to CD19 antigen status - grounds antigen-loss sequencing rubric consideration"
+    }
+  ]
+}

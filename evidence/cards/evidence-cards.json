@@ -37,6 +37,78 @@
     "caveats": "Classification/consensus document, not comparative evidence. Does not state a specific FISH probe protocol; the point is that the entity is defined by rearrangement of MYC and BCL2, which in practice is assessed by break-apart FISH. Text does not explicitly use the word 'amplification' to contrast; the grounding is that 'rearrangement' (not gain/amplification) defines the entity."
   },
   {
+    "key": "ASCO-GA-2018",
+    "title": "Practical Assessment and Management of Vulnerabilities in Older Patients Receiving Chemotherapy: ASCO Guideline for Geriatric Oncology",
+    "authors_year": "Mohile, Dale, Somerfield, ... Hurria, 2018",
+    "journal": "Journal of Clinical Oncology 36(22):2326-2347",
+    "design": "ASCO clinical practice guideline based on a systematic review (68 studies: 30 prospective cohorts, 17 GEM RCTs, 2 GA-allocation RCTs, life-expectancy studies, and systematic reviews).",
+    "population": "Patients aged 65 and older with cancer receiving chemotherapy.",
+    "line": "N/A (assessment guideline; applies across treatment lines).",
+    "key_eligibility": [
+      "Age >=65 receiving chemotherapy is the population for which GA is recommended (age 65 chosen because robust GA outcome data exist above that cutoff)",
+      "Candidate cohort studies required chemotherapy, >=100 patients, and outpatient GA focus"
+    ],
+    "outcomes": "Strong recommendation (high-quality evidence) that geriatric assessment be used in patients >=65 to identify vulnerabilities not captured by routine oncology assessment, because KPS/ECOG performance status do NOT accurately predict which older adults are at highest risk of chemotherapy adverse outcomes. Minimum domains: function, comorbidity, falls, depression, cognition, nutrition. Recommends IADLs (function), thorough history or validated tool such as CIRS-G or Charlson (comorbidity), single question (falls), GDS (depression), Mini-Cog or BOMC (cognition), weight loss/BMI (nutrition); CARG or CRASH for chemotherapy-toxicity risk; G8 or VES-13 for mortality; ePrognosis for life expectancy.",
+    "grounds_rubric_claims": [
+      "Geriatric assessment should be used instead of or in addition to ECOG/KPS for patients >=65 on chemotherapy",
+      "ECOG/KPS performance status alone does not accurately identify older adults at highest risk of chemo toxicity",
+      "Comorbidity should be assessed with a validated tool such as CIRS-G or Charlson",
+      "Recommended minimum GA domains: function, comorbidity, falls, depression, cognition, nutrition"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "In patients age 65 and older receiving chemotherapy, geriatric assessment (GA)... should be used to identify vulnerabilities or geriatric impairments that are not routinely captured in oncology assessments (Type: Evidence-based... Evidence quality: high; Strength of recommendation: strong).",
+        "supports": "Strong recommendation for GA in patients >=65"
+      },
+      {
+        "quote": "Studies have shown that traditional oncology performance measures, such as the Karnofsky performance status (KPS) or Eastern Cooperative Oncology Group (ECOG) performance status (PS) scores, do not accurately predict which older adults are at highest risk of adverse outcomes from chemotherapy.",
+        "supports": "GA over ECOG/KPS alone"
+      },
+      {
+        "quote": "Consider validated tools such as CIRS-G or Charlson. History, CIRS-G, and OARS comorbidity recommended by experts.",
+        "supports": "CIRS-G/Charlson as recommended comorbidity tools within GA"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "2018 version predates the GAP70+/GAIN GA-management RCTs; recommendation for GA-guided management was informal-consensus at this point (strengthened in the 2023 update). Focused on chemotherapy, not other systemic therapies."
+  },
+  {
+    "key": "ASCO-GA-2023",
+    "title": "Practical Assessment and Management of Vulnerabilities in Older Patients Receiving Systemic Cancer Therapy: ASCO Guideline Update",
+    "authors_year": "Dale, Klepin, Williams, ... Mohile, 2023",
+    "journal": "Journal of Clinical Oncology 41(26):4293-4312",
+    "design": "ASCO guideline update; systematic review (Jan 2016-Dec 2022) identifying nine GA-guided-management (GAM) RCTs (including GAP70+ and GAIN), plus secondary analyses and systematic reviews.",
+    "population": "Older adults (65+) with cancer receiving systemic therapy (chemotherapy, targeted therapy, or immunotherapy).",
+    "line": "N/A (assessment/management guideline across lines and modalities).",
+    "key_eligibility": [
+      "Population: older adults with cancer (65+) considering systemic (non-surgical/non-radiation) therapy",
+      "RCTs required >=100 total patients; small/pilot RCTs excluded",
+      "GAP70+ enrolled patients >=70 with incurable solid tumor or lymphoma and >=1 GA vulnerability; GAIN enrolled patients >=65 with solid tumor"
+    ],
+    "outcomes": "Strong recommendation (high-quality evidence): all patients 65+ with GA-identified impairments should receive GA-guided management (GAM). Driven by GAP70+ (grade 3-5 toxicity 51% intervention vs 71% usual care; RR 0.74, 95% CI 0.64-0.86, P=.0001; fewer falls) and GAIN (grade >=3 toxicity 50.5% vs 60.6%, a 10.1% reduction, P=.02). GA should include physical and cognitive function, emotional health, comorbid conditions, polypharmacy, nutrition, and social support; the Practical Geriatric Assessment (PGA) is offered as one option. Reiterates the 2018 recommendation that GA identifies vulnerabilities not captured by oncology assessment.",
+    "grounds_rubric_claims": [
+      "All patients 65+ with GA-identified deficits should receive GA-guided management (strong, high-quality evidence)",
+      "GA-guided management reduces serious (grade 3-5) chemotherapy toxicity (GAP70+, GAIN RCTs)",
+      "GA should span function, cognition, emotional health, comorbidity, polypharmacy, nutrition, and social support; extends to targeted therapy and immunotherapy"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "All patients with cancer aged 65 and over with geriatric assessment (GA)-identified impairments should have GA-guided management (GAM) included in their care plan... (Type: Evidence based... Evidence quality: High; Strength of recommendation: Strong)",
+        "supports": "Strong recommendation for GA-guided management in 65+"
+      },
+      {
+        "quote": "a lower proportion of patients (51%) in the intervention group experienced grade 3-5 toxic effects than patients in the usual care group (71%; relative risk [RR] 0.74 (95% CI, 0.64 to 0.86; P = .0001).",
+        "supports": "GAP70+ RCT evidence that GAM reduces chemo toxicity"
+      },
+      {
+        "quote": "A GA should include high priority aging-related domains known to be associated with outcomes in older patients with cancer to include assessment of physical and cognitive function, emotional health, comorbid conditions, polypharmacy, nutrition, and social support.",
+        "supports": "Required GA domains"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "Evidence strongest for chemotherapy; extension to targeted/immunotherapy rests on early/indirect data. PGA is offered by informal consensus (weak recommendation) and is not yet psychometrically validated as a composite. Some GAM RCTs (e.g., 5C, EGeSOR, Orum) were negative for QOL/completion/survival endpoints."
+  },
+  {
     "key": "Bailen-2024",
     "title": "Anti-CD19 CAR-T Cell Therapy in Elderly Patients: Multicentric Real-World Experience from GETH-TC/GELTAMO",
     "authors_year": "Bailen, Iacoboni, Delgado, ... Kwon (2024)",
@@ -74,6 +146,43 @@
     "caveats": "Retrospective registry; despite higher Charlson index in older group, authors note overall comorbidity burden was relatively low, implying selection bias (only fitter elderly reached infusion). No CAR-T expansion or immune-reconstitution data. ICANS age difference did not reach significance (underpowered for neurotoxicity). Product mix (axi-cel ~55-59%) differs from Ram tisa-cel-predominant cohort, which may explain the stronger CRS-by-age signal.",
     "full_text_available": true,
     "line": "Transplant Cell Ther 2024;30:988.e1-988.e11"
+  },
+  {
+    "key": "BENDA-PREAPHERESIS",
+    "title": "Recent Bendamustine Treatment Before Apheresis Has a Negative Impact on Outcomes in Patients With Large B-Cell Lymphoma Receiving Chimeric Antigen Receptor T-Cell Therapy",
+    "authors_year": "Iacoboni et al., 2023",
+    "journal": "J Clin Oncol 2024; 42: 205-217",
+    "design": "Retrospective, multicenter observational study; 7 European sites; 439 patients with R/R LBCL infused with commercial CD19 CAR T (axi-cel 58%, tisa-cel 42%), 3L+. Compared bendamustine-exposed (n=80) vs bendamustine-naive (n=359) before apheresis; washout and dose analyses. IPTW and propensity-score matching for confounder adjustment.",
+    "population": "Adults with R/R LBCL receiving commercial CD19 CAR T in third or later line (Jan 2019-Oct 2022). Bendamustine-exposed patients were older (median 66 vs 61), worse ECOG, more prior lines, more transformed indolent histology (45% vs 15%).",
+    "line": "Third-line or later CAR T-cell therapy (sequencing/eligibility evidence, not a treatment trial).",
+    "key_eligibility": [
+      "Bendamustine exposure = >=1 cycle before apheresis; washout = time from last bendamustine dose to leukapheresis",
+      "Recent exposure defined as <9 months before apheresis (optimal discriminatory cutoff by max log-rank for OS)",
+      "All met CAR T label criteria and received flu/cy lymphodepletion"
+    ],
+    "outcomes": "Bendamustine-exposed vs naive: lower ORR (53% vs 72%; P<0.01), shorter PFS (3.1 vs 6.2 mo; P=0.04), shorter OS (10.3 vs 23.5 mo; P=0.01); differences attenuated after IPTW/PSM adjustment. RECENT (<9 months) exposure vs naive: ORR 40% vs 72%, PFS 1.3 vs 6.2 mo, OS 4.6 vs 23.5 mo - all P<0.01 and remained significant after IPTW (PFS HR 1.83, OS HR 2.09) and PSM. Cumulative bendamustine dose did NOT affect outcomes. Bendamustine-exposed had more grade >=3 thrombocytopenia and severe infections; CRS/ICANS rates similar. Lower CD3+ and platelet counts at apheresis; enriched for low CAR-T expanders.",
+    "grounds_rubric_claims": [
+      "Recent bendamustine (<9 months) before CAR T apheresis independently worsens ORR, PFS, and OS - grounds a rule to AVOID bendamustine-containing regimens (e.g., pola-BR) before planned CAR T",
+      "Bendamustine should be avoided immediately prior to CAR T; washout of >=9 months mitigates the effect",
+      "Cumulative bendamustine dose does not matter - timing/washout is the driver, not total dose",
+      "Links to POLA-BR sequencing hazard: pola-BR (bendamustine backbone) can compromise subsequent CAR T if given recently before apheresis"
+    ],
+    "caveats": "Retrospective, non-randomized; bendamustine-exposed cohort had worse baseline features (confounding partially addressed by IPTW/PSM). Unadjusted differences attenuate after adjustment except for the recent (<9 mo) subset, which stays significant.",
+    "full_text_available": true,
+    "verbatim_quotes": [
+      {
+        "quote": "those with recent (<9 months) exposure (N = 42) displayed a lower ORR (40% v 72%; P < .01), shorter PFS (1.3 v 6.2 months; P < .01), and OS (4.6 v 23.5 months; P < .01) in comparison with bendamustine-naive patients. These differences remained significant after IPTW and PSM analysis.",
+        "supports": "Core finding: recent (<9 mo) bendamustine before apheresis independently worsens CAR T ORR/PFS/OS"
+      },
+      {
+        "quote": "Recent bendamustine exposure before apheresis was associated with negative treatment outcomes after CD19-targeted CAR T-cell therapy and should be therefore avoided in CAR T-cell candidates.",
+        "supports": "Grounds the rubric rule to avoid bendamustine before planned CAR T"
+      },
+      {
+        "quote": "the cumulative dose of bendamustine before apheresis did not affect CAR-T efficacy outcomes.",
+        "supports": "Timing/washout, not cumulative dose, drives the hazard - refines the sequencing rule"
+      }
+    ]
   },
   {
     "key": "Bishop-2022-BELINDA",
@@ -154,6 +263,73 @@
     ],
     "caveats": "Single-arm, no comparator; cross-study comparisons cautioned. Enrolled during COVID-19 pandemic (13% grade 5 TEAEs, 5 were COVID-19). Combination and 2L use are off-label; regulatory approval is monotherapy at 3L+ only. Median follow-up 13.2 mo.",
     "full_text_available": true
+  },
+  {
+    "key": "CHARLSON",
+    "title": "A new method of classifying prognostic comorbidity in longitudinal studies: development and validation",
+    "authors_year": "Charlson, Pompei, Ales, MacKenzie, 1987",
+    "journal": "Journal of Chronic Diseases (J Chron Dis) 40(5):373-383",
+    "design": "Methods/instrument development and validation study. Weighted comorbidity index developed empirically from 1-yr mortality in an inception cohort of 559 medical inpatients (New York Hospital, 1984) and validated against 10-yr mortality in 685 breast cancer patients (Yale New Haven Hospital, 1962-1969).",
+    "population": "Derivation: 559 general medical inpatients. Validation: 685 women with histologically proven primary breast carcinoma.",
+    "line": "N/A (comorbidity measurement instrument, not a treatment).",
+    "key_eligibility": [
+      "Derivation cohort = consecutive medical-service admissions over 1 month (99.3% of eligible)",
+      "Conditions completely resolved or history of operation for inactive conditions were NOT counted as comorbidity",
+      "Validation cohort = histologically proven primary breast cancer with first treatment at Yale New Haven Hospital"
+    ],
+    "outcomes": "Assigns weights (1, 2, 3, or 6) to 19 comorbid conditions summed to a total score. 1-yr mortality rose stepwise with score: '0'=12%, '1-2'=26%, '3-4'=52%, '>=5'=85%. Lymphoma and leukemia each carry a weight of 2; metastatic solid tumor and AIDS carry weight 6. Each increasing level of the index conferred a relative risk of death from comorbid disease of 2.3 (95% CI 1.9-2.8); each decade of age RR 2.4. An optional combined age-comorbidity score adds 1 point per decade over 40.",
+    "grounds_rubric_claims": [
+      "Charlson Comorbidity Index is a validated instrument to quantify comorbidity burden for prognosis/eligibility decisions",
+      "A weighted comorbidity index (not a simple count of conditions) is the validated approach; conditions carry disease-specific weights",
+      "Lymphoma and leukemia are assigned a comorbidity weight of 2 in the index"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "A weighted index that takes into account the number and the seriousness of comorbid disease was developed in a cohort of 559 medical patients.",
+        "supports": "CCI is a weighted (not simple-count) comorbidity instrument"
+      },
+      {
+        "quote": "To simplify the system, conditions with a relative risk >=1.2 <1.5 were assigned a weight of 1; conditions with a risk >1.5 <2.5 a weight of 2; conditions with a weight of >=2.5 <3.5 a weight of 3; and those two conditions with weights of 6 or more were assigned a weight of 6.",
+        "supports": "The weighting scheme (1/2/3/6) that grounds the scoring rubric"
+      },
+      {
+        "quote": "The relative risk for each increasing level of the comorbidity index was 2.3 (95% confidence limits: 1.9-2.8) and for each decade of age was 2.4.",
+        "supports": "Validation of the index as a graded predictor of comorbid death"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "Derived from 1-yr mortality and tested for 10-yr prediction; authors call it 'preliminary' given small numbers per condition. Age-comorbidity composite was not separately validated. Developed in general medical and breast cancer patients, not lymphoma-specific."
+  },
+  {
+    "key": "CIRS-G",
+    "title": "Rating chronic medical illness burden in geropsychiatric practice and research: application of the Cumulative Illness Rating Scale (CIRS-G)",
+    "authors_year": "Miller, Paradis, Houck, Mazumdar, Stack, Rifai, Mulsant, Reynolds, 1992",
+    "journal": "Psychiatry Research 41:237-248",
+    "design": "Methods/instrument feasibility and reliability study. A geriatric-adapted modification of the Cumulative Illness Rating Scale (CIRS; Linn 1968) operationalized with a manual, tested in elderly subjects.",
+    "population": "141 elderly outpatients across five groups: two geriatric medical-clinic groups (n=20 each), 45 recurrent-depressed, 21 spousally bereaved, 35 healthy controls; plus 10 inpatients for reliability testing.",
+    "line": "N/A (comorbidity/illness-burden rating instrument).",
+    "key_eligibility": [
+      "Elderly outpatient and inpatient geriatric/geropsychiatric subjects",
+      "Raters included nurse practitioners, physician's assistants, and geriatric psychiatrists reviewing charts/exams"
+    ],
+    "outcomes": "CIRS-G rates 13-14 organ-system categories each 0 (no problem) to 4 (extremely severe/urgent), yielding five summary numbers (categories endorsed, total score, severity index, and counts of level-3 and level-4 categories). Good interrater reliability: intraclass correlation 0.78 (outpatients) and 0.88 (inpatients) for total score. CIRS-G total discriminated groups (10.6 in older medical-clinic group vs 4.5 in healthy controls, p<0.0001) and correlated with ADL capability and physicians' global burden estimates. Weighted toward chronic problems, so scores are cumulative and expected to rise over time.",
+    "grounds_rubric_claims": [
+      "CIRS-G is a validated organ-system-based comorbidity/illness-burden rating instrument with good interrater reliability",
+      "Each organ system is rated 0-4 by severity; the total and severity indices quantify cumulative burden",
+      "CIRS-G is one of the tools recommended for comorbidity assessment in geriatric oncology"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "a rating of 0 indicates no problem in a given category; a rating of 1 indicates a mild problem; a rating of 2 indicates a problem of moderate severity requiring active therapy; a rating of 3 indicates severe or constant disability; and 4, an extremely severe or urgent clinical problem.",
+        "supports": "The 0-4 per-organ-system severity scoring that grounds the rubric"
+      },
+      {
+        "quote": "Good interrater reliability (i.e., intraclass correlations of 0.78 and 0.88 in a subsample of 10 outpatients and a separate group of 10 inpatients, respectively) was achieved for CIRS(G) total scores.",
+        "supports": "Reliability of the instrument"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "Developed and validated in geriatric/geropsychiatric populations, not cancer patients. Small samples. A single very severe condition may be underrepresented in the total score (ceiling of one organ category)."
   },
   {
     "key": "Crump-2017-SCHOLAR-1",
@@ -394,6 +570,41 @@
     "caveats": "Narrative review; underlying studies mostly retrospective, heterogeneous in populations/products/prior therapy, with limited follow-up. No randomized data for CAR-T in CNS lymphoma. Prognosis after post-CAR-T relapse is poor (median OS ~4.6 mo). Position of CAR-T in the treatment sequence remains undefined."
   },
   {
+    "key": "ICC",
+    "title": "The International Consensus Classification of Mature Lymphoid Neoplasms: a report from the Clinical Advisory Committee",
+    "authors_year": "Campo, Jaffe, Cook, ... Zelenetz, 2022",
+    "journal": "Blood 140(11):1229-1253",
+    "design": "Consensus classification / diagnostic-criteria report from an international Clinical Advisory Committee (14 working groups), updating lymphoid neoplasm classification with genomic data.",
+    "population": "N/A (diagnostic classification of mature lymphoid, histiocytic, and dendritic cell neoplasms).",
+    "line": "N/A (pathology/diagnostic-criteria document).",
+    "key_eligibility": [
+      "Defines diagnostic entities and required ancillary studies (e.g., FISH) for classification",
+      "High-grade B-cell lymphoma with MYC and BCL2 rearrangements category redefined to EXCLUDE cases with only MYC and BCL6 rearrangements (those become a separate provisional entity)"
+    ],
+    "outcomes": "Establishes 'High-grade B-cell lymphoma with MYC and BCL2 rearrangements' (HGBCL-DH-BCL2, 'double-hit') as a defined entity of GCB origin, diagnosed by demonstrating both MYC and BCL2 rearrangements (translocations detected by FISH). Critically, copy-number increase or amplification of MYC/BCL2 is explicitly NOT sufficient to substitute for a true rearrangement. Double-hit categories continue to exclude follicular lymphoma; the MYC partner gene (IG vs non-IG) does not affect classification. HGBCL-DH-BCL6 (MYC+BCL6) is a separate provisional entity.",
+    "grounds_rubric_claims": [
+      "Double-hit lymphoma = concurrent MYC AND BCL2 rearrangements (translocations), demonstrated by FISH",
+      "Copy-number gain or amplification of MYC/BCL2 does NOT qualify as a rearrangement and cannot substitute for it in the double-hit definition",
+      "MYC+BCL6 (without BCL2) is a separate provisional entity, not the classic MYC/BCL2 double-hit"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "HGBCL-DH now comprises 2 groups: HGBCL with MYC and BCL2 rearrangements (with or without BCL6 rearrangement) (HGBCL-DH-BCL2) and a new provisional entity, HBGBL with MYC and BCL6 rearrangements (HGBCL-DH-BCL6).",
+        "supports": "Double-hit defined by MYC and BCL2 rearrangement (distinct from MYC/BCL6)"
+      },
+      {
+        "quote": "Neither copy number increase nor amplification of these genes is sufficient to substitute for rearrangement in these categories.",
+        "supports": "Amplification/copy-number gain does NOT count as double-hit; only true rearrangement qualifies"
+      },
+      {
+        "quote": "The category is redefined to exclude patients with only MYC and BCL6 rearrangements.",
+        "supports": "MYC/BCL6-only cases are excluded from the classic MYC+BCL2 double-hit category"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "ICC classification runs parallel to (and diverges in places from) the concurrent WHO-HAEM5; terminology and provisional-entity status (e.g., HGBCL-DH-BCL6) may differ between systems. Requires FISH; MYC partner-gene significance remains controversial."
+  },
+  {
     "key": "Jolly-2015",
     "title": "Geriatric Assessment-Identified Deficits in Older Cancer Patients With Normal Performance Status",
     "authors_year": "Jolly, Deal, Nyrop, Williams, ... Muss (2015)",
@@ -468,6 +679,45 @@
     "caveats": "2015 editorial - predates CAR-T era and current regimens; reflects PCNSL (not secondary CNS) but the CNS-penetration pharmacology (HD-MTX/ara-C/thiotepa) generalizes. Opinion piece; author flags the Ferreri 2009 randomized phase 2 monotherapy arm may have used a suboptimal HD-MTX schedule."
   },
   {
+    "key": "L-MIND-original",
+    "title": "Tafasitamab plus lenalidomide in relapsed or refractory diffuse large B-cell lymphoma (L-MIND): a multicentre, prospective, single-arm, phase 2 study",
+    "authors_year": "Salles et al., 2020",
+    "journal": "Lancet Oncol 2020; 21: 978-88",
+    "design": "Multicentre, open-label, single-arm phase 2 study; 35 sites in 10 countries; NCT02399085. Tafasitamab (anti-CD19 mAb) 12 mg/kg IV + lenalidomide 25 mg/day for up to 12 cycles, then tafasitamab monotherapy until progression. Safety n=81; primary activity analysis n=80. Primary endpoint: centrally assessed ORR (2007 IWG criteria).",
+    "population": "Adults with R/R DLBCL after 1-3 prior systemic regimens (>=1 anti-CD20), ASCT-INELIGIBLE. Median age 72; 50% had only 1 prior line; all had prior anti-CD20 and anthracycline. Median 2 prior lines.",
+    "line": "ASCT-ineligible R/R DLBCL, 2L-4L (1-3 prior regimens).",
+    "key_eligibility": [
+      "PRIMARY-REFRACTORY DLBCL EXCLUDED (defined as no response to, or progression during/within 6 months of, frontline therapy) - the key exclusion grounding a rubric rule that L-MIND evidence does NOT apply to primary-refractory patients",
+      "Double-hit/triple-hit DLBCL excluded (if known)",
+      "Only 1-3 prior lines allowed; must be ASCT-ineligible; prior anti-CD19 or immunomodulatory drugs (thalidomide/lenalidomide) excluded",
+      "CNS lymphoma involvement excluded",
+      "Pre-amendment: only relapse within 3 months of prior anti-CD20 counted as primary refractory; post-amendment aligned to 6-month NCCN definition"
+    ],
+    "outcomes": "ORR 60% (95% CI 48-71); CR 43% (32-54); PR 18%. Median DoR 21.7 months (not reached for CR; 93% of CR patients had response lasting 18 months). Median PFS 12.1 months; 12-month PFS 50%; median OS not reached (12-month OS 74%). Grade >=3 TEAEs: neutropenia 48%, thrombocytopenia 17%, febrile neutropenia 12%. Toxicity decreased after lenalidomide discontinuation (tafasitamab monotherapy phase).",
+    "grounds_rubric_claims": [
+      "Tafasitamab-lenalidomide (L-MIND) is an option for ASCT-ineligible R/R DLBCL, ORR 60%/CR 43%, durable responses",
+      "L-MIND EXCLUDED primary-refractory DLBCL - so its efficacy evidence does NOT support use in primary-refractory patients (key rubric guardrail)",
+      "L-MIND excluded double/triple-hit and limited to 1-3 prior lines - eligibility caveats on generalizability",
+      "Anti-CD19 mAb - relevant to CD19-directed sequencing considerations"
+    ],
+    "caveats": "Single-arm; enriched for less-refractory patients (primary-refractory excluded), which inflates apparent benefit relative to real-world 3L+ populations. Small n=80.",
+    "full_text_available": true,
+    "verbatim_quotes": [
+      {
+        "quote": "Exclusion criteria included ... primary refractory diffuse large B-cell lymphoma, defined as no response to, or progression during or within 6 months of frontline therapy",
+        "supports": "L-MIND explicitly EXCLUDED primary-refractory DLBCL - the load-bearing exclusion for a rubric rule limiting tafasitamab-lenalidomide applicability"
+      },
+      {
+        "quote": "48 (60%; 95% CI 48-71) of 80 patients who received tafasitamab plus lenalidomide had an objective response: 34 (43%; 32-54) had a complete response and 14 (18%; 10-28) had a partial response.",
+        "supports": "Headline efficacy of tafasitamab-lenalidomide in ASCT-ineligible R/R DLBCL"
+      },
+      {
+        "quote": "were not candidates for high-dose chemotherapy and subsequent autologous stem-cell transplantation",
+        "supports": "Population is ASCT-ineligible R/R DLBCL"
+      }
+    ]
+  },
+  {
     "key": "Locke-2022-ZUMA-7",
     "title": "Axicabtagene Ciloleucel as Second-Line Therapy for Large B-Cell Lymphoma (ZUMA-7)",
     "authors_year": "Locke FL, Miklos DB, Jacobson CA, et al. 2022",
@@ -510,6 +760,79 @@
     "caveats": "Local file is the ZUMA-7 protocol + SAP supplement (not the results paper); it grounds design, stratification, and eligibility verbatim. The efficacy numbers (EFS HR 0.40, median 8.3 vs 2.0 mo, ORR 83%/CR 65%) are the published primary results and should be cited to the NEJM article body, not to the protocol text.",
     "full_text_available": true,
     "line_field_note": "2L"
+  },
+  {
+    "key": "LOTIS-2",
+    "title": "Loncastuximab tesirine in relapsed or refractory diffuse large B-cell lymphoma (LOTIS-2): a multicentre, open-label, single-arm, phase 2 trial",
+    "authors_year": "Caimi et al., 2021",
+    "journal": "Lancet Oncol 2021; 22: 790-800",
+    "design": "Multicentre (28 sites, USA/UK/Italy/Switzerland), open-label, single-arm phase 2 trial; NCT03589469. Loncastuximab tesirine (CD19-directed antibody-drug conjugate, PBD payload) 150 ug/kg x2 cycles then 75 ug/kg, up to 1 year. As-treated population n=145. Primary endpoint: centrally assessed ORR.",
+    "population": "Adults with R/R DLBCL after >=2 prior multiagent systemic therapies; ECOG 0-2; measurable disease. Included high-risk groups: double/triple-hit, transformed, and primary-refractory DLBCL. Median 3 prior lines; 9% prior CAR T; median age 66.",
+    "line": "Third-line or later (3L+); >=2 prior systemic therapies.",
+    "key_eligibility": [
+      "Broad high-risk eligibility: double-hit/triple-hit, transformed, and primary-refractory DLBCL all included (unlike L-MIND/pola-BR)",
+      "Biopsy-proven CD19 expression required for patients with previous CD19-directed therapy - relevant to antigen-loss sequencing",
+      "Active CNS lymphoma excluded; bulky disease (>=10 cm) excluded after protocol amendment 2",
+      "Previous CAR T-cell therapy allowed (9% had prior CAR T)"
+    ],
+    "outcomes": "As-treated (n=145): ORR 48.3% (95% CI 39.9-56.7); CR 24.1%; PR 24%. Median DoR 10.3 months (13.4 mo for CR, 5.7 mo for PR); median PFS 4.9 months; median OS 9.9 months. Grade >=3 TEAEs: neutropenia 26%, thrombocytopenia 18%, increased GGT 17%. PBD-related toxicities: edema/effusion, liver enzyme elevation, skin/nail changes. In 13 patients with prior CD19 CAR T, ORR was similar to overall - and CD19 expression generally maintained after loncastuximab (antigen loss not common).",
+    "grounds_rubric_claims": [
+      "Loncastuximab tesirine is an approved 3L+ CD19 ADC option for R/R DLBCL, ORR ~48%, CR ~24%",
+      "Active on high-risk subgroups (double/triple-hit, transformed, primary-refractory) that other regimens exclude",
+      "CD19-directed ADC raises antigen-loss sequencing considerations with CD19 CAR T; biopsy CD19 required after prior CD19 therapy; CD19 expression usually retained, so it does not preclude subsequent CD19 CAR T",
+      "Can be used before or after CD19 CAR T (bidirectional sequencing)"
+    ],
+    "full_text_available": true,
+    "verbatim_quotes": [
+      {
+        "quote": "70 of 145 patients had complete or partial response (overall response rate 48.3% [95% CI 39.9-56.7]); 35 had complete response and 35 had partial response",
+        "supports": "Headline efficacy of single-agent loncastuximab tesirine 3L+"
+      },
+      {
+        "quote": "a small study of patients who had CD19-directed CAR T-cell therapy after loncastuximab tesirine therapy found CD19 expression after loncastuximab tesirine treatment in all patients with biopsies (ten of 14 patients), suggesting CD19 antigen loss after loncastuximab tesirine is not common.",
+        "supports": "Antigen-loss sequencing note: loncastuximab (CD19 ADC) generally does not cause CD19 loss precluding subsequent CD19 CAR T"
+      },
+      {
+        "quote": "Biopsy-proven CD19 expression was required for patients with previous CD19-directed therapy.",
+        "supports": "Eligibility rule tied to CD19 antigen status - grounds antigen-loss sequencing rubric consideration"
+      }
+    ]
+  },
+  {
+    "key": "MATRix",
+    "title": "Chemoimmunotherapy with methotrexate, cytarabine, thiotepa, and rituximab (MATRix regimen) in patients with primary CNS lymphoma: first randomisation of the IELSG32 phase 2 trial",
+    "authors_year": "Ferreri, Cwynarski, Pulczynski, ... Illerhaus (IELSG), 2016",
+    "journal": "Lancet Haematology 3(5):e217-e227",
+    "design": "International, multicentre, open-label, randomised phase 2 trial (53 centres, five European countries); first randomisation (1:1:1) of induction: group A methotrexate-cytarabine; group B +rituximab; group C +rituximab+thiotepa (MATRix). Primary endpoint centrally assessed complete remission rate, modified intention-to-treat.",
+    "population": "227 enrolled / 219 assessable HIV-negative patients aged 18-70 (median ~57) with newly diagnosed primary CNS lymphoma (all DLBCL histology), disease confined to CNS/cranial nerves/eyes.",
+    "line": "First line (induction) for newly diagnosed primary CNS lymphoma.",
+    "key_eligibility": [
+      "Age 18-70, histologically proven B-cell non-Hodgkin lymphoma confined to CNS/cranial nerves/eyes, no prior treatment, measurable disease",
+      "ECOG performance status <=3 (or <=2 for ages 66-70)",
+      "Excluded: prior organ transplant/immunosuppression, HBV/HCV/HIV infection, other malignancies"
+    ],
+    "outcomes": "Complete remission rate 49% (group C, MATRix) vs 30% (group B) vs 23% (group A); MATRix vs methotrexate-cytarabine HR 0.46 (95% CI 0.28-0.74). Overall response 87% vs 74% vs 53%. 2-year progression-free survival 61% (C) vs 46% (B) vs 36% (A); 2-year overall survival 69% (C) vs 56% (B) vs 42% (A). Grade 4 haematological toxicity more frequent with thiotepa but infective complications similar; 13 (6%) died of toxicity during induction. Thiotepa crosses the blood-brain barrier (plasma-to-CSF ratio 100%).",
+    "grounds_rubric_claims": [
+      "MATRix (high-dose methotrexate + cytarabine + thiotepa + rituximab) is the CNS-penetrant standard induction backbone for primary CNS lymphoma in patients up to 70",
+      "CNS-directed regimens must use drugs with CNS bioavailability/blood-brain-barrier penetration (methotrexate, cytarabine, thiotepa)",
+      "Adding thiotepa and rituximab to methotrexate-cytarabine significantly improves complete remission, PFS, and OS"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "the IELSG32 trial provides a high level of evidence supporting the use of MATRix combination as the new standard chemoimmunotherapy for patients aged up to 70 years with newly diagnosed primary CNS lymphoma.",
+        "supports": "MATRix as standard CNS-penetrant induction backbone for PCNSL"
+      },
+      {
+        "quote": "patients treated with rituximab and thiotepa had a complete remission rate of 49% (95% CI 38-60), compared with 23% (14-31) of those treated with methotrexate-cytarabine alone (hazard ratio 0.46, 95% CI 0.28-0.74).",
+        "supports": "Headline efficacy of MATRix vs methotrexate-cytarabine"
+      },
+      {
+        "quote": "Thiotepa is an alkylating agent that is active against aggressive lymphomas, and can cross the blood-brain barrier with a plasma-to-cerebrospinal fluid (CSF) ratio of 100%.",
+        "supports": "CNS penetration rationale for the regimen components"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "Randomised phase 2 (calibration design, no formal pre-planned between-group comparison originally); open-label. Upper age limit 70 and ECOG PS <=3 (<=2 if 66-70), so not directly applicable to older/frailer PCNSL patients. 6% induction toxic-death rate. Consolidation (second randomisation, WBRT vs ASCT) reported separately."
   },
   {
     "key": "Merli-2021-FIL-Elderly-Project",
@@ -628,6 +951,78 @@
     "line_field_note": "2L-historical"
   },
   {
+    "key": "POLA-BR",
+    "title": "Polatuzumab Vedotin in Relapsed or Refractory Diffuse Large B-Cell Lymphoma",
+    "authors_year": "Sehn et al., 2019",
+    "journal": "J Clin Oncol 2020; 38: 155-165",
+    "design": "International, multicenter, open-label phase Ib/II trial (GO29365; NCT02257567). Randomised cohort (n=80; 40 per arm) comparing polatuzumab vedotin + bendamustine + rituximab (pola-BR) vs BR alone; plus single-arm pola-BG cohort (n=27). Primary endpoint: IRC-assessed CR rate at end of treatment. Up to six 21-day cycles.",
+    "population": "Adults with transplant-ineligible R/R DLBCL (excluding transformed lymphoma) after >=1 prior line; ECOG 0-2; grade <=1 peripheral neuropathy. Median 2 prior lines; most refractory to last therapy (75% pola-BR, 85% BR); median age 67-71. Double/triple-hit not excluded.",
+    "line": "Approved third-line or later (3L+); trial enrolled >=1 prior line (transplant-ineligible).",
+    "key_eligibility": [
+      "Transplant-ineligible R/R DLBCL, or prior ASCT failure",
+      "Transformed lymphoma EXCLUDED; peripheral neuropathy must be grade <=1 at entry",
+      "Contains bendamustine - relevant to sequencing hazard before cellular therapy (see BENDA-PREAPHERESIS)"
+    ],
+    "outcomes": "Randomised cohort: IRC CR rate 40.0% (pola-BR) vs 17.5% (BR); P=0.026. Median IRC PFS 9.5 vs 3.7 months (HR 0.36; 95% CI 0.21-0.63; P<0.001). Median OS 12.4 vs 4.7 months (HR 0.42; 95% CI 0.24-0.75; P=0.002) - 58% reduction in risk of death. Higher grade 3-4 neutropenia (46.2% vs 33.3%), anaemia, and thrombocytopenia with pola-BR; grade 1-2 polatuzumab-associated peripheral neuropathy in 43.6%, mostly resolving.",
+    "grounds_rubric_claims": [
+      "Pola-BR is an approved 3L+ regimen for transplant-ineligible R/R DLBCL with OS benefit over BR (HR 0.42)",
+      "Regimen contains bendamustine - flags a sequencing hazard when cellular (CAR T) therapy may follow, since recent bendamustine before apheresis worsens CAR T outcomes",
+      "Pola-BR excludes transformed lymphoma in its pivotal evidence (eligibility caveat)"
+    ],
+    "caveats": "Small randomised cohort (40/arm), phase Ib/II. Bendamustine backbone raises concern if CAR T is a subsequent planned therapy.",
+    "full_text_available": true,
+    "verbatim_quotes": [
+      {
+        "quote": "pola-BR patients had a significantly higher IRC-assessed CR rate (40.0% v 17.5%; P = .026) and longer IRC-assessed PFS (median, 9.5 v 3.7 months; ... P < .001) and OS (median, 12.4 v 4.7 months; HR, 0.42; 95% CI, 0.24 to 0.75; P = .002...).",
+        "supports": "Efficacy of pola-BR over BR: higher CR, longer PFS and OS in transplant-ineligible R/R DLBCL"
+      },
+      {
+        "quote": "Polatuzumab vedotin combined with BR resulted in a significantly higher CR rate and reduced the risk of death by 58% compared with BR in patients with transplantation-ineligible R/R DLBCL.",
+        "supports": "Headline conclusion; grounds approved-3L+ role and 58% OS risk reduction"
+      },
+      {
+        "quote": "All patients received bendamustine 90 mg/m2 intravenously",
+        "supports": "Regimen contains bendamustine - grounds the sequencing-hazard link to impaired CAR T apheresis/outcomes"
+      }
+    ]
+  },
+  {
+    "key": "R-miniCHOP",
+    "title": "Attenuated immunochemotherapy regimen (R-miniCHOP) in elderly patients older than 80 years with diffuse large B-cell lymphoma: a multicentre, single-arm, phase 2 trial",
+    "authors_year": "Peyrade, Jardin, Thieblemont, ... Tilly (GELA), 2011",
+    "journal": "Lancet Oncology 12(5):460-468",
+    "design": "Prospective, multicentre, single-arm, phase 2 trial (38 centres, France and Belgium); 6 cycles of R-miniCHOP every 3 weeks; primary endpoint overall survival, intention-to-treat.",
+    "population": "149 patients (of 150 enrolled) aged over 80 years (median 83, range 80-95) with untreated CD20+ DLBCL; 75% Ann Arbor stage III/IV; ECOG PS <=2.",
+    "line": "First line (untreated DLBCL) in patients >=80 years.",
+    "key_eligibility": [
+      "Age over 80 with untreated histologically proven CD20+ DLBCL (WHO classification)",
+      "Ann Arbor stage I bulky to IV; age-adjusted IPI 1-3; ECOG PS <=2; life expectancy >=3 months",
+      "Excluded: CNS or meningeal involvement, other lymphoma subtypes, history of indolent lymphoma, poor renal (creatinine >150 umol/L) or hepatic function, poor marrow reserve, prior cancer within 5 years, patients under guardianship"
+    ],
+    "outcomes": "Median overall survival 29 months; 2-year OS 59% (95% CI 49-67). Median PFS 21 months; 2-year PFS 47% (38-56). Overall response rate 73%; complete/unconfirmed-complete response rate 62%. On multivariate analysis only serum albumin <=35 g/L predicted worse OS (HR 3.2, 95% CI 1.4-7.1, p=0.0053). 58 deaths (33 from lymphoma progression, 12 attributed to treatment toxicity). Grade >=3 neutropenia in 59 patients; febrile neutropenia in 11. Doses: rituximab 375 mg/m2, cyclophosphamide 400 mg/m2, doxorubicin 25 mg/m2, vincristine 1 mg (all day 1), prednisone 40 mg/m2 days 1-5.",
+    "grounds_rubric_claims": [
+      "R-miniCHOP is a validated, prospectively studied first-line regimen for DLBCL in patients >=80 with good performance status; attenuated dosing is intentional and evidence-based, not inappropriate under-dosing",
+      "Curative-intent immunochemotherapy is achievable in the very elderly (2-year OS 59%, CR/CRu 62%)",
+      "Serum albumin <=35 g/L (a nutrition/frailty marker) is the dominant adverse prognostic factor in this population"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "R-miniCHOP offers a good compromise between efficacy and safety in patients aged over 80 years old. R-miniCHOP should be considered as the new standard treatment in this subgroup of patients.",
+        "supports": "R-miniCHOP is the standard first-line regimen for DLBCL patients >80, validating attenuated dosing"
+      },
+      {
+        "quote": "the median overall survival was 29 months (95% CI 21 to upper limit not reached); 2-year overall survival was 59% (49-67%).",
+        "supports": "Headline efficacy outcomes"
+      },
+      {
+        "quote": "In multivariate analyses, overall survival was only affected by a serum albumin concentration of 35 g/L or less (hazard ratio 3.2, 95% CI 1.4-7.1; p=0.0053).",
+        "supports": "Low serum albumin as the key adverse prognostic factor"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "Single-arm, no control group; selected patients (ECOG PS <=2, adequate organ/marrow function) so not generalizable to frail/unfit >=80. 12 toxic deaths (>20% of deaths); most grade 3-4 hematologic toxicity and treatment-related deaths clustered in cycle 1. No formal comprehensive geriatric assessment performed (only IADL)."
+  },
+  {
     "key": "Ram-2021",
     "title": "Toxicity and efficacy of CAR T-cell therapy in patients with DLBCL above the age of 70 years compared to younger patients - a matched control multicenter cohort study",
     "authors_year": "Ram, Grisariu, Shargian-Alon, ... Avivi (2021)",
@@ -741,6 +1136,115 @@
     "caveats": "Non-randomized evidence: 28/39 studies retrospective single-arm; substantial heterogeneity (ICANS I2=84%). PFS HR comparison PCNSL vs SCNSL very wide (0.16-4.91). Pooled proportions across heterogeneous products, prior-line burden, and bridging. Registry/abstract data included."
   },
   {
+    "key": "SIOG",
+    "title": "Use of comprehensive geriatric assessment in older cancer patients: recommendations from the SIOG task force on CGA",
+    "authors_year": "Extermann, Aapro, Bernabei, Cohen, Droz, Lichtman, Mor, Monfardini, Repetto, Sorbye, Topinkova, 2005",
+    "journal": "Critical Reviews in Oncology/Hematology 55:241-252",
+    "design": "Systematic evidence review and consensus recommendations (adapted Oxford levels of evidence) from an eight-member SIOG task force addressing four key questions about CGA in older cancer patients.",
+    "population": "Older cancer patients (soft age limit ~70); evidence base drawn largely from community-dwelling elderly and geriatric RCTs, with limited cancer-specific data.",
+    "line": "N/A (assessment/care-process recommendation).",
+    "key_eligibility": [
+      "Recommends screening for geriatric problems in cancer patients beyond age 70 (a 'soft limit')",
+      "Systematic review of Medline literature through February 2003 rated by adapted Oxford criteria"
+    ],
+    "outcomes": "Concludes there is strong evidence that CGA detects problems missed by routine assessment and that CGA improves function and reduces hospitalization in the elderly; heterogeneous evidence for survival and cost-effectiveness; corroborative but limited cancer-specific evidence. Recommends that functional assessment be more extensive than ECOG performance status (adding ADL/IADL and a performance test such as timed get-up-and-go), plus screening for depression and cognition, and that CGA include follow-up. Cannot recommend any single tool above others.",
+    "grounds_rubric_claims": [
+      "Comprehensive geriatric assessment should be used in older cancer patients to detect problems missed by standard oncologic assessment",
+      "Functional assessment should go beyond ECOG performance status (ADL/IADL, performance measures)",
+      "Geriatric screening is recommended beyond age ~70 as a soft limit"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "A CGA, with or without screening, and with follow-up, should be used in older cancer patients, in order to detect unaddressed problems, improve their functional status, and possibly their survival.",
+        "supports": "Core SIOG recommendation to use CGA in older cancer patients"
+      },
+      {
+        "quote": "functional status assessment should be more extensive than the ECOG performance status evaluation and may include ADL/IADL, and/or a performance test such as the timed get up and go.",
+        "supports": "CGA/GA should extend beyond ECOG performance status"
+      },
+      {
+        "quote": "Based on retrospective evidence that the incidence of geriatric problems increases sharply after 70 in cancer patients, we recommend screening for them beyond that age. This should be considered a soft limit.",
+        "supports": "Age ~70 soft threshold for geriatric screening"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "Explicitly labeled 'recommendations' not guidelines; evidence for specific CGA components is weak and largely extrapolated from non-cancer geriatric trials. No single tool endorsed. Publications only through early 2003."
+  },
+  {
+    "key": "STARGLO",
+    "title": "Glofitamab plus gemcitabine and oxaliplatin (GemOx) versus rituximab-GemOx for relapsed or refractory diffuse large B-cell lymphoma (STARGLO): a global phase 3, randomised, open-label trial",
+    "authors_year": "Abramson et al., 2024",
+    "journal": "Lancet 2024; 404: 1940-54",
+    "design": "Global phase 3, randomised, open-label trial; 62 centres in 13 countries; NCT04408638. Randomised 2:1 to Glofit-GemOx (n=183) vs R-GemOx (n=91). Primary endpoint overall survival. Primary analysis cutoff Mar 2023; updated analysis Feb 2024.",
+    "population": "Transplant-INELIGIBLE adults with histologically confirmed R/R DLBCL NOS after >=1 prior therapy. Median age 68; median 1 prior line (37% had >=2). Patients with 1 prior line had to be ASCT-ineligible (age >=70, end-organ dysfunction, ECOG >=2, refusal, comorbidity). NOTE: transformed, double/triple-hit, and HGBCL NOS were EXCLUDED.",
+    "line": "Second-line or later in transplant-ineligible patients (>=1 prior therapy).",
+    "key_eligibility": [
+      "Transplant-ineligible only; if only one prior line, must be ASCT-ineligible by defined criteria (age >=70, end-organ dysfunction, ECOG >=2, refusal, comorbidity)",
+      "EXCLUDED: DLBCL transformed from indolent lymphoma, double/triple-hit (HGBCL with MYC + BCL2/BCL6), and HGBCL NOS - restricts to DLBCL NOS",
+      "Prior CAR T-cell therapy allowed (8% had prior CAR T)"
+    ],
+    "outcomes": "Updated analysis (median f/u 20.7 mo): median OS 25.5 months (Glofit-GemOx) vs 12.9 months (R-GemOx); HR 0.62 (95% CI 0.43-0.88). Primary analysis OS HR 0.59 (0.40-0.89; p=0.011). IRC PFS 13.8 vs 3.6 months (HR 0.40). IRC CR rate 58.5% vs 25.3%; ORR 68.3% vs 40.7%. CRS in 44% of glofitamab-exposed (predominantly low grade; grade >=3 ~2%). REGULATORY NOTE: received US Complete Response Letter / not FDA-approved (per project framing).",
+    "grounds_rubric_claims": [
+      "Glofit-GemOx improves OS over R-GemOx in transplant-ineligible R/R DLBCL (2L+), HR ~0.62",
+      "Off-the-shelf CD20xCD3 bispecific + chemo is an option for transplant-ineligible patients without CAR T access",
+      "Glofit-GemOx not FDA-approved (US CRL) - availability caveat for US practice despite positive phase 3",
+      "Excludes transformed / double-hit / HGBCL, so evidence applies to DLBCL NOS transplant-ineligible only"
+    ],
+    "caveats": "US regulatory status: received a Complete Response Letter; not FDA-approved (per task framing). Subgroup OS inconsistencies by region/race noted; NALT censoring imbalance prompted post-hoc EFS analysis.",
+    "full_text_available": true,
+    "verbatim_quotes": [
+      {
+        "quote": "At the updated analysis after a median follow-up of 20.7 months (19.9-23.3), a consistent improvement in overall survival was observed with Glofit-GemOx versus R-GemOx (median 25.5 months [18.3-NE] vs 12.9 months [7.9-18.5]; HR 0.62 [0.43-0.88]).",
+        "supports": "Headline OS benefit of Glofit-GemOx over R-GemOx in transplant-ineligible R/R DLBCL"
+      },
+      {
+        "quote": "We recruited transplant-ineligible patients (aged >=18 years) with histologically confirmed relapsed or refractory diffuse large B-cell lymphoma after one or more previous therapies.",
+        "supports": "Population is transplant-ineligible R/R DLBCL, 2L+"
+      },
+      {
+        "quote": "Patients with diffuse large B-cell lymphoma transformed from indolent lymphoma, double or triple hit lymphomas ... or high-grade B-cell lymphoma, not otherwise specified, were not eligible.",
+        "supports": "Key exclusions restricting evidence to DLBCL NOS (grounds a sequencing/eligibility rubric caveat)"
+      }
+    ]
+  },
+  {
+    "key": "SUNMO",
+    "title": "Mosunetuzumab Plus Polatuzumab Vedotin in Transplant-Ineligible Refractory/Relapsed Large B-Cell Lymphoma: Primary Results of the Phase III SUNMO Trial",
+    "authors_year": "Budde et al., 2025",
+    "journal": "J Clin Oncol 2025; 43: 3799-3811",
+    "design": "Global, randomised, phase 3 trial; 50 sites in 13 countries; NCT05171647. Randomised 2:1 to Mosun-Pola (n=138) vs R-GemOx (n=70). Dual primary endpoints: centrally assessed ORR and PFS; OS key secondary. Median follow-up 23.2 months.",
+    "population": "Adults with R/R LBCL (DLBCL NOS, HGBCL including double/triple-hit, FL grade 3b, transformed FL) refractory/relapsed after >=1 prior therapy, deemed ASCT-INELIGIBLE by treating physician. Median age 62; 41% >=65; median 2 prior lines (44% had only 1); 74% primary refractory or relapse within 12 months of first-line. Prior polatuzumab permitted if no PD within 12 months of last dose.",
+    "line": "Second-line or later in transplant-ineligible patients (>=1 prior therapy).",
+    "key_eligibility": [
+      "ASCT-ineligible per treating physician",
+      "Previous polatuzumab vedotin permitted only if no disease progression within 12 months of last dose",
+      "HGBCL including double-/triple-hit and transformed FL included (broader histology than STARGLO)",
+      "Fully outpatient, chemotherapy-free bispecific + ADC regimen; no hospitalization required for mosunetuzumab"
+    ],
+    "outcomes": "Median PFS 11.5 months (Mosun-Pola) vs 3.8 months (R-GemOx); HR 0.41 (95% CI 0.3-0.6); P<0.0001. ORR 70% vs 40% (P<0.0001); CR 51% vs 24%. Interim OS 18.7 vs 13.6 months (HR 0.80; P=0.28, not yet significant). CRS in 26% of Mosun-Pola patients; grade >=2 CRS and tocilizumab use each <5%; only one grade 3 CRS, no grade 4/5, no ICANS. Lowest reported CRS among T-cell engagers. Improved patient-reported outcomes and fewer cytopenias/neuropathy vs R-GemOx.",
+    "grounds_rubric_claims": [
+      "Mosun-Pola is a gentler, outpatient, chemo-free option for transplant-ineligible R/R LBCL, superior PFS/ORR vs R-GemOx",
+      "Lowest CRS of T-cell engagers (grade >=2 <5%, no ICANS) - preferred where CRS/neurotoxicity risk or CAR-T ineligibility is a concern",
+      "Prior polatuzumab within 12 months with PD is an exclusion/sequencing consideration (pola re-exposure limited)",
+      "Appropriate for CAR-T-ineligible R/R DLBCL and proposed to replace GemOx as control arm"
+    ],
+    "full_text_available": true,
+    "verbatim_quotes": [
+      {
+        "quote": "the median PFS was significantly longer with Mosun-Pola than with R-GemOx (11.5 months [95% CI, 5.6 to 18] v 3.8 months [95% CI, 2.9 to 4.1]; hazard ratio for progression or death, 0.41 [95% CI, 0.3 to 0.6]; P < .0001).",
+        "supports": "Primary PFS benefit of Mosun-Pola over R-GemOx in transplant-ineligible R/R LBCL"
+      },
+      {
+        "quote": "the rate of grade >=2 cytokine release syndrome (CRS) and usage of tocilizumab occurred in <5% of patients",
+        "supports": "Very low CRS - grounds gentler-option rubric claim for transplant-ineligible patients"
+      },
+      {
+        "quote": "Previous treatment with polatuzumab vedotin was permitted if no disease progression (PD) occurred within 12 months of the last dose.",
+        "supports": "Sequencing constraint on prior polatuzumab exposure (eligibility rule)"
+      }
+    ]
+  },
+  {
     "key": "tafa-len-L-MIND",
     "title": "Tafasitamab for Patients With Relapsed or Refractory DLBCL: Final 5-Year Efficacy and Safety (L-MIND)",
     "authors_year": "Duell et al., 2023",
@@ -818,6 +1322,79 @@
     ],
     "full_text_available": true,
     "caveats": "n=1 case report - lowest level of evidence, non-randomized, no comparator, short follow-up (CR to ~day 120). MYC/BCL2 were positive by immunohistochemistry only (double-expressor); FISH double-hit status not reported. OCR-garbled source text but clinical facts are legible."
+  },
+  {
+    "key": "TRANSCEND",
+    "title": "Lisocabtagene maraleucel for patients with relapsed or refractory large B-cell lymphomas (TRANSCEND NHL 001): a multicentre seamless design study",
+    "authors_year": "Abramson et al., 2020",
+    "journal": "Lancet 2020; 396: 839-52",
+    "design": "Multicentre, multicohort, open-label, seamless-design phase 1 study of liso-cel (CD19 CAR T) at 14 US cancer centres; NCT02631044. Three target dose levels; efficacy-evaluable set n=256, safety set n=269, ITT (leukapheresed) n=344.",
+    "population": "Adults with relapsed/refractory LBCL after >=2 prior lines (including anti-CD20 + anthracycline). Histologies: DLBCL NOS, DLBCL transformed from indolent lymphoma, high-grade B-cell lymphoma (double/triple-hit), PMBCL, FL grade 3B. Median 3 prior lines (range 1-8); 67% chemorefractory; 42% aged >=65; heavily pretreated.",
+    "line": "Third-line or later (3L+); >=2 prior systemic therapies required.",
+    "key_eligibility": [
+      "Secondary CNS lymphoma explicitly ALLOWED/eligible (7 [3%] had secondary CNS involvement) - grounds permissive CNS rule for liso-cel 3L+",
+      "Moderate comorbidities permitted: creatinine clearance >30 to <60 mL/min and LVEF >=40% to <50%; no minimum absolute lymphocyte count",
+      "Bridging therapy allowed during manufacturing but required reconfirmation of PET-positive disease before lymphodepletion",
+      "Broader eligibility than ZUMA-1/JULIET (included older, comorbid, CNS-involved patients)"
+    ],
+    "outcomes": "Efficacy-evaluable set (n=256): ORR 73% (95% CI 66.8-78.0), CR 53% (46.8-59.4). Median DoR not reached; median PFS 6.8 months; median OS 21.1 months; 12-month OS 58%. Safety (n=269): CRS any grade 42% (grade >=3 only 2% [6 patients]); neurological events any grade 30% (grade >=3 10%). Grade >=3 neutropenia 60%, anaemia 37%, thrombocytopenia 27%. Low rate of severe CRS/neurotoxicity is a signature feature.",
+    "grounds_rubric_claims": [
+      "liso-cel is an approved 3L+ CD19 CAR T option for R/R LBCL with ORR ~73%/CR ~53%",
+      "liso-cel permits secondary CNS lymphoma involvement (unlike some CAR products/trials) - CNS involvement is not an absolute exclusion",
+      "liso-cel has comparatively low grade >=3 CRS (2%) and neurotoxicity (10%), supporting use in higher-risk/comorbid or older patients",
+      "Broad histologic eligibility including transformed indolent lymphoma, double/triple-hit HGBCL, PMBCL, FL3B"
+    ],
+    "full_text_available": true,
+    "verbatim_quotes": [
+      {
+        "quote": "181 (67%) had chemotherapy-refractory disease, and seven (3%) had secondary CNS involvement.",
+        "supports": "TRANSCEND enrolled and permitted patients with secondary CNS lymphoma (3% of cohort), grounding a permissive-CNS rubric rule for liso-cel"
+      },
+      {
+        "quote": "an objective response was achieved by 186 (73%, 95% CI 66.8-78.0) patients and a complete response by 136 (53%, 46.8-59.4).",
+        "supports": "Headline efficacy for liso-cel 3L+: ORR 73%, CR 53%"
+      },
+      {
+        "quote": "grade 3 or worse cytokine release syndrome and neurological events occurred in six (2%) and 27 (10%) patients, respectively.",
+        "supports": "Low incidence of severe CRS and neurological events, a defining safety advantage of liso-cel"
+      }
+    ]
+  },
+  {
+    "key": "TRANSFORM",
+    "title": "Lisocabtagene maraleucel versus standard of care with salvage chemotherapy followed by autologous stem cell transplantation as second-line treatment in patients with relapsed or refractory large B-cell lymphoma (TRANSFORM)",
+    "authors_year": "Kamdar et al., 2022",
+    "journal": "Lancet 2022; 399: 2294-308",
+    "design": "Global, open-label, randomised phase 3 trial; 47 sites (USA, Europe, Japan); NCT03575351. Patients randomised 1:1 (n=92 liso-cel vs n=92 standard of care [salvage immunochemotherapy + high-dose chemo + ASCT]). Prespecified interim analysis at 82% of EFS information fraction; primary endpoint event-free survival.",
+    "population": "Adults 18-75 years with LBCL primary refractory to or relapsed within 12 months of first-line anthracycline + anti-CD20 therapy; ECOG 0-1; candidates for autologous HSCT. 73% refractory to first-line; median age 60; DLBCL NOS, transformed indolent, HGBCL double/triple-hit, PMBCL, THRBCL, FL3B.",
+    "line": "Second-line (2L), specifically primary-refractory or early-relapse (<=12 months) LBCL.",
+    "key_eligibility": [
+      "Population is DEFINED BY primary-refractory or early (<=12 month) relapse after first-line therapy - the exact high-risk group excluded from L-MIND",
+      "Must be considered candidates for autologous HSCT (transplant-eligible)",
+      "Secondary CNS lymphoma allowed",
+      "No minimum absolute lymphocyte count required for enrolment"
+    ],
+    "outcomes": "Median EFS significantly improved with liso-cel: 10.1 months (95% CI 6.1-NR) vs 2.3 months (2.2-4.3) for SOC; stratified HR 0.35 (95% CI 0.23-0.53); p<0.0001. CR rate 66% vs 39% (p<0.0001). Median PFS 14.8 vs 5.7 months (HR 0.41). ORR 86% vs 48%. Grade 3 CRS 1% and grade 3 neurological events 4% in liso-cel group (no grade 4/5). No treatment-related deaths with liso-cel.",
+    "grounds_rubric_claims": [
+      "liso-cel is a preferred 2L option for primary-refractory/early-relapse (<=12 mo) LBCL, superior to salvage chemo + ASCT",
+      "CAR T-cell therapy displaces salvage/ASCT as standard 2L care for the primary-refractory / early-relapse high-risk group",
+      "Strong EFS benefit (HR 0.35) grounds a rule that transplant-intended primary-refractory patients should be routed to CAR T rather than salvage chemo"
+    ],
+    "full_text_available": true,
+    "verbatim_quotes": [
+      {
+        "quote": "Median event-free survival was significantly improved in the liso-cel group (10.1 months [95% CI 6.1-not reached]) compared with the standard-of-care group (2.3 months [2.2-4.3]; stratified hazard ratio 0.35; 95% CI 0.23-0.53; ... one-sided p<0.0001).",
+        "supports": "Primary EFS benefit of liso-cel over salvage/ASCT in 2L primary-refractory/early-relapse LBCL (HR 0.35)"
+      },
+      {
+        "quote": "a prespecified interim analysis of liso-cel versus standard of care as second-line treatment for primary refractory or early relapsed (within 12 months after response to initial therapy) LBCL.",
+        "supports": "Defines the 2L primary-refractory/early-relapse population - the group L-MIND excludes"
+      },
+      {
+        "quote": "These results support liso-cel as a new second-line treatment recommendation in patients with early relapsed or refractory LBCL.",
+        "supports": "Grounds rubric claim that liso-cel is recommended 2L therapy for this high-risk group"
+      }
+    ]
   },
   {
     "key": "Westin-2023-ZUMA-7-OS",

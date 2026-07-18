@@ -1,0 +1,37 @@
+{
+  "key": "BENDA-PREAPHERESIS",
+  "title": "Recent Bendamustine Treatment Before Apheresis Has a Negative Impact on Outcomes in Patients With Large B-Cell Lymphoma Receiving Chimeric Antigen Receptor T-Cell Therapy",
+  "authors_year": "Iacoboni et al., 2023",
+  "journal": "J Clin Oncol 2024; 42: 205-217",
+  "design": "Retrospective, multicenter observational study; 7 European sites; 439 patients with R/R LBCL infused with commercial CD19 CAR T (axi-cel 58%, tisa-cel 42%), 3L+. Compared bendamustine-exposed (n=80) vs bendamustine-naive (n=359) before apheresis; washout and dose analyses. IPTW and propensity-score matching for confounder adjustment.",
+  "population": "Adults with R/R LBCL receiving commercial CD19 CAR T in third or later line (Jan 2019-Oct 2022). Bendamustine-exposed patients were older (median 66 vs 61), worse ECOG, more prior lines, more transformed indolent histology (45% vs 15%).",
+  "line": "Third-line or later CAR T-cell therapy (sequencing/eligibility evidence, not a treatment trial).",
+  "key_eligibility": [
+    "Bendamustine exposure = >=1 cycle before apheresis; washout = time from last bendamustine dose to leukapheresis",
+    "Recent exposure defined as <9 months before apheresis (optimal discriminatory cutoff by max log-rank for OS)",
+    "All met CAR T label criteria and received flu/cy lymphodepletion"
+  ],
+  "outcomes": "Bendamustine-exposed vs naive: lower ORR (53% vs 72%; P<0.01), shorter PFS (3.1 vs 6.2 mo; P=0.04), shorter OS (10.3 vs 23.5 mo; P=0.01); differences attenuated after IPTW/PSM adjustment. RECENT (<9 months) exposure vs naive: ORR 40% vs 72%, PFS 1.3 vs 6.2 mo, OS 4.6 vs 23.5 mo - all P<0.01 and remained significant after IPTW (PFS HR 1.83, OS HR 2.09) and PSM. Cumulative bendamustine dose did NOT affect outcomes. Bendamustine-exposed had more grade >=3 thrombocytopenia and severe infections; CRS/ICANS rates similar. Lower CD3+ and platelet counts at apheresis; enriched for low CAR-T expanders.",
+  "grounds_rubric_claims": [
+    "Recent bendamustine (<9 months) before CAR T apheresis independently worsens ORR, PFS, and OS - grounds a rule to AVOID bendamustine-containing regimens (e.g., pola-BR) before planned CAR T",
+    "Bendamustine should be avoided immediately prior to CAR T; washout of >=9 months mitigates the effect",
+    "Cumulative bendamustine dose does not matter - timing/washout is the driver, not total dose",
+    "Links to POLA-BR sequencing hazard: pola-BR (bendamustine backbone) can compromise subsequent CAR T if given recently before apheresis"
+  ],
+  "caveats": "Retrospective, non-randomized; bendamustine-exposed cohort had worse baseline features (confounding partially addressed by IPTW/PSM). Unadjusted differences attenuate after adjustment except for the recent (<9 mo) subset, which stays significant.",
+  "full_text_available": true,
+  "verbatim_quotes": [
+    {
+      "quote": "those with recent (<9 months) exposure (N = 42) displayed a lower ORR (40% v 72%; P < .01), shorter PFS (1.3 v 6.2 months; P < .01), and OS (4.6 v 23.5 months; P < .01) in comparison with bendamustine-naive patients. These differences remained significant after IPTW and PSM analysis.",
+      "supports": "Core finding: recent (<9 mo) bendamustine before apheresis independently worsens CAR T ORR/PFS/OS"
+    },
+    {
+      "quote": "Recent bendamustine exposure before apheresis was associated with negative treatment outcomes after CD19-targeted CAR T-cell therapy and should be therefore avoided in CAR T-cell candidates.",
+      "supports": "Grounds the rubric rule to avoid bendamustine before planned CAR T"
+    },
+    {
+      "quote": "the cumulative dose of bendamustine before apheresis did not affect CAR-T efficacy outcomes.",
+      "supports": "Timing/washout, not cumulative dose, drives the hazard - refines the sequencing rule"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "key": "TRANSCEND",
+  "title": "Lisocabtagene maraleucel for patients with relapsed or refractory large B-cell lymphomas (TRANSCEND NHL 001): a multicentre seamless design study",
+  "authors_year": "Abramson et al., 2020",
+  "journal": "Lancet 2020; 396: 839-52",
+  "design": "Multicentre, multicohort, open-label, seamless-design phase 1 study of liso-cel (CD19 CAR T) at 14 US cancer centres; NCT02631044. Three target dose levels; efficacy-evaluable set n=256, safety set n=269, ITT (leukapheresed) n=344.",
+  "population": "Adults with relapsed/refractory LBCL after >=2 prior lines (including anti-CD20 + anthracycline). Histologies: DLBCL NOS, DLBCL transformed from indolent lymphoma, high-grade B-cell lymphoma (double/triple-hit), PMBCL, FL grade 3B. Median 3 prior lines (range 1-8); 67% chemorefractory; 42% aged >=65; heavily pretreated.",
+  "line": "Third-line or later (3L+); >=2 prior systemic therapies required.",
+  "key_eligibility": [
+    "Secondary CNS lymphoma explicitly ALLOWED/eligible (7 [3%] had secondary CNS involvement) - grounds permissive CNS rule for liso-cel 3L+",
+    "Moderate comorbidities permitted: creatinine clearance >30 to <60 mL/min and LVEF >=40% to <50%; no minimum absolute lymphocyte count",
+    "Bridging therapy allowed during manufacturing but required reconfirmation of PET-positive disease before lymphodepletion",
+    "Broader eligibility than ZUMA-1/JULIET (included older, comorbid, CNS-involved patients)"
+  ],
+  "outcomes": "Efficacy-evaluable set (n=256): ORR 73% (95% CI 66.8-78.0), CR 53% (46.8-59.4). Median DoR not reached; median PFS 6.8 months; median OS 21.1 months; 12-month OS 58%. Safety (n=269): CRS any grade 42% (grade >=3 only 2% [6 patients]); neurological events any grade 30% (grade >=3 10%). Grade >=3 neutropenia 60%, anaemia 37%, thrombocytopenia 27%. Low rate of severe CRS/neurotoxicity is a signature feature.",
+  "grounds_rubric_claims": [
+    "liso-cel is an approved 3L+ CD19 CAR T option for R/R LBCL with ORR ~73%/CR ~53%",
+    "liso-cel permits secondary CNS lymphoma involvement (unlike some CAR products/trials) - CNS involvement is not an absolute exclusion",
+    "liso-cel has comparatively low grade >=3 CRS (2%) and neurotoxicity (10%), supporting use in higher-risk/comorbid or older patients",
+    "Broad histologic eligibility including transformed indolent lymphoma, double/triple-hit HGBCL, PMBCL, FL3B"
+  ],
+  "full_text_available": true,
+  "verbatim_quotes": [
+    {
+      "quote": "181 (67%) had chemotherapy-refractory disease, and seven (3%) had secondary CNS involvement.",
+      "supports": "TRANSCEND enrolled and permitted patients with secondary CNS lymphoma (3% of cohort), grounding a permissive-CNS rubric rule for liso-cel"
+    },
+    {
+      "quote": "an objective response was achieved by 186 (73%, 95% CI 66.8-78.0) patients and a complete response by 136 (53%, 46.8-59.4).",
+      "supports": "Headline efficacy for liso-cel 3L+: ORR 73%, CR 53%"
+    },
+    {
+      "quote": "grade 3 or worse cytokine release syndrome and neurological events occurred in six (2%) and 27 (10%) patients, respectively.",
+      "supports": "Low incidence of severe CRS and neurological events, a defining safety advantage of liso-cel"
+    }
+  ]
+}
