@@ -1,0 +1,37 @@
+{
+  "key": "Merli-2021-FIL-Elderly-Project",
+  "title": "Simplified Geriatric Assessment in Older Patients With Diffuse Large B-Cell Lymphoma: The Prospective Elderly Project of the Fondazione Italiana Linfomi",
+  "authors_year": "Merli F, Luminari S, Tucci A, et al. 2021",
+  "journal": "Journal of Clinical Oncology 2021;39(11):1214-1222",
+  "design": "Prospective multicenter observational study (Elderly Project; NCT02364050) across 36 FIL centers; treatment left to physician discretion. Validates a simplified geriatric assessment (sGA) and builds/validates the Elderly Prognostic Index (EPI). Primary endpoint OS. Externally validated on 328 independent cases.",
+  "population": "1,163-1,207 patients with newly diagnosed DLBCL aged >=65 (median age 76, range 65-94). sGA classified 54% fit, 28% unfit, 18% frail. First-line (frontline) elderly DLBCL, not R/R.",
+  "line": "First-line (newly diagnosed elderly DLBCL). Relevant as a fitness/frailty framework transferable to treatment-intensity decisions across lines.",
+  "key_eligibility": [
+    "Histologically confirmed DLBCL, age >=65 years, signed consent, oGA results available",
+    "Excluded: diagnoses other than DLBCL, including follicular lymphoma grade 3b or high-grade lymphoma",
+    "sGA defined by age (>= or <80 years) plus CIRS-G comorbidity, ADL, and IADL scores"
+  ],
+  "outcomes": "3-year OS 65% overall. By sGA fitness: fit 75%, unfit 58%, frail 43% (3-year OS). HR unfit vs fit 1.98 (95% CI 1.55-2.54), frail vs fit 3.27 (2.52-4.22). Full-dose anthracycline delivered to 86% of fit, 48% of unfit, 16% of frail. Treatment-related toxicity caused 20.9% of deaths. EPI (integrating sGA + IPI + hemoglobin) stratified low/intermediate/high risk with 3-year OS 87% / 69% / 42%.",
+  "grounds_rubric_claims": [
+    "Frailty/fitness status (functional age), NOT chronologic age, predicts survival and treatment tolerability in older DLBCL: age alone did not independently drive outcome once fitness was accounted for, and in refractory DLBCL (SCHOLAR-1) age >=65 vs <65 did not affect OS",
+    "Fit older patients tolerate and benefit from curative-intent (full-dose) therapy, so age alone should not exclude a patient from aggressive/curative treatment",
+    "A structured geriatric assessment (fit/unfit/frail) should inform treatment-intensity decisions rather than deferring to subjective clinical judgment or a raw age cutoff",
+    "Frail patients have markedly worse survival (3-yr OS 43%) and receive full-dose therapy far less often (16%), supporting attenuated/palliative goals in the frail subgroup"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "The sGA adopted in our study is an objective, reproducible tool... The time has come to consider the fitness status of older patients with DLBCL to better identify their treatment goals.",
+      "supports": "Fitness status (not age) should drive treatment goals in older DLBCL."
+    },
+    {
+      "quote": "the OS was significantly different in the three geriatric fitness status groups, with an hazard ratio (HR) of 1.98 for unfit versus fit... 3.27 for frail versus fit... and 1.65 for frail versus unfit.",
+      "supports": "Frailty status independently predicts survival."
+    },
+    {
+      "quote": "their excellent projected 3-year OS of 87% makes this group of patients suitable for curative approaches similar to those adopted for patients younger than 60 years.",
+      "supports": "Fit older patients tolerate and warrant curative-intent therapy regardless of chronologic age."
+    }
+  ],
+  "caveats": "Frontline, newly diagnosed elderly DLBCL (not R/R) and observational; treatment was physician's discretion, not randomized. HGBCL and FL grade 3b excluded. The fit/unfit/frail construct is transferable to R/R treatment-intensity reasoning but was not derived in the R/R setting.",
+  "full_text_available": true
+}

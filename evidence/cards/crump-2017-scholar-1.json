@@ -1,0 +1,37 @@
+{
+  "key": "Crump-2017-SCHOLAR-1",
+  "title": "Outcomes in refractory diffuse large B-cell lymphoma: results from the international SCHOLAR-1 study",
+  "authors_year": "Crump M, Neelapu SS, Farooq U, et al. 2017",
+  "journal": "Blood 2017;130(16):1800-1808",
+  "design": "International, multicohort, retrospective patient-level pooled analysis. Pooled 2 phase 3 trials (CORAL, LY.12) + 2 observational cohorts (MDACC, IA/MC). Response and OS estimated from initiation of salvage therapy for refractory disease.",
+  "population": "636 patients with refractory DLBCL (incl. transformed FL and PMBCL) from 861 abstracted. Median age 55 (range 19-81); ECOG PS 0-1 in 73%; stage III-IV in 72%. Refractory categories: 28% primary refractory, 50% refractory to >=2nd-line, 22% relapsed <=12 mo post-ASCT.",
+  "line": "Refractory disease at any line (pooled), analyzed from start of the next salvage line. Pre-CAR-T era benchmark.",
+  "key_eligibility": [
+    "Refractory DLBCL defined as progressive disease as best response to any line, OR stable disease as best response to >=4 cycles of first-line / 2 cycles of later-line therapy, OR relapse <=12 months after ASCT",
+    "Must have received an anti-CD20 monoclonal antibody and an anthracycline as a qualifying regimen",
+    "Primary CNS lymphoma excluded"
+  ],
+  "outcomes": "Objective response rate 26% (95% CI 21-31); CR rate 7%. Median OS 6.3 months (95% CI 5.9-7.0) from start of salvage therapy. 1-year OS 28%; 2-year OS 20%. Outcomes uniformly poor across subgroups (median OS <10 mo). Primary refractory worst (ORR 20%, CR 3%). CR after last salvage -> median OS 14.9 mo; patients who reached ASCT -> median OS 14.4 mo vs 5.1 mo without ASCT. Age <65 vs >=65 did NOT impact OS (HR 0.9, p=.37).",
+  "grounds_rubric_claims": [
+    "Establishes the dismal baseline prognosis of refractory DLBCL in the pre-CAR-T era (median OS ~6 months, CR ~7%) as the historical benchmark against which any R/R DLBCL therapy must be judged",
+    "Standard salvage chemotherapy is inadequate for refractory disease (ORR 26%, CR 7%), justifying use of CAR-T / bispecifics / novel regimens over repeat chemotherapy",
+    "Chronologic age does NOT independently predict OS in refractory DLBCL (age <65 vs >=65 not significant), reinforcing that fitness, not age, should drive decisions",
+    "Primary refractory and high-IPI patients have the worst outcomes, defining highest-need subgroups"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "For patients with refractory DLBCL, the objective response rate was 26% (complete response rate, 7%) to the next line of therapy, and the median overall survival was 6.3 months.",
+      "supports": "The headline pre-CAR-T refractory-DLBCL benchmark (poor ORR/CR and ~6-month median OS)."
+    },
+    {
+      "quote": "the SCHOLAR-1 study provides a historical benchmark for future studies in refractory DLBCL, TFL, and PMBCL. The consistently poor outcomes shown here indicate a significant unmet need for effective therapies.",
+      "supports": "Explicitly frames the study as the benchmark of poor baseline prognosis motivating newer therapies."
+    },
+    {
+      "quote": "Age younger than 65 years or age 65 years or older did not impact OS.",
+      "supports": "Chronologic age alone does not predict survival in refractory DLBCL, consistent with a fitness- over age-based approach."
+    }
+  ],
+  "caveats": "Retrospective; pre-CAR-T era (funded by Kite Pharma). Median age (55) younger than typical real-world R/R DLBCL because pooled trial cohorts (LY.12, CORAL) had transplant-oriented eligibility. Includes TFL and PMBCL; primary CNS lymphoma excluded. Long-term survivors driven by the minority reaching ASCT and/or achieving CR/PR.",
+  "full_text_available": true
+}

@@ -1,0 +1,37 @@
+{
+  "key": "Sehgal-2022-PILOT",
+  "title": "Lisocabtagene maraleucel as second-line therapy in adults with relapsed or refractory large B-cell lymphoma who were not intended for haematopoietic stem cell transplantation (PILOT)",
+  "authors_year": "Sehgal A, Hoda D, Riedell PA, et al. 2022",
+  "journal": "Lancet Oncology 2022;23(8):1066-1077",
+  "design": "Open-label, single-arm, phase 2 trial (PILOT; NCT03483103) at 18 US sites. Primary endpoint ORR by IRC (Lugano 2014). Null hypothesis ORR <=50.2% from a real-world synthetic control.",
+  "population": "61 patients treated (efficacy/safety set; 74 leukapheresed). R/R LBCL (DLBCL NOS, transformed FL, HGBCL double/triple-hit, FL grade 3B). Median age 74 (IQR 70-78), 46% aged >=75; 26% ECOG PS 2; 44% HCT-CI >=3. Disease status: 54% refractory, 21% relapsed <=12 mo, 25% relapsed >12 mo. 52% received bridging therapy.",
+  "line": "Second-line (exactly one prior line of anthracycline + CD20-containing chemoimmunotherapy), in patients NOT intended for HSCT.",
+  "key_eligibility": [
+    "Relapsed or refractory (< CR to first-line) LBCL after exactly ONE prior line containing an anthracycline and a CD20-targeted agent",
+    "NOT intended for HSCT by the investigator (subjective) AND met >=1 of 6 objective transplantation-not-intended (TNI) criteria: age >=70, ECOG PS 2, DLCO <=60%, LVEF <50%, CrCl <60 mL/min, or AST/ALT >2x ULN",
+    "PET-positive disease; adequate organ function for CAR T-cell therapy",
+    "Secondary CNS involvement was allowed"
+  ],
+  "outcomes": "ORR 80% (49/61; 95% CI 68-89; p<0.0001) and CR rate 54% (33/61; 95% CI 41-67). Median PFS 9.03 mo overall (22.60 mo in CR patients); median OS not reached; median DOR 12.09 mo overall and 21.65 mo in CR patients. CRS in 38% (23/61), grade 3 in only 1 (2%), no grade 4-5. Neurological events in 31% (grade 3 in 3 [5%], no grade 4-5). Grade >=3 prolonged cytopenia at day 28 in 30%. No CRS/neuro events led to treatment discontinuation; no treatment-related deaths in the CAR-T causal sense (2 COVID-19 deaths).",
+  "grounds_rubric_claims": [
+    "Liso-cel is an evidence-supported 2L option for transplant-INELIGIBLE R/R LBCL regardless of relapse timing (works even in patients who relapse >12 months, who are ineligible for the 2L CAR-T trials TRANSFORM/ZUMA-7 that required refractory/early-relapse)",
+    "Transplant-ineligibility by objective TNI criteria (age >=70, ECOG 2, organ dysfunction) qualifies a patient for 2L CAR-T even though they are not fit for HSCT",
+    "CAR-T is feasible and tolerable in an older, comorbid population (median age 74, 46% >=75, 44% HCT-CI >=3) with lower/manageable CRS (grade 3 only 2%) and ICANS (grade 3 5%)"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "These results support lisocabtagene maraleucel as a potential second-line treatment in patients with large B-cell lymphoma for whom HSCT is not intended.",
+      "supports": "Grounds liso-cel as a 2L option specifically for the transplant-ineligible population."
+    },
+    {
+      "quote": "33 (54%) had refractory disease, 13 (21%) relapsed within 1 year of first-line therapy, and 15 (25%) relapsed after 12 months of first-line therapy.",
+      "supports": "Includes patients relapsing >12 months, so 2L liso-cel applies regardless of relapse timing when transplant-ineligible."
+    },
+    {
+      "quote": "Cytokine release syndrome occurred in 23 (38%; grade 3 in one) patients and neurological events in 19 (31%; grade 3 in three) patients, with no grade 4 events or deaths.",
+      "supports": "Lower/manageable CRS and ICANS in this older transplant-ineligible cohort."
+    }
+  ],
+  "caveats": "Single-arm, synthetic (real-world) control for the null hypothesis. Older/comorbid population by design; 52% received bridging therapy (baseline SPD post-bridging understates tumor burden). Median on-study follow-up 12.3 mo.",
+  "full_text_available": true
+}

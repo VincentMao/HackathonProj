@@ -1,0 +1,42 @@
+{
+  "key": "Brody-2025-EPCORE-NHL-2",
+  "title": "Epcoritamab plus GemOx in transplant-ineligible relapsed/refractory DLBCL: results from the EPCORE NHL-2 trial",
+  "authors_year": "Brody JD, J\u00f8rgensen J, Belada D, et al. 2025",
+  "journal": "Blood 2025;145(15):1621-1629",
+  "design": "Phase 1b/2, open-label, multicenter, single-arm trial (EPCORE NHL-2, arm 5; NCT04663347). Dose-escalation + expansion; no comparator/control group. No formal hypothesis testing.",
+  "population": "103 patients with ASCT-ineligible R/R DLBCL (de novo or transformed from FL/nodal MZL, DHL/THL, FL grade 3B, or T-cell/histiocyte-rich DLBCL). Median age 72 (range 20-87), 35% aged >=75; ECOG 0-2; median 2 prior lines (38% had 1 pLOT, 62% >=2 pLOT); 52% primary refractory, 70% refractory to last therapy, 28% prior CAR T-cell therapy, 23% transformed, 61% stage IV.",
+  "line": "Second-line or later (2L+) in ASCT-ineligible patients; earliest enrollment after >=1 prior therapy. 38% were treated in the 2L setting (1 prior line).",
+  "key_eligibility": [
+    "Documented CD20+ DLBCL R/R to >=1 prior therapy",
+    "Previous ASCT failure OR ineligibility for ASCT due to age, performance status, comorbidities, or insufficient response to prior treatment",
+    "ECOG PS 0-2; measurable disease; adequate organ function; eligible to receive GemOx",
+    "Excluded if active infections requiring systemic therapy"
+  ],
+  "outcomes": "ORR 85% (88/103) and CR rate 61% (63/103) by IRC. Median PFS 11.2 mo (overall); median OS 21.6 mo overall and not reached in CR patients. Median DOR 11.7 mo; median duration of CR 23.6 mo. CR rate higher in less pretreated: 74% (1 pLOT) vs 53% (>=2 pLOT); 68% CAR-T-naive vs 45% prior CAR-T. CRS in 52% (28% G1, 23% G2, only 1% G3); CRS mostly cycle 1, all resolved, none led to discontinuation. ICANS 3% (1% G3). Grade >=3 cytopenias common (thrombocytopenia 59%, neutropenia 57%); febrile neutropenia 7%.",
+  "grounds_rubric_claims": [
+    "Epcoritamab + GemOx is an evidence-supported OFF-LABEL 2L regimen for transplant-ineligible R/R DLBCL: only epcoritamab MONOTHERAPY is FDA-approved (at 3L+), so the GemOx combination and use in 2L are both off-label but supported by this prospective trial",
+    "A regimen chosen off-label can still be evidence-graded as reasonable when a prospective single-arm trial demonstrates deep, durable responses (ORR 85%, CR 61%) in the exact target population (ASCT-ineligible R/R DLBCL)",
+    "Higher CR rate with fewer prior lines (74% at 1 pLOT vs 53% at >=2 pLOT) supports using the regimen earlier (2L) rather than later",
+    "Bispecific + chemo is a valid non-CAR-T option for older/less-fit patients: median age 72, one-third >=75, versus CAR-T pivotal trials (median age 56-60, no patients >76)"
+  ],
+  "verbatim_quotes": [
+    {
+      "quote": "Epcoritamab, a CD3xCD20 bispecific antibody approved for R/R DLBCL after >=2 therapy lines, has shown promising safety and efficacy in various combinations.",
+      "supports": "Confirms the ONLY approved indication is 3L+ (after >=2 lines), so 2L use and the GemOx combination are off-label."
+    },
+    {
+      "quote": "ORR and CR rate were 85% and 61%, respectively. Median duration of CR and OS were 23.6 and 21.6 months, respectively.",
+      "supports": "Headline efficacy establishing the off-label 2L regimen as an evidence-supported choice."
+    },
+    {
+      "quote": "epcoritamab plus GemOx treatment led to higher CR rates overall (61%) and markedly improved CR rates in patients with 1 vs >=2 pLOT (74% vs 53%), supporting that this combination may help to overcome cross-resistance.",
+      "supports": "Rationale that earlier-line (2L) use improves outcomes."
+    },
+    {
+      "quote": "CRS was primarily low grade (52% overall incidence; 28% grade 1, 23% grade 2); only 1 patient experienced grade 3 CRS.",
+      "supports": "Favorable, predominantly low-grade CRS safety profile of the off-label bispecific combination."
+    }
+  ],
+  "caveats": "Single-arm, no comparator; cross-study comparisons cautioned. Enrolled during COVID-19 pandemic (13% grade 5 TEAEs, 5 were COVID-19). Combination and 2L use are off-label; regulatory approval is monotherapy at 3L+ only. Median follow-up 13.2 mo.",
+  "full_text_available": true
+}

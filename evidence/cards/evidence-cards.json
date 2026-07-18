@@ -1,79 +1,40 @@
 [
   {
-    "key": "Jolly-2015",
-    "title": "Geriatric Assessment-Identified Deficits in Older Cancer Patients With Normal Performance Status",
-    "authors_year": "Jolly, Deal, Nyrop, Williams, ... Muss (2015)",
-    "journal": "The Oncologist 2015;20:379-385",
-    "design": "Cross-sectional analysis of a prospective registry (Carolina Senior, NCT01137825); brief geriatric assessment vs. Karnofsky performance status",
-    "population": "984 cancer patients aged >=65 (mean 73, range 65-99); analysis subsample of 796 (81%) rated functionally normal (KPS >=80) by BOTH professional and self-report. 74% female, 89% white; 6% lymphoma, 5% leukemia (mostly breast, 54%). Not R/R DLBCL-specific, but the frailty-vs-PS principle is directly transferable.",
+    "key": "Alaggio-2022-WHO-HAEM5",
+    "title": "The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Lymphoid Neoplasms (WHO-HAEM5)",
+    "authors_year": "Alaggio R, et al., 2022",
+    "journal": "Leukemia 2022;36:1720-1748",
+    "design": "Consensus classification / expert review article (WHO Blue Book 5th edition overview). Not a clinical trial; defines diagnostic entities and criteria.",
+    "population": "Not applicable (classification of lymphoid neoplasm entities). Relevant entity: aggressive large B-cell lymphomas, specifically DLBCL/high-grade B-cell lymphoma with MYC and BCL2 rearrangements (\"double-hit\").",
     "key_eligibility": [
-      "English-speaking cancer patients aged >=65 enrolled in Carolina Senior registry",
-      "Completed brief geriatric assessment (KPS + Patient-KPS + multi-domain measures)",
-      "Focus subsample required agreement between professional and patient KPS >=80 (excludes disagreement to isolate GA signal beyond PS)"
+      "Defines DLBCL/HGBL-MYC/BCL2 by the presence of DUAL rearrangements of MYC AND BCL2 (detected as gene rearrangements, e.g. by FISH break-apart), not amplification or copy-number gain",
+      "MYC/BCL6 dual-rearranged cases are explicitly EXCLUDED from the DLBCL/HGBL-MYC/BCL2 entity and reclassified as DLBCL,NOS or HGBL,NOS by morphology",
+      "Morphology may be large, intermediate, or blastoid cells; entity is defined genetically, not morphologically",
+      "HGBL-11q (formerly Burkitt-like with 11q aberration) is MYC-rearrangement-NEGATIVE and defined by the 11q gain/loss pattern; distinct from double-hit"
     ],
-    "outcomes": "Among KPS >=80 (functionally normal) patients: 69% had >=1 GA-identified deficit; only ~1/3 had none. 24% had >=3 deficits. Specific deficits: 43% took >=9 medications daily; 25% had >=4 comorbidities; 23% >=1 IADL impairment; 18% Timed Up-and-Go >=14 s (fall/early-death predictor) or unable; 18% >=5% unintentional weight loss; 12% MHI-5 <=76 (poor mental health). Multivariable: each 5-yr age increase OR 1.2 (95% CI 1.06-1.38) for having a deficit; active treatment OR 1.7 (1.13-2.64).",
+    "outcomes": "No efficacy outcomes (classification document). Key definitional point: the WHO-HAEM4R entity 'HGBL with dual rearrangements of MYC and BCL2 and/or BCL6' was reframed in WHO-HAEM5 to 'DLBCL/HGBL with MYC and BCL2 rearrangements,' narrowing double-hit to MYC+BCL2 rearranged only (BCL6 dual-hit removed). Notably 54% of HGBL,NOS carry a double-hit gene-expression signature (DHITsig) despite LACKING the rearrangements, underscoring that the entity requires demonstrated rearrangement.",
     "grounds_rubric_claims": [
-      "ECOG/KPS performance status systematically under-captures frailty; a functionally normal PS score does not exclude clinically meaningful deficits",
-      "Multi-domain geriatric assessment surfaces modifiable/prognostic impairments (polypharmacy, comorbidity, IADL, gait/TUG, weight loss, cognition, mood) that PS misses",
-      "TUG >=14 s and >=5% unintentional weight loss are single deficits with independent prognostic weight even in a PS-normal older patient",
-      "Older age independently raises the odds of hidden deficits, supporting GA over chronological age or PS alone for treatment decisions"
+      "WHO-HAEM5 double-hit lymphoma = MYC + BCL2 rearrangement demonstrated by FISH (gene rearrangement), NOT MYC amplification or copy-number gain",
+      "MYC/BCL6 double-rearranged cases are no longer classified as double-hit under WHO-HAEM5",
+      "Double-hit status is defined genetically and is morphology-independent (large, intermediate, or blastoid all qualify if MYC+BCL2 rearranged)",
+      "A double-hit gene-expression signature can exist without rearrangement (HGBL,NOS) and does NOT meet the diagnostic entity definition"
     ],
     "verbatim_quotes": [
       {
-        "quote": "Within this sample of older cancer patients who were rated as functionally normal by KPS, GA identified important deficits that could affect treatment tolerance and outcomes.",
-        "supports": "PS-normal does not equal deficit-free; GA adds information beyond performance status"
+        "quote": "the WHO-HAEM5 renames the entity diffuse large B-cell lymphoma/high-grade B-cell lymphoma with MYC and BCL2 rearrangements (DLBCL/HGBL-MYC/BCL2) to encompass tumours defined by the presence of dual MYC and BCL2 rearrangements that may be composed of large or intermediate or blastoid cells",
+        "supports": "Double-hit entity is defined by dual MYC AND BCL2 rearrangements (not amplification), independent of morphology"
       },
       {
-        "quote": "Only a third of our functionally normal sample had no GA-identified deficits.",
-        "supports": "Magnitude of PS under-capture: 69% of KPS >=80 patients had at least one deficit"
+        "quote": "lymphoid neoplasms with dual MYC and BCL6 rearrangements represent a more diverse spectrum... these cases have been excluded from the DLBCL/HGBL-MYC/BCL2 entity and are now classified either as a subtype of DLBCL, NOS or HGBL, NOS",
+        "supports": "MYC/BCL6 dual-rearranged lymphomas are excluded from the double-hit entity in WHO-HAEM5"
       },
       {
-        "quote": "The odds ratio for each 5-year increase in age was 1.2 (95% CI: 1.06-1.38), suggesting that as age increases, so do the odds of having at least 1 deficit.",
-        "supports": "Age independently predicts hidden frailty deficits beyond performance status"
+        "quote": "gene expression profiling showed that 54% of HGBL, NOS harbour the \"double hit\" signature (DHITsig) characteristic of LBCL/HGBL with MYC/BCL2 despite lacking rearrangements of these genes",
+        "supports": "The double-hit gene-expression signature is distinct from the rearrangement-defined entity; diagnosis requires demonstrated MYC+BCL2 rearrangement"
       }
     ],
-    "caveats": "Predominantly breast cancer (54%) and female (74%); only 6% lymphoma. Not treatment-outcome data and not R/R DLBCL or CAR-T specific; grounds the PS-vs-frailty principle, not any lymphoma-specific numeric threshold. Uses KPS (not ECOG) as the PS instrument.",
     "full_text_available": true,
-    "line": "The Oncologist 2015;20:379-385"
-  },
-  {
-    "key": "Ram-2021",
-    "title": "Toxicity and efficacy of CAR T-cell therapy in patients with DLBCL above the age of 70 years compared to younger patients - a matched control multicenter cohort study",
-    "authors_year": "Ram, Grisariu, Shargian-Alon, ... Avivi (2021)",
-    "journal": "Haematologica 2022;107(5):1111-1118",
-    "design": "Retrospective matched-control multicenter cohort (3 Israeli centers); elderly (>=70) vs younger (<70) matched on ECOG PS (0-1 vs 2-3) and LDH (high vs normal)",
-    "population": "R/R DLBCL. 47 patients >=70 underwent apheresis; 41 infused (mean age 76.2) = study cohort, matched to 41 younger (mean 55.4). Commercial tisa-cel (~80%) or axi-cel (~20%). Non-selective real-world referral: 66% poor PS (ECOG 2-3), ~40% high LDH, ~48% progressive disease pre-infusion, ~47% >=3 prior lines.",
-    "key_eligibility": [
-      "Consecutive R/R DLBCL patients >=70 years referred for CD19 CAR-T (study cohort), matched to <70 controls",
-      "No centralized eligibility committee; national infrastructure did not mandate strict PS/organ cutoffs \u2014 enabling a non-selective elderly population",
-      "Only exclusions at screening: ECOG 4 (n=1) and active hepatitis B (n=1); 96% of referred elderly were eligible and apheresed",
-      "Explicitly NO numeric age cap \u2014 age itself not an exclusion"
-    ],
-    "outcomes": "41/47 (87%) infused; 96% of referred elderly eligible for apheresis. Response similar: CR 46% + PR 17% (ORR 63%) elderly vs 78% younger (P=0.337). Toxicity comparable: grade >=3 CRS 9.8% vs 7.3% (P=0.29); grade 3-4 ICANS 2.5% vs 4.9% (P=0.54); overall ICANS 27.5% vs 17.1% (P=0.48); hospital stay 23.4 vs 24.6 days (P=0.55). Non-relapse mortality 0 at 1 and 3 months both groups. Elderly 6-/12-mo PFS 39%/32%; OS 74%/69%. Age and ECOG PS had NO impact on CR, PFS, or OS in multivariate models; only high LDH, non-GCB, bridging, and post-CAR CR state mattered.",
-    "grounds_rubric_claims": [
-      "CAR-T is feasible and effective in selected older adults (>=70); age per se should not preclude CAR-T",
-      "No numeric age cutoff is justified \u2014 outcomes matched younger patients when controlled for PS and LDH",
-      "Logistics/fitness composite (rapid referral-to-infusion, lymphocyte fitness, LDH, PS) drives outcome more than chronological age",
-      "ICANS severity was low here (tisa-cel-predominant); toxicity not increased by age in this cohort, but authors note axi-cel series report higher ICANS in older patients",
-      "Prior vascular disease and dementia did NOT predict ICANS in this cohort"
-    ],
-    "verbatim_quotes": [
-      {
-        "quote": "outcomes of CAR-T cell therapy are comparable between elderly, geriatric and younger patients, indicating that age as per se should not preclude CAR-T cell administration.",
-        "supports": "No numeric age cutoff; age alone should not exclude CAR-T"
-      },
-      {
-        "quote": "There was no difference between the elderly and the control group in overall ICANS (27.5% vs. 17.1%. respectively, P=0.48) and grade 3-4 ICANS (2.5% vs. 4.9%, respectively, P=0.54).",
-        "supports": "Toxicity (incl. neurotoxicity) not increased by age in this tisa-cel-predominant cohort"
-      },
-      {
-        "quote": "Ideally, a geriatric scoring assessment should be employed and help to establish eligibility criteria for CAR-T cell therapy in this aged group pf patients.",
-        "supports": "Fitness/geriatric assessment (not age) should govern selection"
-      }
-    ],
-    "caveats": "Small (n=41 per arm), retrospective, single-country. Predominantly tisagenlecleucel, which the authors note carries lower ICANS than axi-cel \u2014 so the flat ICANS-by-age finding may not generalize to axi-cel. Possible residual selection: presumably ineligible patients may never have been referred. Matched on ECOG/LDH only; imbalance in ECOG 3 (12% elderly vs 39% younger) and prior autoHCT.",
-    "full_text_available": true,
-    "line": "Haematologica 2022;107(5):1111-1118"
+    "caveats": "Classification/consensus document, not comparative evidence. Does not state a specific FISH probe protocol; the point is that the entity is defined by rearrangement of MYC and BCL2, which in practice is assessed by break-apart FISH. Text does not explicitly use the word 'amplification' to contrast; the grounding is that 'rearrangement' (not gain/amplification) defines the entity."
   },
   {
     "key": "Bailen-2024",
@@ -115,126 +76,161 @@
     "line": "Transplant Cell Ther 2024;30:988.e1-988.e11"
   },
   {
-    "key": "glofitamab-3L",
-    "title": "Glofitamab for Relapsed or Refractory Diffuse Large B-Cell Lymphoma",
-    "authors_year": "Dickinson et al., 2022",
-    "journal": "New England Journal of Medicine (2022;387:2220-31)",
-    "design": "Phase 2 part of an open-label phase 1-2 trial (NCT03075696); single-arm, fixed-duration glofitamab monotherapy (12 cycles) with obinutuzumab pretreatment. Sponsor F. Hoffmann-La Roche.",
-    "population": "155 patients with R/R DLBCL (NOS), transformed FL, high-grade B-cell lymphoma, or PMBCL who had received >=2 prior lines. Median age 66 (range 21-90); median 3 prior lines (range 2-7); 33% prior CAR-T; 58% primary refractory; 86% refractory to last therapy.",
-    "line": "3L+ (third line and beyond; >=2 prior lines including anti-CD20 and anthracycline)",
+    "key": "Bishop-2022-BELINDA",
+    "title": "Second-Line Tisagenlecleucel or Standard Care in Aggressive B-Cell Lymphoma (BELINDA)",
+    "authors_year": "Bishop MR, Dickinson M, Purtill D, et al. 2022",
+    "journal": "N Engl J Med 2022;386:629-639 (NCT03570892)",
+    "design": "International phase 3, randomized (1:1) trial. Tisagenlecleucel (tisa-cel) with optional platinum-based bridging chemotherapy vs standard care (platinum salvage chemoimmunotherapy + high-dose therapy/autologous HSCT in responders). Crossover to tisa-cel permitted after confirmed SD/PD at/after week 12. Primary endpoint: event-free survival (time from randomization to SD or PD at/after week 12 assessment, or death). NEGATIVE trial.",
+    "population": "Adults with aggressive B-cell lymphoma refractory to (no CR) or relapsing within 12 months after first-line anti-CD20 + anthracycline therapy; ASCT-eligible, ECOG 0-1. N=322 (tisa-cel 162 vs standard care 160). 66% refractory to first-line, 19.3% relapse <6 mo.",
+    "line": "Second line (2L) R/R aggressive B-cell lymphoma",
     "key_eligibility": [
-      "Histologically confirmed DLBCL NOS, transformed FL, HGBCL, or PMBCL",
-      "Relapsed after or refractory to >=2 prior lines including >=1 anti-CD20 antibody-containing regimen and >=1 anthracycline-containing regimen",
-      "ECOG 0-1",
-      "Prior CAR-T permitted and included (33% of cohort); primary-refractory NOT excluded (58% primary refractory)"
+      "Same high-risk 2L population as ZUMA-7 (refractory or relapse \u226412 mo, transplant-eligible) \u2014 yet the result was OPPOSITE (negative), so BELINDA does NOT support tisa-cel in 2L.",
+      "Optional bridging chemotherapy allowed and heavily used; median time from leukapheresis to tisa-cel infusion was 52 days (long manufacturing/logistics interval).",
+      "EFS endpoint clock started at week 12 and progressive disease before then did not count as an event, differing from ZUMA-7's definition \u2014 a design factor implicated in the null result.",
+      "Only 32.5% of standard-care patients received ASCT."
     ],
-    "outcomes": "Primary endpoint CR by IRC = 39% (95% CI 32-48). ORR 52% (95% CI 43-60). CR among prior-CAR-T patients 35%. Median time to CR 42 days. CR ongoing at 12 mo in 78%. Median DoCR not reached (95% CI 16.8-NR). Median PFS 4.9 mo; 12-mo PFS 37%. 12-mo OS 50%. Median OS 11.5 mo (investigator). CRS in 63% (grade >=3 in 4%); ICANS-consistent neuro events 8% (grade >=3 in 3%). Grade >=3 AEs 62%; discontinuation for AE 9%.",
-    "outcomes_field_note": "",
+    "outcomes": "Median EFS 3.0 months in BOTH groups; HR for event or death 1.07 (95% CI 0.82-1.40), P=0.61 \u2014 no benefit. Response at/after week 12: 46.3% (tisa-cel) vs 42.5% (standard care); CR 28.4% vs 27.5%. More PD at week 6 (preinfusion) in tisa-cel arm (25.9% vs 13.8%). CRS in 61.3% of infused patients (grade \u22653 in 5.2%); grade \u22653 neurologic events 1.9%. Conclusion: tisa-cel NOT superior to standard salvage therapy in 2L.",
     "grounds_rubric_claims": [
-      "Glofitamab is an approved fixed-duration (12-cycle) monotherapy option for R/R DLBCL at 3L+ (>=2 prior lines)",
-      "Glofitamab retains activity after prior CAR-T (CR 35% in prior-CAR-T subgroup)",
-      "Fixed-duration bispecific: treatment stops at 12 cycles rather than treat-to-progression, unlike epcoritamab/odronextamab",
-      "Requires obinutuzumab pretreatment + step-up dosing for CRS mitigation; CRS mostly low-grade and confined to cycle 1",
-      "Eligibility requires prior anti-CD20 and anthracycline exposure"
+      "Tisagenlecleucel (tisa-cel) is NOT indicated in the second line \u2014 BELINDA was negative (EFS HR 1.07, P=0.61)",
+      "2L CAR-T benefit is product/design-specific: unlike axi-cel (ZUMA-7) and liso-cel (TRANSFORM), tisa-cel did not beat salvage/ASCT",
+      "In an eligible 2L R/R LBCL patient, tisa-cel should not substitute for axi-cel/liso-cel or for the salvage-ASCT pathway"
     ],
     "verbatim_quotes": [
       {
-        "quote": "In the phase 2 part of a phase 1-2 study, we enrolled patients with relapsed or refractory DLBCL who had received at least two lines of therapy previously.",
-        "supports": "3L+ line-of-therapy positioning (>=2 prior lines)"
+        "quote": "Tisagenlecleucel was not superior to standard salvage therapy in this trial.",
+        "supports": "Core negative conclusion: tisa-cel does not beat standard care in 2L"
       },
       {
-        "quote": "Patients received pretreatment with obinutuzumab to mitigate cytokine release syndrome, followed by fixed-duration glofitamab monotherapy (12 cycles total).",
-        "supports": "Fixed-duration monotherapy design with obinutuzumab pretreatment"
+        "quote": "The median event-free survival in both groups was 3.0 months (hazard ratio for event or death in the tisagenlecleucel group, 1.07; 95% confidence interval, 0.82 to 1.40; P = 0.61).",
+        "supports": "Primary endpoint numeric result showing no EFS benefit for tisa-cel in 2L"
       },
       {
-        "quote": "39% (95% confidence interval [CI], 32 to 48) of the patients had a complete response according to independent review. Results were consistent among the 52 patients who had previously received chimeric antigen receptor T-cell therapy (35% of whom had a complete response).",
-        "supports": "Headline CR rate and retained efficacy after prior CAR-T"
+        "quote": "A total of 25.9% of the patients in the tisagenlecleucel group had lymphoma progression at week 6, as compared with 13.8% of those in the standard-care group.",
+        "supports": "Longer manufacturing/time-to-infusion and preinfusion progression contributed to the null result \u2014 mechanistic contrast with axi-cel"
       }
     ],
+    "caveats": "Negative trial; do not misread as evidence FOR 2L tisa-cel. The null result is attributed partly to trial design (week-12 EFS clock, long 52-day median time-to-infusion, optional bridging masking benefit) rather than proving CAR-T is ineffective in 2L \u2014 axi-cel (ZUMA-7) and liso-cel (TRANSFORM) were positive in the same setting. Tisa-cel retains approval only for 3L+ DLBCL.",
     "full_text_available": true,
-    "caveats": "Single-arm, no comparator; historical control benchmark of 20% CR. Conducted primarily in Europe/Australia with limited racial diversity. Five fatal AEs were Covid-19-related. Cross-trial comparisons cautioned by authors."
+    "line_field_note": "2L"
   },
   {
-    "key": "tafa-len-L-MIND",
-    "title": "Tafasitamab for Patients With Relapsed or Refractory DLBCL: Final 5-Year Efficacy and Safety (L-MIND)",
-    "authors_year": "Duell et al., 2023",
-    "journal": "Haematologica (2024;109(2):553-566)",
-    "design": "Open-label, single-arm, global multicenter phase 2 study (NCT02399085). Final 5-year analysis. Tafasitamab + lenalidomide for up to 12 cycles, then tafasitamab monotherapy until progression. Sponsor MorphoSys AG.",
-    "population": "80 patients (full analysis set) with ASCT-ineligible R/R DLBCL, 1-3 prior systemic therapies. Median age 72 (range 41-86); 50% had 1 prior line, 50% had >=2; 50% IPI 3-5; 18.8% primary refractory (by amended definition); 11.3% prior ASCT.",
-    "line": "2L+ (ASCT-ineligible; 1-3 prior lines; label positions as second-line for transplant-ineligible)",
+    "key": "Brody-2025-EPCORE-NHL-2",
+    "title": "Epcoritamab plus GemOx in transplant-ineligible relapsed/refractory DLBCL: results from the EPCORE NHL-2 trial",
+    "authors_year": "Brody JD, J\u00f8rgensen J, Belada D, et al. 2025",
+    "journal": "Blood 2025;145(15):1621-1629",
+    "design": "Phase 1b/2, open-label, multicenter, single-arm trial (EPCORE NHL-2, arm 5; NCT04663347). Dose-escalation + expansion; no comparator/control group. No formal hypothesis testing.",
+    "population": "103 patients with ASCT-ineligible R/R DLBCL (de novo or transformed from FL/nodal MZL, DHL/THL, FL grade 3B, or T-cell/histiocyte-rich DLBCL). Median age 72 (range 20-87), 35% aged >=75; ECOG 0-2; median 2 prior lines (38% had 1 pLOT, 62% >=2 pLOT); 52% primary refractory, 70% refractory to last therapy, 28% prior CAR T-cell therapy, 23% transformed, 61% stage IV.",
+    "line": "Second-line or later (2L+) in ASCT-ineligible patients; earliest enrollment after >=1 prior therapy. 38% were treated in the 2L setting (1 prior line).",
     "key_eligibility": [
-      "ASCT-ineligible R/R DLBCL, aged >=18",
-      "1 to 3 prior systemic therapies including >=1 CD20-targeting agent",
-      "ECOG 0-2",
-      "Primary-refractory disease was EXCLUDED per protocol; definition changed during trial (initially no response/progression within 3 mo, amended June 2016 to within 6 mo of prior anti-CD20 regimen), so some early-relapsing patients (3-6 mo) were enrolled -- 18.8% ultimately had primary-refractory disease by the updated definition",
-      "US label: DLBCL NOS including DLBCL arising from low-grade lymphoma, ineligible for ASCT"
+      "Documented CD20+ DLBCL R/R to >=1 prior therapy",
+      "Previous ASCT failure OR ineligibility for ASCT due to age, performance status, comorbidities, or insufficient response to prior treatment",
+      "ECOG PS 0-2; measurable disease; adequate organ function; eligible to receive GemOx",
+      "Excluded if active infections requiring systemic therapy"
     ],
-    "outcomes": "Best ORR 57.5% (46/80; 95% CI 45.9-68.5); CR rate 41.3% (n=33); PR 16.3%. Median DoR not reached (median follow-up 44.0 mo); plateau after ~12 mo. Median PFS 11.6 mo (95% CI 5.7-45.7). Median OS 33.5 mo (95% CI 18.3-NR). By prior lines: 1 prior line ORR 67.5% (CR 52.5%), median PFS 23.5 mo; >=2 prior lines ORR 47.5% (CR 30.0%), median PFS 7.6 mo. 5-yr OS 72.7% for best-response CR vs 18.3% for PR. Grade >=3 TEAE 64.2%; neutropenia grade >=3 48.1%. AE frequency decreased on tafasitamab monotherapy.",
-    "outcomes_field_note": "",
+    "outcomes": "ORR 85% (88/103) and CR rate 61% (63/103) by IRC. Median PFS 11.2 mo (overall); median OS 21.6 mo overall and not reached in CR patients. Median DOR 11.7 mo; median duration of CR 23.6 mo. CR rate higher in less pretreated: 74% (1 pLOT) vs 53% (>=2 pLOT); 68% CAR-T-naive vs 45% prior CAR-T. CRS in 52% (28% G1, 23% G2, only 1% G3); CRS mostly cycle 1, all resolved, none led to discontinuation. ICANS 3% (1% G3). Grade >=3 cytopenias common (thrombocytopenia 59%, neutropenia 57%); febrile neutropenia 7%.",
     "grounds_rubric_claims": [
-      "Tafa-len (L-MIND) is a standard second-line option specifically for ASCT-INELIGIBLE R/R DLBCL",
-      "Primary-refractory disease was an EXCLUSION criterion in L-MIND (key rubric gate: tafa-len not validated for primary-refractory patients)",
-      "Efficacy is markedly higher at 2L (1 prior line: ORR 67.5%, CR 52.5%) than at 3L+ (>=2 prior lines: ORR 47.5%, CR 30%) -- favors earlier use",
-      "Restricted to 1-3 prior lines; not studied beyond 3 prior lines",
-      "Depth of response (CR) drives long-term survival",
-      "Real-world data show 91% of typical R/R LBCL patients would not have met L-MIND eligibility"
+      "Epcoritamab + GemOx is an evidence-supported OFF-LABEL 2L regimen for transplant-ineligible R/R DLBCL: only epcoritamab MONOTHERAPY is FDA-approved (at 3L+), so the GemOx combination and use in 2L are both off-label but supported by this prospective trial",
+      "A regimen chosen off-label can still be evidence-graded as reasonable when a prospective single-arm trial demonstrates deep, durable responses (ORR 85%, CR 61%) in the exact target population (ASCT-ineligible R/R DLBCL)",
+      "Higher CR rate with fewer prior lines (74% at 1 pLOT vs 53% at >=2 pLOT) supports using the regimen earlier (2L) rather than later",
+      "Bispecific + chemo is a valid non-CAR-T option for older/less-fit patients: median age 72, one-third >=75, versus CAR-T pivotal trials (median age 56-60, no patients >76)"
     ],
     "verbatim_quotes": [
       {
-        "quote": "Patients with primary refractory disease were excluded, but because the definition changed while the study was active, some were eligible and included.",
-        "supports": "Primary-refractory exclusion criterion (core rubric gate) and the definitional nuance"
+        "quote": "Epcoritamab, a CD3xCD20 bispecific antibody approved for R/R DLBCL after >=2 therapy lines, has shown promising safety and efficacy in various combinations.",
+        "supports": "Confirms the ONLY approved indication is 3L+ (after >=2 lines), so 2L use and the GemOx combination are off-label."
       },
       {
-        "quote": "tafasitamab, an anti-CD19 immunotherapy, is used with lenalidomide for patients with autologous stem cell transplant-ineligible relapsed/refractory diffuse large B-cell lymphoma",
-        "supports": "ASCT-ineligible positioning / indication"
+        "quote": "ORR and CR rate were 85% and 61%, respectively. Median duration of CR and OS were 23.6 and 21.6 months, respectively.",
+        "supports": "Headline efficacy establishing the off-label 2L regimen as an evidence-supported choice."
       },
       {
-        "quote": "Patients who had received only one prior line of therapy had a higher ORR (67.5%, with 52.5% CR and 15.0% PR) compared to patients who had received two or more prior lines of therapy (47.5%, with 30.0% CR and 17.5% PR).",
-        "supports": "Line-of-therapy dependence favoring earlier (2L) use"
+        "quote": "epcoritamab plus GemOx treatment led to higher CR rates overall (61%) and markedly improved CR rates in patients with 1 vs >=2 pLOT (74% vs 53%), supporting that this combination may help to overcome cross-resistance.",
+        "supports": "Rationale that earlier-line (2L) use improves outcomes."
+      },
+      {
+        "quote": "CRS was primarily low grade (52% overall incidence; 28% grade 1, 23% grade 2); only 1 patient experienced grade 3 CRS.",
+        "supports": "Favorable, predominantly low-grade CRS safety profile of the off-label bispecific combination."
       }
     ],
-    "full_text_available": true,
-    "caveats": "Single-arm, small (n=80), no comparator. Primary-refractory definition changed mid-trial, so a minority of primary-refractory (3-6 mo relapse) patients were included. No/minimal prior CAR-T or prior anti-CD19 exposure in cohort; poorly generalizable to post-CAR-T setting (real-world: 91% ineligible for L-MIND)."
+    "caveats": "Single-arm, no comparator; cross-study comparisons cautioned. Enrolled during COVID-19 pandemic (13% grade 5 TEAEs, 5 were COVID-19). Combination and 2L use are off-label; regulatory approval is monotherapy at 3L+ only. Median follow-up 13.2 mo.",
+    "full_text_available": true
   },
   {
-    "key": "mosun-pola-p1b2",
-    "title": "Mosunetuzumab With Polatuzumab Vedotin in Relapsed or Refractory Aggressive Large B-Cell Lymphoma: A Phase 1b/2 Trial",
-    "authors_year": "Budde et al., 2024",
-    "journal": "Nature Medicine (2024;30(1):229-239)",
-    "design": "Ongoing phase 1b/2 multi-arm trial (NCT03671018); phase 1b dose escalation (n=22) + single-arm phase 2 dose expansion (n=98). Outpatient, fixed-duration mosunetuzumab (step-up dosing, 8-17 cycles) + polatuzumab vedotin 1.8 mg/kg C1-C6. RP2D mosunetuzumab 1/2/60/30 mg.",
-    "population": "120 enrolled overall (117 efficacy-evaluable LBCL); dose-expansion 98 R/R LBCL. Median age 68 (range 20-88); median 2 prior lines (range 1-10); 35% prior CAR-T; 12.5% prior ASCT; 57.5% primary refractory; 20.2% double/triple-hit.",
-    "line": "2L+ (positioned as second-line, transplant-ineligible; 1-10 prior lines, median 2)",
+    "key": "Crump-2017-SCHOLAR-1",
+    "title": "Outcomes in refractory diffuse large B-cell lymphoma: results from the international SCHOLAR-1 study",
+    "authors_year": "Crump M, Neelapu SS, Farooq U, et al. 2017",
+    "journal": "Blood 2017;130(16):1800-1808",
+    "design": "International, multicohort, retrospective patient-level pooled analysis. Pooled 2 phase 3 trials (CORAL, LY.12) + 2 observational cohorts (MDACC, IA/MC). Response and OS estimated from initiation of salvage therapy for refractory disease.",
+    "population": "636 patients with refractory DLBCL (incl. transformed FL and PMBCL) from 861 abstracted. Median age 55 (range 19-81); ECOG PS 0-1 in 73%; stage III-IV in 72%. Refractory categories: 28% primary refractory, 50% refractory to >=2nd-line, 22% relapsed <=12 mo post-ASCT.",
+    "line": "Refractory disease at any line (pooled), analyzed from start of the next salvage line. Pre-CAR-T era benchmark.",
     "key_eligibility": [
-      "R/R aggressive LBCL: DLBCL, HGBCL, transformed FL, grade 3b FL (grade 1-3a FL excluded from efficacy)",
-      "Transplant-ineligible second-line and later R/R LBCL",
-      "Prior CAR-T permitted and included (35%); primary-refractory patients included (57.5%)",
-      "Positioned explicitly as a fixed-duration outpatient regimen"
+      "Refractory DLBCL defined as progressive disease as best response to any line, OR stable disease as best response to >=4 cycles of first-line / 2 cycles of later-line therapy, OR relapse <=12 months after ASCT",
+      "Must have received an anti-CD20 monoclonal antibody and an anthracycline as a qualifying regimen",
+      "Primary CNS lymphoma excluded"
     ],
-    "outcomes": "Dose-expansion (n=98, RP2D): IRC best ORR 59.2% (95% CI 48.8-69.0); best CR 45.9% (95% CI 35.8-56.3) vs 42% historical control (P=0.0003). Median DoR 20.8 mo; median DoCR not reached (95% CI 20.5-NE); 24-mo CR event-free rate 60.8%. Median PFS 11.4 mo (95% CI 6.2-18.7). Median OS 23.3 mo (95% CI 14.8-NE). Prior-CAR-T subgroup (n=35): ORR 57%, median PFS 9.6 mo. Primary-refractory: median PFS 8.5 mo. Any-grade CRS 16.7% (grade 3 2.5%, no grade 4); ICANS-consistent 5%; grade >=3 neutropenia 25%; no febrile neutropenia; treatment-related discontinuation 10%.",
-    "outcomes_field_note": "",
+    "outcomes": "Objective response rate 26% (95% CI 21-31); CR rate 7%. Median OS 6.3 months (95% CI 5.9-7.0) from start of salvage therapy. 1-year OS 28%; 2-year OS 20%. Outcomes uniformly poor across subgroups (median OS <10 mo). Primary refractory worst (ORR 20%, CR 3%). CR after last salvage -> median OS 14.9 mo; patients who reached ASCT -> median OS 14.4 mo vs 5.1 mo without ASCT. Age <65 vs >=65 did NOT impact OS (HR 0.9, p=.37).",
     "grounds_rubric_claims": [
-      "Mosun-pola is a fixed-duration, outpatient chemo-free bispecific + ADC regimen suitable for second-line transplant-ineligible R/R LBCL",
-      "Active after prior CAR-T (ORR 57% in prior-CAR-T subgroup) and in primary-refractory disease (included; 57.5% of cohort)",
-      "Low CRS (16.7%, grade 3 only 2.5%) supports outpatient administration",
-      "CR rate (45.9%) exceeds single-agent mosunetuzumab (24%) and single-agent polatuzumab (13%), suggesting combination synergy",
-      "Enrolled a higher proportion of primary-refractory (57.5% vs 19%) and post-CAR-T (35% vs 0%) patients than L-MIND tafa-len population"
+      "Establishes the dismal baseline prognosis of refractory DLBCL in the pre-CAR-T era (median OS ~6 months, CR ~7%) as the historical benchmark against which any R/R DLBCL therapy must be judged",
+      "Standard salvage chemotherapy is inadequate for refractory disease (ORR 26%, CR 7%), justifying use of CAR-T / bispecifics / novel regimens over repeat chemotherapy",
+      "Chronologic age does NOT independently predict OS in refractory DLBCL (age <65 vs >=65 not significant), reinforcing that fitness, not age, should drive decisions",
+      "Primary refractory and high-IPI patients have the worst outcomes, defining highest-need subgroups"
     ],
     "verbatim_quotes": [
       {
-        "quote": "These data demonstrate that mosunetuzumab plus polatuzumab vedotin has a favorable safety profile with highly durable responses suitable as second-line therapy in transplant-ineligible relapsed/refractory LBCL.",
-        "supports": "Second-line transplant-ineligible positioning / fixed-duration outpatient regimen"
+        "quote": "For patients with refractory DLBCL, the objective response rate was 26% (complete response rate, 7%) to the next line of therapy, and the median overall survival was 6.3 months.",
+        "supports": "The headline pre-CAR-T refractory-DLBCL benchmark (poor ORR/CR and ~6-month median OS)."
       },
       {
-        "quote": "Best complete response was 45.9% (95% CI: 35.8-56.3)... Median IRC-assessed PFS was 11.4 months (95% CI: 6.2-18.7). Median overall survival was 23.3 months (95% CI: 14.8-NE).",
-        "supports": "Headline efficacy outcomes (CR, PFS, OS)"
+        "quote": "the SCHOLAR-1 study provides a historical benchmark for future studies in refractory DLBCL, TFL, and PMBCL. The consistently poor outcomes shown here indicate a significant unmet need for effective therapies.",
+        "supports": "Explicitly frames the study as the benchmark of poor baseline prognosis motivating newer therapies."
       },
       {
-        "quote": "Notably, the current study enrolled a higher proportion of primary refractory patients (57.5% versus 19.0%) and post-CAR-T cell therapy patients (35% versus 0%) compared to the tafa-len population in the L-MIND study.",
-        "supports": "Contrast with L-MIND eligibility (primary-refractory and post-CAR-T inclusion)"
+        "quote": "Age younger than 65 years or age 65 years or older did not impact OS.",
+        "supports": "Chronologic age alone does not predict survival in refractory DLBCL, consistent with a fitness- over age-based approach."
       }
     ],
+    "caveats": "Retrospective; pre-CAR-T era (funded by Kite Pharma). Median age (55) younger than typical real-world R/R DLBCL because pooled trial cohorts (LY.12, CORAL) had transplant-oriented eligibility. Includes TFL and PMBCL; primary CNS lymphoma excluded. Long-term survivors driven by the minority reaching ASCT and/or achieving CR/PR.",
+    "full_text_available": true
+  },
+  {
+    "key": "El-2024-post-CAR-T-review",
+    "title": "Therapeutic Options for Large B-Cell Lymphoma Relapsing After CD19-Directed CAR T-Cell Therapy",
+    "authors_year": "El Warrak S, Kharfan-Dabaja MA, Iqbal M, Hamadani M, Chavez J, Mohty R. 2024",
+    "journal": "Bone Marrow Transplantation 2024;59:162-170",
+    "design": "Narrative review synthesizing observational/retrospective studies and early-phase trials of salvage options after CD19 CAR-T failure in LBCL: CD19-directed agents (tafasitamab-lenalidomide, loncastuximab), polatuzumab, CD20xCD3 bispecific antibodies (epcoritamab, glofitamab, mosunetuzumab, others), allogeneic HCT, and re-treatment/next-generation CAR-T. Includes a proposed post-CAR-T treatment algorithm.",
+    "population": "Adults with R/R LBCL who relapse or progress after CD19-directed CAR-T (axi-cel, tisa-cel, liso-cel). Post-CAR-T failure carries a poor prognosis (median OS ~6 months).",
+    "line": "Post-CAR-T relapse (3L+ / after cellular therapy)",
+    "key_eligibility": [
+      "Frames the population downstream of failed CAR-T \u2014 a distinct decision node where allo-HCT and bispecifics enter.",
+      "Allo-HCT is RESERVED for patients who relapse after CAR-T, are otherwise transplant-eligible, and achieve an objective response (CR or at least PR) to subsequent therapy.",
+      "Attainment of CR (or at least PR) prior to allografting is an explicit prerequisite for durable remission \u2014 mirrors PARMA-era chemosensitivity principle.",
+      "CD19-directed agents (tafa-len, loncastuximab) show markedly reduced efficacy after CD19 CAR-T failure (ORR ~17-34%, often CD19 antigen loss).",
+      "CD20xCD3 bispecifics (epcoritamab, glofitamab) retain meaningful activity post-CAR-T and can serve as a bridge to allo-HCT."
+    ],
+    "outcomes": "Post-CAR-T failure median OS ~6 months. CD19 agents post-CAR-T: tafa-len/loncaT ORR ~17-34%, CR ~5-17%, short PFS. Bispecifics post-CAR-T: epcoritamab ORR 54.1%/CR 34.4% in prior-CAR-T subgroup; glofitamab CR 35% in prior-CAR-T. Allo-HCT after CAR-T failure (Zurko et al, N=88): 1-year OS 59%, PFS 45%, NRM 22%; disease status CR in 51% at transplant. Fried et al (N=39): 2-year OS 45%, PFS 31%, NRM 43%. Durable remission achievable only in selected, chemo/immuno-responsive, fit (median age <65) patients.",
+    "grounds_rubric_claims": [
+      "Allogeneic HCT is reserved for LBCL patients who relapse after CAR-T (not used before/instead of CAR-T)",
+      "Allo-HCT after CAR-T requires achieving a CR (or at least PR) to subsequent therapy as a prerequisite for durable benefit",
+      "CD19-directed agents lose efficacy after CD19 CAR-T failure (antigen loss/downregulation); non-CD19 bispecifics are preferred and can bridge to allo-HCT",
+      "Post-CAR-T relapse is a poor-prognosis state (median OS ~6 months) warranting clinical-trial enrollment when available"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "Prior to the approval and widespread use of CAR T in R/R LBCL, allo-HCT was generally reserved for patients who relapsed after an auto-HCT and/or had failed multiple prior lines of therapy.",
+        "supports": "Allo-HCT is positioned as a later-line, post-cellular-therapy option \u2014 reserved, not front-loaded"
+      },
+      {
+        "quote": "One of the main limitations for allo-HCT is the prerequisite of achieving disease control in the form of CR or at least PR.",
+        "supports": "Chemosensitivity/response prerequisite for allo-HCT after CAR-T failure"
+      },
+      {
+        "quote": "relapsing after CAR Ts or failure to respond is generally associated with a poor prognosis with an anticipated median overall survival (OS) of approximately 6 months, at best",
+        "supports": "Post-CAR-T failure is a poor-prognosis decision node (median OS ~6 months)"
+      }
+    ],
+    "caveats": "Review-level (not a controlled trial); allo-HCT and bispecific data are largely retrospective/single-arm with selection bias toward younger, fitter, response-achieving patients (median age <65). No head-to-head data define optimal sequencing; authors recommend clinical-trial enrollment first, then bispecific/ADC/mAb (ideally targeting a non-CD19 antigen) with allo-HCT consolidation in eligible responders.",
     "full_text_available": true,
-    "caveats": "Single-arm phase 2 (n=98), no randomized comparator; historical control 42%. Small high-risk subgroups. Grade 1-3a FL excluded from efficacy. Peripheral neuropathy 30.8% (polatuzumab-driven). Applicability limited in patients refractory to prior polatuzumab vedotin."
+    "line_field_note": "post-CAR-T"
   },
   {
     "key": "epcoritamab-EPCORE-NHL1",
@@ -277,43 +273,6 @@
     ],
     "full_text_available": true,
     "caveats": "Single-arm, no control group; median follow-up only 10.7 mo. One fatal ICANS event (with confounders). First full dose requires 24-h inpatient monitoring. Regional ORR differences driven by CAR-T-exposure proportions."
-  },
-  {
-    "key": "Alaggio-2022-WHO-HAEM5",
-    "title": "The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Lymphoid Neoplasms (WHO-HAEM5)",
-    "authors_year": "Alaggio R, et al., 2022",
-    "journal": "Leukemia 2022;36:1720-1748",
-    "design": "Consensus classification / expert review article (WHO Blue Book 5th edition overview). Not a clinical trial; defines diagnostic entities and criteria.",
-    "population": "Not applicable (classification of lymphoid neoplasm entities). Relevant entity: aggressive large B-cell lymphomas, specifically DLBCL/high-grade B-cell lymphoma with MYC and BCL2 rearrangements (\"double-hit\").",
-    "key_eligibility": [
-      "Defines DLBCL/HGBL-MYC/BCL2 by the presence of DUAL rearrangements of MYC AND BCL2 (detected as gene rearrangements, e.g. by FISH break-apart), not amplification or copy-number gain",
-      "MYC/BCL6 dual-rearranged cases are explicitly EXCLUDED from the DLBCL/HGBL-MYC/BCL2 entity and reclassified as DLBCL,NOS or HGBL,NOS by morphology",
-      "Morphology may be large, intermediate, or blastoid cells; entity is defined genetically, not morphologically",
-      "HGBL-11q (formerly Burkitt-like with 11q aberration) is MYC-rearrangement-NEGATIVE and defined by the 11q gain/loss pattern; distinct from double-hit"
-    ],
-    "outcomes": "No efficacy outcomes (classification document). Key definitional point: the WHO-HAEM4R entity 'HGBL with dual rearrangements of MYC and BCL2 and/or BCL6' was reframed in WHO-HAEM5 to 'DLBCL/HGBL with MYC and BCL2 rearrangements,' narrowing double-hit to MYC+BCL2 rearranged only (BCL6 dual-hit removed). Notably 54% of HGBL,NOS carry a double-hit gene-expression signature (DHITsig) despite LACKING the rearrangements, underscoring that the entity requires demonstrated rearrangement.",
-    "grounds_rubric_claims": [
-      "WHO-HAEM5 double-hit lymphoma = MYC + BCL2 rearrangement demonstrated by FISH (gene rearrangement), NOT MYC amplification or copy-number gain",
-      "MYC/BCL6 double-rearranged cases are no longer classified as double-hit under WHO-HAEM5",
-      "Double-hit status is defined genetically and is morphology-independent (large, intermediate, or blastoid all qualify if MYC+BCL2 rearranged)",
-      "A double-hit gene-expression signature can exist without rearrangement (HGBL,NOS) and does NOT meet the diagnostic entity definition"
-    ],
-    "verbatim_quotes": [
-      {
-        "quote": "the WHO-HAEM5 renames the entity diffuse large B-cell lymphoma/high-grade B-cell lymphoma with MYC and BCL2 rearrangements (DLBCL/HGBL-MYC/BCL2) to encompass tumours defined by the presence of dual MYC and BCL2 rearrangements that may be composed of large or intermediate or blastoid cells",
-        "supports": "Double-hit entity is defined by dual MYC AND BCL2 rearrangements (not amplification), independent of morphology"
-      },
-      {
-        "quote": "lymphoid neoplasms with dual MYC and BCL6 rearrangements represent a more diverse spectrum... these cases have been excluded from the DLBCL/HGBL-MYC/BCL2 entity and are now classified either as a subtype of DLBCL, NOS or HGBL, NOS",
-        "supports": "MYC/BCL6 dual-rearranged lymphomas are excluded from the double-hit entity in WHO-HAEM5"
-      },
-      {
-        "quote": "gene expression profiling showed that 54% of HGBL, NOS harbour the \"double hit\" signature (DHITsig) characteristic of LBCL/HGBL with MYC/BCL2 despite lacking rearrangements of these genes",
-        "supports": "The double-hit gene-expression signature is distinct from the rearrangement-defined entity; diagnosis requires demonstrated MYC+BCL2 rearrangement"
-      }
-    ],
-    "full_text_available": true,
-    "caveats": "Classification/consensus document, not comparative evidence. Does not state a specific FISH probe protocol; the point is that the entity is defined by rearrangement of MYC and BCL2, which in practice is assessed by break-apart FISH. Text does not explicitly use the word 'amplification' to contrast; the grounding is that 'rearrangement' (not gain/amplification) defines the entity."
   },
   {
     "key": "Ferreri-2021-MARIETTA",
@@ -359,6 +318,46 @@
     "caveats": "Single-arm phase 2 (no randomized comparator). Very poor-prognosis population; salvage after MARIETTA failure was futile (median survival ~1 month post-progression). Excludes PCNSL and HIV/immunosuppressed. Only 37/75 reached transplant, so intent-to-treat outcomes are lower than transplanted-subgroup figures."
   },
   {
+    "key": "glofitamab-3L",
+    "title": "Glofitamab for Relapsed or Refractory Diffuse Large B-Cell Lymphoma",
+    "authors_year": "Dickinson et al., 2022",
+    "journal": "New England Journal of Medicine (2022;387:2220-31)",
+    "design": "Phase 2 part of an open-label phase 1-2 trial (NCT03075696); single-arm, fixed-duration glofitamab monotherapy (12 cycles) with obinutuzumab pretreatment. Sponsor F. Hoffmann-La Roche.",
+    "population": "155 patients with R/R DLBCL (NOS), transformed FL, high-grade B-cell lymphoma, or PMBCL who had received >=2 prior lines. Median age 66 (range 21-90); median 3 prior lines (range 2-7); 33% prior CAR-T; 58% primary refractory; 86% refractory to last therapy.",
+    "line": "3L+ (third line and beyond; >=2 prior lines including anti-CD20 and anthracycline)",
+    "key_eligibility": [
+      "Histologically confirmed DLBCL NOS, transformed FL, HGBCL, or PMBCL",
+      "Relapsed after or refractory to >=2 prior lines including >=1 anti-CD20 antibody-containing regimen and >=1 anthracycline-containing regimen",
+      "ECOG 0-1",
+      "Prior CAR-T permitted and included (33% of cohort); primary-refractory NOT excluded (58% primary refractory)"
+    ],
+    "outcomes": "Primary endpoint CR by IRC = 39% (95% CI 32-48). ORR 52% (95% CI 43-60). CR among prior-CAR-T patients 35%. Median time to CR 42 days. CR ongoing at 12 mo in 78%. Median DoCR not reached (95% CI 16.8-NR). Median PFS 4.9 mo; 12-mo PFS 37%. 12-mo OS 50%. Median OS 11.5 mo (investigator). CRS in 63% (grade >=3 in 4%); ICANS-consistent neuro events 8% (grade >=3 in 3%). Grade >=3 AEs 62%; discontinuation for AE 9%.",
+    "outcomes_field_note": "",
+    "grounds_rubric_claims": [
+      "Glofitamab is an approved fixed-duration (12-cycle) monotherapy option for R/R DLBCL at 3L+ (>=2 prior lines)",
+      "Glofitamab retains activity after prior CAR-T (CR 35% in prior-CAR-T subgroup)",
+      "Fixed-duration bispecific: treatment stops at 12 cycles rather than treat-to-progression, unlike epcoritamab/odronextamab",
+      "Requires obinutuzumab pretreatment + step-up dosing for CRS mitigation; CRS mostly low-grade and confined to cycle 1",
+      "Eligibility requires prior anti-CD20 and anthracycline exposure"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "In the phase 2 part of a phase 1-2 study, we enrolled patients with relapsed or refractory DLBCL who had received at least two lines of therapy previously.",
+        "supports": "3L+ line-of-therapy positioning (>=2 prior lines)"
+      },
+      {
+        "quote": "Patients received pretreatment with obinutuzumab to mitigate cytokine release syndrome, followed by fixed-duration glofitamab monotherapy (12 cycles total).",
+        "supports": "Fixed-duration monotherapy design with obinutuzumab pretreatment"
+      },
+      {
+        "quote": "39% (95% confidence interval [CI], 32 to 48) of the patients had a complete response according to independent review. Results were consistent among the 52 patients who had previously received chimeric antigen receptor T-cell therapy (35% of whom had a complete response).",
+        "supports": "Headline CR rate and retained efficacy after prior CAR-T"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "Single-arm, no comparator; historical control benchmark of 20% CR. Conducted primarily in Europe/Australia with limited racial diversity. Five fatal AEs were Covid-19-related. Cross-trial comparisons cautioned by authors."
+  },
+  {
     "key": "Houillier-2024-CART-CNS-review",
     "title": "CAR T-cell Therapy for Central Nervous System Lymphoma",
     "authors_year": "Houillier C, Choquet S, 2024",
@@ -395,78 +394,41 @@
     "caveats": "Narrative review; underlying studies mostly retrospective, heterogeneous in populations/products/prior therapy, with limited follow-up. No randomized data for CAR-T in CNS lymphoma. Prognosis after post-CAR-T relapse is poor (median OS ~4.6 mo). Position of CAR-T in the treatment sequence remains undefined."
   },
   {
-    "key": "Shawabkeh-2026-CART-CNS-metaanalysis",
-    "title": "Safety and efficacy of CAR T-cell therapy in central nervous system lymphoma: a systematic review and meta-analysis",
-    "authors_year": "Shawabkeh AE, et al., 2026",
-    "journal": "Frontiers in Oncology 2026;16:1790444",
-    "design": "Systematic review and meta-analysis (PRISMA 2020; PROSPERO CRD420251070033) of 39 studies (38 in quantitative analysis; up to 1,190 patients). Predominantly retrospective single-arm cohorts (n=28) plus 11 single-arm interventional/phase 1-2 studies; NO randomized comparisons. Freeman-Tukey double-arcsine pooling, random-effects (DerSimonian-Laird).",
-    "population": "Adults (>=18) with PCNSL or SCNSL treated with CD19-based CAR T-cell therapy (axi-cel, tisa-cel, liso-cel, brexu-cel, and dual/triple-targeted constructs). 20 studies SCNSL, 5 PCNSL, 13 both. Predominant histology DLBCL; includes double-/triple-hit subsets in several cohorts. No restriction on prior lines or bridging.",
+    "key": "Jolly-2015",
+    "title": "Geriatric Assessment-Identified Deficits in Older Cancer Patients With Normal Performance Status",
+    "authors_year": "Jolly, Deal, Nyrop, Williams, ... Muss (2015)",
+    "journal": "The Oncologist 2015;20:379-385",
+    "design": "Cross-sectional analysis of a prospective registry (Carolina Senior, NCT01137825); brief geriatric assessment vs. Karnofsky performance status",
+    "population": "984 cancer patients aged >=65 (mean 73, range 65-99); analysis subsample of 796 (81%) rated functionally normal (KPS >=80) by BOTH professional and self-report. 74% female, 89% white; 6% lymphoma, 5% leukemia (mostly breast, 54%). Not R/R DLBCL-specific, but the frailty-vs-PS principle is directly transferable.",
     "key_eligibility": [
-      "Included adults with PCNSL or SCNSL (systemic NHL with CNS involvement) receiving CD19-based CAR-T; single- and dual/triple-targeted constructs allowed",
-      "Case reports with <3 patients, reviews, editorials, and preclinical studies EXCLUDED; required separately reported CNS-lymphoma outcomes",
-      "Both prospective and retrospective designs, including case series with >=3 patients; no restriction on prior therapy lines, bridging, or geography",
-      "Rationale: pivotal CAR-T trials systematically excluded active CNS involvement due to neurotoxicity concerns"
+      "English-speaking cancer patients aged >=65 enrolled in Carolina Senior registry",
+      "Completed brief geriatric assessment (KPS + Patient-KPS + multi-domain measures)",
+      "Focus subsample required agreement between professional and patient KPS >=80 (excludes disagreement to isolate GA signal beyond PS)"
     ],
-    "outcomes": "Pooled ORR 0.75 (95% CI 0.70-0.79; I2=53.3%); CR 0.52 (0.46-0.58); PR 0.18 (0.14-0.22). No significant difference in ORR between PCNSL and SCNSL (p=0.063). PFS pooled HR PCNSL vs SCNSL 0.89 (95% CI 0.16-4.91, NS). OS rate 0.71 at 6 mo to 0.48 at 24 mo; PFS 0.41 at 6 mo to 0.28 at 24 mo. Pooled median-of-medians OS 8.6 mo, PFS 3.6 mo. CRS 83.5% (grade>=3 5.77%); ICANS 44.9% (grade>=3 17.4%).",
+    "outcomes": "Among KPS >=80 (functionally normal) patients: 69% had >=1 GA-identified deficit; only ~1/3 had none. 24% had >=3 deficits. Specific deficits: 43% took >=9 medications daily; 25% had >=4 comorbidities; 23% >=1 IADL impairment; 18% Timed Up-and-Go >=14 s (fall/early-death predictor) or unable; 18% >=5% unintentional weight loss; 12% MHI-5 <=76 (poor mental health). Multivariable: each 5-yr age increase OR 1.2 (95% CI 1.06-1.38) for having a deficit; active treatment OR 1.7 (1.13-2.64).",
     "grounds_rubric_claims": [
-      "Meta-analytic (non-randomized) evidence supports CAR T-cell therapy achieving robust responses in CNS lymphoma (ORR ~75%, CR ~52%)",
-      "Efficacy of CAR-T is comparable between primary and secondary CNS lymphoma",
-      "Severe CRS is infrequent (grade>=3 ~6%) and severe ICANS is manageable (~17%) in CNS-lymphoma CAR-T",
-      "Evidence base for CAR-T in CNS lymphoma is non-randomized (retrospective cohorts + single-arm trials), as CNS involvement was excluded from pivotal trials"
+      "ECOG/KPS performance status systematically under-captures frailty; a functionally normal PS score does not exclude clinically meaningful deficits",
+      "Multi-domain geriatric assessment surfaces modifiable/prognostic impairments (polypharmacy, comorbidity, IADL, gait/TUG, weight loss, cognition, mood) that PS misses",
+      "TUG >=14 s and >=5% unintentional weight loss are single deficits with independent prognostic weight even in a PS-normal older patient",
+      "Older age independently raises the odds of hidden deficits, supporting GA over chronological age or PS alone for treatment decisions"
     ],
     "verbatim_quotes": [
       {
-        "quote": "The pooled overall response rate (ORR) was 0.75 [95% CI: 0.70-0.79]... Complete response (CR) rate was 0.52 [0.46-0.58]",
-        "supports": "Pooled CAR-T efficacy in CNS lymphoma: ORR 75%, CR 52%"
+        "quote": "Within this sample of older cancer patients who were rated as functionally normal by KPS, GA identified important deficits that could affect treatment tolerance and outcomes.",
+        "supports": "PS-normal does not equal deficit-free; GA adds information beyond performance status"
       },
       {
-        "quote": "CART therapy achieves robust response rates in CNS lymphoma, with efficacy comparable between PCNSL and SCNSL. Neurotoxicity remains frequent but manageable, and severe CRS events are infrequent.",
-        "supports": "Overall conclusion: comparable PCNSL/SCNSL efficacy; manageable neurotoxicity; infrequent severe CRS"
+        "quote": "Only a third of our functionally normal sample had no GA-identified deficits.",
+        "supports": "Magnitude of PS under-capture: 69% of KPS >=80 patients had at least one deficit"
       },
       {
-        "quote": "Cytokine Release Syndrome (CRS) occurred in 83.5% [79.0-88.0], with grade>=3 CRS in 5.77% [3.0-9.0]. Immune Effector Cell-Associated Neurotoxicity Syndrome (ICANS) was reported in 44.9% [36.0-54.0], with severe (grade >=3) events in 17.4% [12.0-23.0].",
-        "supports": "Safety profile: CRS 83.5% (severe 5.8%), ICANS 44.9% (severe 17.4%)"
+        "quote": "The odds ratio for each 5-year increase in age was 1.2 (95% CI: 1.06-1.38), suggesting that as age increases, so do the odds of having at least 1 deficit.",
+        "supports": "Age independently predicts hidden frailty deficits beyond performance status"
       }
     ],
+    "caveats": "Predominantly breast cancer (54%) and female (74%); only 6% lymphoma. Not treatment-outcome data and not R/R DLBCL or CAR-T specific; grounds the PS-vs-frailty principle, not any lymphoma-specific numeric threshold. Uses KPS (not ECOG) as the PS instrument.",
     "full_text_available": true,
-    "caveats": "Non-randomized evidence: 28/39 studies retrospective single-arm; substantial heterogeneity (ICANS I2=84%). PFS HR comparison PCNSL vs SCNSL very wide (0.16-4.91). Pooled proportions across heterogeneous products, prior-line burden, and bridging. Registry/abstract data included."
-  },
-  {
-    "key": "Takigawa-2024-CART-isolated-SCNS-case",
-    "title": "A case of successful CAR-T cell therapy for early isolated CNS recurrence of DLBCL with persistent CAR-T cells",
-    "authors_year": "Takigawa K, et al., 2024",
-    "journal": "Blood Cell Therapy (APBMT) 2024",
-    "design": "Single case report (n=1), non-randomized.",
-    "population": "66-year-old man with non-GCB DLBCL (Ann Arbor stage IV; IPI 2; CNS-IPI intermediate). Tumor immunophenotype CD10-, non-GCB (CD10-/BCL6-/MUM1+); positive for BCL2 and MYC by IHC. Achieved CR after 6x R-CHOP, then isolated CNS relapse (leptomeningeal, CSF B-cells 51/uL) 3 months later. Received 7 courses high-dose methotrexate + intrathecal MTX (partial response), then liso-cel CAR-T as second-line.",
-    "key_eligibility": [
-      "Isolated secondary CNS relapse of DLBCL (leptomeningeal/CSF disease; no systemic or radiographic parenchymal disease)",
-      "Early relapse (<1 year) after R-CHOP - rationale that ASCT would give only temporary benefit, favoring CAR-T",
-      "Liso-cel used as approved second-line therapy for early relapsed/refractory large B-cell lymphoma; tumor MYC+/BCL2+ by IHC (not stated as FISH-confirmed double-hit)"
-    ],
-    "outcomes": "Second CR achieved after liso-cel; CSF CR by day 18 with resolution of CNS symptoms, ongoing CR to day 120. CRS grade 2 (treated with tocilizumab); NO ICANS. Prolonged pancytopenia (bone marrow failure) recovered with G-CSF + eltrombopag. CAR-T dynamics: peripheral blood CAR-T 25% (d11), 8% (d18), 0.3% (d90); 46.3% CAR-T detected in CSF on day 18 - demonstrating CAR-T trafficking to meningeal disease. Cites Cook meta-analysis (128 pts; ORR 64% overall, 57% SCNSL; ICANS 48%, grade 3-4 26%).",
-    "grounds_rubric_claims": [
-      "CAR T-cell therapy (liso-cel) can be effective and tolerable in isolated secondary CNS DLBCL relapse (single-case, non-randomized evidence)",
-      "Secondary CNS lymphoma requires CNS-penetrant drugs; HD-MTX (with intrathecal MTX) is used before/around CAR-T",
-      "CAR-T cells traffic across the blood-brain barrier into CSF/meningeal disease (46.3% CAR-T in CSF at day 18)",
-      "In early (<1 yr) post-R-CHOP CNS relapse, CAR-T may be preferable to ASCT (which offers only temporary benefit)",
-      "CRS can be manageable (grade 2, tocilizumab) with absent ICANS even in CNS disease"
-    ],
-    "verbatim_quotes": [
-      {
-        "quote": "This case is the first to validate the efficacy and safety of CAR-T cell therapy for isolated secondary CNS lymphoma in clinical practice.",
-        "supports": "Single-case evidence for CAR-T efficacy/safety in isolated secondary CNS DLBCL"
-      },
-      {
-        "quote": "we detected 46.3% of CAR-T cells in the CSF (2/uL) on day 18, suggesting that these CAR-T cells can migrate directly to meningeal lesions of DLBCL",
-        "supports": "CAR-T cells traffic into CSF/meningeal CNS disease"
-      },
-      {
-        "quote": "Secondary central nervous system (CNS) lymphomas typically require CNS-penetrating drugs; however, the available agents are limited with temporary effects and poor outcomes.",
-        "supports": "Rationale for CNS-penetrant drugs in secondary CNS lymphoma and unmet need motivating CAR-T"
-      }
-    ],
-    "full_text_available": true,
-    "caveats": "n=1 case report - lowest level of evidence, non-randomized, no comparator, short follow-up (CR to ~day 120). MYC/BCL2 were positive by immunohistochemistry only (double-expressor); FISH double-hit status not reported. OCR-garbled source text but clinical facts are legible."
+    "line": "The Oncologist 2015;20:379-385"
   },
   {
     "key": "Korfel-2015-PCNSL-pharmacotherapy",
@@ -550,78 +512,81 @@
     "line_field_note": "2L"
   },
   {
-    "key": "Westin-2023-ZUMA-7-OS",
-    "title": "Survival with Axicabtagene Ciloleucel in Large B-Cell Lymphoma (ZUMA-7 OS analysis)",
-    "authors_year": "Westin JR, Oluwole OO, Kersten MJ, et al. 2023",
-    "journal": "N Engl J Med 2023;389:148-157 (NCT03391466)",
-    "design": "Prespecified overall-survival analysis of the phase 3 ZUMA-7 trial (2L axi-cel vs standard of care salvage chemoimmunotherapy + ASCT). OS was a key secondary endpoint; crossover from SOC to cellular therapy off-protocol was permitted. Note: local full-text file is the ZUMA-7 protocol + SAP supplement, which grounds the OS objective and endpoint definition verbatim; headline OS numbers below are the published Westin 2023 results.",
-    "population": "Same ZUMA-7 randomized population: adults with primary-refractory or early-relapse (\u226412 mo) R/R LBCL, transplant-intended. N=359 (axi-cel 180 vs SOC 179).",
-    "line": "Second line (2L) R/R LBCL",
+    "key": "Merli-2021-FIL-Elderly-Project",
+    "title": "Simplified Geriatric Assessment in Older Patients With Diffuse Large B-Cell Lymphoma: The Prospective Elderly Project of the Fondazione Italiana Linfomi",
+    "authors_year": "Merli F, Luminari S, Tucci A, et al. 2021",
+    "journal": "Journal of Clinical Oncology 2021;39(11):1214-1222",
+    "design": "Prospective multicenter observational study (Elderly Project; NCT02364050) across 36 FIL centers; treatment left to physician discretion. Validates a simplified geriatric assessment (sGA) and builds/validates the Elderly Prognostic Index (EPI). Primary endpoint OS. Externally validated on 328 independent cases.",
+    "population": "1,163-1,207 patients with newly diagnosed DLBCL aged >=65 (median age 76, range 65-94). sGA classified 54% fit, 28% unfit, 18% frail. First-line (frontline) elderly DLBCL, not R/R.",
+    "line": "First-line (newly diagnosed elderly DLBCL). Relevant as a fitness/frailty framework transferable to treatment-intensity decisions across lines.",
     "key_eligibility": [
-      "Identical to ZUMA-7 primary trial: primary-refractory or relapse \u226412 months after first-line anti-CD20 + anthracycline therapy, transplant-intended.",
-      "OS defined as time from randomization to death from any cause; analysis performed with ~5-year median follow-up despite substantial SOC-to-cellular-therapy crossover.",
-      "Demonstrates OS benefit is preserved even though a majority of SOC-arm patients later received cellular therapy off protocol."
+      "Histologically confirmed DLBCL, age >=65 years, signed consent, oGA results available",
+      "Excluded: diagnoses other than DLBCL, including follicular lymphoma grade 3b or high-grade lymphoma",
+      "sGA defined by age (>= or <80 years) plus CIRS-G comorbidity, ADL, and IADL scores"
     ],
-    "outcomes": "Published Westin 2023 results: at median follow-up 47.2 months, median OS not reached with axi-cel vs 31.1 months with SOC; HR for death 0.726 (95% CI 0.54-0.98), P=0.03; estimated 4-year OS 54.6% vs 46.0%. OS benefit despite 57% of SOC patients receiving subsequent cellular immunotherapy. Confirms 2L axi-cel improves overall survival, not just EFS, over salvage/ASCT.",
+    "outcomes": "3-year OS 65% overall. By sGA fitness: fit 75%, unfit 58%, frail 43% (3-year OS). HR unfit vs fit 1.98 (95% CI 1.55-2.54), frail vs fit 3.27 (2.52-4.22). Full-dose anthracycline delivered to 86% of fit, 48% of unfit, 16% of frail. Treatment-related toxicity caused 20.9% of deaths. EPI (integrating sGA + IPI + hemoglobin) stratified low/intermediate/high risk with 3-year OS 87% / 69% / 42%.",
     "grounds_rubric_claims": [
-      "2L CAR-T (axi-cel) confers an overall-survival benefit over salvage chemotherapy + ASCT in primary-refractory/early-relapse LBCL",
-      "The ZUMA-7 EFS advantage translates into a durable OS advantage even with SOC-arm crossover to cellular therapy"
+      "Frailty/fitness status (functional age), NOT chronologic age, predicts survival and treatment tolerability in older DLBCL: age alone did not independently drive outcome once fitness was accounted for, and in refractory DLBCL (SCHOLAR-1) age >=65 vs <65 did not affect OS",
+      "Fit older patients tolerate and benefit from curative-intent (full-dose) therapy, so age alone should not exclude a patient from aggressive/curative treatment",
+      "A structured geriatric assessment (fit/unfit/frail) should inform treatment-intensity decisions rather than deferring to subjective clinical judgment or a raw age cutoff",
+      "Frail patients have markedly worse survival (3-yr OS 43%) and receive full-dose therapy far less often (16%), supporting attenuated/palliative goals in the frail subgroup"
     ],
     "verbatim_quotes": [
       {
-        "quote": "To evaluate the effect of axicabtagene ciloleucel compared to SOC on overall survival (OS)",
-        "supports": "OS was a prespecified objective of ZUMA-7, grounding the survival comparison"
+        "quote": "The sGA adopted in our study is an objective, reproducible tool... The time has come to consider the fitness status of older patients with DLBCL to better identify their treatment goals.",
+        "supports": "Fitness status (not age) should drive treatment goals in older DLBCL."
       },
       {
-        "quote": "OS is defined as the time from randomization to death from any cause.",
-        "supports": "Endpoint definition for the overall-survival analysis underlying the OS benefit claim"
+        "quote": "the OS was significantly different in the three geriatric fitness status groups, with an hazard ratio (HR) of 1.98 for unfit versus fit... 3.27 for frail versus fit... and 1.65 for frail versus unfit.",
+        "supports": "Frailty status independently predicts survival."
       },
       {
-        "quote": "Increased Survival with Axicabtagene Ciloleucel in Large B-Cell Lymphoma",
-        "supports": "Headline finding: 2L axi-cel increases overall survival vs standard salvage/ASCT"
+        "quote": "their excellent projected 3-year OS of 87% makes this group of patients suitable for curative approaches similar to those adopted for patients younger than 60 years.",
+        "supports": "Fit older patients tolerate and warrant curative-intent therapy regardless of chronologic age."
       }
     ],
-    "caveats": "Local file is the protocol/SAP supplement; the OS results (median OS not reached vs 31.1 mo, HR 0.726, P=0.03, 4-yr OS 54.6% vs 46.0%) are from the NEJM 2023 article body and should be cited there. OS benefit is notable because a majority of SOC patients crossed over to cellular therapy, making this a conservative estimate of axi-cel benefit.",
-    "full_text_available": true,
-    "line_field_note": "2L"
+    "caveats": "Frontline, newly diagnosed elderly DLBCL (not R/R) and observational; treatment was physician's discretion, not randomized. HGBCL and FL grade 3b excluded. The fit/unfit/frail construct is transferable to R/R treatment-intensity reasoning but was not derived in the R/R setting.",
+    "full_text_available": true
   },
   {
-    "key": "Bishop-2022-BELINDA",
-    "title": "Second-Line Tisagenlecleucel or Standard Care in Aggressive B-Cell Lymphoma (BELINDA)",
-    "authors_year": "Bishop MR, Dickinson M, Purtill D, et al. 2022",
-    "journal": "N Engl J Med 2022;386:629-639 (NCT03570892)",
-    "design": "International phase 3, randomized (1:1) trial. Tisagenlecleucel (tisa-cel) with optional platinum-based bridging chemotherapy vs standard care (platinum salvage chemoimmunotherapy + high-dose therapy/autologous HSCT in responders). Crossover to tisa-cel permitted after confirmed SD/PD at/after week 12. Primary endpoint: event-free survival (time from randomization to SD or PD at/after week 12 assessment, or death). NEGATIVE trial.",
-    "population": "Adults with aggressive B-cell lymphoma refractory to (no CR) or relapsing within 12 months after first-line anti-CD20 + anthracycline therapy; ASCT-eligible, ECOG 0-1. N=322 (tisa-cel 162 vs standard care 160). 66% refractory to first-line, 19.3% relapse <6 mo.",
-    "line": "Second line (2L) R/R aggressive B-cell lymphoma",
+    "key": "mosun-pola-p1b2",
+    "title": "Mosunetuzumab With Polatuzumab Vedotin in Relapsed or Refractory Aggressive Large B-Cell Lymphoma: A Phase 1b/2 Trial",
+    "authors_year": "Budde et al., 2024",
+    "journal": "Nature Medicine (2024;30(1):229-239)",
+    "design": "Ongoing phase 1b/2 multi-arm trial (NCT03671018); phase 1b dose escalation (n=22) + single-arm phase 2 dose expansion (n=98). Outpatient, fixed-duration mosunetuzumab (step-up dosing, 8-17 cycles) + polatuzumab vedotin 1.8 mg/kg C1-C6. RP2D mosunetuzumab 1/2/60/30 mg.",
+    "population": "120 enrolled overall (117 efficacy-evaluable LBCL); dose-expansion 98 R/R LBCL. Median age 68 (range 20-88); median 2 prior lines (range 1-10); 35% prior CAR-T; 12.5% prior ASCT; 57.5% primary refractory; 20.2% double/triple-hit.",
+    "line": "2L+ (positioned as second-line, transplant-ineligible; 1-10 prior lines, median 2)",
     "key_eligibility": [
-      "Same high-risk 2L population as ZUMA-7 (refractory or relapse \u226412 mo, transplant-eligible) \u2014 yet the result was OPPOSITE (negative), so BELINDA does NOT support tisa-cel in 2L.",
-      "Optional bridging chemotherapy allowed and heavily used; median time from leukapheresis to tisa-cel infusion was 52 days (long manufacturing/logistics interval).",
-      "EFS endpoint clock started at week 12 and progressive disease before then did not count as an event, differing from ZUMA-7's definition \u2014 a design factor implicated in the null result.",
-      "Only 32.5% of standard-care patients received ASCT."
+      "R/R aggressive LBCL: DLBCL, HGBCL, transformed FL, grade 3b FL (grade 1-3a FL excluded from efficacy)",
+      "Transplant-ineligible second-line and later R/R LBCL",
+      "Prior CAR-T permitted and included (35%); primary-refractory patients included (57.5%)",
+      "Positioned explicitly as a fixed-duration outpatient regimen"
     ],
-    "outcomes": "Median EFS 3.0 months in BOTH groups; HR for event or death 1.07 (95% CI 0.82-1.40), P=0.61 \u2014 no benefit. Response at/after week 12: 46.3% (tisa-cel) vs 42.5% (standard care); CR 28.4% vs 27.5%. More PD at week 6 (preinfusion) in tisa-cel arm (25.9% vs 13.8%). CRS in 61.3% of infused patients (grade \u22653 in 5.2%); grade \u22653 neurologic events 1.9%. Conclusion: tisa-cel NOT superior to standard salvage therapy in 2L.",
+    "outcomes": "Dose-expansion (n=98, RP2D): IRC best ORR 59.2% (95% CI 48.8-69.0); best CR 45.9% (95% CI 35.8-56.3) vs 42% historical control (P=0.0003). Median DoR 20.8 mo; median DoCR not reached (95% CI 20.5-NE); 24-mo CR event-free rate 60.8%. Median PFS 11.4 mo (95% CI 6.2-18.7). Median OS 23.3 mo (95% CI 14.8-NE). Prior-CAR-T subgroup (n=35): ORR 57%, median PFS 9.6 mo. Primary-refractory: median PFS 8.5 mo. Any-grade CRS 16.7% (grade 3 2.5%, no grade 4); ICANS-consistent 5%; grade >=3 neutropenia 25%; no febrile neutropenia; treatment-related discontinuation 10%.",
+    "outcomes_field_note": "",
     "grounds_rubric_claims": [
-      "Tisagenlecleucel (tisa-cel) is NOT indicated in the second line \u2014 BELINDA was negative (EFS HR 1.07, P=0.61)",
-      "2L CAR-T benefit is product/design-specific: unlike axi-cel (ZUMA-7) and liso-cel (TRANSFORM), tisa-cel did not beat salvage/ASCT",
-      "In an eligible 2L R/R LBCL patient, tisa-cel should not substitute for axi-cel/liso-cel or for the salvage-ASCT pathway"
+      "Mosun-pola is a fixed-duration, outpatient chemo-free bispecific + ADC regimen suitable for second-line transplant-ineligible R/R LBCL",
+      "Active after prior CAR-T (ORR 57% in prior-CAR-T subgroup) and in primary-refractory disease (included; 57.5% of cohort)",
+      "Low CRS (16.7%, grade 3 only 2.5%) supports outpatient administration",
+      "CR rate (45.9%) exceeds single-agent mosunetuzumab (24%) and single-agent polatuzumab (13%), suggesting combination synergy",
+      "Enrolled a higher proportion of primary-refractory (57.5% vs 19%) and post-CAR-T (35% vs 0%) patients than L-MIND tafa-len population"
     ],
     "verbatim_quotes": [
       {
-        "quote": "Tisagenlecleucel was not superior to standard salvage therapy in this trial.",
-        "supports": "Core negative conclusion: tisa-cel does not beat standard care in 2L"
+        "quote": "These data demonstrate that mosunetuzumab plus polatuzumab vedotin has a favorable safety profile with highly durable responses suitable as second-line therapy in transplant-ineligible relapsed/refractory LBCL.",
+        "supports": "Second-line transplant-ineligible positioning / fixed-duration outpatient regimen"
       },
       {
-        "quote": "The median event-free survival in both groups was 3.0 months (hazard ratio for event or death in the tisagenlecleucel group, 1.07; 95% confidence interval, 0.82 to 1.40; P = 0.61).",
-        "supports": "Primary endpoint numeric result showing no EFS benefit for tisa-cel in 2L"
+        "quote": "Best complete response was 45.9% (95% CI: 35.8-56.3)... Median IRC-assessed PFS was 11.4 months (95% CI: 6.2-18.7). Median overall survival was 23.3 months (95% CI: 14.8-NE).",
+        "supports": "Headline efficacy outcomes (CR, PFS, OS)"
       },
       {
-        "quote": "A total of 25.9% of the patients in the tisagenlecleucel group had lymphoma progression at week 6, as compared with 13.8% of those in the standard-care group.",
-        "supports": "Longer manufacturing/time-to-infusion and preinfusion progression contributed to the null result \u2014 mechanistic contrast with axi-cel"
+        "quote": "Notably, the current study enrolled a higher proportion of primary refractory patients (57.5% versus 19.0%) and post-CAR-T cell therapy patients (35% versus 0%) compared to the tafa-len population in the L-MIND study.",
+        "supports": "Contrast with L-MIND eligibility (primary-refractory and post-CAR-T inclusion)"
       }
     ],
-    "caveats": "Negative trial; do not misread as evidence FOR 2L tisa-cel. The null result is attributed partly to trial design (week-12 EFS clock, long 52-day median time-to-infusion, optional bridging masking benefit) rather than proving CAR-T is ineffective in 2L \u2014 axi-cel (ZUMA-7) and liso-cel (TRANSFORM) were positive in the same setting. Tisa-cel retains approval only for 3L+ DLBCL.",
     "full_text_available": true,
-    "line_field_note": "2L"
+    "caveats": "Single-arm phase 2 (n=98), no randomized comparator; historical control 42%. Small high-risk subgroups. Grade 1-3a FL excluded from efficacy. Peripheral neuropathy 30.8% (polatuzumab-driven). Applicability limited in patients refractory to prior polatuzumab vedotin."
   },
   {
     "key": "Philip-1995-PARMA",
@@ -663,43 +628,231 @@
     "line_field_note": "2L-historical"
   },
   {
-    "key": "El-2024-post-CAR-T-review",
-    "title": "Therapeutic Options for Large B-Cell Lymphoma Relapsing After CD19-Directed CAR T-Cell Therapy",
-    "authors_year": "El Warrak S, Kharfan-Dabaja MA, Iqbal M, Hamadani M, Chavez J, Mohty R. 2024",
-    "journal": "Bone Marrow Transplantation 2024;59:162-170",
-    "design": "Narrative review synthesizing observational/retrospective studies and early-phase trials of salvage options after CD19 CAR-T failure in LBCL: CD19-directed agents (tafasitamab-lenalidomide, loncastuximab), polatuzumab, CD20xCD3 bispecific antibodies (epcoritamab, glofitamab, mosunetuzumab, others), allogeneic HCT, and re-treatment/next-generation CAR-T. Includes a proposed post-CAR-T treatment algorithm.",
-    "population": "Adults with R/R LBCL who relapse or progress after CD19-directed CAR-T (axi-cel, tisa-cel, liso-cel). Post-CAR-T failure carries a poor prognosis (median OS ~6 months).",
-    "line": "Post-CAR-T relapse (3L+ / after cellular therapy)",
+    "key": "Ram-2021",
+    "title": "Toxicity and efficacy of CAR T-cell therapy in patients with DLBCL above the age of 70 years compared to younger patients - a matched control multicenter cohort study",
+    "authors_year": "Ram, Grisariu, Shargian-Alon, ... Avivi (2021)",
+    "journal": "Haematologica 2022;107(5):1111-1118",
+    "design": "Retrospective matched-control multicenter cohort (3 Israeli centers); elderly (>=70) vs younger (<70) matched on ECOG PS (0-1 vs 2-3) and LDH (high vs normal)",
+    "population": "R/R DLBCL. 47 patients >=70 underwent apheresis; 41 infused (mean age 76.2) = study cohort, matched to 41 younger (mean 55.4). Commercial tisa-cel (~80%) or axi-cel (~20%). Non-selective real-world referral: 66% poor PS (ECOG 2-3), ~40% high LDH, ~48% progressive disease pre-infusion, ~47% >=3 prior lines.",
     "key_eligibility": [
-      "Frames the population downstream of failed CAR-T \u2014 a distinct decision node where allo-HCT and bispecifics enter.",
-      "Allo-HCT is RESERVED for patients who relapse after CAR-T, are otherwise transplant-eligible, and achieve an objective response (CR or at least PR) to subsequent therapy.",
-      "Attainment of CR (or at least PR) prior to allografting is an explicit prerequisite for durable remission \u2014 mirrors PARMA-era chemosensitivity principle.",
-      "CD19-directed agents (tafa-len, loncastuximab) show markedly reduced efficacy after CD19 CAR-T failure (ORR ~17-34%, often CD19 antigen loss).",
-      "CD20xCD3 bispecifics (epcoritamab, glofitamab) retain meaningful activity post-CAR-T and can serve as a bridge to allo-HCT."
+      "Consecutive R/R DLBCL patients >=70 years referred for CD19 CAR-T (study cohort), matched to <70 controls",
+      "No centralized eligibility committee; national infrastructure did not mandate strict PS/organ cutoffs \u2014 enabling a non-selective elderly population",
+      "Only exclusions at screening: ECOG 4 (n=1) and active hepatitis B (n=1); 96% of referred elderly were eligible and apheresed",
+      "Explicitly NO numeric age cap \u2014 age itself not an exclusion"
     ],
-    "outcomes": "Post-CAR-T failure median OS ~6 months. CD19 agents post-CAR-T: tafa-len/loncaT ORR ~17-34%, CR ~5-17%, short PFS. Bispecifics post-CAR-T: epcoritamab ORR 54.1%/CR 34.4% in prior-CAR-T subgroup; glofitamab CR 35% in prior-CAR-T. Allo-HCT after CAR-T failure (Zurko et al, N=88): 1-year OS 59%, PFS 45%, NRM 22%; disease status CR in 51% at transplant. Fried et al (N=39): 2-year OS 45%, PFS 31%, NRM 43%. Durable remission achievable only in selected, chemo/immuno-responsive, fit (median age <65) patients.",
+    "outcomes": "41/47 (87%) infused; 96% of referred elderly eligible for apheresis. Response similar: CR 46% + PR 17% (ORR 63%) elderly vs 78% younger (P=0.337). Toxicity comparable: grade >=3 CRS 9.8% vs 7.3% (P=0.29); grade 3-4 ICANS 2.5% vs 4.9% (P=0.54); overall ICANS 27.5% vs 17.1% (P=0.48); hospital stay 23.4 vs 24.6 days (P=0.55). Non-relapse mortality 0 at 1 and 3 months both groups. Elderly 6-/12-mo PFS 39%/32%; OS 74%/69%. Age and ECOG PS had NO impact on CR, PFS, or OS in multivariate models; only high LDH, non-GCB, bridging, and post-CAR CR state mattered.",
     "grounds_rubric_claims": [
-      "Allogeneic HCT is reserved for LBCL patients who relapse after CAR-T (not used before/instead of CAR-T)",
-      "Allo-HCT after CAR-T requires achieving a CR (or at least PR) to subsequent therapy as a prerequisite for durable benefit",
-      "CD19-directed agents lose efficacy after CD19 CAR-T failure (antigen loss/downregulation); non-CD19 bispecifics are preferred and can bridge to allo-HCT",
-      "Post-CAR-T relapse is a poor-prognosis state (median OS ~6 months) warranting clinical-trial enrollment when available"
+      "CAR-T is feasible and effective in selected older adults (>=70); age per se should not preclude CAR-T",
+      "No numeric age cutoff is justified \u2014 outcomes matched younger patients when controlled for PS and LDH",
+      "Logistics/fitness composite (rapid referral-to-infusion, lymphocyte fitness, LDH, PS) drives outcome more than chronological age",
+      "ICANS severity was low here (tisa-cel-predominant); toxicity not increased by age in this cohort, but authors note axi-cel series report higher ICANS in older patients",
+      "Prior vascular disease and dementia did NOT predict ICANS in this cohort"
     ],
     "verbatim_quotes": [
       {
-        "quote": "Prior to the approval and widespread use of CAR T in R/R LBCL, allo-HCT was generally reserved for patients who relapsed after an auto-HCT and/or had failed multiple prior lines of therapy.",
-        "supports": "Allo-HCT is positioned as a later-line, post-cellular-therapy option \u2014 reserved, not front-loaded"
+        "quote": "outcomes of CAR-T cell therapy are comparable between elderly, geriatric and younger patients, indicating that age as per se should not preclude CAR-T cell administration.",
+        "supports": "No numeric age cutoff; age alone should not exclude CAR-T"
       },
       {
-        "quote": "One of the main limitations for allo-HCT is the prerequisite of achieving disease control in the form of CR or at least PR.",
-        "supports": "Chemosensitivity/response prerequisite for allo-HCT after CAR-T failure"
+        "quote": "There was no difference between the elderly and the control group in overall ICANS (27.5% vs. 17.1%. respectively, P=0.48) and grade 3-4 ICANS (2.5% vs. 4.9%, respectively, P=0.54).",
+        "supports": "Toxicity (incl. neurotoxicity) not increased by age in this tisa-cel-predominant cohort"
       },
       {
-        "quote": "relapsing after CAR Ts or failure to respond is generally associated with a poor prognosis with an anticipated median overall survival (OS) of approximately 6 months, at best",
-        "supports": "Post-CAR-T failure is a poor-prognosis decision node (median OS ~6 months)"
+        "quote": "Ideally, a geriatric scoring assessment should be employed and help to establish eligibility criteria for CAR-T cell therapy in this aged group pf patients.",
+        "supports": "Fitness/geriatric assessment (not age) should govern selection"
       }
     ],
-    "caveats": "Review-level (not a controlled trial); allo-HCT and bispecific data are largely retrospective/single-arm with selection bias toward younger, fitter, response-achieving patients (median age <65). No head-to-head data define optimal sequencing; authors recommend clinical-trial enrollment first, then bispecific/ADC/mAb (ideally targeting a non-CD19 antigen) with allo-HCT consolidation in eligible responders.",
+    "caveats": "Small (n=41 per arm), retrospective, single-country. Predominantly tisagenlecleucel, which the authors note carries lower ICANS than axi-cel \u2014 so the flat ICANS-by-age finding may not generalize to axi-cel. Possible residual selection: presumably ineligible patients may never have been referred. Matched on ECOG/LDH only; imbalance in ECOG 3 (12% elderly vs 39% younger) and prior autoHCT.",
     "full_text_available": true,
-    "line_field_note": "post-CAR-T"
+    "line": "Haematologica 2022;107(5):1111-1118"
+  },
+  {
+    "key": "Sehgal-2022-PILOT",
+    "title": "Lisocabtagene maraleucel as second-line therapy in adults with relapsed or refractory large B-cell lymphoma who were not intended for haematopoietic stem cell transplantation (PILOT)",
+    "authors_year": "Sehgal A, Hoda D, Riedell PA, et al. 2022",
+    "journal": "Lancet Oncology 2022;23(8):1066-1077",
+    "design": "Open-label, single-arm, phase 2 trial (PILOT; NCT03483103) at 18 US sites. Primary endpoint ORR by IRC (Lugano 2014). Null hypothesis ORR <=50.2% from a real-world synthetic control.",
+    "population": "61 patients treated (efficacy/safety set; 74 leukapheresed). R/R LBCL (DLBCL NOS, transformed FL, HGBCL double/triple-hit, FL grade 3B). Median age 74 (IQR 70-78), 46% aged >=75; 26% ECOG PS 2; 44% HCT-CI >=3. Disease status: 54% refractory, 21% relapsed <=12 mo, 25% relapsed >12 mo. 52% received bridging therapy.",
+    "line": "Second-line (exactly one prior line of anthracycline + CD20-containing chemoimmunotherapy), in patients NOT intended for HSCT.",
+    "key_eligibility": [
+      "Relapsed or refractory (< CR to first-line) LBCL after exactly ONE prior line containing an anthracycline and a CD20-targeted agent",
+      "NOT intended for HSCT by the investigator (subjective) AND met >=1 of 6 objective transplantation-not-intended (TNI) criteria: age >=70, ECOG PS 2, DLCO <=60%, LVEF <50%, CrCl <60 mL/min, or AST/ALT >2x ULN",
+      "PET-positive disease; adequate organ function for CAR T-cell therapy",
+      "Secondary CNS involvement was allowed"
+    ],
+    "outcomes": "ORR 80% (49/61; 95% CI 68-89; p<0.0001) and CR rate 54% (33/61; 95% CI 41-67). Median PFS 9.03 mo overall (22.60 mo in CR patients); median OS not reached; median DOR 12.09 mo overall and 21.65 mo in CR patients. CRS in 38% (23/61), grade 3 in only 1 (2%), no grade 4-5. Neurological events in 31% (grade 3 in 3 [5%], no grade 4-5). Grade >=3 prolonged cytopenia at day 28 in 30%. No CRS/neuro events led to treatment discontinuation; no treatment-related deaths in the CAR-T causal sense (2 COVID-19 deaths).",
+    "grounds_rubric_claims": [
+      "Liso-cel is an evidence-supported 2L option for transplant-INELIGIBLE R/R LBCL regardless of relapse timing (works even in patients who relapse >12 months, who are ineligible for the 2L CAR-T trials TRANSFORM/ZUMA-7 that required refractory/early-relapse)",
+      "Transplant-ineligibility by objective TNI criteria (age >=70, ECOG 2, organ dysfunction) qualifies a patient for 2L CAR-T even though they are not fit for HSCT",
+      "CAR-T is feasible and tolerable in an older, comorbid population (median age 74, 46% >=75, 44% HCT-CI >=3) with lower/manageable CRS (grade 3 only 2%) and ICANS (grade 3 5%)"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "These results support lisocabtagene maraleucel as a potential second-line treatment in patients with large B-cell lymphoma for whom HSCT is not intended.",
+        "supports": "Grounds liso-cel as a 2L option specifically for the transplant-ineligible population."
+      },
+      {
+        "quote": "33 (54%) had refractory disease, 13 (21%) relapsed within 1 year of first-line therapy, and 15 (25%) relapsed after 12 months of first-line therapy.",
+        "supports": "Includes patients relapsing >12 months, so 2L liso-cel applies regardless of relapse timing when transplant-ineligible."
+      },
+      {
+        "quote": "Cytokine release syndrome occurred in 23 (38%; grade 3 in one) patients and neurological events in 19 (31%; grade 3 in three) patients, with no grade 4 events or deaths.",
+        "supports": "Lower/manageable CRS and ICANS in this older transplant-ineligible cohort."
+      }
+    ],
+    "caveats": "Single-arm, synthetic (real-world) control for the null hypothesis. Older/comorbid population by design; 52% received bridging therapy (baseline SPD post-bridging understates tumor burden). Median on-study follow-up 12.3 mo.",
+    "full_text_available": true
+  },
+  {
+    "key": "Shawabkeh-2026-CART-CNS-metaanalysis",
+    "title": "Safety and efficacy of CAR T-cell therapy in central nervous system lymphoma: a systematic review and meta-analysis",
+    "authors_year": "Shawabkeh AE, et al., 2026",
+    "journal": "Frontiers in Oncology 2026;16:1790444",
+    "design": "Systematic review and meta-analysis (PRISMA 2020; PROSPERO CRD420251070033) of 39 studies (38 in quantitative analysis; up to 1,190 patients). Predominantly retrospective single-arm cohorts (n=28) plus 11 single-arm interventional/phase 1-2 studies; NO randomized comparisons. Freeman-Tukey double-arcsine pooling, random-effects (DerSimonian-Laird).",
+    "population": "Adults (>=18) with PCNSL or SCNSL treated with CD19-based CAR T-cell therapy (axi-cel, tisa-cel, liso-cel, brexu-cel, and dual/triple-targeted constructs). 20 studies SCNSL, 5 PCNSL, 13 both. Predominant histology DLBCL; includes double-/triple-hit subsets in several cohorts. No restriction on prior lines or bridging.",
+    "key_eligibility": [
+      "Included adults with PCNSL or SCNSL (systemic NHL with CNS involvement) receiving CD19-based CAR-T; single- and dual/triple-targeted constructs allowed",
+      "Case reports with <3 patients, reviews, editorials, and preclinical studies EXCLUDED; required separately reported CNS-lymphoma outcomes",
+      "Both prospective and retrospective designs, including case series with >=3 patients; no restriction on prior therapy lines, bridging, or geography",
+      "Rationale: pivotal CAR-T trials systematically excluded active CNS involvement due to neurotoxicity concerns"
+    ],
+    "outcomes": "Pooled ORR 0.75 (95% CI 0.70-0.79; I2=53.3%); CR 0.52 (0.46-0.58); PR 0.18 (0.14-0.22). No significant difference in ORR between PCNSL and SCNSL (p=0.063). PFS pooled HR PCNSL vs SCNSL 0.89 (95% CI 0.16-4.91, NS). OS rate 0.71 at 6 mo to 0.48 at 24 mo; PFS 0.41 at 6 mo to 0.28 at 24 mo. Pooled median-of-medians OS 8.6 mo, PFS 3.6 mo. CRS 83.5% (grade>=3 5.77%); ICANS 44.9% (grade>=3 17.4%).",
+    "grounds_rubric_claims": [
+      "Meta-analytic (non-randomized) evidence supports CAR T-cell therapy achieving robust responses in CNS lymphoma (ORR ~75%, CR ~52%)",
+      "Efficacy of CAR-T is comparable between primary and secondary CNS lymphoma",
+      "Severe CRS is infrequent (grade>=3 ~6%) and severe ICANS is manageable (~17%) in CNS-lymphoma CAR-T",
+      "Evidence base for CAR-T in CNS lymphoma is non-randomized (retrospective cohorts + single-arm trials), as CNS involvement was excluded from pivotal trials"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "The pooled overall response rate (ORR) was 0.75 [95% CI: 0.70-0.79]... Complete response (CR) rate was 0.52 [0.46-0.58]",
+        "supports": "Pooled CAR-T efficacy in CNS lymphoma: ORR 75%, CR 52%"
+      },
+      {
+        "quote": "CART therapy achieves robust response rates in CNS lymphoma, with efficacy comparable between PCNSL and SCNSL. Neurotoxicity remains frequent but manageable, and severe CRS events are infrequent.",
+        "supports": "Overall conclusion: comparable PCNSL/SCNSL efficacy; manageable neurotoxicity; infrequent severe CRS"
+      },
+      {
+        "quote": "Cytokine Release Syndrome (CRS) occurred in 83.5% [79.0-88.0], with grade>=3 CRS in 5.77% [3.0-9.0]. Immune Effector Cell-Associated Neurotoxicity Syndrome (ICANS) was reported in 44.9% [36.0-54.0], with severe (grade >=3) events in 17.4% [12.0-23.0].",
+        "supports": "Safety profile: CRS 83.5% (severe 5.8%), ICANS 44.9% (severe 17.4%)"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "Non-randomized evidence: 28/39 studies retrospective single-arm; substantial heterogeneity (ICANS I2=84%). PFS HR comparison PCNSL vs SCNSL very wide (0.16-4.91). Pooled proportions across heterogeneous products, prior-line burden, and bridging. Registry/abstract data included."
+  },
+  {
+    "key": "tafa-len-L-MIND",
+    "title": "Tafasitamab for Patients With Relapsed or Refractory DLBCL: Final 5-Year Efficacy and Safety (L-MIND)",
+    "authors_year": "Duell et al., 2023",
+    "journal": "Haematologica (2024;109(2):553-566)",
+    "design": "Open-label, single-arm, global multicenter phase 2 study (NCT02399085). Final 5-year analysis. Tafasitamab + lenalidomide for up to 12 cycles, then tafasitamab monotherapy until progression. Sponsor MorphoSys AG.",
+    "population": "80 patients (full analysis set) with ASCT-ineligible R/R DLBCL, 1-3 prior systemic therapies. Median age 72 (range 41-86); 50% had 1 prior line, 50% had >=2; 50% IPI 3-5; 18.8% primary refractory (by amended definition); 11.3% prior ASCT.",
+    "line": "2L+ (ASCT-ineligible; 1-3 prior lines; label positions as second-line for transplant-ineligible)",
+    "key_eligibility": [
+      "ASCT-ineligible R/R DLBCL, aged >=18",
+      "1 to 3 prior systemic therapies including >=1 CD20-targeting agent",
+      "ECOG 0-2",
+      "Primary-refractory disease was EXCLUDED per protocol; definition changed during trial (initially no response/progression within 3 mo, amended June 2016 to within 6 mo of prior anti-CD20 regimen), so some early-relapsing patients (3-6 mo) were enrolled -- 18.8% ultimately had primary-refractory disease by the updated definition",
+      "US label: DLBCL NOS including DLBCL arising from low-grade lymphoma, ineligible for ASCT"
+    ],
+    "outcomes": "Best ORR 57.5% (46/80; 95% CI 45.9-68.5); CR rate 41.3% (n=33); PR 16.3%. Median DoR not reached (median follow-up 44.0 mo); plateau after ~12 mo. Median PFS 11.6 mo (95% CI 5.7-45.7). Median OS 33.5 mo (95% CI 18.3-NR). By prior lines: 1 prior line ORR 67.5% (CR 52.5%), median PFS 23.5 mo; >=2 prior lines ORR 47.5% (CR 30.0%), median PFS 7.6 mo. 5-yr OS 72.7% for best-response CR vs 18.3% for PR. Grade >=3 TEAE 64.2%; neutropenia grade >=3 48.1%. AE frequency decreased on tafasitamab monotherapy.",
+    "outcomes_field_note": "",
+    "grounds_rubric_claims": [
+      "Tafa-len (L-MIND) is a standard second-line option specifically for ASCT-INELIGIBLE R/R DLBCL",
+      "Primary-refractory disease was an EXCLUSION criterion in L-MIND (key rubric gate: tafa-len not validated for primary-refractory patients)",
+      "Efficacy is markedly higher at 2L (1 prior line: ORR 67.5%, CR 52.5%) than at 3L+ (>=2 prior lines: ORR 47.5%, CR 30%) -- favors earlier use",
+      "Restricted to 1-3 prior lines; not studied beyond 3 prior lines",
+      "Depth of response (CR) drives long-term survival",
+      "Real-world data show 91% of typical R/R LBCL patients would not have met L-MIND eligibility"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "Patients with primary refractory disease were excluded, but because the definition changed while the study was active, some were eligible and included.",
+        "supports": "Primary-refractory exclusion criterion (core rubric gate) and the definitional nuance"
+      },
+      {
+        "quote": "tafasitamab, an anti-CD19 immunotherapy, is used with lenalidomide for patients with autologous stem cell transplant-ineligible relapsed/refractory diffuse large B-cell lymphoma",
+        "supports": "ASCT-ineligible positioning / indication"
+      },
+      {
+        "quote": "Patients who had received only one prior line of therapy had a higher ORR (67.5%, with 52.5% CR and 15.0% PR) compared to patients who had received two or more prior lines of therapy (47.5%, with 30.0% CR and 17.5% PR).",
+        "supports": "Line-of-therapy dependence favoring earlier (2L) use"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "Single-arm, small (n=80), no comparator. Primary-refractory definition changed mid-trial, so a minority of primary-refractory (3-6 mo relapse) patients were included. No/minimal prior CAR-T or prior anti-CD19 exposure in cohort; poorly generalizable to post-CAR-T setting (real-world: 91% ineligible for L-MIND)."
+  },
+  {
+    "key": "Takigawa-2024-CART-isolated-SCNS-case",
+    "title": "A case of successful CAR-T cell therapy for early isolated CNS recurrence of DLBCL with persistent CAR-T cells",
+    "authors_year": "Takigawa K, et al., 2024",
+    "journal": "Blood Cell Therapy (APBMT) 2024",
+    "design": "Single case report (n=1), non-randomized.",
+    "population": "66-year-old man with non-GCB DLBCL (Ann Arbor stage IV; IPI 2; CNS-IPI intermediate). Tumor immunophenotype CD10-, non-GCB (CD10-/BCL6-/MUM1+); positive for BCL2 and MYC by IHC. Achieved CR after 6x R-CHOP, then isolated CNS relapse (leptomeningeal, CSF B-cells 51/uL) 3 months later. Received 7 courses high-dose methotrexate + intrathecal MTX (partial response), then liso-cel CAR-T as second-line.",
+    "key_eligibility": [
+      "Isolated secondary CNS relapse of DLBCL (leptomeningeal/CSF disease; no systemic or radiographic parenchymal disease)",
+      "Early relapse (<1 year) after R-CHOP - rationale that ASCT would give only temporary benefit, favoring CAR-T",
+      "Liso-cel used as approved second-line therapy for early relapsed/refractory large B-cell lymphoma; tumor MYC+/BCL2+ by IHC (not stated as FISH-confirmed double-hit)"
+    ],
+    "outcomes": "Second CR achieved after liso-cel; CSF CR by day 18 with resolution of CNS symptoms, ongoing CR to day 120. CRS grade 2 (treated with tocilizumab); NO ICANS. Prolonged pancytopenia (bone marrow failure) recovered with G-CSF + eltrombopag. CAR-T dynamics: peripheral blood CAR-T 25% (d11), 8% (d18), 0.3% (d90); 46.3% CAR-T detected in CSF on day 18 - demonstrating CAR-T trafficking to meningeal disease. Cites Cook meta-analysis (128 pts; ORR 64% overall, 57% SCNSL; ICANS 48%, grade 3-4 26%).",
+    "grounds_rubric_claims": [
+      "CAR T-cell therapy (liso-cel) can be effective and tolerable in isolated secondary CNS DLBCL relapse (single-case, non-randomized evidence)",
+      "Secondary CNS lymphoma requires CNS-penetrant drugs; HD-MTX (with intrathecal MTX) is used before/around CAR-T",
+      "CAR-T cells traffic across the blood-brain barrier into CSF/meningeal disease (46.3% CAR-T in CSF at day 18)",
+      "In early (<1 yr) post-R-CHOP CNS relapse, CAR-T may be preferable to ASCT (which offers only temporary benefit)",
+      "CRS can be manageable (grade 2, tocilizumab) with absent ICANS even in CNS disease"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "This case is the first to validate the efficacy and safety of CAR-T cell therapy for isolated secondary CNS lymphoma in clinical practice.",
+        "supports": "Single-case evidence for CAR-T efficacy/safety in isolated secondary CNS DLBCL"
+      },
+      {
+        "quote": "we detected 46.3% of CAR-T cells in the CSF (2/uL) on day 18, suggesting that these CAR-T cells can migrate directly to meningeal lesions of DLBCL",
+        "supports": "CAR-T cells traffic into CSF/meningeal CNS disease"
+      },
+      {
+        "quote": "Secondary central nervous system (CNS) lymphomas typically require CNS-penetrating drugs; however, the available agents are limited with temporary effects and poor outcomes.",
+        "supports": "Rationale for CNS-penetrant drugs in secondary CNS lymphoma and unmet need motivating CAR-T"
+      }
+    ],
+    "full_text_available": true,
+    "caveats": "n=1 case report - lowest level of evidence, non-randomized, no comparator, short follow-up (CR to ~day 120). MYC/BCL2 were positive by immunohistochemistry only (double-expressor); FISH double-hit status not reported. OCR-garbled source text but clinical facts are legible."
+  },
+  {
+    "key": "Westin-2023-ZUMA-7-OS",
+    "title": "Survival with Axicabtagene Ciloleucel in Large B-Cell Lymphoma (ZUMA-7 OS analysis)",
+    "authors_year": "Westin JR, Oluwole OO, Kersten MJ, et al. 2023",
+    "journal": "N Engl J Med 2023;389:148-157 (NCT03391466)",
+    "design": "Prespecified overall-survival analysis of the phase 3 ZUMA-7 trial (2L axi-cel vs standard of care salvage chemoimmunotherapy + ASCT). OS was a key secondary endpoint; crossover from SOC to cellular therapy off-protocol was permitted. Note: local full-text file is the ZUMA-7 protocol + SAP supplement, which grounds the OS objective and endpoint definition verbatim; headline OS numbers below are the published Westin 2023 results.",
+    "population": "Same ZUMA-7 randomized population: adults with primary-refractory or early-relapse (\u226412 mo) R/R LBCL, transplant-intended. N=359 (axi-cel 180 vs SOC 179).",
+    "line": "Second line (2L) R/R LBCL",
+    "key_eligibility": [
+      "Identical to ZUMA-7 primary trial: primary-refractory or relapse \u226412 months after first-line anti-CD20 + anthracycline therapy, transplant-intended.",
+      "OS defined as time from randomization to death from any cause; analysis performed with ~5-year median follow-up despite substantial SOC-to-cellular-therapy crossover.",
+      "Demonstrates OS benefit is preserved even though a majority of SOC-arm patients later received cellular therapy off protocol."
+    ],
+    "outcomes": "Published Westin 2023 results: at median follow-up 47.2 months, median OS not reached with axi-cel vs 31.1 months with SOC; HR for death 0.726 (95% CI 0.54-0.98), P=0.03; estimated 4-year OS 54.6% vs 46.0%. OS benefit despite 57% of SOC patients receiving subsequent cellular immunotherapy. Confirms 2L axi-cel improves overall survival, not just EFS, over salvage/ASCT.",
+    "grounds_rubric_claims": [
+      "2L CAR-T (axi-cel) confers an overall-survival benefit over salvage chemotherapy + ASCT in primary-refractory/early-relapse LBCL",
+      "The ZUMA-7 EFS advantage translates into a durable OS advantage even with SOC-arm crossover to cellular therapy"
+    ],
+    "verbatim_quotes": [
+      {
+        "quote": "To evaluate the effect of axicabtagene ciloleucel compared to SOC on overall survival (OS)",
+        "supports": "OS was a prespecified objective of ZUMA-7, grounding the survival comparison"
+      },
+      {
+        "quote": "OS is defined as the time from randomization to death from any cause.",
+        "supports": "Endpoint definition for the overall-survival analysis underlying the OS benefit claim"
+      },
+      {
+        "quote": "Increased Survival with Axicabtagene Ciloleucel in Large B-Cell Lymphoma",
+        "supports": "Headline finding: 2L axi-cel increases overall survival vs standard salvage/ASCT"
+      }
+    ],
+    "caveats": "Local file is the protocol/SAP supplement; the OS results (median OS not reached vs 31.1 mo, HR 0.726, P=0.03, 4-yr OS 54.6% vs 46.0%) are from the NEJM 2023 article body and should be cited there. OS benefit is notable because a majority of SOC patients crossed over to cellular therapy, making this a conservative estimate of axi-cel benefit.",
+    "full_text_available": true,
+    "line_field_note": "2L"
   }
 ]
