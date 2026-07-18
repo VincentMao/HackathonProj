@@ -24,8 +24,8 @@ export default function VerifierPanel({ report }: { report: VerifierReport }) {
         <div>
           <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Rule checks</p>
           <ul className="space-y-2">
-            {report.rule_checks.map((c) => (
-              <li key={c.rule_id} className="rounded-lg border border-slate-200 p-2.5">
+            {report.rule_checks.map((c, i) => (
+              <li key={`${c.rule_id}-${i}`} className="rounded-lg border border-slate-200 p-2.5">
                 <div className="flex items-center gap-2">
                   <span className="font-mono text-[11px] font-semibold text-slate-500">{c.rule_id}</span>
                   <VerdictBadge verdict={c.verdict} />
@@ -41,8 +41,8 @@ export default function VerifierPanel({ report }: { report: VerifierReport }) {
         <div>
           <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">Evidence grounding</p>
           <ul className="space-y-2">
-            {report.groundings.map((g) => (
-              <li key={g.claim_id} className="rounded-lg border border-slate-200 p-2.5">
+            {report.groundings.map((g, i) => (
+              <li key={`${g.claim_id}-${i}`} className="rounded-lg border border-slate-200 p-2.5">
                 <div className="flex flex-wrap items-center gap-2">
                   <VerdictBadge verdict={g.verdict} />
                   {g.citation_id && <CitationPill id={g.citation_id} />}

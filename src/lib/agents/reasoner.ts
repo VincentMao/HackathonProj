@@ -119,6 +119,12 @@ function computeDelta(
   return deltas;
 }
 
+/** A regimen must appear at most once per ranked list; keep the first occurrence. */
+function dedupeByRegimen(options: z.infer<typeof Recommendation>[]): z.infer<typeof Recommendation>[] {
+  const seen = new Set<string>();
+  return options.filter((o) => (seen.has(o.regimen) ? false : (seen.add(o.regimen), true)));
+}
+
 export async function reason(
   caseId: string,
   chart: ChartExtract,
@@ -135,10 +141,12 @@ export async function reason(
     rankPass(rules, `CHART ONLY:\n${chartText}`, signal),
     rankPass(rules, `CHART:\n${chartText}\n\nROOM (conversation signals):\n${roomText || "(none)"}`, signal),
   ]);
+  const preOpts = dedupeByRegimen(pre.options);
+  const postOpts = dedupeByRegimen(post.options);
   return RecommendationSet.parse({
     case_id: caseId,
-    pre: { options: pre.options },
-    post: { options: post.options },
-    delta: computeDelta(pre.options, post.options),
+    pre: { options: preOpts },
+    post: { options: postOpts },
+    delta: computeDelta(preOpts, postOpts),
   });
 }

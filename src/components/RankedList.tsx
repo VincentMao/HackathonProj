@@ -29,7 +29,7 @@ export default function RankedList({
     <div className="space-y-3">
       {sorted.map((rec, i) => (
         <div
-          key={rec.regimen}
+          key={`${rec.regimen}-${i}`}
           className="stagger-in"
           style={{ animationDelay: `${i * 90}ms` }}
         >

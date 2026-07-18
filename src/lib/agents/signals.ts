@@ -60,9 +60,12 @@ export async function extractSignals(
     toolDescription: "Report the conversation-surfaced decision signals.",
     signal,
   });
+  // Keep one signal per key (the model sometimes reports the same key from several spans).
+  const seen = new Set<string>();
+  const unique = out.signals.filter((s) => (seen.has(s.key) ? false : (seen.add(s.key), true)));
   return VisitSignals.parse({
     case_id: caseId,
     mode,
-    signals: out.signals.map((s) => ({ ...s, ref: `visit.${s.key}` })),
+    signals: unique.map((s) => ({ ...s, ref: `visit.${s.key}` })),
   });
 }
