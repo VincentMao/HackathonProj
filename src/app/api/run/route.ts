@@ -8,6 +8,9 @@ import { getResult } from "@/lib/pipeline";
 import { ChartExtract } from "@/lib/rules";
 
 export const runtime = "nodejs";
+// A live run (signals -> reasoner x2 -> verifier grounding) takes ~30-50s. Vercel's default
+// function timeout is 10s; raise it so live/edited/scratch runs complete. 60s is the Hobby max.
+export const maxDuration = 60;
 
 export async function POST(req: Request) {
   let body: { caseId?: string; transcript?: string; chart?: unknown };
