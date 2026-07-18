@@ -63,6 +63,21 @@ function ecog(raw: RawCase): number | null {
   return Number.isNaN(n) ? null : n;
 }
 
+/** Find an Observation whose code.text contains `needle`; return its numeric/string value. */
+function obs(raw: RawCase, needle: string): { num: number | null; str: string | null } {
+  const list = raw.encounter_fhir.related_resources?.Observation ?? [];
+  const o = list.find((x) => (x.code?.text ?? "").toLowerCase().includes(needle.toLowerCase()));
+  if (!o) return { num: null, str: null };
+  const num = o.valueQuantity?.value ?? (o.valueString != null && !Number.isNaN(Number(o.valueString)) ? Number(o.valueString) : null);
+  return { num: num ?? null, str: o.valueString ?? (num != null ? String(num) : null) };
+}
+
+function patientName(raw: RawCase): string {
+  const n = (raw.patient_context.patient as { name?: Array<{ family?: string; given?: string[] }> }).name?.[0];
+  if (!n) return "";
+  return [n.given?.join(" "), n.family].filter(Boolean).join(" ");
+}
+
 function firstLine(raw: RawCase): string {
   const procs = (raw.encounter_fhir.related_resources?.Procedure ?? []).map((p) => (p.code?.text ?? "").toLowerCase());
   const t = procs.join(" | ");
@@ -102,42 +117,111 @@ export function extractChart(raw: RawCase): ChartExtract {
 
   const physiologicallyFit = eco == null ? age < 80 : eco <= 1;
 
+  const stageMatch = dx.match(/stage\s+(iv|iii|ii|i)\s*([ab])?/i);
+  const stage = stageMatch ? (stageMatch[1] + (stageMatch[2] ?? "")).toUpperCase() : "";
+  const bSymptoms = /night sweats|b symptoms|weight loss|drenching/.test(dx) || /[iv]+b$/i.test(stage);
+  const doubleHit = /double.?hit/.test(dx) && !/negative|like/.test(dx);
+  const firstLineText = firstLine(raw);
+  const anthracycline = /chop|epoch|chemo/i.test(firstLineText);
+
+  const lvef = obs(raw, "lvef");
+  const egfr = obs(raw, "egfr");
+  const ldh = obs(raw, "ldh");
+  const hgb = obs(raw, "hemoglobin").num ?? obs(raw, "hgb").num;
+  const hbv = obs(raw, "hepatitis b");
+  const hcv = obs(raw, "hepatitis c");
+  const diagnosis = raw.encounter_fhir.related_resources?.Condition?.[0]?.code?.text ?? "";
+
   const parsed = ChartExtract.safeParse({
+    patient: { name: patientName(raw), mrn: String((raw.patient_context.patient as { id?: string }).id ?? ""), sex: raw.patient_context.patient.gender ?? "unknown" },
     line: 2,
     region: "US",
     transplant_intent: age >= 75 ? "ineligible" : "intended",
     refractoriness: { primary_refractory: primaryRefractory },
     disease: {
+      diagnosis,
+      stage,
+      b_symptoms: bSymptoms,
+      sites: "",
+      largest_mass_cm: null,
+      ki67: null,
+      ldh_uln_ratio: ldh.num != null ? Math.round((ldh.num / 250) * 100) / 100 : null,
       chemosensitive: !primaryRefractory,
       relapse_timing: primaryRefractory ? "early" : "na",
       cell_of_origin: cellOfOrigin,
       cns_involvement: cnsInvolved,
       cns_compartment: compartment,
-      molecular: { myc_positive: mycPositive, myc_method: mycMethod },
+      molecular: { myc_positive: mycPositive, myc_method: mycMethod, double_hit: doubleHit },
     },
-    fitness: { age, cell_therapy_fit: physiologicallyFit },
-    prior: { first_line: firstLine(raw), cd19_directed: false },
+    fitness: { age, ecog: eco ?? 1, cell_therapy_fit: physiologicallyFit },
+    organ: {
+      lvef_current: lvef.num,
+      lvef_baseline: null,
+      egfr: egfr.str ?? "",
+      hepatitis_status: [hbv.str ? `HBV ${hbv.str}` : "", hcv.str ? `HCV ${hcv.str}` : ""].filter(Boolean).join("; "),
+    },
+    neuro: { neuropathy_grade: 0, foot_drop_history: false },
+    prior: {
+      first_line: firstLineText,
+      prior_response: primaryRefractory ? "refractory to first line" : "",
+      anthracycline_exposed: anthracycline,
+      vincristine_neuropathy: false,
+      cd19_directed: false,
+    },
+    labs: {
+      hgb,
+      other: [ldh.str ? `LDH ${ldh.str}` : "", obs(raw, "creatinine").str ? `Cr ${obs(raw, "creatinine").str}` : ""].filter(Boolean).join("; "),
+    },
+    social: { distance_minutes: null, lives_with_spouse: false },
     geriatric_assessment: { completed: false },
   });
   if (!parsed.success) throw new Error(`chart: extract failed validation:\n${parsed.error.toString()}`);
   return parsed.data;
 }
 
-/** Compact, human-readable chart summary for the reasoner prompt (NO note / AVS). */
+/** Full, human-readable chart summary for the reasoner prompt (NO note / AVS). */
 export function chartSummary(chart: ChartExtract): string {
   const d = chart.disease;
+  const o = chart.organ;
+  const p = chart.prior;
+  const line = (label: string, v: unknown) =>
+    v === null || v === undefined || v === "" ? null : `${label}: ${v}`;
   return [
-    `Age: ${chart.fitness.age}`,
-    `Line of therapy: ${chart.line}`,
-    `Primary-refractory: ${chart.refractoriness.primary_refractory}`,
-    `Chemosensitive: ${d.chemosensitive}`,
-    `Relapse timing: ${d.relapse_timing}`,
-    `Cell of origin: ${d.cell_of_origin}`,
-    `MYC: ${d.molecular.myc_positive ? d.molecular.myc_method : "negative"}`,
-    `CNS involvement: ${d.cns_involvement}${d.cns_compartment.length ? ` (${d.cns_compartment.join(", ")})` : ""}`,
-    `Transplant intent: ${chart.transplant_intent}`,
-    `Physiologic cell-therapy fitness: ${chart.fitness.cell_therapy_fit}`,
-    `Prior first line: ${chart.prior.first_line}`,
-    `Geriatric assessment completed: ${chart.geriatric_assessment.completed}`,
-  ].join("\n");
+    line("Patient", [chart.patient.name, chart.patient.sex, `age ${chart.fitness.age}`].filter(Boolean).join(", ")),
+    line("Line of therapy", chart.line),
+    line("Diagnosis", d.diagnosis),
+    line("Cell of origin", d.cell_of_origin),
+    line("MYC", d.molecular.myc_positive ? d.molecular.myc_method : "negative"),
+    line("Double-hit", d.molecular.double_hit),
+    line("Ki-67 (%)", d.ki67),
+    line("Stage", d.stage),
+    line("B symptoms", d.b_symptoms),
+    line("Sites", d.sites),
+    line("Largest mass (cm)", d.largest_mass_cm),
+    line("LDH (x ULN)", d.ldh_uln_ratio),
+    line("Primary-refractory", chart.refractoriness.primary_refractory),
+    line("Chemosensitive", d.chemosensitive),
+    line("Relapse timing", d.relapse_timing),
+    line("CNS involvement", d.cns_involvement ? `yes${d.cns_compartment.length ? ` (${d.cns_compartment.join(", ")})` : ""}` : "no"),
+    line("ECOG", chart.fitness.ecog),
+    line("Cardiac LVEF", o.lvef_current != null ? `${o.lvef_current}%${o.lvef_baseline != null ? ` (baseline ${o.lvef_baseline}%)` : ""}` : null),
+    line("eGFR", o.egfr),
+    line("Hepatitis", o.hepatitis_status),
+    line("Peripheral neuropathy grade", chart.neuro.neuropathy_grade),
+    line("Prior foot drop", chart.neuro.foot_drop_history),
+    line("Prior first line", p.first_line),
+    line("Prior response", p.prior_response),
+    line("Anthracycline exposed", p.anthracycline_exposed),
+    line("Prior vincristine neuropathy", p.vincristine_neuropathy),
+    line("Prior CD19-directed therapy", p.cd19_directed),
+    line("Hemoglobin (g/dL)", chart.labs.hgb),
+    line("Other labs", chart.labs.other),
+    line("Transplant intent", chart.transplant_intent),
+    line("Physiologic cell-therapy fitness", chart.fitness.cell_therapy_fit),
+    line("Distance to center (min)", chart.social.distance_minutes),
+    line("Lives with spouse", chart.social.lives_with_spouse),
+    line("Geriatric assessment completed", chart.geriatric_assessment.completed),
+  ]
+    .filter(Boolean)
+    .join("\n");
 }

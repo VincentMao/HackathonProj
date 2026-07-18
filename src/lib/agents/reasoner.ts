@@ -65,7 +65,11 @@ function system(rules: RuleTable): string {
     "prefer where indicated, and when an option is off strict guideline, set status='off_guideline' and fill " +
     "off_guideline{boundary, citation_id, tradeoff} — explain the boundary; never hard-stop a licensed physician " +
     "unless a rule is a hard exclusion. Every rationale.ref and every depends_on entry MUST be 'chart.<field>' " +
-    "or 'visit.<signalKey>'. Do not put age in depends_on when fitness/logistics are the real drivers.\n\n" +
+    "or 'visit.<signalKey>'. Do not put age in depends_on when fitness/logistics are the real drivers. " +
+    "Weigh the whole chart — organ function (e.g. cardiac LVEF vs anthracycline exposure), peripheral neuropathy " +
+    "(vincristine/polatuzumab), relapse timing and chemosensitivity — against the rules. Include only the most " +
+    "relevant options (typically 4-6): the preferred and serious candidates plus any noteworthy exclusion; you need " +
+    "not enumerate every regimen in the set.\n\n" +
     "RULE TABLE:\n" +
     ruleLines
   );

@@ -21,34 +21,68 @@ import { evaluateCondition, type Ctx } from "./condition";
  * ------------------------------------------------------------------ */
 
 export const ChartExtract = z.object({
+  // Identity (display)
+  patient: z.object({
+    name: z.string().default(""),
+    mrn: z.string().default(""),
+    sex: z.enum(["male", "female", "other", "unknown"]).default("unknown"),
+  }),
   line: z.number().int(),
   region: z.enum(["US"]).default("US"),
   transplant_intent: z.enum(["intended", "ineligible", "undetermined"]),
   refractoriness: z.object({
     // NOTE (open item #4 for Shalin): R01 keys on primary_refractory === true.
-    // Confirm Case B sets this true, or broaden R01 to include early_relapse_le6mo.
     primary_refractory: z.boolean(),
   }),
   disease: z.object({
+    diagnosis: z.string().default(""),
+    stage: z.string().default(""),
+    b_symptoms: z.boolean().default(false),
+    sites: z.string().default(""), // free-text list of nodal/extranodal sites + sizes
+    largest_mass_cm: z.number().nullable().default(null),
+    ki67: z.number().nullable().default(null),
+    ldh_uln_ratio: z.number().nullable().default(null), // LDH as x upper-limit-of-normal
     chemosensitive: z.boolean(),
-    relapse_timing: z.enum(["early", "late", "na"]), // early <=12mo
+    relapse_timing: z.enum(["early", "late", "na"]), // early <=12mo, late >12mo
     cell_of_origin: z.enum(["GCB", "ABC", "non_GCB", "unknown"]),
     cns_involvement: z.boolean(),
     cns_compartment: z.array(z.enum(["parenchymal", "leptomeningeal", "csf_positive"])),
     molecular: z.object({
       myc_positive: z.boolean(),
       myc_method: z.enum(["unknown", "rearrangement", "amplification", "not_tested"]),
+      double_hit: z.boolean().default(false),
     }),
   }),
   fitness: z.object({
     age: z.number().int(),
+    ecog: z.number().int().min(0).max(4).default(1),
     // DERIVED composite (open item #5): fitness + organ + comorbidity + caregiver + logistics.
-    // Never an age rule (R11). Computed, not extracted raw.
     cell_therapy_fit: z.boolean(),
+  }),
+  organ: z.object({
+    lvef_current: z.number().nullable().default(null), // %
+    lvef_baseline: z.number().nullable().default(null), // %
+    egfr: z.string().default(""),
+    hepatitis_status: z.string().default(""),
+  }),
+  neuro: z.object({
+    neuropathy_grade: z.number().int().min(0).max(4).default(0),
+    foot_drop_history: z.boolean().default(false),
   }),
   prior: z.object({
     first_line: z.string(),
+    prior_response: z.string().default(""),
+    anthracycline_exposed: z.boolean().default(false),
+    vincristine_neuropathy: z.boolean().default(false),
     cd19_directed: z.boolean(),
+  }),
+  labs: z.object({
+    hgb: z.number().nullable().default(null),
+    other: z.string().default(""), // free-text: WBC, platelets, CMP, serologies, etc.
+  }),
+  social: z.object({
+    distance_minutes: z.number().nullable().default(null),
+    lives_with_spouse: z.boolean().default(false),
   }),
   geriatric_assessment: z.object({
     completed: z.boolean(),
@@ -58,20 +92,38 @@ export type ChartExtract = z.infer<typeof ChartExtract>;
 
 /** Neutral defaults for a "from scratch" case the user builds live. */
 export const BLANK_CHART: ChartExtract = {
+  patient: { name: "", mrn: "", sex: "unknown" },
   line: 2,
   region: "US",
   transplant_intent: "undetermined",
   refractoriness: { primary_refractory: false },
   disease: {
+    diagnosis: "",
+    stage: "",
+    b_symptoms: false,
+    sites: "",
+    largest_mass_cm: null,
+    ki67: null,
+    ldh_uln_ratio: null,
     chemosensitive: true,
     relapse_timing: "na",
     cell_of_origin: "unknown",
     cns_involvement: false,
     cns_compartment: [],
-    molecular: { myc_positive: false, myc_method: "not_tested" },
+    molecular: { myc_positive: false, myc_method: "not_tested", double_hit: false },
   },
-  fitness: { age: 65, cell_therapy_fit: true },
-  prior: { first_line: "unknown", cd19_directed: false },
+  fitness: { age: 65, ecog: 1, cell_therapy_fit: true },
+  organ: { lvef_current: null, lvef_baseline: null, egfr: "", hepatitis_status: "" },
+  neuro: { neuropathy_grade: 0, foot_drop_history: false },
+  prior: {
+    first_line: "unknown",
+    prior_response: "",
+    anthracycline_exposed: false,
+    vincristine_neuropathy: false,
+    cd19_directed: false,
+  },
+  labs: { hgb: null, other: "" },
+  social: { distance_minutes: null, lives_with_spouse: false },
   geriatric_assessment: { completed: false },
 };
 
@@ -166,9 +218,19 @@ export function baseContext(chart: ChartExtract, signals: VisitSignals | null): 
     "disease.cns_compartment": chart.disease.cns_compartment,
     "disease.molecular.myc_positive": chart.disease.molecular.myc_positive,
     "disease.molecular.myc_method": chart.disease.molecular.myc_method,
+    "disease.stage": chart.disease.stage,
+    "disease.b_symptoms": chart.disease.b_symptoms,
+    "disease.ldh_uln_ratio": chart.disease.ldh_uln_ratio,
+    "disease.molecular.double_hit": chart.disease.molecular.double_hit,
     "fitness.age": chart.fitness.age,
+    "fitness.ecog": chart.fitness.ecog,
     "fitness.cell_therapy_fit": chart.fitness.cell_therapy_fit,
+    "organ.lvef_current": chart.organ.lvef_current,
+    "organ.lvef_baseline": chart.organ.lvef_baseline,
+    "neuro.neuropathy_grade": chart.neuro.neuropathy_grade,
     "prior.first_line": chart.prior.first_line,
+    "prior.anthracycline_exposed": chart.prior.anthracycline_exposed,
+    "prior.vincristine_neuropathy": chart.prior.vincristine_neuropathy,
     "prior.cd19_directed": chart.prior.cd19_directed,
     "geriatric_assessment.completed": chart.geriatric_assessment.completed,
   };

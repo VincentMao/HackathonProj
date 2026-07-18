@@ -187,7 +187,7 @@ export default function Home() {
       <div className="mt-6 grid gap-6 lg:grid-cols-[380px_1fr]">
         {/* ---------- Input panel ---------- */}
         <aside className="lg:sticky lg:top-6 lg:self-start">
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto">
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Starting point</p>
             <div className="mt-2 flex gap-2">
               {(["A", "B"] as const).map((k) => (
