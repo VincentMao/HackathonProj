@@ -10,14 +10,14 @@
  *   Edit + Run -> live pipeline (signals -> reasoner -> verifier), identical code path
  */
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { PipelineResult, Recommendation, RegimenId } from "@/lib/contracts";
+import type { PipelineResult, Recommendation, RegimenId, TodoItem } from "@/lib/contracts";
 import type { ChartExtract } from "@/lib/rules";
 import { BLANK_CHART } from "@/lib/rules";
 import { CASES, PRESET_KEYS, type PresetKey } from "@/components/labels";
 import ChartForm from "@/components/ChartForm";
 import RankedList from "@/components/RankedList";
 import SignalChip from "@/components/SignalChip";
-import DecisionBar, { type DecisionState } from "@/components/DecisionBar";
+import SummaryPanel from "@/components/SummaryPanel";
 
 type CaseKey = PresetKey | "scratch";
 const SCRATCH_ID = "SCRATCH::ENC-0001";
@@ -36,8 +36,13 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [dirty, setDirty] = useState(false);
-  const [decision, setDecision] = useState<DecisionState>({ action: null, reason: "" });
-  const [selectedRegimen, setSelectedRegimen] = useState<RegimenId | null>(null);
+  const [selectedRegimens, setSelectedRegimens] = useState<RegimenId[]>([]);
+  const [todos, setTodos] = useState<TodoItem[] | null>(null);
+  const [todosLoading, setTodosLoading] = useState(false);
+  const [todosError, setTodosError] = useState<string | null>(null);
+  const [checked, setChecked] = useState<Record<string, boolean>>({});
+  const [comment, setComment] = useState("");
+  const [sent, setSent] = useState(false);
   const runToken = useRef(0);
 
   const caseId = caseKey === "scratch" ? SCRATCH_ID : CASES[caseKey].caseId;
@@ -49,7 +54,6 @@ export default function Home() {
     setLoading(true);
     setError(null);
     setDirty(false);
-    setDecision({ action: null, reason: "" });
     const id = CASES[key].caseId;
     try {
       const caseRes = await fetch(`/api/case?caseId=${encodeURIComponent(id)}`);
@@ -99,7 +103,6 @@ export default function Home() {
       }
       setResult((await res.json()) as PipelineResult);
       setDirty(false);
-      setDecision({ action: null, reason: "" });
     } catch {
       if (token === runToken.current) setError("Could not reach /api/run.");
     } finally {
@@ -117,21 +120,21 @@ export default function Home() {
     setError(null);
     setLoading(false);
     setDirty(true);
-    setDecision({ action: null, reason: "" });
   }, []);
 
   useEffect(() => {
     void loadCase("A");
   }, [loadCase]);
 
-  // When a new result arrives, default-select the top plan and reset the decision.
+  // When a new result arrives, default-select the top plan and reset the summary.
   useEffect(() => {
-    if (!result) {
-      setSelectedRegimen(null);
-      return;
-    }
-    setSelectedRegimen(topOption(result)?.regimen ?? null);
-    setDecision({ action: null, reason: "" });
+    setTodos(null);
+    setChecked({});
+    setComment("");
+    setSent(false);
+    setTodosError(null);
+    const t = result ? topOption(result) : undefined;
+    setSelectedRegimens(t ? [t.regimen] : []);
   }, [result]);
 
   // Cmd/Ctrl+Enter runs live from anywhere (incl. the transcript textarea).
@@ -154,6 +157,47 @@ export default function Home() {
     setTranscript(v);
     setDirty(true);
   };
+
+  // Select plans: plain click replaces; ⌘/Ctrl-click toggles into a multi-selection.
+  const onSelectPlan = (regimen: RegimenId, additive: boolean) => {
+    setSelectedRegimens((prev) =>
+      additive ? (prev.includes(regimen) ? prev.filter((r) => r !== regimen) : [...prev, regimen]) : [regimen],
+    );
+    setTodos(null);
+    setChecked({});
+    setSent(false);
+    setTodosError(null);
+  };
+
+  const generateSummary = useCallback(async () => {
+    if (!chart || !result || selectedRegimens.length === 0) return;
+    const plans = result.recommendations.options.filter((o) => selectedRegimens.includes(o.regimen));
+    const verifications = result.verifier.plans.filter((v) => selectedRegimens.includes(v.regimen));
+    setTodosLoading(true);
+    setTodosError(null);
+    try {
+      const res = await fetch("/api/summary", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chart, plans, verifications }),
+      });
+      if (!res.ok) {
+        const d = await res.json().catch(() => null);
+        setTodosError(res.status === 501 ? "Summary unavailable — set ANTHROPIC_API_KEY." : d?.error ? String(d.error) : `Failed (${res.status}).`);
+        return;
+      }
+      const data = await res.json();
+      setTodos(data.todos as TodoItem[]);
+      setChecked({});
+      setSent(false);
+    } catch {
+      setTodosError("Could not reach /api/summary.");
+    } finally {
+      setTodosLoading(false);
+    }
+  }, [chart, result, selectedRegimens]);
+
+  const toggleTodo = (id: string) => setChecked((c) => ({ ...c, [id]: !c[id] }));
 
   const top = result ? topOption(result) : undefined;
   // "Age is not the decision": an older patient whose top plan hinges on function/logistics, not age.
@@ -297,9 +341,10 @@ export default function Home() {
 
               {/* One combined ranking (chart + room), each plan verified */}
               <div>
-                <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-slate-500">
-                  Recommended plans
-                </h2>
+                <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+                  <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500">Recommended plans</h2>
+                  <span className="text-xs text-slate-400">Click to select · ⌘/Ctrl-click for multiple</span>
+                </div>
                 {showAgeCallout && (
                   <div className="mb-3 rounded-xl border border-teal-300 bg-teal-50 p-3">
                     <p className="text-sm font-semibold text-teal-900">Age is not the decision</p>
@@ -311,12 +356,24 @@ export default function Home() {
                 <RankedList
                   options={result.recommendations.options}
                   verifications={result.verifier.plans}
-                  selectedRegimen={selectedRegimen}
-                  onSelect={(r) => setSelectedRegimen(r as RegimenId)}
+                  selectedRegimens={selectedRegimens}
+                  onSelect={onSelectPlan}
                 />
               </div>
 
-              <DecisionBar regimen={selectedRegimen} decision={decision} onChange={setDecision} />
+              <SummaryPanel
+                plans={result.recommendations.options.filter((o) => selectedRegimens.includes(o.regimen))}
+                todos={todos}
+                loading={todosLoading}
+                error={todosError}
+                onGenerate={() => void generateSummary()}
+                checked={checked}
+                onToggle={toggleTodo}
+                comment={comment}
+                onComment={setComment}
+                onSend={() => setSent(true)}
+                sent={sent}
+              />
             </>
           )}
         </section>

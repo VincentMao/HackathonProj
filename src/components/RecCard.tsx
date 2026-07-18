@@ -37,7 +37,7 @@ export default function RecCard({
   rec: Recommendation;
   verification?: PlanVerification;
   selected?: boolean;
-  onSelect?: () => void;
+  onSelect?: (additive: boolean) => void;
 }) {
   const excluded = rec.status === "excluded";
   const preferred = rec.status === "preferred";
@@ -64,7 +64,7 @@ export default function RecCard({
 
   return (
     <article
-      onClick={selectable ? onSelect : undefined}
+      onClick={selectable ? (e) => onSelect!(e.metaKey || e.ctrlKey) : undefined}
       className={`rounded-2xl border bg-white p-5 shadow-sm transition-all ${border} ${selectable ? "cursor-pointer hover:shadow-md" : ""}`}
     >
       <div className="flex items-start gap-4">

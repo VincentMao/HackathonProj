@@ -178,6 +178,23 @@ export const Decision = z.object({
 export type Decision = z.infer<typeof Decision>;
 
 /* ------------------------------------------------------------------ *
+ * 5. TODO summary — the summarizer turns the selected plan(s) into an actionable
+ *    clinical to-do list (orders, workup, consent, referrals, monitoring, coordination)
+ *    to hand off to downstream clinical workflow.
+ * ------------------------------------------------------------------ */
+
+export const TodoItem = z.object({
+  id: z.string(),
+  text: z.string(),
+  category: z.enum(["order", "workup", "consent", "referral", "monitoring", "supportive", "coordination", "other"]),
+  regimen: RegimenId.nullable(), // which selected plan this task belongs to (null = shared/cross-cutting)
+});
+export type TodoItem = z.infer<typeof TodoItem>;
+
+export const TodoList = z.object({ todos: z.array(TodoItem) });
+export type TodoList = z.infer<typeof TodoList>;
+
+/* ------------------------------------------------------------------ *
  * Pipeline result envelope
  * ------------------------------------------------------------------ */
 

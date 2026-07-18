@@ -2,7 +2,7 @@
  * The one combined ranking. Sorts by rank (excluded plans drop to the bottom) and renders a
  * selectable card per plan, each with its verifier attention flags + evidence.
  */
-import type { Recommendation, PlanVerification } from "@/lib/contracts";
+import type { Recommendation, PlanVerification, RegimenId } from "@/lib/contracts";
 import RecCard from "./RecCard";
 
 function order(a: Recommendation, b: Recommendation): number {
@@ -14,13 +14,13 @@ function order(a: Recommendation, b: Recommendation): number {
 export default function RankedList({
   options,
   verifications,
-  selectedRegimen,
+  selectedRegimens,
   onSelect,
 }: {
   options: Recommendation[];
   verifications: PlanVerification[];
-  selectedRegimen: string | null;
-  onSelect: (regimen: string) => void;
+  selectedRegimens: RegimenId[];
+  onSelect: (regimen: RegimenId, additive: boolean) => void;
 }) {
   const sorted = [...options].sort(order);
   const vByReg = new Map(verifications.map((v) => [v.regimen, v]));
@@ -32,8 +32,8 @@ export default function RankedList({
           <RecCard
             rec={rec}
             verification={vByReg.get(rec.regimen)}
-            selected={selectedRegimen === rec.regimen}
-            onSelect={rec.status === "excluded" ? undefined : () => onSelect(rec.regimen)}
+            selected={selectedRegimens.includes(rec.regimen)}
+            onSelect={rec.status === "excluded" ? undefined : (additive) => onSelect(rec.regimen, additive)}
           />
         </div>
       ))}
