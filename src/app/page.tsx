@@ -13,7 +13,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { PipelineResult, Recommendation } from "@/lib/contracts";
 import type { ChartExtract } from "@/lib/rules";
 import { BLANK_CHART } from "@/lib/rules";
-import { CASES } from "@/components/labels";
+import { CASES, PRESET_KEYS, type PresetKey } from "@/components/labels";
 import ChartForm from "@/components/ChartForm";
 import RankedList from "@/components/RankedList";
 import SignalChip from "@/components/SignalChip";
@@ -21,7 +21,7 @@ import VerdictBadge from "@/components/VerdictBadge";
 import VerifierPanel from "@/components/VerifierPanel";
 import DecisionBar, { type DecisionState } from "@/components/DecisionBar";
 
-type CaseKey = "A" | "B" | "scratch";
+type CaseKey = PresetKey | "scratch";
 const SCRATCH_ID = "SCRATCH::ENC-0001";
 
 function topPostOption(result: PipelineResult): Recommendation | undefined {
@@ -52,7 +52,7 @@ export default function Home() {
   const caseId = caseKey === "scratch" ? SCRATCH_ID : CASES[caseKey].caseId;
 
   // Load a starting case: populate editable inputs, then show the instant cached result.
-  const loadCase = useCallback(async (key: "A" | "B") => {
+  const loadCase = useCallback(async (key: PresetKey) => {
     const token = ++runToken.current;
     setCaseKey(key);
     setLoading(true);
@@ -189,17 +189,24 @@ export default function Home() {
         <aside className="lg:sticky lg:top-6 lg:self-start">
           <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto">
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Starting point</p>
-            <div className="mt-2 flex gap-2">
-              {(["A", "B"] as const).map((k) => (
+            <div className="mt-2 grid grid-cols-2 gap-2">
+              {PRESET_KEYS.map((k) => (
                 <button
                   key={k}
                   type="button"
                   onClick={() => void loadCase(k)}
-                  className={`flex-1 rounded-xl px-3 py-2 text-left text-sm transition-colors ${
+                  className={`rounded-xl px-3 py-2 text-left text-sm transition-colors ${
                     caseKey === k ? "bg-slate-900 text-white" : "border border-slate-200 text-slate-600 hover:bg-slate-100"
                   }`}
                 >
-                  <span className="block font-semibold">{CASES[k].title}</span>
+                  <span className="flex items-center gap-1.5 font-semibold">
+                    {CASES[k].title}
+                    {CASES[k].live && (
+                      <span className={`rounded px-1 py-0.5 text-[9px] font-bold uppercase ${caseKey === k ? "bg-teal-500 text-white" : "bg-teal-100 text-teal-700"}`}>
+                        live
+                      </span>
+                    )}
+                  </span>
                   <span className={`block text-xs ${caseKey === k ? "text-slate-300" : "text-slate-400"}`}>
                     {CASES[k].chart.age}{CASES[k].chart.sex} · {CASES[k].chart.diagnosis.split(",")[0]}
                   </span>

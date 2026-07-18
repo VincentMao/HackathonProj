@@ -1,0 +1,231 @@
+{
+  "id": "SYN-T2-0001::SYN-T2-ENC-0001",
+  "metadata": {
+    "source": "consilium-synthetic-test",
+    "synthetic": "True",
+    "blind": "True",
+    "patient_id": "SYN-T2-0001",
+    "encounter_id": "SYN-T2-ENC-0001",
+    "date": "2026-07-18T09:00:00-05:00",
+    "status": "finished",
+    "visit_title": "Relapsed non-GCB DLBCL, early relapse (2L) \u2014 treatment evaluation (blind test input)",
+    "visit_type": "Malignant hematology evaluation"
+  },
+  "patient_context": {
+    "patient": {
+      "resourceType": "Patient",
+      "id": "SYN-T2-0001",
+      "name": [
+        {
+          "use": "official",
+          "family": "Delacroix",
+          "given": [
+            "Frank"
+          ]
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1950-03-09",
+      "address": [
+        {
+          "state": "CT",
+          "country": "US"
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "text": "English (United States)"
+          }
+        }
+      ]
+    },
+    "longitudinal_summary": {
+      "resource_counts": {
+        "Condition": "3",
+        "Observation": "7",
+        "Procedure": "2",
+        "DiagnosticReport": "2",
+        "MedicationStatement": "3"
+      },
+      "condition_labels": [
+        "Relapsed non-GCB DLBCL (early relapse, double-hit negative)",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "medication_labels": [
+        "lisinopril",
+        "atorvastatin",
+        "aspirin"
+      ]
+    }
+  },
+  "encounter_fhir": {
+    "encounter": {
+      "resourceType": "Encounter",
+      "id": "SYN-T2-ENC-0001",
+      "status": "finished",
+      "class": {
+        "code": "AMB"
+      },
+      "type": [
+        {
+          "text": "Malignant hematology evaluation"
+        }
+      ],
+      "subject": {
+        "reference": "urn:uuid:SYN-T2-0001",
+        "display": "Frank Delacroix"
+      }
+    },
+    "related_resources": {
+      "Condition": [
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "relapsed"
+          },
+          "code": {
+            "text": "Relapsed diffuse large B-cell lymphoma, non-GCB (ABC-type); double-hit NEGATIVE (FISH negative MYC/BCL2/BCL6); stage III; EARLY relapse (progression ~4 months after completing R-CHOP, within 12 months)"
+          }
+        },
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "active"
+          },
+          "code": {
+            "text": "Essential hypertension (controlled)"
+          }
+        },
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "active"
+          },
+          "code": {
+            "text": "Hyperlipidemia"
+          }
+        }
+      ],
+      "Observation": [
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "ECOG performance status (documented)"
+          },
+          "valueString": "1"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "LVEF"
+          },
+          "valueQuantity": {
+            "value": 60,
+            "unit": "%"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "eGFR"
+          },
+          "valueString": ">60"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Hemoglobin"
+          },
+          "valueQuantity": {
+            "value": 11.8,
+            "unit": "g/dL"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Relapse timing"
+          },
+          "valueString": "Early (<12 months from first-line); 2L cellular-therapy population"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Prior target-antigen exposure"
+          },
+          "valueString": "CD20 (rituximab, R-CHOP)"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Living situation (documented)"
+          },
+          "valueString": "Lives at home with supportive spouse; drives; no documented functional limitation"
+        }
+      ],
+      "Procedure": [
+        {
+          "resourceType": "Procedure",
+          "status": "completed",
+          "code": {
+            "text": "R-CHOP x6 (first line, ~10 months ago) -> partial response"
+          }
+        },
+        {
+          "resourceType": "Procedure",
+          "status": "completed",
+          "code": {
+            "text": "Cervical lymph node core biopsy (relapse)"
+          }
+        }
+      ],
+      "DiagnosticReport": [
+        {
+          "resourceType": "DiagnosticReport",
+          "code": {
+            "text": "Restaging PET/CT"
+          },
+          "conclusion": "Bilateral cervical and axillary adenopathy with a para-aortic nodal conglomerate; FDG-avid; no CNS, extranodal-organ, or marrow disease. Stage III."
+        },
+        {
+          "resourceType": "DiagnosticReport",
+          "code": {
+            "text": "Cervical node biopsy pathology"
+          },
+          "conclusion": "Relapsed DLBCL, non-GCB (Hans); FISH negative for MYC, BCL2, BCL6 rearrangements (double-hit negative)."
+        }
+      ],
+      "MedicationStatement": [
+        {
+          "resourceType": "MedicationStatement",
+          "medicationCodeableConcept": {
+            "text": "lisinopril"
+          }
+        },
+        {
+          "resourceType": "MedicationStatement",
+          "medicationCodeableConcept": {
+            "text": "atorvastatin"
+          }
+        },
+        {
+          "resourceType": "MedicationStatement",
+          "medicationCodeableConcept": {
+            "text": "aspirin 81 mg"
+          }
+        }
+      ]
+    }
+  },
+  "transcript": "DR: Mr. Delacroix, good to see you. And Mrs. Delacroix, thanks for coming in together. I want to go over the recent scans and the biopsy with you both.\n\nPT: Sure, sure. Whatever you need, doc.\n\nDR: Frank, before I get into it, tell me in your own words, what's your understanding of why we're here today?\n\nPT: Well, I've been coming in for the... for the treatments. Nora handles the schedule. I know we did the chemo, that was a while back. Is everything okay?\n\nNORA: We finished the R-CHOP in the spring, honey. Then they did the scan. Doctor, we're here about the scan.\n\nDR: That's right. Frank, the lymphoma has come back, and it came back fairly soon after your first treatment. That's what the biopsy of the neck lymph node showed.\n\nPT: It came back? I thought we... didn't we get rid of it?\n\nNORA: We thought so too. It's back, Frank. That's what the doctor's saying.\n\nPT: Okay. Okay. So we do the chemo again.\n\nDR: There are a few options and I want to walk through them carefully, because when it comes back this quickly there are stronger treatments we consider. But first I need to understand how you've been doing day to day. Frank, what are you taking for medications right now?\n\nPT: Oh, the... I've got the blood pressure one. And a couple others. Nora, what am I on?\n\nNORA: He's on the lisinopril, the atorvastatin, and the baby aspirin. I set them up in the weekly box every Sunday. He does fine as long as they're in the box.\n\nDR: And who handles things like the bills, the driving, the appointments?\n\nNORA: I've taken over the bills this past year, it just got to be too much for him. I do the driving mostly now. He still drives to the store sometimes.\n\nPT: I drive fine.\n\nNORA: You do, honey. Although, doctor, I'll be honest, last month he went to the Stop and Shop, the one we've gone to for twenty years, and he called me because he couldn't remember how to get home. That scared me. But he's just tired, with all of this.\n\nPT: That was a one-time thing. I was distracted.\n\nDR: I understand. Those things happen. Frank, how's your energy, your appetite? Any weakness, numbness, fevers?\n\nPT: I feel alright. Maybe a little slow. But I'm ready to fight this. Whatever it takes, doc, I mean it. I'm not a quitter. You tell me what to do and I'll do it.\n\nDR: I hear you, and I appreciate that spirit, it matters. Frank, can I ask, the treatment we talked about a minute ago, can you tell me back what you understood about it?\n\nPT: The... the strong treatment. For the... the lymph nodes. Nora knows the details better than me, she keeps track. Whatever you two think is best, I trust you.\n\nNORA: He's always been the sharp one, the accountant in the family. This slowness is new, the last year or so. I do more and more of the keeping-track now. But he wants to do everything, and so do I. We're not giving up on him.\n\nDR: I can see how much you're both in this together, and that support is real and important. Frank, one more, do you know today's date, roughly, and where we are?\n\nPT: It's... it's summer. We're at the... the hospital, your office. The date, I'd have to look. Nora would know.\n\nDR: That's alright. Here's where I am. Frank, you've got a lymphoma that's come back early, and on the strength of that alone there are intensive treatments I'd normally reach for right away. But some of those treatments ask a lot of a person, they need someone to catch problems quickly and to make some complicated decisions along the way, and I want to make sure we set you up safely for whatever we choose. So before I give you a firm recommendation, I want to do a couple more assessments and take a little time to get this exactly right for you.\n\nNORA: Whatever you need to check, doctor. We'll do it.\n\nPT: That's fine by me. You're the boss, doc.\n\nDR: We'll finish the workup and I'll sit down with both of you with a clear plan. In the meantime, any fever over 100.4, new confusion beyond the usual, trouble breathing, or a bad fall, you call us right away.\n\nNORA: I'll watch him like a hawk. Thank you, doctor.\n\nDR: Thank you both. We'll talk very soon.",
+  "note": "**HPI/Assessment:** 76-year-old man with stage III non-GCB DLBCL treated ~10 months ago with R-CHOP x6 (partial response), now with early relapse (progression ~4 months after completing therapy) confirmed on biopsy of a cervical node (non-GCB, double-hit negative), stage III. ECOG 1 (documented). Organ function preserved (LVEF 60%, eGFR >60, normal hepatic function). Comorbidities: controlled hypertension, hyperlipidemia. Lives at home with his wife. Presents with his spouse to discuss treatment for relapsed disease.\n\n**Plan:** Restaging and relapse biopsy complete. *Treatment planning in progress \u2014 to be determined; additional assessments pending.* (Intentionally omitted for blind model evaluation.)",
+  "after_visit_summary": "Treatment plan to be determined; additional assessments pending. (Blind test case: plan intentionally omitted.)",
+  "after_visit_summary_provenance": {
+    "method": "authored-synthetic-blind",
+    "clinically_reviewed": false,
+    "synthetic": true,
+    "blind": true
+  }
+}

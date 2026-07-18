@@ -123,17 +123,22 @@ export interface ChartSummary {
   note: string;
 }
 
+export type PresetKey = "A" | "B" | "T1" | "T2";
+
 export interface CaseMeta {
-  key: "A" | "B" | "C";
+  key: PresetKey;
   caseId: string;
   title: string;
   scenario: string;
   chart: ChartSummary;
-  /** Baseline transcript shown for Case C; A/B rely on the cached fixture. */
-  transcript: string;
+  /** True for blind test cases (no cached fixture — loading runs the pipeline live). */
+  live: boolean;
 }
 
-export const CASES: Record<"A" | "B" | "C", CaseMeta> = {
+/** Preset order shown in the UI. */
+export const PRESET_KEYS: PresetKey[] = ["A", "B", "T1", "T2"];
+
+export const CASES: Record<PresetKey, CaseMeta> = {
   A: {
     key: "A",
     caseId: "SYN-A-0001::SYN-A-ENC-0001",
@@ -149,7 +154,7 @@ export const CASES: Record<"A" | "B" | "C", CaseMeta> = {
       ecog: "ECOG 1",
       note: "Fit, working full-time, strong caregiver support.",
     },
-    transcript: "",
+    live: false,
   },
   B: {
     key: "B",
@@ -166,31 +171,40 @@ export const CASES: Record<"A" | "B" | "C", CaseMeta> = {
       ecog: "ECOG 1",
       note: "Robust, independent, gardens daily; lives alone, 90 min from center.",
     },
-    transcript: "",
+    live: false,
   },
-  C: {
-    key: "C",
-    caseId: "SYN-C-0001::SYN-C-ENC-0001",
-    title: "Live case",
-    scenario: "Type the room. Run the pipeline live.",
+  T1: {
+    key: "T1",
+    caseId: "SYN-T1-0001::SYN-T1-ENC-0001",
+    title: "Harold Iverson",
+    scenario: "Late relapse — the heart and the nerves must shape the choice. (live)",
     chart: {
-      name: "Live patient",
-      age: 74,
-      sex: "—",
-      diagnosis: "Relapsed/refractory aggressive B-cell lymphoma",
-      refractoriness: "Refractory",
-      priorLine: "R-CHOP",
-      ecog: "ECOG —",
-      note: "Edit the transcript below and run the pipeline live.",
+      name: "Harold Iverson",
+      age: 65,
+      sex: "M",
+      diagnosis: "Relapsed non-GCB DLBCL (double-hit negative), stage IIIB",
+      refractoriness: "Late relapse (~3 y)",
+      priorLine: "R-CHOP ×6 → CR",
+      ecog: "ECOG 1",
+      note: "LVEF 65→50, residual grade-1 neuropathy; ~1 h away, strong support.",
     },
-    transcript:
-      "DR: Good to see you. Before we talk treatment, tell me how you're actually doing day to day.\nPT: Honestly, not bad. I keep busy.\nDR: Any new symptoms since we last spoke?\nPT: ",
+    live: true,
+  },
+  T2: {
+    key: "T2",
+    caseId: "SYN-T2-0001::SYN-T2-ENC-0001",
+    title: "Frank Delacroix",
+    scenario: "Early relapse on paper; the room reveals cognitive decline. (live)",
+    chart: {
+      name: "Frank Delacroix",
+      age: 76,
+      sex: "M",
+      diagnosis: "Relapsed non-GCB DLBCL (double-hit negative), early relapse (2L)",
+      refractoriness: "Early relapse (<12 mo)",
+      priorLine: "R-CHOP ×6 → PR",
+      ecog: "ECOG 1",
+      note: "HTN/HLD; the room surfaces memory concerns bearing on CAR-T.",
+    },
+    live: true,
   },
 };
-
-/** Suggested sentences a judge can append to the Case C transcript. */
-export const CASE_C_SUGGESTIONS: string[] = [
-  "Still gardening every day",
-  "Lives 90 minutes away",
-  "New back pain and leg weakness",
-];

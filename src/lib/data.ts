@@ -68,8 +68,9 @@ export function citationIds(): Set<string> {
 const CASE_FILES: Record<string, string> = {
   "SYN-A-0001::SYN-A-ENC-0001": "consilium-case-A.json",
   "SYN-B-0001::SYN-B-ENC-0001": "consilium-case-B.json",
-  // Case C reuses Case B's chart as a live-editable base (judge appends transcript).
-  "SYN-C-0001::SYN-C-ENC-0001": "consilium-case-B.json",
+  // Blind live-demo test cases (no fixtures -> always run live).
+  "SYN-T1-0001::SYN-T1-ENC-0001": "consilium-case-T1.json",
+  "SYN-T2-0001::SYN-T2-ENC-0001": "consilium-case-T2.json",
 };
 
 // Cases are authored, not zod-validated here (shape is the encounter schema).

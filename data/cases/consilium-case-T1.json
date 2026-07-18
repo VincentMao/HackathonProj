@@ -1,0 +1,230 @@
+{
+  "id": "SYN-T1-0001::SYN-T1-ENC-0001",
+  "metadata": {
+    "source": "consilium-synthetic-test",
+    "synthetic": "True",
+    "blind": "True",
+    "patient_id": "SYN-T1-0001",
+    "encounter_id": "SYN-T1-ENC-0001",
+    "date": "2026-07-18T09:00:00-05:00",
+    "status": "finished",
+    "visit_title": "Relapsed non-GCB DLBCL, late relapse \u2014 treatment evaluation (blind test input)",
+    "visit_type": "Malignant hematology evaluation"
+  },
+  "patient_context": {
+    "patient": {
+      "resourceType": "Patient",
+      "id": "SYN-T1-0001",
+      "name": [
+        {
+          "use": "official",
+          "family": "Iverson",
+          "given": [
+            "Harold"
+          ]
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1961-02-14",
+      "address": [
+        {
+          "state": "CT",
+          "country": "US"
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "text": "English (United States)"
+          }
+        }
+      ]
+    },
+    "longitudinal_summary": {
+      "resource_counts": {
+        "Condition": "3",
+        "Observation": "9",
+        "Procedure": "2",
+        "DiagnosticReport": "3"
+      },
+      "condition_labels": [
+        "Relapsed non-GCB DLBCL (double-hit negative)",
+        "Residual grade 1 peripheral neuropathy (vincristine)",
+        "Asymptomatic LVEF decline"
+      ],
+      "medication_labels": []
+    }
+  },
+  "encounter_fhir": {
+    "encounter": {
+      "resourceType": "Encounter",
+      "id": "SYN-T1-ENC-0001",
+      "status": "finished",
+      "class": {
+        "code": "AMB"
+      },
+      "type": [
+        {
+          "text": "Malignant hematology evaluation"
+        }
+      ],
+      "subject": {
+        "reference": "urn:uuid:SYN-T1-0001",
+        "display": "Harold Iverson"
+      }
+    },
+    "related_resources": {
+      "Condition": [
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "relapsed"
+          },
+          "code": {
+            "text": "Relapsed diffuse large B-cell lymphoma, non-GCB (ABC-type); double-hit NEGATIVE (FISH negative MYC/BCL2/BCL6); Ki-67 ~80%; stage IIIB; late relapse ~3 years after CR to R-CHOP"
+          }
+        },
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "active"
+          },
+          "code": {
+            "text": "Residual grade 1 chemotherapy-induced peripheral neuropathy (prior vincristine; prior foot drop, resolved)"
+          }
+        },
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "active"
+          },
+          "code": {
+            "text": "Asymptomatic left ventricular systolic decline (LVEF 65% -> 50%)"
+          }
+        }
+      ],
+      "Observation": [
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "ECOG performance status"
+          },
+          "valueString": "1"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "LVEF (current echocardiogram)"
+          },
+          "valueQuantity": {
+            "value": 50,
+            "unit": "%"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "LVEF (at original diagnosis)"
+          },
+          "valueQuantity": {
+            "value": 65,
+            "unit": "%"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "LDH"
+          },
+          "valueString": "~1.3x ULN (elevated)"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Hemoglobin"
+          },
+          "valueQuantity": {
+            "value": 12.1,
+            "unit": "g/dL"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "B symptoms"
+          },
+          "valueString": "Present (drenching night sweats)"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Peripheral neuropathy grade"
+          },
+          "valueString": "Grade 1 (functional)"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Prior target-antigen exposure"
+          },
+          "valueString": "CD20 (rituximab, R-CHOP)"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Prior vinca exposure"
+          },
+          "valueString": "Vincristine (neurotoxicity: prior foot drop)"
+        }
+      ],
+      "Procedure": [
+        {
+          "resourceType": "Procedure",
+          "status": "completed",
+          "code": {
+            "text": "R-CHOP x6 (first line, ~3 years ago) -> complete remission; vincristine attenuated for neuropathy"
+          }
+        },
+        {
+          "resourceType": "Procedure",
+          "status": "completed",
+          "code": {
+            "text": "Left supraclavicular mass core biopsy (relapse)"
+          }
+        }
+      ],
+      "DiagnosticReport": [
+        {
+          "resourceType": "DiagnosticReport",
+          "code": {
+            "text": "Restaging PET/CT"
+          },
+          "conclusion": "5.0 cm left supraclavicular nodal mass and 4.0 cm retroperitoneal node; FDG-avid; no CNS, extranodal-organ, or marrow disease. Stage IIIB."
+        },
+        {
+          "resourceType": "DiagnosticReport",
+          "code": {
+            "text": "Supraclavicular biopsy pathology"
+          },
+          "conclusion": "Relapsed DLBCL, non-GCB (Hans); FISH negative for MYC, BCL2, BCL6 rearrangements (double-hit negative); Ki-67 ~80%."
+        },
+        {
+          "resourceType": "DiagnosticReport",
+          "code": {
+            "text": "Echocardiogram"
+          },
+          "conclusion": "LVEF 50%, asymptomatic; down from 65% at original diagnosis."
+        }
+      ]
+    }
+  },
+  "transcript": "DR: Mr. Iverson, thanks for coming in, and for calling when the night sweats started. That was the right move. I've had a chance to go through the scans and the biopsy, so let's talk about where things stand.\n\nPT: Please. The sweats have been drenching, I'm changing the sheets at 3 a.m. And I'm tired in a way I haven't been.\n\nFAMILY: I'm Diane, his wife. The fatigue is new. Up until a couple months ago he was doing great, out on the golf course, no complaints for a good year.\n\nDR: That's important context, thank you. Here's the situation. The lymphoma has come back. The biopsy of the lump above your collarbone shows it's the same diffuse large B-cell lymphoma you had before, not a new or more aggressive type, and importantly the high-risk genetic markers we worry about are negative. There's the mass above the collarbone and a node deep in the belly. The night sweats are the lymphoma.\n\nPT: It's back. Okay. It's been three years though, that's something?\n\nDR: It is, and I want you to hold onto that. When lymphoma comes back years later like yours, rather than during or right after the first treatment, that's a more favorable pattern and it opens up more options for us. So the timing is on your side.\n\nPT: Good. Because I'll do whatever it takes. I'm not going to sit on my hands.\n\nDR: I can see that, and it matters. Before we get into specifics I want to understand two things from your history, because they'll shape what's safe for you. First, the nerves. Tell me about the foot drop from last time.\n\nPT: That was rough. During the first chemo my right foot started slapping when I walked, I was tripping. They told me it was one of the drugs, they backed it off, and it slowly got better. Now I've just got some numbness in the toes, pins and needles, but I walk fine, I drive, I play golf. It doesn't stop me.\n\nDR: So functionally you're good, but there's still some residual nerve damage from that drug. That's exactly the kind of thing I need to factor in, because some of the treatments we might consider can worsen neuropathy and I don't want to bring that foot drop back.\n\nPT: I'd really rather not go through that again. But if it's what I need, I'm listening.\n\nDR: Understood, and we'll weigh it carefully. The second thing is your heart. Your heart function was normal when you were first treated, and it's come down somewhat since, into the borderline range, though you don't have any symptoms from it. Any shortness of breath, ankle swelling, chest tightness?\n\nPT: No, none of that. I feel my heart's fine. I get winded now but I think that's the tiredness from this, not my heart.\n\nDR: That fits. It's something we watch, because a couple of the treatment paths lean on the heart or on drugs your heart's already seen, so I'll build that into the plan. Now, a few practical things. How far are you from us here?\n\nFAMILY: About an hour each way. It's very doable, we've been making the drive without any trouble.\n\nDR: And support at home?\n\nFAMILY: He's got me. I'm retired, I can be at every appointment, I can stay with him for whatever's needed.\n\nPT: She runs a tighter ship than any nurse, no offense.\n\nDR: None taken, that's a real asset here. And you clearly follow all of this well, you're asking the right questions. That all counts. Let me be straight with you about where we are: you've got a lymphoma that's come back late, which is favorable, in a body that's in good shape overall but with two things I have to respect, the nerves and the heart. There are a few genuinely good directions we can go from here, and they trade off differently on effectiveness, on your heart, and on those nerves.\n\nPT: So what do we do?\n\nDR: I'm going to work through the options carefully rather than shoot from the hip, because getting the match right for you specifically is the whole game here. I want to lay them out, weigh each against your heart and your neuropathy, and I'll likely bring your case to our lymphoma group so you get more than one set of eyes on it. Then you and Diane and I sit down and decide together.\n\nPT: That's what I want. Do it right.\n\nDR: That's the plan. Let's get the rest of the workup buttoned up so nothing's missing when we choose, and I'll have a clear recommendation for you to react to.\n\nFAMILY: What do we watch for in the meantime?\n\nDR: Fevers over 100.4, any new severe pain, trouble breathing, or new weakness or numbness beyond what you already have, you call us. And keep noting the sweats and the fatigue so we can track them.\n\nPT: Will do. Thank you for not rushing it.\n\nDR: You've earned a careful plan. We'll talk very soon.",
+  "note": "**HPI/Assessment:** 65-year-old man with a history of stage IV non-GCB DLBCL treated 3 years ago with R-CHOP x6 to complete remission, complicated by vincristine-induced neuropathy (prior foot drop, now grade 1 residual). Presents with a late relapse: new drenching night sweats and fatigue, restaging PET/CT showing a 5.0 cm left supraclavicular mass and a 4.0 cm retroperitoneal node; supraclavicular biopsy confirms relapsed non-GCB DLBCL, double-hit negative. Stage IIIB. ECOG 1. Notable comorbidity: LVEF 65% to 50% (asymptomatic) and residual grade 1 neuropathy. Excellent health literacy and support; lives ~1 hour away; strongly motivated for treatment.\n\n**Plan:** Restaging and relapse biopsy complete. *Treatment planning in progress \u2014 to be determined.* (Intentionally omitted for blind model evaluation.)",
+  "after_visit_summary": "Treatment plan to be determined; workup complete, options under review. (Blind test case: plan intentionally omitted.)",
+  "after_visit_summary_provenance": {
+    "method": "authored-synthetic-blind",
+    "clinically_reviewed": false,
+    "synthetic": true,
+    "blind": true
+  }
+}

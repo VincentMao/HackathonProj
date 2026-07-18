@@ -72,6 +72,18 @@ function obs(raw: RawCase, needle: string): { num: number | null; str: string | 
   return { num: num ?? null, str: o.valueString ?? (num != null ? String(num) : null) };
 }
 
+/** All clinical free-text (conditions, observations, procedures, reports, labels), lowercased. */
+function clinicalText(raw: RawCase): string {
+  const rr = raw.encounter_fhir.related_resources ?? {};
+  const parts: string[] = [];
+  for (const c of rr.Condition ?? []) parts.push(c.code?.text ?? "");
+  for (const o of rr.Observation ?? []) parts.push(`${o.code?.text ?? ""} ${o.valueString ?? ""} ${o.valueQuantity?.value ?? ""}`);
+  for (const p of rr.Procedure ?? []) parts.push(p.code?.text ?? "");
+  for (const d of rr.DiagnosticReport ?? []) parts.push(`${d.code?.text ?? ""} ${d.conclusion ?? ""}`);
+  parts.push(...(raw.patient_context.longitudinal_summary?.condition_labels ?? []));
+  return parts.join(" | ").toLowerCase();
+}
+
 function patientName(raw: RawCase): string {
   const n = (raw.patient_context.patient as { name?: Array<{ family?: string; given?: string[] }> }).name?.[0];
   if (!n) return "";
@@ -109,20 +121,39 @@ export function extractChart(raw: RawCase): ChartExtract {
   else if (/myc (rearrang|translocat)/.test(dx)) mycMethod = "rearrangement";
   else if (mycPositive) mycMethod = "unknown";
 
-  const cellOfOrigin: "GCB" | "ABC" | "non_GCB" | "unknown" = /\bgcb\b/.test(dx)
-    ? "GCB"
-    : /\babc\b|non-gcb|non gcb/.test(dx)
-      ? "ABC"
-      : "unknown";
+  // Check non-GCB/ABC BEFORE GCB — otherwise "\bgcb\b" matches inside "non-GCB".
+  const cellOfOrigin: "GCB" | "ABC" | "non_GCB" | "unknown" = /\babc\b/.test(dx)
+    ? "ABC"
+    : /non-?gcb|non gcb/.test(dx)
+      ? "non_GCB"
+      : /\bgcb\b/.test(dx)
+        ? "GCB"
+        : "unknown";
 
   const physiologicallyFit = eco == null ? age < 80 : eco <= 1;
 
+  const all = clinicalText(raw);
   const stageMatch = dx.match(/stage\s+(iv|iii|ii|i)\s*([ab])?/i);
   const stage = stageMatch ? (stageMatch[1] + (stageMatch[2] ?? "")).toUpperCase() : "";
-  const bSymptoms = /night sweats|b symptoms|weight loss|drenching/.test(dx) || /[iv]+b$/i.test(stage);
+  const bSymptoms = /night sweats|b symptoms|weight loss|drenching/.test(all) || /[iv]+b$/i.test(stage);
   const doubleHit = /double.?hit/.test(dx) && !/negative|like/.test(dx);
   const firstLineText = firstLine(raw);
-  const anthracycline = /chop|epoch|chemo/i.test(firstLineText);
+  const anthracycline = /chop|epoch|anthracyc/i.test(firstLineText) || /chop|anthracyc/.test(all);
+
+  // Neurologic (from any clinical text)
+  let neuropathyGrade = 0;
+  if (/neuropath/.test(all)) {
+    const m = all.match(/grade\s*(\d)[^|]*neuropath/) || all.match(/neuropath[^|]*grade\s*(\d)/);
+    neuropathyGrade = m ? Number(m[1]) : 1;
+  }
+  const footDrop = /foot drop/.test(all);
+  const vincristineNeuropathy = /vincristine|vinca/.test(all) && (/neuropath/.test(all) || footDrop);
+
+  // Relapse timing from the clinical text (else fall back to primary-refractory).
+  let relapseTiming: "early" | "late" | "na" = "na";
+  if (/early relapse|within 12 months|<\s*12\s*month|refractory/.test(all)) relapseTiming = "early";
+  else if (/late relapse|>\s*12\s*month/.test(all) || /relapse[^|]*\b\d+\s*years?/.test(all)) relapseTiming = "late";
+  else if (primaryRefractory) relapseTiming = "early";
 
   const lvef = obs(raw, "lvef");
   const egfr = obs(raw, "egfr");
@@ -131,6 +162,17 @@ export function extractChart(raw: RawCase): ChartExtract {
   const hbv = obs(raw, "hepatitis b");
   const hcv = obs(raw, "hepatitis c");
   const diagnosis = raw.encounter_fhir.related_resources?.Condition?.[0]?.code?.text ?? "";
+
+  const lvefBaselineObs = (raw.encounter_fhir.related_resources?.Observation ?? []).find((o) => {
+    const t = (o.code?.text ?? "").toLowerCase();
+    return t.includes("lvef") && (t.includes("original") || t.includes("baseline"));
+  });
+  const lvefBaseline = lvefBaselineObs?.valueQuantity?.value ?? null;
+  let ldhRatio = ldh.num != null ? Math.round((ldh.num / 250) * 100) / 100 : null;
+  if (ldhRatio == null && ldh.str) {
+    const m = ldh.str.match(/([\d.]+)\s*x/i); // e.g. "~1.3x ULN"
+    if (m) ldhRatio = Number(m[1]);
+  }
 
   const parsed = ChartExtract.safeParse({
     patient: { name: patientName(raw), mrn: String((raw.patient_context.patient as { id?: string }).id ?? ""), sex: raw.patient_context.patient.gender ?? "unknown" },
@@ -145,9 +187,9 @@ export function extractChart(raw: RawCase): ChartExtract {
       sites: "",
       largest_mass_cm: null,
       ki67: null,
-      ldh_uln_ratio: ldh.num != null ? Math.round((ldh.num / 250) * 100) / 100 : null,
+      ldh_uln_ratio: ldhRatio,
       chemosensitive: !primaryRefractory,
-      relapse_timing: primaryRefractory ? "early" : "na",
+      relapse_timing: relapseTiming,
       cell_of_origin: cellOfOrigin,
       cns_involvement: cnsInvolved,
       cns_compartment: compartment,
@@ -156,16 +198,16 @@ export function extractChart(raw: RawCase): ChartExtract {
     fitness: { age, ecog: eco ?? 1, cell_therapy_fit: physiologicallyFit },
     organ: {
       lvef_current: lvef.num,
-      lvef_baseline: null,
+      lvef_baseline: lvefBaseline,
       egfr: egfr.str ?? "",
       hepatitis_status: [hbv.str ? `HBV ${hbv.str}` : "", hcv.str ? `HCV ${hcv.str}` : ""].filter(Boolean).join("; "),
     },
-    neuro: { neuropathy_grade: 0, foot_drop_history: false },
+    neuro: { neuropathy_grade: neuropathyGrade, foot_drop_history: footDrop },
     prior: {
       first_line: firstLineText,
       prior_response: primaryRefractory ? "refractory to first line" : "",
       anthracycline_exposed: anthracycline,
-      vincristine_neuropathy: false,
+      vincristine_neuropathy: vincristineNeuropathy,
       cd19_directed: false,
     },
     labs: {
