@@ -1,0 +1,238 @@
+{
+  "id": "SYN-A-0001::SYN-A-ENC-0001",
+  "metadata": {
+    "source": "consilium-synthetic",
+    "synthetic": "True",
+    "patient_id": "SYN-A-0001",
+    "encounter_id": "SYN-A-ENC-0001",
+    "encounter_reference": "urn:uuid:SYN-A-ENC-0001",
+    "date": "2026-07-15T09:00:00-05:00",
+    "status": "finished",
+    "visit_title": "Primary refractory transformed high-grade BCL with new CNS symptoms, treatment decision",
+    "visit_type": "Malignant hematology evaluation"
+  },
+  "patient_context": {
+    "patient": {
+      "resourceType": "Patient",
+      "id": "SYN-A-0001",
+      "name": [
+        {
+          "use": "official",
+          "family": "Okafor",
+          "given": [
+            "Gerald"
+          ]
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1963-11-02",
+      "address": [
+        {
+          "state": "CT",
+          "country": "US"
+        }
+      ],
+      "communication": [
+        {
+          "language": {
+            "text": "English (United States)"
+          }
+        }
+      ]
+    },
+    "longitudinal_summary": {
+      "resource_counts": {
+        "Condition": "6",
+        "Observation": "10",
+        "MedicationStatement": "4",
+        "DiagnosticReport": "2",
+        "Procedure": "1"
+      },
+      "condition_labels": [
+        "Transformed follicular lymphoma / high-grade aggressive B-cell lymphoma (primary refractory)",
+        "Suspected secondary CNS lymphoma",
+        "Hypertension",
+        "Obstructive sleep apnea",
+        "Ankylosing spondylitis",
+        "Obesity"
+      ],
+      "medication_labels": [
+        "atenolol",
+        "rosuvastatin"
+      ]
+    }
+  },
+  "encounter_fhir": {
+    "encounter": {
+      "resourceType": "Encounter",
+      "id": "SYN-A-ENC-0001",
+      "status": "finished",
+      "class": {
+        "code": "AMB"
+      },
+      "type": [
+        {
+          "text": "Malignant hematology evaluation"
+        }
+      ],
+      "subject": {
+        "reference": "urn:uuid:SYN-A-0001",
+        "display": "Gerald Okafor"
+      }
+    },
+    "related_resources": {
+      "Condition": [
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "active"
+          },
+          "code": {
+            "text": "Transformed follicular lymphoma with MYC amplification and IGH/BCL2 translocation, high-grade aggressive B-cell lymphoma, primary refractory to R-CHOP"
+          }
+        },
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "active"
+          },
+          "verificationStatus": {
+            "text": "provisional"
+          },
+          "code": {
+            "text": "Suspected secondary CNS (leptomeningeal/intrathecal) involvement"
+          }
+        },
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "active"
+          },
+          "code": {
+            "text": "Hypertension"
+          }
+        },
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "active"
+          },
+          "code": {
+            "text": "Obstructive sleep apnea on CPAP"
+          }
+        },
+        {
+          "resourceType": "Condition",
+          "clinicalStatus": {
+            "text": "active"
+          },
+          "code": {
+            "text": "Ankylosing spondylitis"
+          }
+        }
+      ],
+      "Observation": [
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "ECOG performance status"
+          },
+          "valueString": "1"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "LDH"
+          },
+          "valueQuantity": {
+            "value": 157,
+            "unit": "U/L"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Creatinine"
+          },
+          "valueQuantity": {
+            "value": 1.01,
+            "unit": "mg/dL"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "eGFR"
+          },
+          "valueString": ">60"
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "LVEF (echo)"
+          },
+          "valueQuantity": {
+            "value": 61,
+            "unit": "%"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "text": "Presenting symptom"
+          },
+          "valueString": "New subacute back pain, bilateral lower-extremity weakness, urinary hesitancy"
+        }
+      ],
+      "MedicationStatement": [
+        {
+          "resourceType": "MedicationStatement",
+          "medicationCodeableConcept": {
+            "text": "atenolol 50 mg nightly"
+          }
+        },
+        {
+          "resourceType": "MedicationStatement",
+          "medicationCodeableConcept": {
+            "text": "rosuvastatin 10 mg daily"
+          }
+        }
+      ],
+      "Procedure": [
+        {
+          "resourceType": "Procedure",
+          "status": "completed",
+          "code": {
+            "text": "R-CHOP x6 cycles (first line); primary refractory"
+          }
+        }
+      ],
+      "DiagnosticReport": [
+        {
+          "resourceType": "DiagnosticReport",
+          "code": {
+            "text": "End-of-treatment PET/CT"
+          },
+          "conclusion": "Unresolved, more intensely FDG-avid mesenteric mass; refractory disease."
+        },
+        {
+          "resourceType": "DiagnosticReport",
+          "code": {
+            "text": "MRI total spine + brain / LP"
+          },
+          "status": "registered",
+          "conclusion": "Ordered urgently to evaluate suspected CNS involvement."
+        }
+      ]
+    }
+  },
+  "transcript": "DR: Mr. Okafor, good to meet you. I've been through your records. Before we get into the lymphoma, you mentioned some new symptoms to the nurse. Walk me through those.\n\nPT: Yeah. About a week now. My lower back's been aching, but the thing that scared me is my legs feel weak, especially the right one. And I'm having trouble, sorry, trouble starting to urinate.\n\nFAMILY: I'm Yvonne, his wife. He almost went down on the stairs Tuesday. That's not him.\n\nDR: I'm glad you came in. Any numbness, any loss of control of your bladder or bowels?\n\nPT: No accidents. Just the weakness and the trouble going.\n\nDR: Okay. That combination, new back pain, leg weakness, and urinary hesitancy, in someone with aggressive lymphoma, that gets my full attention today. It can mean the lymphoma has reached the lining around the spinal cord and brain. I want an urgent MRI of the whole spine and brain, and I want to sample the spinal fluid.\n\nPT: I thought this visit was about whether the chemo worked.\n\nDR: It was going to be. Your first chemo, the R-CHOP, didn't clear the disease, the scan at the end showed the mesenteric mass was actually more active. So we already knew we needed a second plan. But what you just told me changes the shape of that plan before we even start.\n\nFAMILY: Changes it how?\n\nDR: If the lymphoma is in the central nervous system, the fluid around the brain and spine, then most of our usual second-line drugs don't get in there well enough. We'd have to pick treatments that cross into that space and also put chemotherapy directly into the spinal fluid. It reroutes everything. That's why I don't want to lock in a plan until I see the MRI and the spinal fluid.\n\nPT: And if it is there?\n\nDR: Then we treat hard and fast, because CNS involvement is serious, but it is treatable, and people do get through it. I'd move you to a stronger salvage chemotherapy that penetrates the nervous system, add chemotherapy given directly into the spinal fluid through repeated spinal taps, and aim to get the disease under control enough to go to CAR T-cell therapy, which is our best shot at a lasting remission for a lymphoma like yours.\n\nPT: I want that shot. Whatever it takes. I'm 62, I coach my grandson's team, I'm not done.\n\nDR: That's exactly the frame I want. And your fitness matters here, it's the reason I can offer you the aggressive path. If you were frail, I'd be having a very different conversation. You're not.\n\nFAMILY: What does CAR-T involve? I've heard the word.\n\nDR: We collect his own immune cells, re-engineer them to attack the lymphoma, and give them back. It's powerful, and it can cause a reaction, fevers, sometimes confusion, so it means time in or very near the hospital with close monitoring, and it means a caregiver at his side. That's where you come in.\n\nFAMILY: I'll be there. Whatever the schedule is.\n\nDR: That support is a real part of why this path is open to him. It doesn't work without it.\n\nPT: So what happens first?\n\nDR: First, the imaging and the spinal tap today or tomorrow, urgently. If the CNS is involved, we start the spinal fluid chemotherapy right away and begin the stronger salvage regimen. In parallel, I take your case to our tumor board this week so the transplant and CAR-T team is lined up. If there's disease left after salvage, we can use a bridging treatment to hold things steady while the CAR-T cells are being made. And we keep a stem-cell transplant from a donor in reserve, only if we ever need it after CAR-T.\n\nPT: That's a lot.\n\nDR: It is. We do it in order, one step at a time, and you will not be doing it alone. The reason I'm laying out the whole staircase is so you can see there's a destination, remission, not just a series of hard weeks.\n\nPT: Okay. Let's find out what we're dealing with and go.\n\nDR: That's the plan. I'll put in the MRI and the spinal tap now, start the protective medicines, and get you on the board this week. Yvonne, the same rule for you both: any new confusion, fever, worse weakness, or if he can't urinate at all, that's an emergency, come in.\n\nFAMILY: Understood.\n\nDR: We'll move quickly. You came in at the right time.",
+  "note": "**Assessment:** 62-year-old fit man with transformed follicular lymphoma (MYC amplification, IGH/BCL2 translocation), high-grade aggressive B-cell lymphoma, primary refractory to first-line R-CHOP. Presents with new subacute back pain, lower-extremity weakness, and urinary hesitancy concerning for secondary CNS involvement. ECOG 1, working full-time, strong caregiver support.\n\n**Plan / reasoning:**\n- Urgent MRI total spine and brain plus lumbar puncture with CSF flow cytometry to confirm suspected leptomeningeal and intrathecal disease. (Anticipated: leptomeningeal and intrathecal enhancement from the mid-thoracic level downward and posterior-fossa involvement, CSF positive for clonal B-cells.)\n- If CNS confirmed: CNS-penetrating salvage (R-DHAP) plus intensive intrathecal methotrexate/rituximab; systemic control with intent to proceed to CD19 CAR T-cell therapy.\n- Bridging therapy for residual disease pending CAR-T manufacturing; allogeneic transplant reserved only for post-CAR-T relapse.\n- Present at tumor board this week to align the cellular-therapy team; aggressive path justified by fitness, goals, and caregiver support.\n- Supportive/CNS prophylaxis and monitoring; safety-netting for cord-compression and neurologic emergencies.",
+  "after_visit_summary": "Your first lymphoma treatment did not fully clear the disease, and the new symptoms you described today, back pain, leg weakness, and trouble urinating, raise concern that the lymphoma may have spread to the fluid around your brain and spine. We are getting an urgent MRI and a spinal tap to find out. If it has spread there, we will treat quickly with a stronger chemotherapy that reaches the nervous system, plus chemotherapy given directly into the spinal fluid, with the goal of getting you to CAR T-cell therapy, which offers the best chance at a lasting remission. We will discuss your case at our team conference this week. Because you are healthy and active and have strong support at home, we can offer you this aggressive, curative-intent path. Call us or come in immediately for any new confusion, fever, worsening weakness, or inability to urinate.",
+  "after_visit_summary_provenance": {
+    "method": "authored-synthetic",
+    "source": "note Assessment/Plan",
+    "clinically_reviewed": false,
+    "synthetic": true
+  }
+}
