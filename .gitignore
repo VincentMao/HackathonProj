@@ -1,6 +1,7 @@
 # Never commit copyrighted full text or secrets to this public repo
 .env
 .env.*
+!.env.example
 *.pdf
 papers/
 chunks/
@@ -11,3 +12,14 @@ __pycache__/
 venv/
 node_modules/
 .DS_Store
+
+# Next.js / build
+.next/
+/out
+/build
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+
+# Test / coverage
+/coverage
